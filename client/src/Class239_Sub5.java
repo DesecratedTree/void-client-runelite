@@ -42,13 +42,13 @@ final class Class239_Sub5 extends Class239 {
         return Class239_Sub26.method1833((byte) -128, i_2_, i) || Class348_Sub42_Sub8_Sub2.method3200(i_2_, i, (byte) 96);
     }
 
-    static final void method1741(Class348_Sub49_Sub2 class348_sub49_sub2, byte i) {
+    static final void method1741(BitPacket BitPacket, byte i) {
         anInt5893++;
-        class348_sub49_sub2.startBitAccess(122);
+        BitPacket.startBitAccess(122);
         int i_3_ = Class348_Sub42_Sub11.anInt9591;
         Player player = (Class132.aPlayer_1907 = Class294.aPlayerArray5058[i_3_] = new Player());
         player.anInt10290 = i_3_;
-        int i_4_ = class348_sub49_sub2.readBits((byte) -24, 30);
+        int i_4_ = BitPacket.readBits((byte) -24, 30);
         if (i != 118) anInt5886 = 111;
         byte i_5_ = (byte) (i_4_ >> 28);
         int i_6_ = i_4_ >> 14 & 0x3fff;
@@ -58,7 +58,7 @@ final class Class239_Sub5 extends Class239 {
         player.anIntArray10317[0] = i_7_ + -Class90.regionTileY;
         player.y = (((player.anIntArray10317[0]) << 9) - -(player.method2436((byte) 85) << 8));
         Class355.anInt4372 = player.plane = player.aByte6376 = i_5_;
-        if (Class79.method802((player.anIntArray10317[0]), (player.anIntArray10320[0]), true)) player.aByte6376++;
+        if (NPCType.method802((player.anIntArray10317[0]), (player.anIntArray10320[0]), true)) player.aByte6376++;
         if (Class154.aClass348_Sub49Array2105[i_3_] != null) player.method2452((byte) 84, (Class154.aClass348_Sub49Array2105[i_3_]));
         Class328_Sub1.anInt6513 = 0;
         Class286_Sub7.anIntArray6290[Class328_Sub1.anInt6513++] = i_3_;
@@ -66,7 +66,7 @@ final class Class239_Sub5 extends Class239 {
         Class348_Sub42_Sub4.anInt9513 = 0;
         for (int i_8_ = 1; i_8_ < 2048; i_8_++) {
             if (i_8_ != i_3_) {
-                int i_9_ = class348_sub49_sub2.readBits((byte) -24, 18);
+                int i_9_ = BitPacket.readBits((byte) -24, 18);
                 int i_10_ = i_9_ >> 16;
                 int i_11_ = (i_9_ & 0xff78) >> 8;
                 int i_12_ = i_9_ & 0xff;
@@ -79,7 +79,7 @@ final class Class239_Sub5 extends Class239 {
                 Class348_Sub5.aByteArray6624[i_8_] = (byte) 0;
             }
         }
-        class348_sub49_sub2.stopBitAccess(false);
+        BitPacket.stopBitAccess(false);
     }
 
     Class239_Sub5(int i, Class348_Sub51 class348_sub51) {

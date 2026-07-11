@@ -61,11 +61,11 @@ final class Class239_Sub28 extends Class239 {
         if (bool_14_ == false) {
             Class348_Sub40_Sub31.anInt9406 = i;
             anInt6136++;
-            Class348_Sub35.anInt6981 = i_12_;
+            IntNode.anInt6981 = i_12_;
             Class258_Sub2.anInt8537 = i_15_;
             if (bool && Class258_Sub2.anInt8537 >= 100) {
                 Class59_Sub2_Sub2.anInt8685 = 256 + 512 * Class275.anInt3550;
-                Class286_Sub4.anInt6246 = 256 + Class348_Sub35.anInt6981 * 512;
+                Class286_Sub4.anInt6246 = 256 + IntNode.anInt6981 * 512;
                 Class305.anInt3855 = (Class275.method2064(Class286_Sub4.anInt6246, Class355.anInt4372, 11219, Class59_Sub2_Sub2.anInt8685) + -Class348_Sub42_Sub4.anInt9515);
             }
             Class348_Sub40_Sub21.anInt9282 = 2;
@@ -108,7 +108,7 @@ final class Class239_Sub28 extends Class239 {
     static final boolean method1846(int i, int i_18_, int i_19_) {
         if (i_19_ <= 42) return true;
         anInt6143++;
-        return Class278.method2075(i_18_, -126, i) | (0x40000 & i_18_) != 0 || Class273.method2056(i_18_, 122, i);
+        return NPCTypeList.method2075(i_18_, -126, i) | (0x40000 & i_18_) != 0 || Class273.method2056(i_18_, 122, i);
     }
 
     static final String[] method1847(String[] strings, int i) {

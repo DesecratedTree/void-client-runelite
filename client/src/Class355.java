@@ -3,14 +3,14 @@
  */
 
 final class Class355 {
-    private final Class60 aClass60_4362;
+    private final ReferenceCache aClass60_4362;
     static int anInt4363;
     int anInt4364;
     int anInt4365 = 0;
     static Object anObject4366;
     static long aLong4367 = -1L;
-    private Class45 aClass45_4368;
-    private final Class45 aClass45_4369;
+    private Js5Archive aClass45_4368;
+    private final Js5Archive aClass45_4369;
     static int anInt4370;
     static int anInt4371;
     static int anInt4372;
@@ -36,7 +36,7 @@ final class Class355 {
         else is = aClass45_4368.method410(-1860, 1, i);
         class348_sub42_sub10 = new Class348_Sub42_Sub10();
         class348_sub42_sub10.aClass355_9567 = this;
-        if (is != null) class348_sub42_sub10.method3218(new Class348_Sub49(is), 0);
+        if (is != null) class348_sub42_sub10.method3218(new Packet(is), 0);
         if (i_0_ >= -86) method3473(-12);
         if (i >= 32768) class348_sub42_sub10.method3209(false);
         aClass60_4362.method582(class348_sub42_sub10, i, (byte) -125);
@@ -62,20 +62,20 @@ final class Class355 {
         anObject4366 = null;
     }
 
-    Class355(int i, Class45 class45, Class45 class45_1_, Interface15 interface15) {
+    Class355(int i, Js5Archive Js5Archive, Js5Archive class45_1_, Interface15 interface15) {
         this.anInt4364 = 0;
-        aClass60_4362 = new Class60(64);
+        aClass60_4362 = new ReferenceCache(64);
         anInterface15_4373 = null;
         do {
             try {
                 anInterface15_4373 = interface15;
-                aClass45_4368 = class45;
+                aClass45_4368 = Js5Archive;
                 aClass45_4369 = class45_1_;
                 if (aClass45_4368 != null) this.anInt4365 = aClass45_4368.method407(0, 1);
                 if (aClass45_4369 == null) break;
                 this.anInt4364 = aClass45_4369.method407(0, 1);
             } catch (RuntimeException runtimeexception) {
-                throw Class348_Sub17.method2929(runtimeexception, ("aha.<init>(" + i + ',' + (class45 != null ? "{...}" : "null") + ',' + (class45_1_ != null ? "{...}" : "null") + ',' + (interface15 != null ? "{...}" : "null") + ')'));
+                throw Class348_Sub17.method2929(runtimeexception, ("aha.<init>(" + i + ',' + (Js5Archive != null ? "{...}" : "null") + ',' + (class45_1_ != null ? "{...}" : "null") + ',' + (interface15 != null ? "{...}" : "null") + ')'));
             }
             break;
         } while (false);

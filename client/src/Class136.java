@@ -5,14 +5,14 @@
 final class Class136 implements Interface7 {
     static Class65 aClass65_4787;
     private final String aString4788;
-    private final Class45 aClass45_4789;
+    private final Js5Archive aClass45_4789;
     static int anInt4790;
     static short[][] aShortArrayArray4791;
     static int anInt4792;
     static int anInt4793 = 1405;
     static int anInt4794;
     static int anInt4795;
-    static Class45 aClass45_4796;
+    static Js5Archive aClass45_4796;
 
     public static void method1159(byte i) {
         aShortArrayArray4791 = null;
@@ -20,12 +20,12 @@ final class Class136 implements Interface7 {
         if (i >= 36) aClass45_4796 = null;
     }
 
-    Class136(Class45 class45, String string) {
+    Class136(Js5Archive Js5Archive, String string) {
         try {
             aString4788 = string;
-            aClass45_4789 = class45;
+            aClass45_4789 = Js5Archive;
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("nv.<init>(" + (class45 != null ? "{...}" : "null") + ',' + (string != null ? "{...}" : "null") + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("nv.<init>(" + (Js5Archive != null ? "{...}" : "null") + ',' + (string != null ? "{...}" : "null") + ')'));
         }
     }
 

@@ -6,7 +6,7 @@ import java.awt.*;
 
 abstract class s {
     int[][] anIntArrayArray4584;
-    static Class45 aClass45_4585;
+    static Js5Archive aClass45_4585;
     static int anInt4586;
     int anInt4587;
     int anInt4588;
@@ -25,7 +25,7 @@ abstract class s {
             anInt4586++;
             Dimension dimension = canvas.getSize();
             Class85.method828((byte) 38, dimension.height, dimension.width);
-            if (Class348_Sub49.anInt7207 != 1) Class21.aHa326.method3669(canvas, Class59_Sub1.anInt5283, Class107.anInt1651);
+            if (Packet.anInt7207 != 1) Class21.aHa326.method3669(canvas, Class59_Sub1.anInt5283, Class107.anInt1651);
             else Class21.aHa326.method3669(canvas, Class348_Sub16_Sub1.anInt8854, Class239_Sub16.anInt6008);
         }
     }
@@ -46,7 +46,7 @@ abstract class s {
 
     abstract void method3984(int i, int i_25_, int i_26_, boolean[][] bools, boolean bool, int i_27_, int i_28_);
 
-    static final Class147 method3985(int i, int i_29_) {
+    static final ChatMessage method3985(int i, int i_29_) {
         anInt4591++;
         if (i != -101) method3980(-117, null);
         if (i_29_ < 0 || i_29_ >= 100) return null;

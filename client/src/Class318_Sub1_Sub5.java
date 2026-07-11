@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-abstract class Class318_Sub1_Sub5 extends Class318_Sub1 {
+abstract class Class318_Sub1_Sub5 extends SceneEntity {
     static Class144 aClass144_8766;
     static int anInt8767;
     static int anInt8768;
@@ -50,13 +50,13 @@ abstract class Class318_Sub1_Sub5 extends Class318_Sub1 {
         return Class125.method1110((this.y >> Class362.anInt4459), this.method2394(true), this.aByte6376, (byte) -79, (this.x >> Class362.anInt4459));
     }
 
-    final void method2380(ha var_ha, int i, boolean bool, Class318_Sub1 class318_sub1, int i_2_, byte i_3_, int i_4_) {
+    final void method2380(ha var_ha, int i, boolean bool, SceneEntity SceneEntity, int i_2_, byte i_3_, int i_4_) {
         try {
             anInt8768++;
             if (i_3_ >= -106) method2384(null, 52);
             throw new IllegalStateException();
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("un.N(" + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + bool + ',' + (class318_sub1 != null ? "{...}" : "null") + ',' + i_2_ + ',' + i_3_ + ',' + i_4_ + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("un.N(" + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + bool + ',' + (SceneEntity != null ? "{...}" : "null") + ',' + i_2_ + ',' + i_3_ + ',' + i_4_ + ')'));
         }
     }
 

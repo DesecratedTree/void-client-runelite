@@ -7,12 +7,12 @@ abstract class Class5 implements Interface1 {
     static int anInt4628;
     static int anInt4629;
     private int anInt4630;
-    private final Class45 aClass45_4631;
-    Class45 aClass45_4632;
+    private final Js5Archive aClass45_4631;
+    Js5Archive aClass45_4632;
     static int anInt4633;
     static int anInt4634;
     Class369 aClass369_4635;
-    static Class60 aClass60_4636 = new Class60(64);
+    static ReferenceCache aClass60_4636 = new ReferenceCache(64);
     private Class324 aClass324_4637;
     static int anInt4638;
     static int anInt4639;
@@ -38,13 +38,13 @@ abstract class Class5 implements Interface1 {
         }
     }
 
-    static final Class369_Sub1 method179(int i, Class348_Sub49 class348_sub49) {
+    static final Class369_Sub1 method179(int i, Packet Packet) {
         anInt4629++;
-        Class369 class369 = Class348_Sub16_Sub2.method2834((byte) -127, class348_sub49);
-        int i_3_ = class348_sub49.readInt((byte) -126);
-        int i_4_ = class348_sub49.readInt((byte) -126);
+        Class369 class369 = Class348_Sub16_Sub2.method2834((byte) -127, Packet);
+        int i_3_ = Packet.readInt((byte) -126);
+        int i_4_ = Packet.readInt((byte) -126);
         if (i != 16533) aClass60_4636 = null;
-        int i_5_ = class348_sub49.readUnsignedShort(842397944);
+        int i_5_ = Packet.readUnsignedShort(842397944);
         return new Class369_Sub1(class369.aClass221_4968, class369.aClass341_4973, class369.anInt4970, class369.anInt4959, class369.anInt4971, class369.anInt4963, class369.anInt4966, class369.anInt4965, class369.anInt4961, i_3_, i_4_, i_5_);
     }
 
@@ -106,13 +106,13 @@ abstract class Class5 implements Interface1 {
         }
     }
 
-    Class5(Class45 class45, Class45 class45_15_, Class369 class369) {
+    Class5(Js5Archive Js5Archive, Js5Archive class45_15_, Class369 class369) {
         try {
             aClass45_4631 = class45_15_;
-            this.aClass45_4632 = class45;
+            this.aClass45_4632 = Js5Archive;
             this.aClass369_4635 = class369;
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("gl.<init>(" + (class45 != null ? "{...}" : "null") + ',' + (class45_15_ != null ? "{...}" : "null") + ',' + (class369 != null ? "{...}" : "null") + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("gl.<init>(" + (Js5Archive != null ? "{...}" : "null") + ',' + (class45_15_ != null ? "{...}" : "null") + ',' + (class369 != null ? "{...}" : "null") + ')'));
         }
     }
 }

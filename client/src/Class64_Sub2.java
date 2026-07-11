@@ -305,6 +305,7 @@ final class Class64_Sub2 extends Class64 {
 
     static final void method661(byte i) {
         anInt5466++;
+        net.runelite.client.game.GameEventBridgeHooks.clearMenuEntries();
         for (Class348_Sub42_Sub13 class348_sub42_sub13 = ((Class348_Sub42_Sub13) Class233.aClass107_3022.method1011(-93)); class348_sub42_sub13 != null; class348_sub42_sub13 = ((Class348_Sub42_Sub13) Class233.aClass107_3022.method1003((byte) 46))) {
             if (class348_sub42_sub13.anInt9615 > 1) {
                 class348_sub42_sub13.anInt9615 = 0;
@@ -554,7 +555,7 @@ final class Class64_Sub2 extends Class64 {
                 anIntArray5455 = null;
                 aShortArray5439 = null;
             }
-            if (aByteArray5499 != null && !Class77.method776(anInt5472, anInt5463, i + -196608)) {
+            if (aByteArray5499 != null && !Isaac.method776(anInt5472, anInt5463, i + -196608)) {
                 if ((0x37 & anInt5472) != 0 ? (aClass290_5424 == null || aClass290_5424.method2197((byte) -10)) : (aClass290_5482 == null || aClass290_5482.method2197((byte) -73))) {
                     aShortArray5493 = aShortArray5438 = aShortArray5436 = null;
                     aByteArray5499 = null;
@@ -597,7 +598,7 @@ final class Class64_Sub2 extends Class64 {
                 anIntArrayArray5413 = null;
                 aShortArray5494 = null;
             }
-            if (anIntArrayArray5412 != null && !Class77.method780(anInt5472, 0, anInt5463)) anIntArrayArray5412 = null;
+            if (anIntArrayArray5412 != null && !Isaac.method780(anInt5472, 0, anInt5463)) anIntArrayArray5412 = null;
             if (anIntArray5404 != null && (0x800 & anInt5463) == 0 && (anInt5463 & 0x40000) == 0) {
                 anIntArray5404 = null;
                 anIntArray5473 = null;
@@ -1104,7 +1105,7 @@ final class Class64_Sub2 extends Class64 {
                 class64_sub2_154_.aClass192_5485.anInterface5_Impl2_2572 = aClass192_5485.anInterface5_Impl2_2572;
             } else if (Class368.method3563(i, (byte) 56, anInt5472)) class64_sub2_154_.aClass192_5485 = aClass192_5485;
             else class64_sub2_154_.aClass192_5485 = null;
-            if (Class278.method2077(-122, anInt5472, i)) {
+            if (NPCTypeList.method2077(-122, anInt5472, i)) {
                 if (class64_sub2_153_.aShortArray5423 != null && class64_sub2_153_.aShortArray5423.length >= anInt5478) class64_sub2_154_.aShortArray5423 = class64_sub2_153_.aShortArray5423;
                 else {
                     int i_172_ = anInt5478;
@@ -2265,7 +2266,7 @@ final class Class64_Sub2 extends Class64 {
                 aFloatArray5476 = Class348_Sub42_Sub16.method3258(0, anInt5475, aFloatArray5476);
                 aFloatArray5506 = Class348_Sub42_Sub16.method3258(0, anInt5475, aFloatArray5506);
                 if (class124.anIntArray1868 != null && Class160.method1257(-58, anInt5472, i)) anIntArrayArray5413 = class124.method1100(false, -20);
-                if (class124.aClass162Array1832 != null && Class77.method780(anInt5472, 0, i)) anIntArrayArray5412 = class124.method1093((byte) -120);
+                if (class124.aClass162Array1832 != null && Isaac.method780(anInt5472, 0, i)) anIntArrayArray5412 = class124.method1093((byte) -120);
                 if (class124.anIntArray1824 == null || !Class135_Sub2.method1158(anInt5472, -1, i)) break;
                 int i_459_ = 0;
                 int[] is_460_ = new int[256];

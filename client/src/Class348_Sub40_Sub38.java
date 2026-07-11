@@ -21,23 +21,23 @@ final class Class348_Sub40_Sub38 extends Class348_Sub40 {
         super(1, false);
     }
 
-    final void method3049(Class348_Sub49 class348_sub49, int i, int i_0_) {
+    final void method3049(Packet Packet, int i, int i_0_) {
         if (i_0_ != 31015) anInt9470 = -15;
         int i_1_ = i;
         while_213_:
         do {
             do {
                 if (i_1_ == 0) {
-                    anInt9474 = class348_sub49.readUnsignedShort(i_0_ + 842366929);
+                    anInt9474 = Packet.readUnsignedShort(i_0_ + 842366929);
                     break while_213_;
                 } else if (i_1_ != 1) {
                     if (i_1_ == 2) break;
                     break while_213_;
                 }
-                anInt9470 = class348_sub49.readUnsignedShort(i_0_ + 842366929);
+                anInt9470 = Packet.readUnsignedShort(i_0_ + 842366929);
                 break while_213_;
             } while (false);
-            this.aBoolean7045 = class348_sub49.readUnsignedByte(i_0_ + -30760) == 1;
+            this.aBoolean7045 = Packet.readUnsignedByte(i_0_ + -30760) == 1;
         } while (false);
         anInt9472++;
     }
@@ -88,7 +88,7 @@ final class Class348_Sub40_Sub38 extends Class348_Sub40 {
             Class348_Sub22 class348_sub22 = ((Class348_Sub22) Class282.aClass356_3654.method3480(i_14_, -6008));
             if (class348_sub22 != null) {
                 Npc npc = (class348_sub22.aNpc_6859);
-                Class322.method2556(false, npc.aClass79_10505.anInt1399, npc);
+                Class322.method2556(false, npc.definition.anInt1399, npc);
             }
         }
     }

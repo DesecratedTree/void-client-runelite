@@ -61,12 +61,12 @@ final class Class178 {
             int i_7_ = 0;
             if (bool_3_ != true) aClass29_2352 = null;
             for (/**/; i_7_ < Exception_Sub1.aClass255_112.anInt3271; i_7_++) {
-                Class213 class213 = Exception_Sub1.aClass255_112.method1940(-74, i_7_);
-                if ((!bool_1_ || class213.aBoolean2755) && class213.anInt2833 == -1 && class213.anInt2812 == -1 && class213.anInt2799 == 0 && class213.aString2795.toLowerCase().indexOf(string_2_) != -1) {
+                ObjType ObjType = Exception_Sub1.aClass255_112.getItemDefinitions(-74, i_7_);
+                if ((!bool_1_ || ObjType.stockmarket) && ObjType.certtemplate == -1 && ObjType.lenttemplate == -1 && ObjType.anInt2799 == 0 && ObjType.name.toLowerCase().indexOf(string_2_) != -1) {
                     if (i_0_ != -1) {
                         if (bool) {
-                            if (!string.equals(class213.method1561(string_5_, i_0_, -1511086397))) continue;
-                        } else if (class213.method1567(i_4_, -116, i_0_) != i) continue;
+                            if (!string.equals(ObjType.getStringParam(string_5_, i_0_, -1511086397))) continue;
+                        } else if (ObjType.getIntParam(i_4_, -116, i_0_) != i) continue;
                     }
                     if (i_6_ >= 250) {
                         Class192.aShortArray2579 = null;
@@ -87,7 +87,7 @@ final class Class178 {
             Class148.anInt2037 = 0;
             String[] strings = new String[Class76.anInt1285];
             for (int i_10_ = 0; Class76.anInt1285 > i_10_; i_10_++)
-                strings[i_10_] = Exception_Sub1.aClass255_112.method1940(123, is[i_10_]).aString2795;
+                strings[i_10_] = Exception_Sub1.aClass255_112.getItemDefinitions(123, is[i_10_]).name;
             Class174.method1333(Class192.aShortArray2579, 26073, strings);
             Class174.aClass45_2306.method412((byte) 116);
             Class174.aClass45_2306.anInt634 = 2;

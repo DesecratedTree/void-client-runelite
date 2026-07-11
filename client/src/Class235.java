@@ -4,7 +4,7 @@
 
 final class Class235 {
     static int anInt3050;
-    private final Class318_Sub1 aClass318_Sub1_3051;
+    private final SceneEntity aClass318_Sub1_3051;
     int anInt3052;
     private int anInt3053;
     private int anInt3054;
@@ -244,7 +244,7 @@ final class Class235 {
         if (this.aClass318_Sub10_3081 != null) this.aClass318_Sub10_3081.method2534();
     }
 
-    private final void method1672(Class318_Sub1 class318_sub1, boolean bool) {
+    private final void method1672(SceneEntity SceneEntity, boolean bool) {
         if (bool != true) method1674(-55, null);
         anInt3086++;
         int i;
@@ -274,7 +274,7 @@ final class Class235 {
             }
             for (; ; ) {
                 if (aClass17_3057.anIntArray267[anInt3084] >= i) break while_76_;
-                Class287.method2178(class318_sub1, anInt3084, aClass17_3057, -99);
+                Class287.method2178(SceneEntity, anInt3084, aClass17_3057, -99);
                 i -= aClass17_3057.anIntArray267[anInt3084];
                 anInt3084++;
                 if (aClass17_3057.anIntArray237.length <= anInt3084) {
@@ -301,7 +301,7 @@ final class Class235 {
         if (i >= -19) method1669(-110, -13);
     }
 
-    Class235(ha var_ha, Class51 class51, int i, int i_15_, int i_16_, int i_17_, Class318_Sub1 class318_sub1, boolean bool, int i_18_) {
+    Class235(ha var_ha, Class51 class51, int i, int i_15_, int i_16_, int i_17_, SceneEntity SceneEntity, boolean bool, int i_18_) {
         anInt3055 = 0;
         aBoolean3064 = false;
         anInt3053 = -1;
@@ -311,7 +311,7 @@ final class Class235 {
         try {
             this.anInt3079 = i;
             this.anInt3063 = class51.anInt941;
-            aClass318_Sub1_3051 = class318_sub1;
+            aClass318_Sub1_3051 = SceneEntity;
             aByte3085 = (byte) i_16_;
             aByte3067 = (byte) i_17_;
             aBoolean3069 = bool;
@@ -320,7 +320,7 @@ final class Class235 {
             if (i_18_ != -1) aBoolean3064 = true;
             method1666((byte) 69, i_18_);
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("bv.<init>(" + (var_ha != null ? "{...}" : "null") + ',' + (class51 != null ? "{...}" : "null") + ',' + i + ',' + i_15_ + ',' + i_16_ + ',' + i_17_ + ',' + (class318_sub1 != null ? "{...}" : "null") + ',' + bool + ',' + i_18_ + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("bv.<init>(" + (var_ha != null ? "{...}" : "null") + ',' + (class51 != null ? "{...}" : "null") + ',' + i + ',' + i_15_ + ',' + i_16_ + ',' + i_17_ + ',' + (SceneEntity != null ? "{...}" : "null") + ',' + bool + ',' + i_18_ + ')'));
         }
     }
 

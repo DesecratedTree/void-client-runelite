@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-abstract class Class318_Sub1_Sub3 extends Class318_Sub1 {
+abstract class Class318_Sub1_Sub3 extends SceneEntity {
     static int anInt8739;
     static int anInt8740;
     boolean aBoolean8741;
@@ -19,7 +19,7 @@ abstract class Class318_Sub1_Sub3 extends Class318_Sub1 {
     static int anInt8752;
     static int anInt8753;
     static int anInt8754;
-    static Class45 aClass45_8755;
+    static Js5Archive aClass45_8755;
     static Class114 aClass114_8756 = new Class114(107, 6);
 
     final boolean method2378(int i) {
@@ -189,15 +189,15 @@ abstract class Class318_Sub1_Sub3 extends Class318_Sub1 {
         return i_19_;
     }
 
-    static final int method2413(int i, Class348_Sub49_Sub2 class348_sub49_sub2) {
+    static final int method2413(int i, BitPacket BitPacket) {
         anInt8749++;
-        int i_35_ = class348_sub49_sub2.readBits((byte) -24, 2);
+        int i_35_ = BitPacket.readBits((byte) -24, 2);
         if (i != 1) aClass262_8744 = null;
         int i_36_;
         if (i_35_ != 0) {
-            if (i_35_ == 1) i_36_ = class348_sub49_sub2.readBits((byte) -24, 5);
-            else if (i_35_ != 2) i_36_ = class348_sub49_sub2.readBits((byte) -24, 11);
-            else i_36_ = class348_sub49_sub2.readBits((byte) -24, 8);
+            if (i_35_ == 1) i_36_ = BitPacket.readBits((byte) -24, 5);
+            else if (i_35_ != 2) i_36_ = BitPacket.readBits((byte) -24, 11);
+            else i_36_ = BitPacket.readBits((byte) -24, 8);
         } else i_36_ = 0;
         return i_36_;
     }

@@ -13,7 +13,7 @@ final class Class353 {
     byte aByte4343;
     int anInt4344;
     static int anInt4345;
-    static Class60 aClass60_4346 = new Class60(4);
+    static ReferenceCache aClass60_4346 = new ReferenceCache(4);
     int anInt4347;
     short aShort4348;
     int anInt4349;

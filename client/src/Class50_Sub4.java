@@ -46,22 +46,22 @@ final class Class50_Sub4 extends Class50 {
         anInt5259 = i_10_;
     }
 
-    static final Class158 method472(int i, Class348_Sub49 class348_sub49) {
+    static final Class158 method472(int i, Packet Packet) {
         anInt5263++;
-        String string = class348_sub49.readString((byte) 90);
-        Class221 class221 = Class158.method1248(127)[class348_sub49.readUnsignedByte(i ^ ~0x6c6e)];
+        String string = Packet.readString((byte) 90);
+        Class221 class221 = Class158.method1248(127)[Packet.readUnsignedByte(i ^ ~0x6c6e)];
         if (i != -27794) return null;
-        Class341 class341 = Class62.method596(i + 47794)[class348_sub49.readUnsignedByte(255)];
-        int i_15_ = class348_sub49.readShort(13638);
-        int i_16_ = class348_sub49.readShort(13638);
-        int i_17_ = class348_sub49.readUnsignedByte(255);
-        int i_18_ = class348_sub49.readUnsignedByte(255);
-        int i_19_ = class348_sub49.readUnsignedByte(255);
-        int i_20_ = class348_sub49.readUnsignedShort(i ^ ~0x32359469);
-        int i_21_ = class348_sub49.readUnsignedShort(842397944);
-        int i_22_ = class348_sub49.readInt((byte) -126);
-        int i_23_ = class348_sub49.readInt((byte) -126);
-        int i_24_ = class348_sub49.readInt((byte) -126);
+        Class341 class341 = Class62.method596(i + 47794)[Packet.readUnsignedByte(255)];
+        int i_15_ = Packet.readShort(13638);
+        int i_16_ = Packet.readShort(13638);
+        int i_17_ = Packet.readUnsignedByte(255);
+        int i_18_ = Packet.readUnsignedByte(255);
+        int i_19_ = Packet.readUnsignedByte(255);
+        int i_20_ = Packet.readUnsignedShort(i ^ ~0x32359469);
+        int i_21_ = Packet.readUnsignedShort(842397944);
+        int i_22_ = Packet.readInt((byte) -126);
+        int i_23_ = Packet.readInt((byte) -126);
+        int i_24_ = Packet.readInt((byte) -126);
         return new Class158(string, class221, class341, i_15_, i_16_, i_17_, i_18_, i_19_, i_20_, i_21_, i_22_, i_23_, i_24_);
     }
 

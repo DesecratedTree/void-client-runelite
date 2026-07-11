@@ -10,9 +10,9 @@ final class Class363 {
     static int anInt4465;
 
     static final void method3513(int i) {
-        synchronized (Class318.aClass243Array3974) {
-            for (int i_0_ = 0; (i_0_ < Class318.aClass243Array3974.length); i_0_++) {
-                Class318.aClass243Array3974[i_0_] = new Class243();
+        synchronized (Linkable.aClass243Array3974) {
+            for (int i_0_ = 0; (i_0_ < Linkable.aClass243Array3974.length); i_0_++) {
+                Linkable.aClass243Array3974[i_0_] = new Class243();
                 Class331.anIntArray4128[i_0_] = 0;
             }
         }

@@ -553,7 +553,7 @@ abstract class Class318_Sub1_Sub3_Sub3 extends Class318_Sub1_Sub3 {
         }
         Class348_Sub31_Sub2.aClass357ArrayArrayArray9082 = null;
         Class332.aSArray4142 = null;
-        Class147.aClass357ArrayArrayArray2029 = null;
+        ChatMessage.aClass357ArrayArrayArray2029 = null;
         aa_Sub1.aSArray5191 = null;
         Class99.aBooleanArrayArray1572 = null;
         Class348_Sub8.aBooleanArrayArray6656 = null;
@@ -566,7 +566,7 @@ abstract class Class318_Sub1_Sub3_Sub3 extends Class318_Sub1_Sub3 {
                 Class24.aClass318_Sub1_Sub3Array357[i] = null;
             Class86.anInt1477 = 0;
         }
-        Class348.aClass318_Sub1Array4293 = null;
+        Node.aClass318_Sub1Array4293 = null;
         Class250.aClass318_Sub1Array3226 = null;
         Class115.aClass318_Sub1Array1754 = null;
         if (Class239_Sub21.aClass318_Sub1Array6066 != null) {

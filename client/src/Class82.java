@@ -8,9 +8,9 @@ import java.io.File;
 import java.io.FileOutputStream;
 
 final class Class82 {
-    static Class45 aClass45_1434;
+    static Js5Archive aClass45_1434;
     static int anInt1435;
-    private final Class45 aClass45_1436;
+    private final Js5Archive aClass45_1436;
     static int anInt1437;
     static int anInt1438;
     int anInt1439;
@@ -262,10 +262,10 @@ final class Class82 {
                             return;
                         }
                         if (string.startsWith("setba")) {
-                            if (string.length() < 6) Applet_Sub1.method94("Invalid buildarea value", i + -36);
+                            if (string.length() < 6) Applet_Sub1.method94("Invalid buildarea cost", i + -36);
                             else {
                                 int i_6_ = (Class348_Sub41.method3156(true, string.substring(6)));
-                                if (i_6_ < 0 || (Class348.method2710(-126, Class226.anInt2964) < i_6_)) Applet_Sub1.method94("Invalid buildarea value", 53);
+                                if (i_6_ < 0 || (Node.method2710(-126, Class226.anInt2964) < i_6_)) Applet_Sub1.method94("Invalid buildarea cost", 53);
                                 else {
                                     Class316.aClass348_Sub51_3959.method3429((byte) 74, (Class316.aClass348_Sub51_3959.aClass239_Sub6_7226), i_6_);
                                     Class14_Sub2.method243(37);
@@ -278,7 +278,7 @@ final class Class82 {
                             return;
                         }
                         if (string.startsWith("rect_debug")) {
-                            if (string.length() < 10) Applet_Sub1.method94("Invalid rect_debug value", -94);
+                            if (string.length() < 10) Applet_Sub1.method94("Invalid rect_debug cost", -94);
                             else {
                                 ha_Sub3.anInt8045 = Class348_Sub41.method3156(true, string.substring(10).trim());
                                 Applet_Sub1.method94(("rect_debug=" + ha_Sub3.anInt8045), -124);
@@ -428,11 +428,11 @@ final class Class82 {
                         if (string.startsWith("pc")) {
                             Class348_Sub47 class348_sub47 = (Class286_Sub3.method2148(Class348_Sub40_Sub22.aClass351_9304, Class348_Sub23_Sub2.aClass77_9029, -97));
                             class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, 0);
-                            int i_12_ = (class348_sub47.aClass348_Sub49_Sub2_7116.anInt7197);
+                            int i_12_ = (class348_sub47.aClass348_Sub49_Sub2_7116.pos);
                             int i_13_ = string.indexOf(" ", 4);
                             class348_sub47.aClass348_Sub49_Sub2_7116.writeString((byte) -5, string.substring(3, i_13_));
                             Class367_Sub4.method3544((class348_sub47.aClass348_Sub49_Sub2_7116), i + -12, string.substring(i_13_));
-                            class348_sub47.aClass348_Sub49_Sub2_7116.method3339(114, (class348_sub47.aClass348_Sub49_Sub2_7116.anInt7197 + -i_12_));
+                            class348_sub47.aClass348_Sub49_Sub2_7116.method3339(114, (class348_sub47.aClass348_Sub49_Sub2_7116.pos + -i_12_));
                             Class348_Sub42_Sub14.method3243(i ^ ~0x49, class348_sub47);
                             return;
                         }
@@ -442,10 +442,10 @@ final class Class82 {
                             return;
                         }
                         if (string.equals("scramblevarcs")) {
-                            for (int i_14_ = 0; (i_14_ < Class77.anIntArray1303.length); i_14_++) {
+                            for (int i_14_ = 0; (i_14_ < Isaac.anIntArray1303.length); i_14_++) {
                                 if (Class286_Sub6.aBooleanArray6270[i_14_]) {
-                                    Class77.anIntArray1303[i_14_] = (int) (Math.random() * 99999.0);
-                                    if (Math.random() > 0.5) Class77.anIntArray1303[i_14_] *= -1;
+                                    Isaac.anIntArray1303[i_14_] = (int) (Math.random() * 99999.0);
+                                    if (Math.random() > 0.5) Isaac.anIntArray1303[i_14_] *= -1;
                                 }
                             }
                             Class318_Sub1_Sub2.method2405(-61);
@@ -518,7 +518,7 @@ final class Class82 {
                             return;
                         }
                         if (string.equals("errormessage")) {
-                            Applet_Sub1.method94(Class79.aClient1367.method81((byte) 102), 102);
+                            Applet_Sub1.method94(NPCType.aClient1367.method81((byte) 102), 102);
                             return;
                         }
                         if (string.equals("heapdump")) {
@@ -569,7 +569,7 @@ final class Class82 {
                         }
                         if (string.startsWith("orthotilesize ")) {
                             int i_23_ = (Class348_Sub41.method3156(true, string.substring(1 + string.indexOf(' '))));
-                            Class186_Sub1.anInt5812 = Class45.anInt666 = i_23_;
+                            Class186_Sub1.anInt5812 = Js5Archive.anInt666 = i_23_;
                             Applet_Sub1.method94("ortho tile size=" + i_23_, -70);
                             Class348_Sub42_Sub3.method3179(0);
                             return;
@@ -653,7 +653,7 @@ final class Class82 {
     }
 
     static final Class318_Sub1_Sub4 method813(int i, int i_25_, int i_26_) {
-        Class357 class357 = Class147.aClass357ArrayArrayArray2029[i][i_25_][i_26_];
+        Class357 class357 = ChatMessage.aClass357ArrayArrayArray2029[i][i_25_][i_26_];
         if (class357 == null) return null;
         return class357.aClass318_Sub1_Sub4_4403;
     }
@@ -695,13 +695,13 @@ final class Class82 {
         }
     }
 
-    Class82(Class230 class230, int i, Class45 class45) {
-        new Class60(64);
+    Class82(Class230 class230, int i, Js5Archive Js5Archive) {
+        new ReferenceCache(64);
         try {
-            aClass45_1436 = class45;
+            aClass45_1436 = Js5Archive;
             this.anInt1439 = aClass45_1436.method407(0, 15);
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("lba.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (class45 != null ? "{...}" : "null") + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("lba.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (Js5Archive != null ? "{...}" : "null") + ')'));
         }
     }
 }

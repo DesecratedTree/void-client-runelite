@@ -6,7 +6,7 @@ final class Class126 implements Interface14 {
     int anInt4981;
     int anInt4982;
     static int[] anIntArray4983;
-    static Class45 aClass45_4984;
+    static Js5Archive aClass45_4984;
     static int anInt4985 = 0;
     static int anInt4986;
     static Class267[] aClass267Array4987;

@@ -92,13 +92,13 @@ final class Class318_Sub1_Sub3_Sub5 extends Class318_Sub1_Sub3 {
         } else aDouble10409 = ((double) i_0_ - aDouble10384) / d;
     }
 
-    final void method2380(ha var_ha, int i, boolean bool, Class318_Sub1 class318_sub1, int i_6_, byte i_7_, int i_8_) {
+    final void method2380(ha var_ha, int i, boolean bool, SceneEntity SceneEntity, int i_6_, byte i_7_, int i_8_) {
         try {
             if (i_7_ > -106) method2474((byte) 11);
             anInt10415++;
             throw new IllegalStateException();
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("to.N(" + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + bool + ',' + (class318_sub1 != null ? "{...}" : "null") + ',' + i_6_ + ',' + i_7_ + ',' + i_8_ + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("to.N(" + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + bool + ',' + (SceneEntity != null ? "{...}" : "null") + ',' + i_6_ + ',' + i_7_ + ',' + i_8_ + ')'));
         }
     }
 
@@ -322,12 +322,12 @@ final class Class318_Sub1_Sub3_Sub5 extends Class318_Sub1_Sub3 {
     static final void method2477(String string, String string_37_, byte i, int i_38_, String string_39_, String string_40_, int i_41_, int i_42_, String string_43_) {
         try {
             anInt10382++;
-            Class147 class147 = Class318_Sub2.aClass147Array6400[99];
+            ChatMessage ChatMessage = Class318_Sub2.aClass147Array6400[99];
             for (int i_44_ = 99; i_44_ > 0; i_44_--)
                 Class318_Sub2.aClass147Array6400[i_44_] = Class318_Sub2.aClass147Array6400[i_44_ + -1];
-            if (class147 == null) class147 = new Class147(i_41_, i_42_, string_39_, string, string_43_, string_40_, i_38_, string_37_);
-            else class147.method1196(i_41_, i_42_, string_43_, string, string_40_, -18691, i_38_, string_39_, string_37_);
-            Class318_Sub2.aClass147Array6400[0] = class147;
+            if (ChatMessage == null) ChatMessage = new ChatMessage(i_41_, i_42_, string_39_, string, string_43_, string_40_, i_38_, string_37_);
+            else ChatMessage.method1196(i_41_, i_42_, string_43_, string, string_40_, -18691, i_38_, string_39_, string_37_);
+            Class318_Sub2.aClass147Array6400[0] = ChatMessage;
             Class348_Sub42_Sub3.anInt9501 = Class311.anInt3918;
             if (i <= -109) za_Sub1.anInt9774++;
         } catch (RuntimeException runtimeexception) {

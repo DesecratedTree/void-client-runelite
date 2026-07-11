@@ -4,7 +4,7 @@
 
 final class Class348_Sub40_Sub17_Sub1 extends Class348_Sub40_Sub17 {
     static int anInt10425;
-    static Class45 aClass45_10426;
+    static Js5Archive aClass45_10426;
     static int anInt10427;
 
     public Class348_Sub40_Sub17_Sub1() {

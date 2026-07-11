@@ -75,7 +75,7 @@ final class Class232 {
             anInt3008 = i_9_;
             if (i_9_ <= 0) aClass258_Sub3_2998 = null;
             else {
-                Class348_Sub49 class348_sub49 = new Class348_Sub49(i_9_ * 2);
+                Packet Packet = new Packet(i_9_ * 2);
                 if (aHa_Sub2_3000.aBoolean7775) {
                     for (int i_19_ = 0; i_8_ > i_19_; i_19_++) {
                         int i_20_ = (i_10_ + (i_19_ + i_11_) * var_s_Sub2.anInt4587);
@@ -83,7 +83,7 @@ final class Class232 {
                             short[] is = (var_s_Sub2.aShortArrayArray8267[i_20_++]);
                             if (is != null) {
                                 for (int i_22_ = 0; (i_22_ < is.length); i_22_++)
-                                    class348_sub49.writeShort((byte) 107, (is[i_22_] & 0xffff));
+                                    Packet.writeShort((byte) 107, (is[i_22_] & 0xffff));
                             }
                         }
                     }
@@ -94,12 +94,12 @@ final class Class232 {
                             short[] is = (var_s_Sub2.aShortArrayArray8267[i_16_++]);
                             if (is != null) {
                                 for (int i_18_ = 0; is.length > i_18_; i_18_++)
-                                    class348_sub49.method3397(87, is[i_18_] & 0xffff);
+                                    Packet.method3397(87, is[i_18_] & 0xffff);
                             }
                         }
                     }
                 }
-                anInterface8_3001 = (aHa_Sub2_3000.method3733(5123, -39, class348_sub49.anInt7197, class348_sub49.aByteArray7154, false));
+                anInterface8_3001 = (aHa_Sub2_3000.method3733(5123, -39, Packet.pos, Packet.data, false));
                 aClass119_Sub2_3011 = new Class119_Sub2(aHa_Sub2_3000, 5123, null, 1);
             }
         } catch (RuntimeException runtimeexception) {

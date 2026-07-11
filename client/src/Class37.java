@@ -42,7 +42,7 @@ final class Class37 {
 
     static final void method358(int i, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_, int i_8_) {
         if (i_8_ != -29494) anInt496 = 32;
-        if (Class316.aClass348_Sub51_3959.aClass239_Sub26_7272.method1838(-32350) != 0 && i != 0 && Class147.anInt2021 < 50 && i_7_ != -1) Class258_Sub2.aClass10Array8531[Class147.anInt2021++] = new Class10((byte) 1, i_7_, i, i_4_, i_5_, i_3_, i_6_, null);
+        if (Class316.aClass348_Sub51_3959.aClass239_Sub26_7272.method1838(-32350) != 0 && i != 0 && ChatMessage.anInt2021 < 50 && i_7_ != -1) Class258_Sub2.aClass10Array8531[ChatMessage.anInt2021++] = new Class10((byte) 1, i_7_, i, i_4_, i_5_, i_3_, i_6_, null);
         anInt490++;
     }
 

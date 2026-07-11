@@ -11,7 +11,7 @@ final class Class348_Sub42_Sub16_Sub2 extends Class348_Sub42_Sub16 {
     static int anInt10462;
     static int anInt10463 = 0;
     static int anInt10464;
-    static Class356 aClass356_10465 = new Class356(16);
+    static IterableHashTable aClass356_10465 = new IterableHashTable(16);
 
     static final boolean method3263(boolean bool) {
         if (bool != true) return false;
@@ -31,17 +31,17 @@ final class Class348_Sub42_Sub16_Sub2 extends Class348_Sub42_Sub16 {
         return 100;
     }
 
-    static final void method3265(int i, Class348 class348, Class348 class348_0_) {
+    static final void method3265(int i, Node Node, Node class348_0_) {
         try {
-            if (class348.aClass348_4295 != null) class348.method2715((byte) 27);
+            if (Node.previous != null) Node.method2715((byte) 27);
             int i_1_ = -109 % ((6 - i) / 43);
             anInt10462++;
-            class348.aClass348_4295 = class348_0_.aClass348_4295;
-            class348.aClass348_4294 = class348_0_;
-            class348.aClass348_4295.aClass348_4294 = class348;
-            class348.aClass348_4294.aClass348_4295 = class348;
+            Node.previous = class348_0_.previous;
+            Node.next = class348_0_;
+            Node.previous.next = Node;
+            Node.next.previous = Node;
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("qh.K(" + i + ',' + (class348 != null ? "{...}" : "null") + ',' + (class348_0_ != null ? "{...}" : "null") + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("qh.K(" + i + ',' + (Node != null ? "{...}" : "null") + ',' + (class348_0_ != null ? "{...}" : "null") + ')'));
         }
     }
 

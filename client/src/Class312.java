@@ -3,7 +3,7 @@
  */
 
 final class Class312 {
-    private Class348 aClass348_3922;
+    private Node aClass348_3922;
     private Class262 aClass262_3923;
     static int anInt3924;
     static Class114 aClass114_3925;
@@ -15,16 +15,16 @@ final class Class312 {
     static int anInt3931;
     static int anInt3932;
 
-    final Class348 method2327(byte i) {
+    final Node method2327(byte i) {
         anInt3929++;
-        Class348 class348 = (aClass262_3923.aClass348_3334.aClass348_4294);
+        Node Node = (aClass262_3923.aClass348_3334.next);
         if (i != -53) method2329(-21);
-        if (aClass262_3923.aClass348_3334 == class348) {
+        if (aClass262_3923.aClass348_3334 == Node) {
             aClass348_3922 = null;
             return null;
         }
-        aClass348_3922 = class348.aClass348_4294;
-        return class348;
+        aClass348_3922 = Node.next;
+        return Node;
     }
 
     final void method2328(Class262 class262, int i) {
@@ -33,16 +33,16 @@ final class Class312 {
         aClass262_3923 = class262;
     }
 
-    final Class348 method2329(int i) {
+    final Node method2329(int i) {
         anInt3928++;
         if (i != 10) method2330((byte) -25);
-        Class348 class348 = aClass348_3922;
-        if (aClass262_3923.aClass348_3334 == class348) {
+        Node Node = aClass348_3922;
+        if (aClass262_3923.aClass348_3334 == Node) {
             aClass348_3922 = null;
             return null;
         }
-        aClass348_3922 = class348.aClass348_4294;
-        return class348;
+        aClass348_3922 = Node.next;
+        return Node;
     }
 
     static final void method2330(byte i) {
@@ -51,10 +51,10 @@ final class Class312 {
         if (i == 86) {
             Class348_Sub40_Sub25.anInt9341 = 0;
             Class348_Sub40_Sub36.aClass114_9456 = null;
-            Class299.aClass348_Sub49_Sub2_3813.anInt7197 = 0;
+            Class299.aClass348_Sub49_Sub2_3813.pos = 0;
             Class238.aClass114_3133 = null;
             Class239.aClass114_3145 = null;
-            Class348_Sub50.anInt7213 = 0;
+            StringNode.anInt7213 = 0;
             Class348_Sub3.aClass114_6584 = null;
             Class289.anInt3699 = 0;
             Class348_Sub40_Sub39.method3153(0);
@@ -69,7 +69,7 @@ final class Class312 {
             Class363.method3515(i + 36);
             Class9.anInt167 = Class318_Sub1_Sub5_Sub2.anInt10163 = -1;
             Class348_Sub40_Sub21.anInt9282 = 1;
-            Class348_Sub49.method3379(2, 10);
+            Packet.method3379(2, 10);
             for (int i_2_ = 0; i_2_ < 100; i_2_++)
                 Class152.aBooleanArray2076[i_2_] = true;
             Class286_Sub2.method2145(-24498);

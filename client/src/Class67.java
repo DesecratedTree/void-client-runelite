@@ -11,8 +11,8 @@ final class Class67 implements Interface1 {
     static int anInt4647;
     static int[] anIntArray4648 = new int[14];
     private Class324 aClass324_4649;
-    private final Class45 aClass45_4650;
-    private final Class45 aClass45_4651;
+    private final Js5Archive aClass45_4650;
+    private final Js5Archive aClass45_4651;
 
     public static void method716(int i) {
         if (i == 1) {
@@ -59,33 +59,33 @@ final class Class67 implements Interface1 {
         if (i == 10286) aClass324_4649 = (Class348_Sub8.aHa6654.method3686(class143, Class207.method1523(aClass45_4650, aClass158_4646.anInt4944), true));
     }
 
-    Class67(Class45 class45, Class45 class45_3_, Class158 class158) {
+    Class67(Js5Archive Js5Archive, Js5Archive class45_3_, Class158 class158) {
         try {
             aClass45_4651 = class45_3_;
             aClass158_4646 = class158;
-            aClass45_4650 = class45;
+            aClass45_4650 = Js5Archive;
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("kd.<init>(" + (class45 != null ? "{...}" : "null") + ',' + (class45_3_ != null ? "{...}" : "null") + ',' + (class158 != null ? "{...}" : "null") + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("kd.<init>(" + (Js5Archive != null ? "{...}" : "null") + ',' + (class45_3_ != null ? "{...}" : "null") + ',' + (class158 != null ? "{...}" : "null") + ')'));
         }
     }
 
-    static final void method718(Class318_Sub1[] class318_sub1s, int i, int i_4_) {
+    static final void method718(SceneEntity[] class318_sub1s, int i, int i_4_) {
         if (i < i_4_) {
             int i_5_ = (i + i_4_) / 2;
             int i_6_ = i;
-            Class318_Sub1 class318_sub1 = class318_sub1s[i_5_];
+            SceneEntity SceneEntity = class318_sub1s[i_5_];
             class318_sub1s[i_5_] = class318_sub1s[i_4_];
-            class318_sub1s[i_4_] = class318_sub1;
-            int i_7_ = class318_sub1.anInt6389;
+            class318_sub1s[i_4_] = SceneEntity;
+            int i_7_ = SceneEntity.anInt6389;
             for (int i_8_ = i; i_8_ < i_4_; i_8_++) {
                 if (class318_sub1s[i_8_].anInt6389 > i_7_ + (i_8_ & 0x1)) {
-                    Class318_Sub1 class318_sub1_9_ = class318_sub1s[i_8_];
+                    SceneEntity class318_sub1_9_ = class318_sub1s[i_8_];
                     class318_sub1s[i_8_] = class318_sub1s[i_6_];
                     class318_sub1s[i_6_++] = class318_sub1_9_;
                 }
             }
             class318_sub1s[i_4_] = class318_sub1s[i_6_];
-            class318_sub1s[i_6_] = class318_sub1;
+            class318_sub1s[i_6_] = SceneEntity;
             method718(class318_sub1s, i, i_6_ - 1);
             method718(class318_sub1s, i_6_ + 1, i_4_);
         }

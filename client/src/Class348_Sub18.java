@@ -5,7 +5,7 @@
 import java.awt.*;
 import java.lang.reflect.Constructor;
 
-final class Class348_Sub18 extends Class348 {
+final class Class348_Sub18 extends Node {
     static int anInt6804;
     static int anInt6805;
     private final int anInt6806;
@@ -77,7 +77,7 @@ final class Class348_Sub18 extends Class348 {
         Class369_Sub3.method3573(-15326);
         Class164.method1277((byte) 62);
         Class84.method821(-126);
-        Class318.method2375(16127);
+        Linkable.method2375(16127);
         if (Class55_Sub1.aClass364_5271 != Class8.aClass364_165) {
             for (int i_6_ = 0; Class308.aByteArrayArray3882.length > i_6_; i_6_++)
                 Class308.aByteArrayArray3882[i_6_] = null;
@@ -92,11 +92,11 @@ final class Class348_Sub18 extends Class348 {
             Class66.aClass60_1174.method590(0);
             Class348_Sub8.aHa6654.method3663();
             Class238_Sub1.method1707(26469);
-            Class348_Sub49.method3354(-52);
+            Packet.method3354(-52);
             Class348_Sub29.aClass45_6909.method412((byte) -124);
             Class186.aClass45_2490.method412((byte) -119);
             Class95.aClass45_1541.method412((byte) 37);
-            Class348_Sub35.aClass45_6980.method412((byte) -113);
+            IntNode.aClass45_6980.method412((byte) -113);
             Class129.aClass45_1878.method412((byte) -116);
             Class367_Sub10.aClass45_7382.method412((byte) -110);
             Class59_Sub2_Sub1.aClass45_8667.method412((byte) 64);

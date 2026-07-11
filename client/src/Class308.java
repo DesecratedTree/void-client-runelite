@@ -12,7 +12,7 @@ final class Class308 {
     static int anInt3885;
     static int anInt3886;
     private Class348_Sub42 aClass348_Sub42_3887 = new Class348_Sub42();
-    private final Class356 aClass356_3888;
+    private final IterableHashTable aClass356_3888;
     private Class107 aClass107_3889 = new Class107();
     private final int anInt3890;
     private int anInt3891;
@@ -91,7 +91,7 @@ final class Class308 {
         for (i_1_ = 1; i_1_ + i_1_ < i; i_1_ += i_1_) {
             /* empty */
         }
-        aClass356_3888 = new Class356(i_1_);
+        aClass356_3888 = new IterableHashTable(i_1_);
     }
 
     static {

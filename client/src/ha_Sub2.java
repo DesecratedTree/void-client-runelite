@@ -567,10 +567,10 @@ final class ha_Sub2 extends ha {
 
     final synchronized void method3737(int i, byte i_31_, int i_32_) {
         anInt7676++;
-        Class348_Sub35 class348_sub35 = new Class348_Sub35(i_32_);
-        class348_sub35.aLong4291 = i;
+        IntNode IntNode = new IntNode(i_32_);
+        IntNode.key = i;
         int i_33_ = -124 / ((i_31_ - 79) / 39);
-        aClass262_7752.method1999(class348_sub35, -20180);
+        aClass262_7752.method1999(IntNode, -20180);
     }
 
     final void method3738(int i, int i_34_) {
@@ -711,8 +711,13 @@ final class ha_Sub2 extends ha {
         anInt7680++;
         if (aCanvas7575 != null) {
             Dimension dimension = aCanvas7575.getSize();
-            anInt7645 = dimension.width;
-            anInt7523 = dimension.height;
+            if (Applet_Sub1.shouldScaleOpenGLFrame()) {
+                anInt7645 = Class321.anInt4017;
+                anInt7523 = Class348_Sub42_Sub8_Sub2.anInt10432;
+            } else {
+                anInt7645 = dimension.width;
+                anInt7523 = dimension.height;
+            }
         } else anInt7645 = anInt7523 = 0;
         if (i > 61) {
             if (anInterface11_7740 == null) {
@@ -1050,7 +1055,7 @@ final class ha_Sub2 extends ha {
         anInterface11Array7743 = new Interface11[4];
         anInt7746 = -1;
         new Class107();
-        new Class356(16);
+        new IterableHashTable(16);
         aClass262_7749 = new Class262();
         aClass262_7751 = new Class262();
         aClass262_7752 = new Class262();
@@ -1339,9 +1344,9 @@ final class ha_Sub2 extends ha {
         int i_122_ = 0;
         i &= 0x7fffffff;
         while (!aClass262_7751.method2002((byte) 18)) {
-            Class348_Sub35 class348_sub35 = (Class348_Sub35) aClass262_7751.method1997(8);
-            Class328_Sub3.anIntArray6522[i_122_++] = (int) class348_sub35.aLong4291;
-            this.anInt7747 -= class348_sub35.anInt6976;
+            IntNode IntNode = (IntNode) aClass262_7751.method1997(8);
+            Class328_Sub3.anIntArray6522[i_122_++] = (int) IntNode.key;
+            this.anInt7747 -= IntNode.anInt6976;
             if (i_122_ == 1000) {
                 OpenGL.glDeleteBuffersARB(i_122_, Class328_Sub3.anIntArray6522, 0);
                 i_122_ = 0;
@@ -1352,9 +1357,9 @@ final class ha_Sub2 extends ha {
             i_122_ = 0;
         }
         while (!aClass262_7752.method2002((byte) 18)) {
-            Class348_Sub35 class348_sub35 = (Class348_Sub35) aClass262_7752.method1997(8);
-            Class328_Sub3.anIntArray6522[i_122_++] = (int) class348_sub35.aLong4291;
-            this.anInt7748 -= class348_sub35.anInt6976;
+            IntNode IntNode = (IntNode) aClass262_7752.method1997(8);
+            Class328_Sub3.anIntArray6522[i_122_++] = (int) IntNode.key;
+            this.anInt7748 -= IntNode.anInt6976;
             if (i_122_ == 1000) {
                 OpenGL.glDeleteTextures(i_122_, Class328_Sub3.anIntArray6522, 0);
                 i_122_ = 0;
@@ -1365,8 +1370,8 @@ final class ha_Sub2 extends ha {
             i_122_ = 0;
         }
         while (!aClass262_7753.method2002((byte) 18)) {
-            Class348_Sub35 class348_sub35 = (Class348_Sub35) aClass262_7753.method1997(8);
-            Class328_Sub3.anIntArray6522[i_122_++] = class348_sub35.anInt6976;
+            IntNode IntNode = (IntNode) aClass262_7753.method1997(8);
+            Class328_Sub3.anIntArray6522[i_122_++] = IntNode.anInt6976;
             if (i_122_ == 1000) {
                 OpenGL.glDeleteFramebuffersEXT(i_122_, Class328_Sub3.anIntArray6522, 0);
                 i_122_ = 0;
@@ -1377,9 +1382,9 @@ final class ha_Sub2 extends ha {
             i_122_ = 0;
         }
         while (!aClass262_7754.method2002((byte) 18)) {
-            Class348_Sub35 class348_sub35 = (Class348_Sub35) aClass262_7754.method1997(8);
-            Class328_Sub3.anIntArray6522[i_122_++] = (int) class348_sub35.aLong4291;
-            anInt7750 -= class348_sub35.anInt6976;
+            IntNode IntNode = (IntNode) aClass262_7754.method1997(8);
+            Class328_Sub3.anIntArray6522[i_122_++] = (int) IntNode.key;
+            anInt7750 -= IntNode.anInt6976;
             if (i_122_ == 1000) {
                 OpenGL.glDeleteRenderbuffersEXT(i_122_, Class328_Sub3.anIntArray6522, 0);
                 i_122_ = 0;
@@ -1390,20 +1395,20 @@ final class ha_Sub2 extends ha {
             boolean bool = false;
         }
         while (!aClass262_7749.method2002((byte) 18)) {
-            Class348_Sub35 class348_sub35 = (Class348_Sub35) aClass262_7749.method1997(8);
-            OpenGL.glDeleteLists((int) class348_sub35.aLong4291, class348_sub35.anInt6976);
+            IntNode IntNode = (IntNode) aClass262_7749.method1997(8);
+            OpenGL.glDeleteLists((int) IntNode.key, IntNode.anInt6976);
         }
         while (!aClass262_7755.method2002((byte) 18)) {
-            Class348 class348 = aClass262_7755.method1997(8);
-            OpenGL.glDeleteProgramARB((int) class348.aLong4291);
+            Node Node = aClass262_7755.method1997(8);
+            OpenGL.glDeleteProgramARB((int) Node.key);
         }
         while (!aClass262_7756.method2002((byte) 18)) {
-            Class348 class348 = aClass262_7756.method1997(8);
-            OpenGL.glDeleteObjectARB(class348.aLong4291);
+            Node Node = aClass262_7756.method1997(8);
+            OpenGL.glDeleteObjectARB(Node.key);
         }
         while (!aClass262_7749.method2002((byte) 18)) {
-            Class348_Sub35 class348_sub35 = (Class348_Sub35) aClass262_7749.method1997(8);
-            OpenGL.glDeleteLists((int) class348_sub35.aLong4291, class348_sub35.anInt6976);
+            IntNode IntNode = (IntNode) aClass262_7749.method1997(8);
+            OpenGL.glDeleteLists((int) IntNode.key, IntNode.anInt6976);
         }
         aClass354_7723.method3469(8218);
         if (E() > 100663296 && 60000L + aLong7757 < Class62.method599(-96)) {
@@ -1506,10 +1511,10 @@ final class ha_Sub2 extends ha {
 
     final synchronized void method3765(byte i, int i_137_) {
         anInt7566++;
-        Class348 class348 = new Class348();
-        class348.aLong4291 = i_137_;
+        Node Node = new Node();
+        Node.key = i_137_;
         if (i <= 64) method3685(null, -38);
-        aClass262_7755.method1999(class348, -20180);
+        aClass262_7755.method1999(Node, -20180);
     }
 
     final void method3766(byte i, Class101_Sub3 class101_sub3) {
@@ -1619,8 +1624,8 @@ final class ha_Sub2 extends ha {
     }
 
     final void method3652() {
-        for (Class348 class348 = aClass262_7732.method1995(4); class348 != null; class348 = aClass262_7732.method1990((byte) 55))
-            ((za_Sub1) class348).method3440(-82);
+        for (Node Node = aClass262_7732.method1995(4); Node != null; Node = aClass262_7732.method1990((byte) 55))
+            ((za_Sub1) Node).method3440(-82);
         anInt7563++;
         if (aClass18_7720 != null) aClass18_7720.method279((byte) -126);
         if (anOpenGL7664 != null) {
@@ -1683,9 +1688,9 @@ final class ha_Sub2 extends ha {
         try {
             if (bool != false) aClass262_7751 = null;
             anInt7533++;
-            Class348 class348 = new Class348();
-            class348.aLong4291 = l;
-            aClass262_7756.method1999(class348, -20180);
+            Node Node = new Node();
+            Node.key = l;
+            aClass262_7756.method1999(Node, -20180);
         } catch (RuntimeException runtimeexception) {
             throw Class348_Sub17.method2929(runtimeexception, "qo.CD(" + l + ',' + bool + ')');
         }
@@ -2071,7 +2076,7 @@ final class ha_Sub2 extends ha {
                     class348_sub49_sub1.method3399(18291, 0.0F);
                     class348_sub49_sub1.method3399(18291, 0.0F);
                 }
-                anInterface2_7797 = method3731(2, false, 20, (class348_sub49_sub1.aByteArray7154), (class348_sub49_sub1.anInt7197));
+                anInterface2_7797 = method3731(2, false, 20, (class348_sub49_sub1.data), (class348_sub49_sub1.pos));
                 this.aClass123_7849 = new Class123(anInterface2_7797, 5126, 3, 0);
                 this.aClass123_7833 = new Class123(anInterface2_7797, 5126, 2, 12);
                 aClass233_7711.method1654(643267468, this);
@@ -2238,9 +2243,9 @@ final class ha_Sub2 extends ha {
 
     final synchronized void method3780(int i, int i_235_, int i_236_) {
         anInt7616++;
-        Class348_Sub35 class348_sub35 = new Class348_Sub35(i);
-        class348_sub35.aLong4291 = i_236_;
-        aClass262_7751.method1999(class348_sub35, -20180);
+        IntNode IntNode = new IntNode(i);
+        IntNode.key = i_236_;
+        aClass262_7751.method1999(IntNode, -20180);
         if (i_235_ != -1) method3733(-17, -42, -40, null, true);
     }
 
@@ -2818,8 +2823,8 @@ final class ha_Sub2 extends ha {
 
     final synchronized void method3800(int i, int i_299_) {
         anInt7570++;
-        Class348_Sub35 class348_sub35 = new Class348_Sub35(i_299_);
-        if (i > 71) aClass262_7753.method1999(class348_sub35, -20180);
+        IntNode IntNode = new IntNode(i_299_);
+        if (i > 71) aClass262_7753.method1999(IntNode, -20180);
     }
 
     final void method3698() {
@@ -2918,15 +2923,15 @@ final class ha_Sub2 extends ha {
         Class88.anInt1497 = 0;
         int[] is = Class286_Sub7.anIntArray6290;
         for (int i_322_ = 0; (i_322_ < Class150.anInt2057 + i_321_); i_322_++) {
-            Class79 class79 = null;
+            NPCType NPCType = null;
             Class318_Sub1_Sub3_Sub3 class318_sub1_sub3_sub3;
             if (i_321_ > i_322_) class318_sub1_sub3_sub3 = (Class294.aPlayerArray5058[is[i_322_]]);
             else {
                 class318_sub1_sub3_sub3 = (((Class348_Sub22) Class282.aClass356_3654.method3480(Class74.anIntArray1233[i_322_ + -i_321_], i_316_ ^ ~0x1775)).aNpc_6859);
-                class79 = ((Npc) class318_sub1_sub3_sub3).aClass79_10505;
-                if (class79.anIntArray1377 != null) {
-                    class79 = class79.method794((Class318_Sub1_Sub3_Sub3.aClass170_10209), i_316_ + -3);
-                    if (class79 == null) continue;
+                NPCType = ((Npc) class318_sub1_sub3_sub3).definition;
+                if (NPCType.multinpcs != null) {
+                    NPCType = NPCType.method794((Class318_Sub1_Sub3_Sub3.aClass170_10209), i_316_ + -3);
+                    if (NPCType == null) continue;
                 }
             }
             if ((class318_sub1_sub3_sub3.anInt10285 >= 0) && (((class318_sub1_sub3_sub3.anInt10301) == Class239_Sub15.anInt6006) || ((Class132.aPlayer_1907.plane) == class318_sub1_sub3_sub3.plane))) {
@@ -2947,7 +2952,7 @@ final class ha_Sub2 extends ha {
                         int i_324_ = -1;
                         int i_325_ = 1;
                         if (i_321_ <= i_322_) {
-                            i_324_ = class79.anInt1373;
+                            i_324_ = NPCType.healthBarSprite;
                             if (i_324_ == -1) i_324_ = (class318_sub1_sub3_sub3.method2422((byte) 72).anInt2909);
                         } else {
                             Player player = (Class294.aPlayerArray5058[is[i_322_]]);
@@ -2989,7 +2994,7 @@ final class ha_Sub2 extends ha {
                             Class105 class105_332_ = (Class239_Sub2.aClass105Array5857[(!class318_sub1_sub3_sub3.aBoolean10226 ? 1 : 3)]);
                             int i_333_ = -1;
                             if (class318_sub1_sub3_sub3 instanceof Npc) {
-                                i_333_ = class79.anInt1382;
+                                i_333_ = NPCType.timerbarSprite;
                                 if (i_333_ == -1) i_333_ = (class318_sub1_sub3_sub3.method2422((byte) 72).anInt2923);
                             } else i_333_ = (class318_sub1_sub3_sub3.method2422((byte) 72).anInt2923);
                             if (i_333_ != -1) {
@@ -3041,8 +3046,8 @@ final class ha_Sub2 extends ha {
                                 Class338.method2663(-5590, (-12 + Class239_Sub21.anIntArray6062[0] + i_317_), (Class239_Sub21.anIntArray6062[0] + i_317_ - (12 + -class105.method966())), i_323_, i_323_ - -class105.method980());
                                 i_323_ -= 2;
                             }
-                        } else if (class79.anInt1375 >= 0 && (class79.anInt1375 < Class264.aClass105Array3378.length)) {
-                            Class105 class105 = (Class264.aClass105Array3378[class79.anInt1375]);
+                        } else if (NPCType.headIcon >= 0 && (NPCType.headIcon < Class264.aClass105Array3378.length)) {
+                            Class105 class105 = (Class264.aClass105Array3378[NPCType.headIcon]);
                             i_323_ -= 25;
                             class105.method974((i_317_ + (Class239_Sub21.anIntArray6062[0]) + -(class105.method971() >> 1)), i_323_);
                             Class338.method2663(-5590, (Class239_Sub21.anIntArray6062[0] + (i_317_ - (class105.method971() >> 1))), (Class239_Sub21.anIntArray6062[0] + (i_317_ - (class105.method971() >> 1)) + class105.method966()), i_323_, class105.method980() + i_323_);
@@ -3346,7 +3351,7 @@ final class ha_Sub2 extends ha {
                 }
             }
         }
-        for (int i_433_ = 0; i_433_ < Class45.anInt669; i_433_++) {
+        for (int i_433_ = 0; i_433_ < Js5Archive.anInt669; i_433_++) {
             int i_434_ = Class258_Sub4.anIntArray8557[i_433_];
             Class318_Sub1_Sub3_Sub3 class318_sub1_sub3_sub3;
             if (i_434_ >= 2048) class318_sub1_sub3_sub3 = (((Class348_Sub22) Class282.aClass356_3654.method3480(-2048 + i_434_, -6008)).aNpc_6859);
@@ -3643,6 +3648,30 @@ final class ha_Sub2 extends ha {
 
     final int[] na(int i, int i_474_, int i_475_, int i_476_) {
         anInt7622++;
+        if (Applet_Sub1.shouldScaleOpenGLFrame() && aCanvas7575 != null) {
+            Dimension dimension = aCanvas7575.getSize();
+            int actualH = dimension.height;
+            double scaleX = (double) dimension.width / Math.max(1, this.anInt7688);
+            double scaleY = (double) actualH / Math.max(1, this.anInt7641);
+            int px = (int) Math.floor(i * scaleX);
+            int py = (int) Math.floor(i_474_ * scaleY);
+            int pw = Math.max(1, (int) Math.ceil(i_475_ * scaleX));
+            int ph = Math.max(1, (int) Math.ceil(i_476_ * scaleY));
+            int[] pixels = new int[pw * ph];
+            for (int r = 0; ph > r; r++)
+                OpenGL.glReadPixelsi(px, (-py + actualH + -r), pw, 1, 32993, this.anInt7812, pixels, pw * r);
+            int[] out = new int[i_475_ * i_476_];
+            for (int y = 0; y < i_476_; y++) {
+                int srcY = Math.min(ph - 1, (int) ((y + 0.5) * scaleY));
+                int rowOff = srcY * pw;
+                int dstOff = y * i_475_;
+                for (int x = 0; x < i_475_; x++) {
+                    int srcX = Math.min(pw - 1, (int) ((x + 0.5) * scaleX));
+                    out[dstOff + x] = pixels[rowOff + srcX];
+                }
+            }
+            return out;
+        }
         int[] is = new int[i_475_ * i_476_];
         for (int i_477_ = 0; i_476_ > i_477_; i_477_++)
             OpenGL.glReadPixelsi(i, (-i_474_ + this.anInt7641 + -i_477_), i_475_, 1, 32993, this.anInt7812, is, i_475_ * i_477_);
@@ -3650,7 +3679,12 @@ final class ha_Sub2 extends ha {
     }
 
     private final void method3809(boolean bool) {
-        OpenGL.glViewport(anInt7770, anInt7867, this.anInt7688, this.anInt7641);
+        if (Applet_Sub1.shouldScaleOpenGLFrame() && aCanvas7575 != null) {
+            Dimension dimension = aCanvas7575.getSize();
+            OpenGL.glViewport(anInt7770, anInt7867, dimension.width, dimension.height);
+        } else {
+            OpenGL.glViewport(anInt7770, anInt7867, this.anInt7688, this.anInt7641);
+        }
         anInt7718++;
         if (bool != true) this.aClass64_Sub3_7780 = null;
     }
@@ -3663,16 +3697,25 @@ final class ha_Sub2 extends ha {
     final synchronized void method3810(int i, int i_478_, int i_479_) {
         if (i_479_ < -57) {
             anInt7677++;
-            Class348_Sub35 class348_sub35 = new Class348_Sub35(i_478_);
-            class348_sub35.aLong4291 = i;
-            aClass262_7754.method1999(class348_sub35, -20180);
+            IntNode IntNode = new IntNode(i_478_);
+            IntNode.key = i;
+            aClass262_7754.method1999(IntNode, -20180);
         }
     }
 
     private final void method3811(byte i) {
         anInt7690++;
         if (i == 11) {
-            if (anInt7855 >= anInt7868 && anInt7773 <= anInt7787) OpenGL.glScissor(anInt7770 + anInt7868, (anInt7867 + this.anInt7641 - anInt7787), -anInt7868 + anInt7855, -anInt7773 + anInt7787);
+            if (Applet_Sub1.shouldScaleOpenGLFrame() && aCanvas7575 != null && anInt7855 >= anInt7868 && anInt7773 <= anInt7787) {
+                Dimension dimension = aCanvas7575.getSize();
+                double scaleX = (double) dimension.width / Math.max(1, this.anInt7688);
+                double scaleY = (double) dimension.height / Math.max(1, this.anInt7641);
+                OpenGL.glScissor(
+                        anInt7770 + (int) Math.floor(anInt7868 * scaleX),
+                        anInt7867 + dimension.height - (int) Math.ceil(anInt7787 * scaleY),
+                        Math.max(0, (int) Math.ceil((-anInt7868 + anInt7855) * scaleX)),
+                        Math.max(0, (int) Math.ceil((-anInt7773 + anInt7787) * scaleY)));
+            } else if (anInt7855 >= anInt7868 && anInt7773 <= anInt7787) OpenGL.glScissor(anInt7770 + anInt7868, (anInt7867 + this.anInt7641 - anInt7787), -anInt7868 + anInt7855, -anInt7773 + anInt7787);
             else OpenGL.glScissor(0, 0, 0, 0);
         }
     }

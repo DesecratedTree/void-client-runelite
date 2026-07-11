@@ -3,7 +3,7 @@
  */
 
 final class Class10 {
-    Class318_Sub1 aClass318_Sub1_172;
+    SceneEntity aClass318_Sub1_172;
     int anInt173;
     static int[][] anIntArrayArray174 = {{0, 2}, {0, 2}, {0, 0, 2}, {2, 0, 0}, {0, 2, 0}, {0, 0, 2}, {0, 5, 1, 4}, {0, 4, 4, 4}, {4, 4, 4, 0}, {6, 6, 6, 2, 2, 2}, {2, 2, 2, 6, 6, 6}, {0, 11, 6, 6, 6, 4}, {0, 2}, {0, 4, 4, 4}, {0, 4, 4, 4}};
     static int anInt175;
@@ -44,7 +44,7 @@ final class Class10 {
     static final boolean method219(int i, boolean bool, int i_0_) {
         if (bool != false) return false;
         anInt190++;
-        return (i & 0x800) != 0 | Class278.method2077(-106, i_0_, i) || Class348_Sub42_Sub8_Sub2.method3200(i, i_0_, (byte) 88);
+        return (i & 0x800) != 0 | NPCTypeList.method2077(-106, i_0_, i) || Class348_Sub42_Sub8_Sub2.method3200(i, i_0_, (byte) 88);
     }
 
     final boolean method220(byte i) {
@@ -53,7 +53,7 @@ final class Class10 {
         return this.aByte180 == 2 || this.aByte180 == 3;
     }
 
-    Class10(byte i, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_, Class318_Sub1 class318_sub1) {
+    Class10(byte i, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_, SceneEntity SceneEntity) {
         this.anInt177 = i_2_;
         this.anInt184 = i_4_;
         this.anInt188 = i_3_;
@@ -61,7 +61,7 @@ final class Class10 {
         this.anInt185 = i_1_;
         this.aByte180 = i;
         this.anInt173 = i_6_;
-        this.aClass318_Sub1_172 = class318_sub1;
+        this.aClass318_Sub1_172 = SceneEntity;
     }
 
     static {

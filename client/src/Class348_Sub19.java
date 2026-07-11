@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-abstract class Class348_Sub19 extends Class348 {
+abstract class Class348_Sub19 extends Node {
     int anInt6824;
 
     public Class348_Sub19() {

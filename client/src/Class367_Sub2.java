@@ -31,8 +31,8 @@ final class Class367_Sub2 extends Class367 {
                     class318_sub1_sub2.aClass318_Sub1_6379 = Class250.aClass318_Sub1Array3226[i_3_];
                     Class250.aClass318_Sub1Array3226[i_3_] = class318_sub1_sub2;
                 } else {
-                    class318_sub1_sub2.aClass318_Sub1_6379 = Class348.aClass318_Sub1Array4293[i_3_];
-                    Class348.aClass318_Sub1Array4293[i_3_] = class318_sub1_sub2;
+                    class318_sub1_sub2.aClass318_Sub1_6379 = Node.aClass318_Sub1Array4293[i_3_];
+                    Node.aClass318_Sub1Array4293[i_3_] = class318_sub1_sub2;
                     Class348_Sub16_Sub2.aBoolean8870 = true;
                 }
             } else {
@@ -56,15 +56,15 @@ final class Class367_Sub2 extends Class367 {
         }
     }
 
-    Class367_Sub2(Class377 class377, Class45 class45, Class269 class269) {
+    Class367_Sub2(Class377 class377, Js5Archive Js5Archive, Class269 class269) {
         super(class377);
         try {
             aClass377_7296 = class377;
             aClass269_7294 = class269;
-            if (class45 == null || !aClass269_7294.method2039(100) || !aClass377_7296.aBoolean9923) aClass193_7293 = null;
-            else aClass193_7293 = za_Sub2.method3442(34336, class45.method391("gl", "transparent_water", -29832), aClass377_7296, 4);
+            if (Js5Archive == null || !aClass269_7294.method2039(100) || !aClass377_7296.aBoolean9923) aClass193_7293 = null;
+            else aClass193_7293 = za_Sub2.method3442(34336, Js5Archive.method391("gl", "transparent_water", -29832), aClass377_7296, 4);
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("ov.<init>(" + (class377 != null ? "{...}" : "null") + ',' + (class45 != null ? "{...}" : "null") + ',' + (class269 != null ? "{...}" : "null") + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("ov.<init>(" + (class377 != null ? "{...}" : "null") + ',' + (Js5Archive != null ? "{...}" : "null") + ',' + (class269 != null ? "{...}" : "null") + ')'));
         }
     }
 

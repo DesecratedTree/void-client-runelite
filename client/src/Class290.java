@@ -30,9 +30,11 @@ final class Class290 {
         if (i == -9) {
             Class239_Sub19.anInt6043 <<= 2;
             if (Class348_Sub8.aHa6654.method3670()) Class239_Sub19.anInt6043 += 512;
-            Class226.method1626(1, false);
         }
         Class239_Sub19.anInt6043 = (int) (Class239_Sub19.anInt6043 * Loader.CULLING_DISTANCE_MULTIPLIER);
+        if (i == -9) {
+            Class226.method1626(1, false);
+        }
     }
 
     final boolean method2197(byte i) {

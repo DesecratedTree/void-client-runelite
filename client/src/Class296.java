@@ -112,7 +112,7 @@ final class Class296 {
                 int i_17_ = 0xff & is[i_11_];
                 int i_18_ = anIntArray3766[i_17_];
                 int i_19_ = aByteArray3769[i_17_];
-                if (i_19_ == 0) throw new RuntimeException("No codeword for data value " + i_17_);
+                if (i_19_ == 0) throw new RuntimeException("No codeword for data cost " + i_17_);
                 int i_20_ = i_16_ >> 3;
                 int i_21_ = i_16_ & 0x7;
                 i_15_ &= -i_21_ >> 31;

@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-final class Class318_Sub7 extends Class318 {
+final class Class318_Sub7 extends Linkable {
     Class243 aClass243_6433;
     private int anInt6434 = 0;
     private final long aLong6435;
@@ -73,11 +73,11 @@ final class Class318_Sub7 extends Class318 {
         var_ha.method3668(-2 + i, 18 + i_0_, i_4_, 1 + i_1_, -19 + i_3_, 115);
     }
 
-    static final boolean method2510(Class45 class45, Class348_Sub16_Sub3 class348_sub16_sub3, Class45 class45_5_, boolean bool, Class279 class279, Class45 class45_6_) {
+    static final boolean method2510(Js5Archive Js5Archive, Class348_Sub16_Sub3 class348_sub16_sub3, Js5Archive class45_5_, boolean bool, Class279 class279, Js5Archive class45_6_) {
         try {
             Class318_Sub1_Sub4.aClass279_8764 = class279;
             Class98.aClass348_Sub16_Sub3_1564 = class348_sub16_sub3;
-            Class43.aClass45_611 = class45;
+            Class43.aClass45_611 = Js5Archive;
             Class367_Sub9.aClass45_7371 = class45_6_;
             Class333.aClass45_4147 = class45_5_;
             Class367_Sub3.anIntArray7299 = new int[16];
@@ -87,7 +87,7 @@ final class Class318_Sub7 extends Class318 {
                 Class367_Sub3.anIntArray7299[i] = 255;
             return true;
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("rba.G(" + (class45 != null ? "{...}" : "null") + ',' + (class348_sub16_sub3 != null ? "{...}" : "null") + ',' + (class45_5_ != null ? "{...}" : "null") + ',' + bool + ',' + (class279 != null ? "{...}" : "null") + ',' + (class45_6_ != null ? "{...}" : "null") + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("rba.G(" + (Js5Archive != null ? "{...}" : "null") + ',' + (class348_sub16_sub3 != null ? "{...}" : "null") + ',' + (class45_5_ != null ? "{...}" : "null") + ',' + bool + ',' + (class279 != null ? "{...}" : "null") + ',' + (class45_6_ != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -106,15 +106,15 @@ final class Class318_Sub7 extends Class318 {
         try {
             anInt6440++;
             if (Class75.aClass348_Sub42_Sub14_1243 != null) {
-                if (Class348.anInt4290 < 10) {
+                if (Node.anInt4290 < 10) {
                     if (!Class75.aClass45_1237.method413(100, Class75.aClass348_Sub42_Sub14_1243.aString9625)) {
-                        Class348.anInt4290 = (Class348_Sub32.aClass45_6950.method397((Class75.aClass348_Sub42_Sub14_1243.aString9625), 0)) / 10;
+                        Node.anInt4290 = (Class348_Sub32.aClass45_6950.method397((Class75.aClass348_Sub42_Sub14_1243.aString9625), 0)) / 10;
                         return;
                     }
                     InputStream_Sub1.method126(-16203);
-                    Class348.anInt4290 = 10;
+                    Node.anInt4290 = 10;
                 }
-                if (Class348.anInt4290 == 10) {
+                if (Node.anInt4290 == 10) {
                     Class75.anInt1266 = (Class75.aClass348_Sub42_Sub14_1243.anInt9644 >> 6 << 6);
                     Class75.anInt1263 = (Class75.aClass348_Sub42_Sub14_1243.anInt9643 >> 6 << 6);
                     Class75.anInt1259 = 64 + ((Class75.aClass348_Sub42_Sub14_1243.anInt9635 >> 6 << 6) - Class75.anInt1266);
@@ -171,61 +171,61 @@ final class Class318_Sub7 extends Class318 {
                     Class75.aClass141_1242.method1178(256, 1, 256);
                     Class75.aClass263_1245.method2014(4096, true);
                     Class229.aClass194_2981.method1444(256, 123);
-                    Class348.anInt4290 = 20;
-                } else if (Class348.anInt4290 == 20) {
+                    Node.anInt4290 = 20;
+                } else if (Node.anInt4290 == 20) {
                     Class289.method2193(true, (byte) -123);
                     Class75.method756(var_ha, Class75.anInt1250, Class75.anInt1253);
-                    Class348.anInt4290 = 60;
+                    Node.anInt4290 = 60;
                     Class289.method2193(true, (byte) -122);
                     Class94.method867(true);
                 } else if (i <= -43) {
-                    if (Class348.anInt4290 == 60) {
+                    if (Node.anInt4290 == 60) {
                         if (Class75.aClass45_1237.method400(-18308, (Class75.aClass348_Sub42_Sub14_1243.aString9625) + "_staticelements")) {
                             if (!Class75.aClass45_1237.method413(100, (Class75.aClass348_Sub42_Sub14_1243.aString9625) + "_staticelements")) return;
                             Class75.aClass252_1246 = (Class307.method2300(Class75.aClass45_1237, (Class75.aClass348_Sub42_Sub14_1243.aString9625) + "_staticelements", Class130.aBoolean1900, (byte) -91));
                         } else Class75.aClass252_1246 = new Class252(0);
                         Class75.method761();
-                        Class348.anInt4290 = 70;
+                        Node.anInt4290 = 70;
                         Class289.method2193(true, (byte) -127);
                         Class94.method867(true);
-                    } else if (Class348.anInt4290 == 70) {
+                    } else if (Node.anInt4290 == 70) {
                         Class125.aClass323_4921 = new Class323(var_ha, 11, true, Class305.aCanvas3869);
-                        Class348.anInt4290 = 73;
+                        Node.anInt4290 = 73;
                         Class289.method2193(true, (byte) -123);
                         Class94.method867(true);
-                    } else if (Class348.anInt4290 == 73) {
+                    } else if (Node.anInt4290 == 73) {
                         Class14_Sub4.aClass323_8644 = new Class323(var_ha, 12, true, Class305.aCanvas3869);
-                        Class348.anInt4290 = 76;
+                        Node.anInt4290 = 76;
                         Class289.method2193(true, (byte) -125);
                         Class94.method867(true);
-                    } else if (Class348.anInt4290 == 76) {
+                    } else if (Node.anInt4290 == 76) {
                         Class39.aClass323_521 = new Class323(var_ha, 14, true, Class305.aCanvas3869);
-                        Class348.anInt4290 = 79;
+                        Node.anInt4290 = 79;
                         Class289.method2193(true, (byte) -123);
                         Class94.method867(true);
-                    } else if (Class348.anInt4290 == 79) {
+                    } else if (Node.anInt4290 == 79) {
                         Class168.aClass323_2252 = new Class323(var_ha, 17, true, Class305.aCanvas3869);
-                        Class348.anInt4290 = 82;
+                        Node.anInt4290 = 82;
                         Class289.method2193(true, (byte) -124);
                         Class94.method867(true);
-                    } else if (Class348.anInt4290 == 82) {
+                    } else if (Node.anInt4290 == 82) {
                         Class176.aClass323_2333 = new Class323(var_ha, 19, true, Class305.aCanvas3869);
-                        Class348.anInt4290 = 85;
+                        Node.anInt4290 = 85;
                         Class289.method2193(true, (byte) -128);
                         Class94.method867(true);
-                    } else if (Class348.anInt4290 == 85) {
+                    } else if (Node.anInt4290 == 85) {
                         Class285.aClass323_4754 = new Class323(var_ha, 22, true, Class305.aCanvas3869);
-                        Class348.anInt4290 = 88;
+                        Node.anInt4290 = 88;
                         Class289.method2193(true, (byte) -124);
                         Class94.method867(true);
-                    } else if (Class348.anInt4290 == 88) {
+                    } else if (Node.anInt4290 == 88) {
                         Class348_Sub3.aClass323_6581 = new Class323(var_ha, 26, true, Class305.aCanvas3869);
-                        Class348.anInt4290 = 91;
+                        Node.anInt4290 = 91;
                         Class289.method2193(true, (byte) -125);
                         Class94.method867(true);
                     } else {
                         Class240.aClass323_4672 = new Class323(var_ha, 30, true, Class305.aCanvas3869);
-                        Class348.anInt4290 = 100;
+                        Node.anInt4290 = 100;
                         Class289.method2193(true, (byte) -119);
                         Class94.method867(true);
                         System.gc();

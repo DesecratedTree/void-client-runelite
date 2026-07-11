@@ -6,7 +6,7 @@ final class Class115 {
     static boolean[][][] aBooleanArrayArrayArray1751;
     static Class348_Sub1[] aClass348_Sub1Array1752 = new Class348_Sub1[8];
     static int anInt1753;
-    static Class318_Sub1[] aClass318_Sub1Array1754;
+    static SceneEntity[] aClass318_Sub1Array1754;
     static int anInt1755;
     static int anInt1756;
     static int[] anIntArray1757 = {16776960, 16711680, 65280, 65535, 16711935, 16777215};

@@ -23,13 +23,13 @@ final class Class348_Sub42_Sub11 extends Class348_Sub42 {
         aClass351_9590 = null;
     }
 
-    final void method3221(int i, Class348_Sub49 class348_sub49) {
+    final void method3221(int i, Packet Packet) {
         int i_0_ = 81 / ((-39 - i) / 52);
         anInt9583++;
         for (; ; ) {
-            int i_1_ = class348_sub49.readUnsignedByte(255);
+            int i_1_ = Packet.readUnsignedByte(255);
             if (i_1_ == 0) break;
-            method3227(-5847, class348_sub49, i_1_);
+            method3227(-5847, Packet, i_1_);
         }
     }
 
@@ -91,7 +91,7 @@ final class Class348_Sub42_Sub11 extends Class348_Sub42 {
                             i_11_ = Class318_Sub1_Sub5_Sub2.anInt10163;
                             i_10_ = Class9.anInt167;
                         }
-                        if ((0x4 & (Class348_Sub33.aByteArrayArrayArray6962[Class355.anInt4372][i_10_ >> 9][i_11_ >> 9])) != 0) Class367_Sub4.method3542(i_11_ >> 9, Class147.aClass357ArrayArrayArray2029, i_10_ >> 9, 0, 0, false);
+                        if ((0x4 & (Class348_Sub33.aByteArrayArrayArray6962[Class355.anInt4372][i_10_ >> 9][i_11_ >> 9])) != 0) Class367_Sub4.method3542(i_11_ >> 9, ChatMessage.aClass357ArrayArrayArray2029, i_10_ >> 9, 0, 0, false);
                         if (Class348_Sub42_Sub19.anInt9701 < 2560) {
                             int i_12_ = Class286_Sub4.anInt6246 >> 9;
                             int i_13_ = Class59_Sub2_Sub2.anInt8685 >> 9;
@@ -112,7 +112,7 @@ final class Class348_Sub42_Sub11 extends Class348_Sub42 {
                                     if (i_15_ > i_13_) i_13_++;
                                     else if (i_15_ < i_13_) i_13_--;
                                     if ((0x4 & (Class348_Sub33.aByteArrayArrayArray6962[Class355.anInt4372][i_12_][i_13_])) != 0) {
-                                        Class367_Sub4.method3542(i_13_, (Class147.aClass357ArrayArrayArray2029), i_12_, 0, 1, false);
+                                        Class367_Sub4.method3542(i_13_, (ChatMessage.aClass357ArrayArrayArray2029), i_12_, 0, 1, false);
                                         break;
                                     }
                                     i_19_ += i_18_;
@@ -121,7 +121,7 @@ final class Class348_Sub42_Sub11 extends Class348_Sub42 {
                                         else if (i_14_ < i_12_) i_12_--;
                                         i_19_ -= 65536;
                                         if ((0x4 & (Class348_Sub33.aByteArrayArrayArray6962[Class355.anInt4372][i_12_][i_13_])) != 0) {
-                                            Class367_Sub4.method3542(i_13_, (Class147.aClass357ArrayArrayArray2029), i_12_, 0, 1, false);
+                                            Class367_Sub4.method3542(i_13_, (ChatMessage.aClass357ArrayArrayArray2029), i_12_, 0, 1, false);
                                             break;
                                         }
                                     }
@@ -134,7 +134,7 @@ final class Class348_Sub42_Sub11 extends Class348_Sub42 {
                                         if (i_12_ > i_14_) i_12_--;
                                     } else i_12_++;
                                     if ((0x4 & (Class348_Sub33.aByteArrayArrayArray6962[Class355.anInt4372][i_12_][i_13_])) != 0) {
-                                        Class367_Sub4.method3542(i_13_, (Class147.aClass357ArrayArrayArray2029), i_12_, 0, 1, false);
+                                        Class367_Sub4.method3542(i_13_, (ChatMessage.aClass357ArrayArrayArray2029), i_12_, 0, 1, false);
                                         break;
                                     }
                                     i_21_ += i_20_;
@@ -143,7 +143,7 @@ final class Class348_Sub42_Sub11 extends Class348_Sub42 {
                                         else if (i_13_ > i_15_) i_13_--;
                                         i_21_ -= 65536;
                                         if ((0x4 & (Class348_Sub33.aByteArrayArrayArray6962[Class355.anInt4372][i_12_][i_13_])) != 0) {
-                                            Class367_Sub4.method3542(i_13_, (Class147.aClass357ArrayArrayArray2029), i_12_, 0, 1, false);
+                                            Class367_Sub4.method3542(i_13_, (ChatMessage.aClass357ArrayArrayArray2029), i_12_, 0, 1, false);
                                             break;
                                         }
                                     }
@@ -153,7 +153,7 @@ final class Class348_Sub42_Sub11 extends Class348_Sub42 {
                     } else {
                         int i_22_ = Class275.method2064(Class286_Sub4.anInt6246, Class355.anInt4372, 11219, Class59_Sub2_Sub2.anInt8685);
                         if (i_22_ - Class305.anInt3855 < 3200 && ((Class348_Sub33.aByteArrayArrayArray6962[Class355.anInt4372][Class286_Sub4.anInt6246 >> 9][Class59_Sub2_Sub2.anInt8685 >> 9]) & 0x4) != 0)
-                            Class367_Sub4.method3542(Class59_Sub2_Sub2.anInt8685 >> 9, Class147.aClass357ArrayArrayArray2029, Class286_Sub4.anInt6246 >> 9, 0, 1, false);
+                            Class367_Sub4.method3542(Class59_Sub2_Sub2.anInt8685 >> 9, ChatMessage.aClass357ArrayArrayArray2029, Class286_Sub4.anInt6246 >> 9, 0, 1, false);
                     }
                 }
             }
@@ -170,28 +170,28 @@ final class Class348_Sub42_Sub11 extends Class348_Sub42 {
         return -1;
     }
 
-    private final void method3227(int i, Class348_Sub49 class348_sub49, int i_24_) {
+    private final void method3227(int i, Packet Packet, int i_24_) {
         if (i_24_ != 1) {
             if (i_24_ == 2) {
-                int i_25_ = class348_sub49.readUnsignedByte(255);
+                int i_25_ = Packet.readUnsignedByte(255);
                 this.anIntArray9592 = new int[i_25_];
                 this.aCharArray9588 = new char[i_25_];
                 for (int i_26_ = 0; i_26_ < i_25_; i_26_++) {
-                    this.anIntArray9592[i_26_] = class348_sub49.readUnsignedShort(842397944);
-                    byte i_27_ = class348_sub49.readByte(-121);
+                    this.anIntArray9592[i_26_] = Packet.readUnsignedShort(842397944);
+                    byte i_27_ = Packet.readByte(-121);
                     this.aCharArray9588[i_26_] = (i_27_ != 0 ? Class50_Sub1.method462(i_27_, -128) : '\0');
                 }
             } else if (i_24_ == 3) {
-                int i_28_ = class348_sub49.readUnsignedByte(255);
+                int i_28_ = Packet.readUnsignedByte(255);
                 this.aCharArray9582 = new char[i_28_];
                 this.anIntArray9580 = new int[i_28_];
                 for (int i_29_ = 0; i_28_ > i_29_; i_29_++) {
-                    this.anIntArray9580[i_29_] = class348_sub49.readUnsignedShort(842397944);
-                    byte i_30_ = class348_sub49.readByte(-115);
+                    this.anIntArray9580[i_29_] = Packet.readUnsignedShort(842397944);
+                    byte i_30_ = Packet.readByte(-115);
                     this.aCharArray9582[i_29_] = (i_30_ != 0 ? Class50_Sub1.method462(i_30_, -128) : '\0');
                 }
             }
-        } else this.aString9587 = class348_sub49.readString((byte) 100);
+        } else this.aString9587 = Packet.readString((byte) 100);
         if (i != -5847) anInt9586 = 12;
         anInt9581++;
     }

@@ -27,7 +27,7 @@ class Class288 implements Interface12 {
     static final boolean method2187(int i, int i_0_, int i_1_) {
         anInt4956++;
         if (i_0_ > -70) method2187(-57, -121, 54);
-        return ((Class348.method2709(i_1_, i, -1) | Class223.method1613(false, i_1_, i) | Class299_Sub1.method2259(0, i_1_, i)) & Class64.method616(2, i, i_1_));
+        return ((Node.method2709(i_1_, i, -1) | Class223.method1613(false, i_1_, i) | Class299_Sub1.method2259(0, i_1_, i)) & Class64.method616(2, i, i_1_));
     }
 
     public Class223 method51(byte i) {

@@ -14,12 +14,12 @@ final class Class222 {
     private int anInt2891;
     static Class351 aClass351_2892 = new Class351(39, 8);
 
-    private final void method1608(int i, Class348_Sub49 class348_sub49, byte i_0_) {
+    private final void method1608(int i, Packet Packet, byte i_0_) {
         anInt2887++;
-        if (i == 1) anInt2891 = class348_sub49.readUnsignedShort(842397944);
+        if (i == 1) anInt2891 = Packet.readUnsignedShort(842397944);
         else if (i == 2) {
-            this.anInt2883 = class348_sub49.readUnsignedByte(255);
-            this.anInt2890 = class348_sub49.readUnsignedByte(255);
+            this.anInt2883 = Packet.readUnsignedByte(255);
+            this.anInt2890 = Packet.readUnsignedByte(255);
         }
         if (i_0_ != 4) method1608(-8, null, (byte) 81);
     }
@@ -41,11 +41,11 @@ final class Class222 {
         return class207;
     }
 
-    final void method1611(Class348_Sub49 class348_sub49, boolean bool) {
+    final void method1611(Packet Packet, boolean bool) {
         for (; ; ) {
-            int i = class348_sub49.readUnsignedByte(255);
+            int i = Packet.readUnsignedByte(255);
             if (i == 0) break;
-            method1608(i, class348_sub49, (byte) 4);
+            method1608(i, Packet, (byte) 4);
         }
         anInt2889++;
         if (bool != false) method1610((byte) -86);

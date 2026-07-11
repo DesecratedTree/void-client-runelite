@@ -17,13 +17,13 @@ final class Class152 {
 
     final byte[] method1214(int i, byte[] is) {
         anInt2074++;
-        Class348_Sub49 class348_sub49 = new Class348_Sub49(is);
-        class348_sub49.anInt7197 = is.length - 4;
-        int i_0_ = class348_sub49.method3359(-86);
-        class348_sub49.anInt7197 = 0;
+        Packet Packet = new Packet(is);
+        Packet.pos = is.length - 4;
+        int i_0_ = Packet.method3359(-86);
+        Packet.pos = 0;
         if (i != 9) aFloatArray2075 = null;
         byte[] is_1_ = new byte[i_0_];
-        method1218(is_1_, 29123, class348_sub49);
+        method1218(is_1_, 29123, Packet);
         return is_1_;
     }
 
@@ -31,9 +31,9 @@ final class Class152 {
         if (i != 3) method1217(-39, null);
         anInt2078++;
         if (Class240.anInt4674 != 9) {
-            if (Class240.anInt4674 == 5 || Class240.anInt4674 == 6) Class348_Sub49.method3379(2, 3);
-            else if (Class240.anInt4674 == 12) Class348_Sub49.method3379(2, 3);
-        } else Class348_Sub49.method3379(2, 5);
+            if (Class240.anInt4674 == 5 || Class240.anInt4674 == 6) Packet.method3379(2, 3);
+            else if (Class240.anInt4674 == 12) Packet.method3379(2, 3);
+        } else Packet.method3379(2, 5);
     }
 
     public static void method1216(byte i) {
@@ -70,14 +70,14 @@ final class Class152 {
         this(-1, 1000000, 1000000);
     }
 
-    final void method1218(byte[] is, int i, Class348_Sub49 class348_sub49) {
+    final void method1218(byte[] is, int i, Packet Packet) {
         try {
             if (i != 29123) method1217(-91, null);
             anInt2073++;
-            if ((class348_sub49.aByteArray7154[class348_sub49.anInt7197]) != 31 || (class348_sub49.aByteArray7154[1 + class348_sub49.anInt7197]) != -117) throw new RuntimeException("Invalid GZIP header!");
+            if ((Packet.data[Packet.pos]) != 31 || (Packet.data[1 + Packet.pos]) != -117) throw new RuntimeException("Invalid GZIP header!");
             if (anInflater2072 == null) anInflater2072 = new Inflater(true);
             try {
-                anInflater2072.setInput(class348_sub49.aByteArray7154, class348_sub49.anInt7197 - -10, -8 - (10 + class348_sub49.anInt7197 - (class348_sub49.aByteArray7154).length));
+                anInflater2072.setInput(Packet.data, Packet.pos - -10, -8 - (10 + Packet.pos - (Packet.data).length));
                 anInflater2072.inflate(is);
             } catch (Exception exception) {
                 anInflater2072.reset();
@@ -85,7 +85,7 @@ final class Class152 {
             }
             anInflater2072.reset();
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("ol.A(" + (is != null ? "{...}" : "null") + ',' + i + ',' + (class348_sub49 != null ? "{...}" : "null") + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("ol.A(" + (is != null ? "{...}" : "null") + ',' + i + ',' + (Packet != null ? "{...}" : "null") + ')'));
         }
     }
 

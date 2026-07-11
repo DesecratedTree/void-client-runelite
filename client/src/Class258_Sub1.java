@@ -129,6 +129,8 @@ final class Class258_Sub1 extends Class258 {
             Class59_Sub1.anInt5293 = Class348_Sub41.anInt7054;
             Class23.aBoolean351 = false;
         }
+        method1961(Class99.aBooleanArrayArray1572, Class318_Sub1_Sub4_Sub1.anInt10084, 0);
+        method1961(Class348_Sub8.aBooleanArrayArray6656, Class318_Sub1_Sub4_Sub1.anInt10084, 1);
         Class243.method1877(Class9.aHa171, -69);
         if (!Class71.aClass76_1208.aBoolean1283) {
             Class243 class243 = Class71.aClass76_1208.aClass243_1282;
@@ -182,6 +184,25 @@ final class Class258_Sub1 extends Class258 {
             Class348_Sub8.aBooleanArrayArray6656 = bools_28_;
         }
         Class245.method1884();
+    }
+
+    private static void method1961(boolean[][] bools, int radius, int centerOffset) {
+        int margin = Loader.FOG_EDGE_RADIAL_TILE_MARGIN;
+        if (bools == null || radius <= 1 || margin <= 0) return;
+        int effectiveRadius = radius - margin;
+        if (effectiveRadius <= 0) return;
+        int radiusSq = effectiveRadius * effectiveRadius;
+        int center = radius + centerOffset;
+        for (int x = 0; x < bools.length; x++) {
+            boolean[] row = bools[x];
+            if (row == null) continue;
+            int dx = x - center;
+            for (int y = 0; y < row.length; y++) {
+                if (!row[y]) continue;
+                int dy = y - center;
+                if (dx * dx + dy * dy > radiusSq) row[y] = false;
+            }
+        }
     }
 
     Class258_Sub1(ha_Sub2 var_ha_Sub2, int i, int i_49_, int i_50_, int i_51_) {

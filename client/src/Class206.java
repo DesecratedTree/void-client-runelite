@@ -72,7 +72,7 @@ final class Class206 implements Interface11 {
 
     static final void method1501(int i) {
         int i_3_ = 56 / ((i - -56) / 42);
-        for (int i_4_ = 0; i_4_ < Class147.anInt2021; i_4_++) {
+        for (int i_4_ = 0; i_4_ < ChatMessage.anInt2021; i_4_++) {
             Class10 class10 = Class258_Sub2.aClass10Array8531[i_4_];
             boolean bool = false;
             if (class10.aClass348_Sub16_Sub5_176 == null) {
@@ -139,8 +139,8 @@ final class Class206 implements Interface11 {
                 } else bool = true;
             } else if (!class10.aClass348_Sub16_Sub5_176.method2712((byte) 4)) bool = true;
             if (bool) {
-                Class147.anInt2021--;
-                for (int i_19_ = i_4_; Class147.anInt2021 > i_19_; i_19_++)
+                ChatMessage.anInt2021--;
+                for (int i_19_ = i_4_; ChatMessage.anInt2021 > i_19_; i_19_++)
                     Class258_Sub2.aClass10Array8531[i_19_] = Class258_Sub2.aClass10Array8531[i_19_ - -1];
                 i_4_--;
             }
@@ -154,7 +154,7 @@ final class Class206 implements Interface11 {
             Class74.aBoolean1236 = false;
             Class209.aClass348_Sub16_Sub3_2718 = null;
         } else if (Class316.aClass348_Sub51_3959.aClass239_Sub26_7260.method1838(-32350) != 0 && Class267.anInt3428 != -1 && !Class167.method1296(true)) {
-            Class318.anInt3973++;
+            Linkable.anInt3973++;
             Class348_Sub47 class348_sub47 = Class286_Sub3.method2148(ha_Sub2.aClass351_7554, Class348_Sub23_Sub2.aClass77_9029, -107);
             class348_sub47.aClass348_Sub49_Sub2_7116.writeInt((byte) 118, Class267.anInt3428);
             Class348_Sub42_Sub14.method3243(-54, class348_sub47);

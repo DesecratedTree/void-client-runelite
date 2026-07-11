@@ -71,7 +71,7 @@ final class Class348_Sub40_Sub5 extends Class348_Sub40 {
             int i_4_ = 0;
             while_140_:
             for (/**/; Class348_Sub40_Sub6.anInt9139 > i_4_; i_4_++) {
-                Class348_Sub42_Sub20.anInt9715 = Class215.anInt2835 = Class147.anInt2023 = Class135_Sub1.anInt4715 = 2147483647;
+                Class348_Sub42_Sub20.anInt9715 = Class215.anInt2835 = ChatMessage.anInt2023 = Class135_Sub1.anInt4715 = 2147483647;
                 int i_5_ = 2048 - -(Class318_Sub6.anIntArray6432[i_4_] * anInt9129);
                 int i_6_ = i_5_ >> 12;
                 int i_7_ = i_6_ + 1;
@@ -127,18 +127,18 @@ final class Class348_Sub40_Sub5 extends Class348_Sub40 {
                         } while (false);
                         if (Class348_Sub42_Sub20.anInt9715 <= i_15_) {
                             if (i_15_ >= Class215.anInt2835) {
-                                if (i_15_ < Class147.anInt2023) {
-                                    Class135_Sub1.anInt4715 = Class147.anInt2023;
-                                    Class147.anInt2023 = i_15_;
+                                if (i_15_ < ChatMessage.anInt2023) {
+                                    Class135_Sub1.anInt4715 = ChatMessage.anInt2023;
+                                    ChatMessage.anInt2023 = i_15_;
                                 } else if (i_15_ < Class135_Sub1.anInt4715) Class135_Sub1.anInt4715 = i_15_;
                             } else {
-                                Class135_Sub1.anInt4715 = Class147.anInt2023;
-                                Class147.anInt2023 = Class215.anInt2835;
+                                Class135_Sub1.anInt4715 = ChatMessage.anInt2023;
+                                ChatMessage.anInt2023 = Class215.anInt2835;
                                 Class215.anInt2835 = i_15_;
                             }
                         } else {
-                            Class135_Sub1.anInt4715 = Class147.anInt2023;
-                            Class147.anInt2023 = Class215.anInt2835;
+                            Class135_Sub1.anInt4715 = ChatMessage.anInt2023;
+                            ChatMessage.anInt2023 = Class215.anInt2835;
                             Class215.anInt2835 = Class348_Sub42_Sub20.anInt9715;
                             Class348_Sub42_Sub20.anInt9715 = i_15_;
                         }
@@ -165,7 +165,7 @@ final class Class348_Sub40_Sub5 extends Class348_Sub40 {
                             is[i_4_] = Class215.anInt2835;
                             continue while_140_;
                         } while (false);
-                        is[i_4_] = Class147.anInt2023;
+                        is[i_4_] = ChatMessage.anInt2023;
                         continue while_140_;
                     } while (false);
                     is[i_4_] = Class135_Sub1.anInt4715;
@@ -177,7 +177,7 @@ final class Class348_Sub40_Sub5 extends Class348_Sub40 {
         return is;
     }
 
-    final void method3049(Class348_Sub49 class348_sub49, int i, int i_17_) {
+    final void method3049(Packet Packet, int i, int i_17_) {
         if (i_17_ == 31015) {
             int i_18_ = i;
             while_145_:
@@ -192,7 +192,7 @@ final class Class348_Sub40_Sub5 extends Class348_Sub40 {
                             do {
                                 do {
                                     if (i_18_ == 0) {
-                                        anInt9129 = anInt9117 = class348_sub49.readUnsignedByte(i_17_ ^ 0x79d8);
+                                        anInt9129 = anInt9117 = Packet.readUnsignedByte(i_17_ ^ 0x79d8);
                                         break while_145_;
                                     } else if (i_18_ != 1) {
                                         if (i_18_ != 2) {
@@ -208,22 +208,22 @@ final class Class348_Sub40_Sub5 extends Class348_Sub40 {
                                         } else break;
                                         break while_141_;
                                     }
-                                    anInt9122 = class348_sub49.readUnsignedByte(i_17_ + -30760);
+                                    anInt9122 = Packet.readUnsignedByte(i_17_ + -30760);
                                     break while_145_;
                                 } while (false);
-                                anInt9125 = class348_sub49.readUnsignedShort(842397944);
+                                anInt9125 = Packet.readUnsignedShort(842397944);
                                 break while_145_;
                             } while (false);
-                            anInt9124 = class348_sub49.readUnsignedByte(i_17_ ^ 0x79d8);
+                            anInt9124 = Packet.readUnsignedByte(i_17_ ^ 0x79d8);
                             break while_145_;
                         } while (false);
-                        anInt9118 = class348_sub49.readUnsignedByte(i_17_ ^ 0x79d8);
+                        anInt9118 = Packet.readUnsignedByte(i_17_ ^ 0x79d8);
                         break while_145_;
                     } while (false);
-                    anInt9129 = class348_sub49.readUnsignedByte(255);
+                    anInt9129 = Packet.readUnsignedByte(255);
                     break while_145_;
                 } while (false);
-                anInt9117 = class348_sub49.readUnsignedByte(255);
+                anInt9117 = Packet.readUnsignedByte(255);
             } while (false);
             anInt9127++;
         }

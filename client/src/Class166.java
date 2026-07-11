@@ -7,17 +7,17 @@ import java.io.File;
 final class Class166 {
     static int anInt2178;
     static int anInt2179;
-    Class45 aClass45_2180;
+    Js5Archive aClass45_2180;
     static int anInt2181;
     static int anInt2182;
     static Class114 aClass114_2183 = new Class114(0, -1);
     static int anInt2184;
-    private final Class60 aClass60_2185 = new Class60(64);
+    private final ReferenceCache aClass60_2185 = new ReferenceCache(64);
     static int anInt2186;
     static Class262 aClass262_2187 = new Class262();
-    private final Class45 aClass45_2188;
+    private final Js5Archive aClass45_2188;
     static int anInt2189;
-    Class60 aClass60_2190 = new Class60(2);
+    ReferenceCache aClass60_2190 = new ReferenceCache(2);
 
     final void method1283(int i) {
         synchronized (aClass60_2185) {
@@ -74,7 +74,7 @@ final class Class166 {
         }
         class222 = new Class222();
         class222.aClass166_2886 = this;
-        if (is != null) class222.method1611(new Class348_Sub49(is), false);
+        if (is != null) class222.method1611(new Packet(is), false);
         synchronized (aClass60_2185) {
             aClass60_2185.method582(class222, i_1_, (byte) -116);
         }
@@ -83,8 +83,8 @@ final class Class166 {
 
     static final void method1288(int i, int i_2_) {
         anInt2186++;
-        for (Class348 class348 = Class226.aClass356_2959.method3484(0); class348 != null; class348 = Class226.aClass356_2959.method3482(0)) {
-            if ((class348.aLong4291 >> 48 & 0xffffL) == (long) i_2_) class348.method2715((byte) 119);
+        for (Node Node = Class226.aClass356_2959.method3484(0); Node != null; Node = Class226.aClass356_2959.method3482(0)) {
+            if ((Node.key >> 48 & 0xffffL) == (long) i_2_) Node.method2715((byte) 119);
         }
     }
 
@@ -98,12 +98,12 @@ final class Class166 {
             i_8_ += Class16.method260(false);
         }
         if (Class239_Sub20.anInt6048 == 1) {
-            Class105 class105 = (Class348_Sub40_Sub37.aClass105Array9467[Class348.anInt4292 / 100]);
+            Class105 class105 = (Class348_Sub40_Sub37.aClass105Array9467[Node.anInt4292 / 100]);
             class105.method974(i_7_ - 8, i_8_ + -8);
             Class338.method2663(-5590, -8 + i_7_, -8 + (i_7_ - -class105.method966()), -8 + i_8_, class105.method980() + -8 + i_8_);
         }
         if (Class239_Sub20.anInt6048 == 2) {
-            Class105 class105 = (Class348_Sub40_Sub37.aClass105Array9467[Class348.anInt4292 / 100 + 4]);
+            Class105 class105 = (Class348_Sub40_Sub37.aClass105Array9467[Node.anInt4292 / 100 + 4]);
             class105.method974(i_7_ + -8, -8 + i_8_);
             Class338.method2663(-5590, i_7_ - 8, class105.method966() + i_7_ + -8, -8 + i_8_, class105.method980() + -8 + i_8_);
         }
@@ -121,13 +121,13 @@ final class Class166 {
         }
     }
 
-    Class166(Class230 class230, int i, Class45 class45, Class45 class45_9_) {
+    Class166(Class230 class230, int i, Js5Archive Js5Archive, Js5Archive class45_9_) {
         try {
-            aClass45_2188 = class45;
+            aClass45_2188 = Js5Archive;
             this.aClass45_2180 = class45_9_;
             aClass45_2188.method407(0, 33);
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("pg.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (class45 != null ? "{...}" : "null") + ',' + (class45_9_ != null ? "{...}" : "null") + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("pg.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (Js5Archive != null ? "{...}" : "null") + ',' + (class45_9_ != null ? "{...}" : "null") + ')'));
         }
     }
 }

@@ -13,17 +13,17 @@ final class Class245 {
         anIntArray3169 = null;
     }
 
-    static final void method1883(Class318 class318, Class318 class318_0_, boolean bool) {
+    static final void method1883(Linkable Linkable, Linkable class318_0_, boolean bool) {
         try {
             anInt3171++;
-            if (class318_0_.aClass318_3976 != null) class318_0_.method2373(false);
-            class318_0_.aClass318_3970 = class318;
+            if (class318_0_.previousLink != null) class318_0_.method2373(false);
+            class318_0_.nextLink = Linkable;
             if (bool != true) anIntArray3169 = null;
-            class318_0_.aClass318_3976 = class318.aClass318_3976;
-            class318_0_.aClass318_3976.aClass318_3970 = class318_0_;
-            class318_0_.aClass318_3970.aClass318_3976 = class318_0_;
+            class318_0_.previousLink = Linkable.previousLink;
+            class318_0_.previousLink.nextLink = class318_0_;
+            class318_0_.nextLink.previousLink = class318_0_;
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("te.B(" + (class318 != null ? "{...}" : "null") + ',' + (class318_0_ != null ? "{...}" : "null") + ',' + bool + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("te.B(" + (Linkable != null ? "{...}" : "null") + ',' + (class318_0_ != null ? "{...}" : "null") + ',' + bool + ')'));
         }
     }
 

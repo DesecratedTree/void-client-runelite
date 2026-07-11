@@ -6,7 +6,7 @@ final class Class247 {
     static int anInt3180;
     static Class21 aClass21_3181 = new Class21();
     static double aDouble3182;
-    static Class45 aClass45_3183;
+    static Js5Archive aClass45_3183;
     static int anInt3184;
 
     public static void method1889(int i) {

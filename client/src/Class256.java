@@ -14,10 +14,10 @@ final class Class256 {
         class174 = new Class174();
         if (bool != false) method1944(64);
         class174.anInt2303 = i;
-        if (is != null) class174.method1336(83, new Class348_Sub49(is));
+        if (is != null) class174.method1336(83, new Packet(is));
         class174.method1337(-1);
         if (class174.anInt2296 == 2 && (Class59_Sub2_Sub2.aClass356_8679.method3480(i, -6008) == null)) {
-            Class59_Sub2_Sub2.aClass356_8679.method3483((byte) 87, i, new Class348_Sub35(Class285_Sub1.anInt8492));
+            Class59_Sub2_Sub2.aClass356_8679.method3483((byte) 87, i, new IntNode(Class285_Sub1.anInt8492));
             Class19.aClass174Array311[Class285_Sub1.anInt8492++] = class174;
         }
         Class318_Sub1_Sub2.aClass60_8732.method582(class174, i, (byte) -109);

@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-abstract class Class348_Sub45 extends Class348 {
+abstract class Class348_Sub45 extends Node {
     static int anInt7102 = 1400;
     static Class304 aClass304_7103 = new Class304(3);
     static int anInt7104;
@@ -22,7 +22,7 @@ abstract class Class348_Sub45 extends Class348 {
         Class318_Sub1_Sub3_Sub4.aClass338Array10330 = new Class338[2000];
         ha_Sub2.anInt7714 = Class270.anInt3465;
         Class50_Sub1.aBoolean5226 = false;
-        Class147.aClass338Array2034 = new Class338[500];
+        ChatMessage.aClass338Array2034 = new Class338[500];
         Class69.anInt1200 = 0;
         Class239_Sub26.anInt6115 = 0;
         Class294.aClass338Array5060 = new Class338[1000];

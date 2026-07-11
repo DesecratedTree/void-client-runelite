@@ -43,17 +43,17 @@ final class Class318_Sub1_Sub1_Sub2 extends Class318_Sub1_Sub1 implements Interf
         anIntArray9981 = null;
     }
 
-    final void method2380(ha var_ha, int i, boolean bool, Class318_Sub1 class318_sub1, int i_0_, byte i_1_, int i_2_) {
+    final void method2380(ha var_ha, int i, boolean bool, SceneEntity SceneEntity, int i_0_, byte i_1_, int i_2_) {
         do {
             try {
                 anInt9970++;
                 if (i_1_ > -106) method2402(-5, (byte) 56);
-                if (!(class318_sub1 instanceof Class318_Sub1_Sub1_Sub2)) break;
-                Class318_Sub1_Sub1_Sub2 class318_sub1_sub1_sub2_3_ = (Class318_Sub1_Sub1_Sub2) class318_sub1;
+                if (!(SceneEntity instanceof Class318_Sub1_Sub1_Sub2)) break;
+                Class318_Sub1_Sub1_Sub2 class318_sub1_sub1_sub2_3_ = (Class318_Sub1_Sub1_Sub2) SceneEntity;
                 if (aClass64_9993 == null || class318_sub1_sub1_sub2_3_.aClass64_9993 == null) break;
                 aClass64_9993.method613((class318_sub1_sub1_sub2_3_.aClass64_9993), i_2_, i, i_0_, bool);
             } catch (RuntimeException runtimeexception) {
-                throw Class348_Sub17.method2929(runtimeexception, ("uo.N(" + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + bool + ',' + (class318_sub1 != null ? "{...}" : "null") + ',' + i_0_ + ',' + i_1_ + ',' + i_2_ + ')'));
+                throw Class348_Sub17.method2929(runtimeexception, ("uo.N(" + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + bool + ',' + (SceneEntity != null ? "{...}" : "null") + ',' + i_0_ + ',' + i_1_ + ',' + i_2_ + ')'));
             }
             break;
         } while (false);

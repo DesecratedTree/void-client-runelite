@@ -13,12 +13,12 @@ final class Class244 implements d {
     static int anInt4616;
     static int anInt4617;
     static int anInt4618;
-    private final Class45 aClass45_4619;
+    private final Js5Archive aClass45_4619;
     static int anInt4620;
     static int anInt4621;
     private final Class308 aClass308_4622 = new Class308(256);
     static int[] anIntArray4623 = new int[8];
-    private final Class45 aClass45_4624;
+    private final Js5Archive aClass45_4624;
     private final int anInt4625;
     static float aFloat4626;
 
@@ -40,7 +40,7 @@ final class Class244 implements d {
         byte[] is = aClass45_4619.method415((byte) 73, i);
         if (is == null) return null;
         if (bool != false) method1(-58, 1.9039171F, false, -106, -22, -18);
-        Class348_Sub42_Sub5 class348_sub42_sub5 = new Class348_Sub42_Sub5(new Class348_Sub49(is));
+        Class348_Sub42_Sub5 class348_sub42_sub5 = new Class348_Sub42_Sub5(new Packet(is));
         aClass308_4622.method2305(i, class348_sub42_sub5, -1);
         return class348_sub42_sub5;
     }
@@ -76,75 +76,75 @@ final class Class244 implements d {
         return anInt4625;
     }
 
-    Class244(Class45 class45, Class45 class45_12_, Class45 class45_13_) {
+    Class244(Js5Archive Js5Archive, Js5Archive class45_12_, Js5Archive class45_13_) {
         try {
             aClass45_4619 = class45_12_;
             aClass45_4624 = class45_13_;
-            Class348_Sub49 class348_sub49 = new Class348_Sub49(class45.method410(-1860, 0, 0));
-            anInt4625 = class348_sub49.readUnsignedShort(842397944);
+            Packet Packet = new Packet(Js5Archive.method410(-1860, 0, 0));
+            anInt4625 = Packet.readUnsignedShort(842397944);
             aClass12Array4611 = new Class12[anInt4625];
             for (int i = 0; anInt4625 > i; i++) {
-                if (class348_sub49.readUnsignedByte(255) == 1) aClass12Array4611[i] = new Class12();
+                if (Packet.readUnsignedByte(255) == 1) aClass12Array4611[i] = new Class12();
             }
             for (int i = 0; i < anInt4625; i++) {
-                if (aClass12Array4611[i] != null) aClass12Array4611[i].aBoolean209 = class348_sub49.readUnsignedByte(255) == 0;
+                if (aClass12Array4611[i] != null) aClass12Array4611[i].aBoolean209 = Packet.readUnsignedByte(255) == 0;
             }
             for (int i = 0; i < anInt4625; i++) {
-                if (aClass12Array4611[i] != null) aClass12Array4611[i].aBoolean199 = class348_sub49.readUnsignedByte(255) == 1;
+                if (aClass12Array4611[i] != null) aClass12Array4611[i].aBoolean199 = Packet.readUnsignedByte(255) == 1;
             }
             for (int i = 0; anInt4625 > i; i++) {
-                if (aClass12Array4611[i] != null) aClass12Array4611[i].aBoolean204 = class348_sub49.readUnsignedByte(255) == 1;
+                if (aClass12Array4611[i] != null) aClass12Array4611[i].aBoolean204 = Packet.readUnsignedByte(255) == 1;
             }
             for (int i = 0; i < anInt4625; i++) {
-                if (aClass12Array4611[i] != null) aClass12Array4611[i].aByte216 = class348_sub49.readByte(-85);
+                if (aClass12Array4611[i] != null) aClass12Array4611[i].aByte216 = Packet.readByte(-85);
             }
             for (int i = 0; i < anInt4625; i++) {
-                if (aClass12Array4611[i] != null) aClass12Array4611[i].aByte201 = class348_sub49.readByte(-113);
+                if (aClass12Array4611[i] != null) aClass12Array4611[i].aByte201 = Packet.readByte(-113);
             }
             for (int i = 0; i < anInt4625; i++) {
-                if (aClass12Array4611[i] != null) aClass12Array4611[i].aByte213 = class348_sub49.readByte(-97);
+                if (aClass12Array4611[i] != null) aClass12Array4611[i].aByte213 = Packet.readByte(-97);
             }
             for (int i = 0; i < anInt4625; i++) {
-                if (aClass12Array4611[i] != null) aClass12Array4611[i].aByte202 = class348_sub49.readByte(-82);
+                if (aClass12Array4611[i] != null) aClass12Array4611[i].aByte202 = Packet.readByte(-82);
             }
             for (int i = 0; i < anInt4625; i++) {
-                if (aClass12Array4611[i] != null) aClass12Array4611[i].aShort208 = (short) class348_sub49.readUnsignedShort(842397944);
+                if (aClass12Array4611[i] != null) aClass12Array4611[i].aShort208 = (short) Packet.readUnsignedShort(842397944);
             }
             for (int i = 0; anInt4625 > i; i++) {
-                if (aClass12Array4611[i] != null) aClass12Array4611[i].aByte198 = class348_sub49.readByte(-86);
+                if (aClass12Array4611[i] != null) aClass12Array4611[i].aByte198 = Packet.readByte(-86);
             }
             for (int i = 0; anInt4625 > i; i++) {
-                if (aClass12Array4611[i] != null) aClass12Array4611[i].aByte211 = class348_sub49.readByte(-104);
+                if (aClass12Array4611[i] != null) aClass12Array4611[i].aByte211 = Packet.readByte(-104);
             }
             for (int i = 0; anInt4625 > i; i++) {
-                if (aClass12Array4611[i] != null) aClass12Array4611[i].aBoolean212 = class348_sub49.readUnsignedByte(255) == 1;
+                if (aClass12Array4611[i] != null) aClass12Array4611[i].aBoolean212 = Packet.readUnsignedByte(255) == 1;
             }
             for (int i = 0; anInt4625 > i; i++) {
-                if (aClass12Array4611[i] != null) aClass12Array4611[i].aBoolean207 = class348_sub49.readUnsignedByte(255) == 1;
+                if (aClass12Array4611[i] != null) aClass12Array4611[i].aBoolean207 = Packet.readUnsignedByte(255) == 1;
             }
             for (int i = 0; i < anInt4625; i++) {
-                if (aClass12Array4611[i] != null) aClass12Array4611[i].aByte205 = class348_sub49.readByte(-77);
+                if (aClass12Array4611[i] != null) aClass12Array4611[i].aByte205 = Packet.readByte(-77);
             }
             for (int i = 0; i < anInt4625; i++) {
-                if (aClass12Array4611[i] != null) aClass12Array4611[i].aBoolean217 = class348_sub49.readUnsignedByte(255) == 1;
+                if (aClass12Array4611[i] != null) aClass12Array4611[i].aBoolean217 = Packet.readUnsignedByte(255) == 1;
             }
             for (int i = 0; anInt4625 > i; i++) {
-                if (aClass12Array4611[i] != null) aClass12Array4611[i].aBoolean215 = class348_sub49.readUnsignedByte(255) == 1;
+                if (aClass12Array4611[i] != null) aClass12Array4611[i].aBoolean215 = Packet.readUnsignedByte(255) == 1;
             }
             for (int i = 0; anInt4625 > i; i++) {
-                if (aClass12Array4611[i] != null) aClass12Array4611[i].aBoolean218 = class348_sub49.readUnsignedByte(255) == 1;
+                if (aClass12Array4611[i] != null) aClass12Array4611[i].aBoolean218 = Packet.readUnsignedByte(255) == 1;
             }
             for (int i = 0; i < anInt4625; i++) {
-                if (aClass12Array4611[i] != null) aClass12Array4611[i].anInt203 = class348_sub49.readUnsignedByte(255);
+                if (aClass12Array4611[i] != null) aClass12Array4611[i].anInt203 = Packet.readUnsignedByte(255);
             }
             for (int i = 0; anInt4625 > i; i++) {
-                if (aClass12Array4611[i] != null) aClass12Array4611[i].anInt206 = class348_sub49.readInt((byte) -126);
+                if (aClass12Array4611[i] != null) aClass12Array4611[i].anInt206 = Packet.readInt((byte) -126);
             }
             for (int i = 0; anInt4625 > i; i++) {
-                if (aClass12Array4611[i] != null) aClass12Array4611[i].anInt200 = class348_sub49.readUnsignedByte(255);
+                if (aClass12Array4611[i] != null) aClass12Array4611[i].anInt200 = Packet.readUnsignedByte(255);
             }
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("tda.<init>(" + (class45 != null ? "{...}" : "null") + ',' + (class45_12_ != null ? "{...}" : "null") + ',' + (class45_13_ != null ? "{...}" : "null") + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("tda.<init>(" + (Js5Archive != null ? "{...}" : "null") + ',' + (class45_12_ != null ? "{...}" : "null") + ',' + (class45_13_ != null ? "{...}" : "null") + ')'));
         }
     }
 

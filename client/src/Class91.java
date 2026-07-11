@@ -31,7 +31,8 @@ final class Class91 {
             Npc npc = (class348_sub22.aNpc_6859);
             if (Class5_Sub1.aBoolean8335 && Class348_Sub42_Sub1.method3169(i_3_, 0)) Class286_Sub2.method2146((byte) 84);
             if (Class348_Sub23_Sub3.anInt9041 != (npc.anInt10306)) {
-                if (npc.aClass79_10505.method793(0)) Class5.method181(true, npc);
+                if (npc.definition.method793(0)) Class5.method181(true, npc);
+                NpcEventHooks.despawned(npc);
                 npc.method2448(null, -2);
                 class348_sub22.method2715((byte) 52);
                 bool = true;
@@ -41,7 +42,7 @@ final class Class91 {
             Class348_Sub32.anInt6930 = Class282.aClass356_3654.method3474(1);
             Class282.aClass356_3654.method3477(3, Class348_Sub40_Sub23.aClass348_Sub22Array9319);
         }
-        if (Class348_Sub40_Sub25.anInt9341 != Class299.aClass348_Sub49_Sub2_3813.anInt7197) throw new RuntimeException("gnp1 pos:" + (Class299.aClass348_Sub49_Sub2_3813.anInt7197) + " psize:" + Class348_Sub40_Sub25.anInt9341);
+        if (Class348_Sub40_Sub25.anInt9341 != Class299.aClass348_Sub49_Sub2_3813.pos) throw new RuntimeException("gnp1 pos:" + (Class299.aClass348_Sub49_Sub2_3813.pos) + " psize:" + Class348_Sub40_Sub25.anInt9341);
         if (i <= 47) aClass74_1519 = null;
         for (int i_4_ = 0; Class150.anInt2057 > i_4_; i_4_++) {
             if (Class282.aClass356_3654.method3480(Class74.anIntArray1233[i_4_], -6008) == null) throw new RuntimeException("gnp2 pos:" + i_4_ + " size:" + Class150.anInt2057);

@@ -81,13 +81,13 @@ final class Class318_Sub1_Sub3_Sub4 extends Class318_Sub1_Sub3 {
         }
     }
 
-    final void method2380(ha var_ha, int i, boolean bool, Class318_Sub1 class318_sub1, int i_0_, byte i_1_, int i_2_) {
+    final void method2380(ha var_ha, int i, boolean bool, SceneEntity SceneEntity, int i_0_, byte i_1_, int i_2_) {
         try {
             anInt10347++;
             if (i_1_ > -106) this.aBoolean10345 = false;
             throw new IllegalStateException();
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("lf.N(" + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + bool + ',' + (class318_sub1 != null ? "{...}" : "null") + ',' + i_0_ + ',' + i_1_ + ',' + i_2_ + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("lf.N(" + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + bool + ',' + (SceneEntity != null ? "{...}" : "null") + ',' + i_0_ + ',' + i_1_ + ',' + i_2_ + ')'));
         }
     }
 
@@ -150,15 +150,15 @@ final class Class318_Sub1_Sub3_Sub4 extends Class318_Sub1_Sub3 {
         do {
             try {
                 anInt10357++;
-                if (Class348.anInt4290 < 100) Class318_Sub7.method2512(var_d, var_ha, i ^ 0x74);
+                if (Node.anInt4290 < 100) Class318_Sub7.method2512(var_d, var_ha, i ^ 0x74);
                 var_ha.KA(i_11_, i_14_, i_12_ + i_11_, i_14_ + i_13_);
-                if (Class348.anInt4290 < 100) {
+                if (Node.anInt4290 < 100) {
                     int i_15_ = 20;
                     int i_16_ = i_12_ / 2 + i_11_;
                     int i_17_ = i_14_ - -(i_13_ / 2) - 18 - i_15_;
                     var_ha.aa(i_11_, i_14_, i_12_, i_13_, -16777216, 0);
                     var_ha.method3628(-152 + i_16_, i_17_, 304, 34, Class348_Sub40_Sub8.aColorArray9163[Class222.anInt2884].getRGB(), 0);
-                    var_ha.aa(i_16_ - 150, 2 + i_17_, Class348.anInt4290 * 3, 30, Class135.aColorArray1928[Class222.anInt2884].getRGB(), 0);
+                    var_ha.aa(i_16_ - 150, 2 + i_17_, Node.anInt4290 * 3, 30, Class135.aColorArray1928[Class222.anInt2884].getRGB(), 0);
                     Class262.aClass324_3326.method2575((byte) -116, i_16_, Class50_Sub3.aColorArray5242[Class222.anInt2884].getRGB(), Class274.aClass274_3501.method2063(Class348_Sub33.anInt6967, i + 551), -1, i_15_ + i_17_);
                 } else {
                     int i_18_ = (Class348_Sub36.anInt6992 + -(int) ((float) i_12_ / Class75.aFloat1247));
@@ -284,7 +284,7 @@ final class Class318_Sub1_Sub3_Sub4 extends Class318_Sub1_Sub3 {
             int i_31_ = 0;
             for (int i_32_ = 0; Class367_Sub4.anInt7319 > i_32_; i_32_++) {
                 for (int i_33_ = 0; Class348_Sub40_Sub3.anInt9109 > i_33_; i_33_++) {
-                    if (Class367_Sub4.method3542(i_33_, Class147.aClass357ArrayArrayArray2029, i_32_, 0, i_31_, true)) i_31_++;
+                    if (Class367_Sub4.method3542(i_33_, ChatMessage.aClass357ArrayArrayArray2029, i_32_, 0, i_31_, true)) i_31_++;
                     if (i_31_ >= 512) return;
                 }
             }

@@ -3,10 +3,10 @@
  */
 
 abstract class Class130 {
-    static Class60 aClass60_1894 = new Class60(5);
-    static Class356 aClass356_1895 = new Class356(64);
+    static ReferenceCache aClass60_1894 = new ReferenceCache(5);
+    static IterableHashTable aClass356_1895 = new IterableHashTable(64);
     static int anInt1896;
-    static Class45 aClass45_1897;
+    static Js5Archive aClass45_1897;
     static int anInt1898;
     static boolean aBoolean1899 = false;
     static boolean aBoolean1900 = false;

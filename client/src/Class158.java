@@ -11,7 +11,7 @@ final class Class158 implements Interface12 {
     int anInt4931;
     int anInt4932;
     static int anInt4933;
-    static Class356 aClass356_4934 = new Class356(8);
+    static IterableHashTable aClass356_4934 = new IterableHashTable(8);
     int anInt4935;
     int anInt4936;
     int anInt4937;

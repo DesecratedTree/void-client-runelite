@@ -41,22 +41,22 @@ final class Class348_Sub42_Sub8_Sub2 extends Class348_Sub42_Sub8 {
         if (Class348_Sub3.aClass114_6584 == null) {
             if (Class108.aBoolean1661) {
                 if (!Class348_Sub40_Sub8.aClass238_9165.method1705(1, 119)) return false;
-                Class348_Sub40_Sub8.aClass238_9165.method1701(1, 0, (byte) 6, (Class299.aClass348_Sub49_Sub2_3813.aByteArray7154));
-                Class348_Sub50.anInt7213 = 0;
+                Class348_Sub40_Sub8.aClass238_9165.method1701(1, 0, (byte) 6, (Class299.aClass348_Sub49_Sub2_3813.data));
+                StringNode.anInt7213 = 0;
                 Class108.aBoolean1661 = false;
                 Class13.anInt221++;
             }
-            Class299.aClass348_Sub49_Sub2_3813.anInt7197 = 0;
+            Class299.aClass348_Sub49_Sub2_3813.pos = 0;
             if (Class299.aClass348_Sub49_Sub2_3813.method3404(-1510)) {
                 if (!Class348_Sub40_Sub8.aClass238_9165.method1705(1, 119)) return false;
-                Class348_Sub40_Sub8.aClass238_9165.method1701(1, 1, (byte) 26, (Class299.aClass348_Sub49_Sub2_3813.aByteArray7154));
+                Class348_Sub40_Sub8.aClass238_9165.method1701(1, 1, (byte) 26, (Class299.aClass348_Sub49_Sub2_3813.data));
                 Class13.anInt221++;
-                Class348_Sub50.anInt7213 = 0;
+                StringNode.anInt7213 = 0;
             }
             Class108.aBoolean1661 = true;
             Class114[] class114s = Class14_Sub3.method248(-11271);
             int i = Class299.aClass348_Sub49_Sub2_3813.method3407(15295);
-            if (i < 0 || i >= class114s.length) throw new IOException("invo:" + i + " ip:" + (Class299.aClass348_Sub49_Sub2_3813.anInt7197));
+            if (i < 0 || i >= class114s.length) throw new IOException("invo:" + i + " ip:" + (Class299.aClass348_Sub49_Sub2_3813.pos));
             Class348_Sub3.aClass114_6584 = class114s[i];
             if (Loader.debug) {
                 System.out.println("Packet read: " + i + " length: " + Class348_Sub3.aClass114_6584.anInt1749);
@@ -65,25 +65,36 @@ final class Class348_Sub42_Sub8_Sub2 extends Class348_Sub42_Sub8 {
         }
         if (Class348_Sub40_Sub25.anInt9341 == -1) {
             if (!Class348_Sub40_Sub8.aClass238_9165.method1705(1, 116)) return false;
-            Class348_Sub40_Sub8.aClass238_9165.method1701(1, 0, (byte) -118, (Class299.aClass348_Sub49_Sub2_3813.aByteArray7154));
-            Class348_Sub40_Sub25.anInt9341 = 0xff & (Class299.aClass348_Sub49_Sub2_3813.aByteArray7154[0]);
+            Class348_Sub40_Sub8.aClass238_9165.method1701(1, 0, (byte) -118, (Class299.aClass348_Sub49_Sub2_3813.data));
+            Class348_Sub40_Sub25.anInt9341 = 0xff & (Class299.aClass348_Sub49_Sub2_3813.data[0]);
             Class13.anInt221++;
-            Class348_Sub50.anInt7213 = 0;
+            StringNode.anInt7213 = 0;
         }
         if (Class348_Sub40_Sub25.anInt9341 == -2) {
             if (!Class348_Sub40_Sub8.aClass238_9165.method1705(2, 120)) return false;
-            Class348_Sub40_Sub8.aClass238_9165.method1701(2, 0, (byte) 127, (Class299.aClass348_Sub49_Sub2_3813.aByteArray7154));
-            Class299.aClass348_Sub49_Sub2_3813.anInt7197 = 0;
+            Class348_Sub40_Sub8.aClass238_9165.method1701(2, 0, (byte) 127, (Class299.aClass348_Sub49_Sub2_3813.data));
+            Class299.aClass348_Sub49_Sub2_3813.pos = 0;
             Class348_Sub40_Sub25.anInt9341 = Class299.aClass348_Sub49_Sub2_3813.readUnsignedShort(842397944);
             Class13.anInt221 += 2;
-            Class348_Sub50.anInt7213 = 0;
+            StringNode.anInt7213 = 0;
         }
         if (Class348_Sub40_Sub25.anInt9341 > 0) {
             if (!Class348_Sub40_Sub8.aClass238_9165.method1705(Class348_Sub40_Sub25.anInt9341, 104)) return false;
-            Class299.aClass348_Sub49_Sub2_3813.anInt7197 = 0;
-            Class348_Sub40_Sub8.aClass238_9165.method1701(Class348_Sub40_Sub25.anInt9341, 0, (byte) -123, (Class299.aClass348_Sub49_Sub2_3813.aByteArray7154));
+            Class299.aClass348_Sub49_Sub2_3813.pos = 0;
+            Class348_Sub40_Sub8.aClass238_9165.method1701(Class348_Sub40_Sub25.anInt9341, 0, (byte) -123, (Class299.aClass348_Sub49_Sub2_3813.data));
             Class13.anInt221 += Class348_Sub40_Sub25.anInt9341;
-            Class348_Sub50.anInt7213 = 0;
+            StringNode.anInt7213 = 0;
+        }
+        try {
+            if (Class348_Sub3.aClass114_6584 != null) {
+                net.runelite.client.game.GameEventBridgeHooks.postIncomingPacket(
+                    Class348_Sub3.aClass114_6584.method1058((byte) 127),
+                    Class348_Sub3.aClass114_6584.anInt1749,
+                    Class348_Sub40_Sub25.anInt9341
+                );
+            }
+        } catch (Throwable ignored) {
+            /* Network logger hooks must never break packet decode. */
         }
         Class348_Sub40_Sub36.aClass114_9456 = Class239.aClass114_3145;
         Class239.aClass114_3145 = Class238.aClass114_3133;
@@ -129,7 +140,7 @@ final class Class348_Sub42_Sub8_Sub2 extends Class348_Sub42_Sub8 {
             Class348_Sub3.aClass114_6584 = null;
             return true;
         }
-        if (Class356.aClass114_4388 == Class348_Sub3.aClass114_6584) {
+        if (IterableHashTable.aClass114_4388 == Class348_Sub3.aClass114_6584) {
             byte i = Class299.aClass348_Sub49_Sub2_3813.readByte(-100);
             int i_8_ = Class299.aClass348_Sub49_Sub2_3813.readShortAddLittle(-111);
             Class318_Sub1_Sub1_Sub1.method2397((byte) -126);
@@ -228,8 +239,8 @@ final class Class348_Sub42_Sub8_Sub2 extends Class348_Sub42_Sub8 {
                 }
             } while (false);
             if (!bool_20_ && Class250.anInt3227 == 0) {
-                Class357.aLongArray4410[Class79.anInt1359] = l_19_;
-                Class79.anInt1359 = (1 + Class79.anInt1359) % 100;
+                Class357.aLongArray4410[NPCType.anInt1359] = l_19_;
+                NPCType.anInt1359 = (1 + NPCType.anInt1359) % 100;
                 String string_22_ = (Class59_Sub2_Sub2.method572((Class348_Sub40_Sub32.method3136((byte) 64, Class299.aClass348_Sub49_Sub2_3813)), 23034));
                 if (i == 2 || i == 3) Class318_Sub1_Sub3_Sub5.method2477("<img=1>" + string_16_, string_22_, (byte) -126, -1, "<img=1>" + string, Class239_Sub16.method1788((byte) -76, l), 9, 0, string);
                 else if (i != 1) Class318_Sub1_Sub3_Sub5.method2477(string_16_, string_22_, (byte) -125, -1, string, Class239_Sub16.method1788((byte) -83, l), 9, 0, string);
@@ -259,7 +270,7 @@ final class Class348_Sub42_Sub8_Sub2 extends Class348_Sub42_Sub8 {
             Class318_Sub1_Sub1_Sub1.method2397((byte) -127);
             Class181.aBooleanArray2374[i_23_] = true;
             Class275.anIntArray3552[i_23_] = i;
-            Class255.anIntArray3273[i_23_] = i_25_;
+            ObjTypeList.anIntArray3273[i_23_] = i_25_;
             Class338.anIntArray4196[i_23_] = i_26_;
             Class318_Sub1_Sub1_Sub2.anIntArray9981[i_23_] = i_24_;
             Class348_Sub3.aClass114_6584 = null;
@@ -268,7 +279,7 @@ final class Class348_Sub42_Sub8_Sub2 extends Class348_Sub42_Sub8 {
         if (Class348_Sub3.aClass114_6584 == Class239_Sub24.aClass114_6089) {
             Class73.anInt4786 = (Class299.aClass348_Sub49_Sub2_3813.readByteInverse(-622951480) << 3);
             Class348_Sub40_Sub12.anInt9200 = Class299.aClass348_Sub49_Sub2_3813.readByteAdd((byte) -84);
-            Class278.anInt3581 = (Class299.aClass348_Sub49_Sub2_3813.method3341(-8679) << 3);
+            NPCTypeList.anInt3581 = (Class299.aClass348_Sub49_Sub2_3813.method3341(-8679) << 3);
             Class348_Sub3.aClass114_6584 = null;
             return true;
         }
@@ -304,9 +315,9 @@ final class Class348_Sub42_Sub8_Sub2 extends Class348_Sub42_Sub8 {
             int i_29_ = Class299.aClass348_Sub49_Sub2_3813.readInt((byte) -126);
             Class318_Sub1_Sub1_Sub1.method2397((byte) -128);
             Class70.method727((byte) -63, i_29_, i, i_28_);
-            Class213 class213 = Exception_Sub1.aClass255_112.method1940(-126, i);
-            Class122.method1085(class213.anInt2825, class213.anInt2787, (byte) -59, class213.anInt2781, i_28_);
-            Class34.method350(class213.anInt2779, class213.anInt2826, 125, i_28_, class213.anInt2810);
+            ObjType ObjType = Exception_Sub1.aClass255_112.getItemDefinitions(-126, i);
+            Class122.method1085(ObjType.zoom2d, ObjType.xan2d, (byte) -59, ObjType.yan2d, i_28_);
+            Class34.method350(ObjType.xof2d, ObjType.yof2d, 125, i_28_, ObjType.zan2d);
             Class348_Sub3.aClass114_6584 = null;
             return true;
         }
@@ -319,8 +330,8 @@ final class Class348_Sub42_Sub8_Sub2 extends Class348_Sub42_Sub8 {
             for (int i_33_ = 0; i_33_ < i_32_; i_33_++) {
                 int i_34_ = Class299.aClass348_Sub49_Sub2_3813.readByteAdd((byte) -127);
                 if (i_34_ == 255) {
-                    int index = Class299.aClass348_Sub49_Sub2_3813.anInt7197;
-                    byte[] data = Class299.aClass348_Sub49_Sub2_3813.aByteArray7154;
+                    int index = Class299.aClass348_Sub49_Sub2_3813.pos;
+                    byte[] data = Class299.aClass348_Sub49_Sub2_3813.data;
                     i_34_ = Class299.aClass348_Sub49_Sub2_3813.readIntMiddleEndian((byte) 82);
                 }
                 int i_35_ = Class299.aClass348_Sub49_Sub2_3813.readShortAdd(-78);
@@ -497,7 +508,7 @@ final class Class348_Sub42_Sub8_Sub2 extends Class348_Sub42_Sub8 {
                     int i_63_ = 256 + 512 * i_61_;
                     int i_64_ = 512 * i_62_ + 256;
                     int i_65_ = i_60_;
-                    if (i_65_ < 3 && Class79.method802(i_62_, i_61_, true)) i_65_++;
+                    if (i_65_ < 3 && NPCType.method802(i_62_, i_61_, true)) i_65_++;
                     Class318_Sub1_Sub3_Sub4 class318_sub1_sub3_sub4 = (new Class318_Sub1_Sub3_Sub4(i_38_, i_39_, Class367_Sub11.anInt7396, i_60_, i_65_, i_63_, -i_37_ + Class275.method2064(i_63_, i_60_, 11219, i_64_), i_64_, i_61_, i_61_, i_62_, i_62_, i_42_));
                     r_Sub2.aClass262_10492.method1999(new Class348_Sub42_Sub6(class318_sub1_sub3_sub4), -20180);
                 }
@@ -598,7 +609,7 @@ final class Class348_Sub42_Sub8_Sub2 extends Class348_Sub42_Sub8 {
             if (class302.anInt3831 >= 0 && (class302.anInt3831 < Class239_Sub9.aClass105Array5933.length)) {
                 if (class302.anInt3840 == 1 || class302.anInt3840 == 10) {
                     class302.anInt3833 = Class299.aClass348_Sub49_Sub2_3813.readUnsignedShort(842397944);
-                    Class299.aClass348_Sub49_Sub2_3813.anInt7197 += 6;
+                    Class299.aClass348_Sub49_Sub2_3813.pos += 6;
                 } else if (class302.anInt3840 >= 2 && class302.anInt3840 <= 6) {
                     if (class302.anInt3840 == 2) {
                         class302.anInt3832 = 256;
@@ -734,7 +745,10 @@ final class Class348_Sub42_Sub8_Sub2 extends Class348_Sub42_Sub8 {
             Class318_Sub1_Sub1_Sub1.method2397((byte) -127);
             Class348_Sub36 class348_sub36 = new Class348_Sub36();
             class348_sub36.anObjectArray6987 = objects;
+            net.runelite.client.game.GameEventBridgeHooks.postScriptPreFired(((Integer) objects[0]).intValue());
+            net.runelite.client.game.GameEventBridgeHooks.postScriptCallbackEvent(class348_sub36, String.valueOf(objects[0]));
             Class66.method705(class348_sub36);
+            net.runelite.client.game.GameEventBridgeHooks.postScriptPostFired(((Integer) objects[0]).intValue());
             Class348_Sub3.aClass114_6584 = null;
             return true;
         }
@@ -822,6 +836,7 @@ final class Class348_Sub42_Sub8_Sub2 extends Class348_Sub42_Sub8 {
                         if (i_92_ != 1) Class318_Sub1_Sub3_Sub5.method2477(player.method2450(false, -121), string, (byte) -126, i_95_, player.method2456(true, 255), null, i_96_, 0, player.aString10537);
                         else Class318_Sub1_Sub3_Sub5.method2477("<img=0>" + player.method2450(false, -93), string, (byte) -111, i_95_, "<img=0>" + player.method2456(true, 255), null, i_96_, 0, player.aString10537);
                     } else Class318_Sub1_Sub3_Sub5.method2477("<img=1>" + player.method2450(false, -95), string, (byte) -120, i_95_, "<img=1>" + player.method2456(true, 255), null, i_96_, 0, player.aString10537);
+                    net.runelite.client.game.GameEventBridgeHooks.postChatMessage(i_96_, player.method2450(false, -121), string, player.aString10537, Class367_Sub11.anInt7396);
                 }
             }
             Class348_Sub3.aClass114_6584 = null;
@@ -851,8 +866,8 @@ final class Class348_Sub42_Sub8_Sub2 extends Class348_Sub42_Sub8 {
                 }
             } while (false);
             if (!bool_101_ && Class250.anInt3227 == 0) {
-                Class357.aLongArray4410[Class79.anInt1359] = l_100_;
-                Class79.anInt1359 = (1 + Class79.anInt1359) % 100;
+                Class357.aLongArray4410[NPCType.anInt1359] = l_100_;
+                NPCType.anInt1359 = (1 + NPCType.anInt1359) % 100;
                 String string_103_ = (Class59_Sub2_Sub2.method572((Class348_Sub40_Sub32.method3136((byte) 64, Class299.aClass348_Sub49_Sub2_3813)), 23034));
                 if (i == 2) Class318_Sub1_Sub3_Sub5.method2477("<img=1>" + string_98_, string_103_, (byte) -127, -1, "<img=1>" + string, null, 7, 0, string);
                 else if (i == 1) Class318_Sub1_Sub3_Sub5.method2477("<img=0>" + string_98_, string_103_, (byte) -115, -1, "<img=0>" + string, null, 7, 0, string);
@@ -903,12 +918,12 @@ final class Class348_Sub42_Sub8_Sub2 extends Class348_Sub42_Sub8 {
             Class348_Sub3.aClass114_6584 = null;
             return true;
         }
-        if (Class255.aClass114_3265 == Class348_Sub3.aClass114_6584) {
-            Class278.anInt3581 = (Class299.aClass348_Sub49_Sub2_3813.readByteInverse(-622951480) << 3);
+        if (ObjTypeList.aClass114_3265 == Class348_Sub3.aClass114_6584) {
+            NPCTypeList.anInt3581 = (Class299.aClass348_Sub49_Sub2_3813.readByteInverse(-622951480) << 3);
             Class348_Sub40_Sub12.anInt9200 = Class299.aClass348_Sub49_Sub2_3813.readUnsignedByteSubtract((byte) 98);
             Class73.anInt4786 = (Class299.aClass348_Sub49_Sub2_3813.readByteSubtract(-27697) << 3);
-            while ((Class299.aClass348_Sub49_Sub2_3813.anInt7197) < Class348_Sub40_Sub25.anInt9341) {
-                Class74 class74 = (Class255.method1929((byte) -19)[Class299.aClass348_Sub49_Sub2_3813.readUnsignedByte(255)]);
+            while ((Class299.aClass348_Sub49_Sub2_3813.pos) < Class348_Sub40_Sub25.anInt9341) {
+                Class74 class74 = (ObjTypeList.method1929((byte) -19)[Class299.aClass348_Sub49_Sub2_3813.readUnsignedByte(255)]);
                 InputStream_Sub2.method128(class74, (byte) 8);
             }
             Class348_Sub3.aClass114_6584 = null;
@@ -962,8 +977,8 @@ final class Class348_Sub42_Sub8_Sub2 extends Class348_Sub42_Sub8 {
                 if (i <= 1 && Class351.method3455(string_114_, 28280)) bool_119_ = true;
             } while (false);
             if (!bool_119_ && Class250.anInt3227 == 0) {
-                Class357.aLongArray4410[Class79.anInt1359] = l_118_;
-                Class79.anInt1359 = (Class79.anInt1359 + 1) % 100;
+                Class357.aLongArray4410[NPCType.anInt1359] = l_118_;
+                NPCType.anInt1359 = (NPCType.anInt1359 + 1) % 100;
                 String string_121_ = (Class239_Sub6.aClass355_5900.method3471(i_117_, (byte) -106).method3216(Class299.aClass348_Sub49_Sub2_3813, (byte) 42));
                 if (i == 2) Class318_Sub1_Sub3_Sub5.method2477("<img=1>" + string_114_, string_121_, (byte) -120, i_117_, "<img=1>" + string, Class239_Sub16.method1788((byte) 87, l), 20, 0, string);
                 else if (i != 1) Class318_Sub1_Sub3_Sub5.method2477(string_114_, string_121_, (byte) -111, i_117_, string, Class239_Sub16.method1788((byte) 80, l), 20, 0, string);
@@ -1129,7 +1144,7 @@ final class Class348_Sub42_Sub8_Sub2 extends Class348_Sub42_Sub8 {
             int i = Class299.aClass348_Sub49_Sub2_3813.readUnsignedByte(255);
             if (Class299.aClass348_Sub49_Sub2_3813.readUnsignedByte(255) == 0) Class239_Sub26.aClass54Array6114[i] = new Class54();
             else {
-                Class299.aClass348_Sub49_Sub2_3813.anInt7197--;
+                Class299.aClass348_Sub49_Sub2_3813.pos--;
                 Class239_Sub26.aClass54Array6114[i] = new Class54(Class299.aClass348_Sub49_Sub2_3813);
             }
             Class348_Sub3.aClass114_6584 = null;
@@ -1169,7 +1184,7 @@ final class Class348_Sub42_Sub8_Sub2 extends Class348_Sub42_Sub8 {
             return true;
         }
         if (Class348_Sub3.aClass114_6584 == Class348_Sub45.aClass114_7106) {
-            while ((Class299.aClass348_Sub49_Sub2_3813.anInt7197) < Class348_Sub40_Sub25.anInt9341) {
+            while ((Class299.aClass348_Sub49_Sub2_3813.pos) < Class348_Sub40_Sub25.anInt9341) {
                 boolean bool_149_ = Class299.aClass348_Sub49_Sub2_3813.readUnsignedByte(255) == 1;
                 String string = Class299.aClass348_Sub49_Sub2_3813.readString((byte) -95);
                 String string_150_ = Class299.aClass348_Sub49_Sub2_3813.readString((byte) 118);
@@ -1298,7 +1313,7 @@ final class Class348_Sub42_Sub8_Sub2 extends Class348_Sub42_Sub8 {
             return true;
         }
         if (Class348_Sub3.aClass114_6584 == Class280.aClass114_3641) {
-            InputStream_Sub2.method128(Class348_Sub35.aClass74_6977, (byte) 8);
+            InputStream_Sub2.method128(IntNode.aClass74_6977, (byte) 8);
             Class348_Sub3.aClass114_6584 = null;
             return true;
         }
@@ -1349,8 +1364,8 @@ final class Class348_Sub42_Sub8_Sub2 extends Class348_Sub42_Sub8 {
                 if (i <= 1 && Class351.method3455(string_175_, 28280)) bool_179_ = true;
             } while (false);
             if (!bool_179_ && Class250.anInt3227 == 0) {
-                Class357.aLongArray4410[Class79.anInt1359] = l_178_;
-                Class79.anInt1359 = (Class79.anInt1359 - -1) % 100;
+                Class357.aLongArray4410[NPCType.anInt1359] = l_178_;
+                NPCType.anInt1359 = (NPCType.anInt1359 - -1) % 100;
                 String string_181_ = (Class239_Sub6.aClass355_5900.method3471(i_177_, (byte) -93).method3216(Class299.aClass348_Sub49_Sub2_3813, (byte) 62));
                 if (i == 2) Class318_Sub1_Sub3_Sub5.method2477("<img=1>" + string_175_, string_181_, (byte) -110, i_177_, "<img=1>" + string, null, 18, 0, string);
                 else if (i == 1) Class318_Sub1_Sub3_Sub5.method2477("<img=0>" + string_175_, string_181_, (byte) -112, i_177_, "<img=0>" + string, null, 18, 0, string);
@@ -1404,20 +1419,20 @@ final class Class348_Sub42_Sub8_Sub2 extends Class348_Sub42_Sub8 {
         if (Class348_Sub38.aClass114_7015 == Class348_Sub3.aClass114_6584) {
             Class348_Sub40_Sub12.anInt9200 = Class299.aClass348_Sub49_Sub2_3813.readByteAdd((byte) 126);
             Class73.anInt4786 = (Class299.aClass348_Sub49_Sub2_3813.readByteInverse(-622951480) << 3);
-            Class278.anInt3581 = (Class299.aClass348_Sub49_Sub2_3813.readByteInverse(-622951480) << 3);
+            NPCTypeList.anInt3581 = (Class299.aClass348_Sub49_Sub2_3813.readByteInverse(-622951480) << 3);
             for (Class348_Sub37 class348_sub37 = (Class348_Sub37) Class130.aClass356_1895.method3484(0); class348_sub37 != null; class348_sub37 = ((Class348_Sub37) Class130.aClass356_1895.method3482(0))) {
-                int i = (int) ((class348_sub37.aLong4291 >> 28) & 0x3L);
-                int i_188_ = (int) (class348_sub37.aLong4291 & 0x3fffL);
+                int i = (int) ((class348_sub37.key >> 28) & 0x3L);
+                int i_188_ = (int) (class348_sub37.key & 0x3fffL);
                 int i_189_ = i_188_ + -za_Sub2.regionTileX;
-                int i_190_ = (int) (0x3fffL & (class348_sub37.aLong4291 >> 14));
+                int i_190_ = (int) (0x3fffL & (class348_sub37.key >> 14));
                 int i_191_ = -Class90.regionTileY + i_190_;
-                if (i == Class348_Sub40_Sub12.anInt9200 && Class278.anInt3581 <= i_189_ && 8 + Class278.anInt3581 > i_189_ && Class73.anInt4786 <= i_191_ && Class73.anInt4786 - -8 > i_191_) {
+                if (i == Class348_Sub40_Sub12.anInt9200 && NPCTypeList.anInt3581 <= i_189_ && 8 + NPCTypeList.anInt3581 > i_189_ && Class73.anInt4786 <= i_191_ && Class73.anInt4786 - -8 > i_191_) {
                     class348_sub37.method2715((byte) 89);
                     if (i_189_ >= 0 && i_191_ >= 0 && i_189_ < Class367_Sub4.anInt7319 && (i_191_ < Class348_Sub40_Sub3.anInt9109)) Class203.method1479(i_191_, (byte) -118, i_189_, Class348_Sub40_Sub12.anInt9200);
                 }
             }
             for (Class348_Sub27 class348_sub27 = ((Class348_Sub27) Class348_Sub42_Sub20.aClass262_9711.method1995(4)); class348_sub27 != null; class348_sub27 = (Class348_Sub27) Class348_Sub42_Sub20.aClass262_9711.method1990((byte) 31)) {
-                if ((Class278.anInt3581 <= class348_sub27.anInt6905) && (class348_sub27.anInt6905 < Class278.anInt3581 - -8) && (class348_sub27.anInt6896 >= Class73.anInt4786) && (class348_sub27.anInt6896 < Class73.anInt4786 + 8) && (class348_sub27.anInt6899 == Class348_Sub40_Sub12.anInt9200))
+                if ((NPCTypeList.anInt3581 <= class348_sub27.anInt6905) && (class348_sub27.anInt6905 < NPCTypeList.anInt3581 - -8) && (class348_sub27.anInt6896 >= Class73.anInt4786) && (class348_sub27.anInt6896 < Class73.anInt4786 + 8) && (class348_sub27.anInt6899 == Class348_Sub40_Sub12.anInt9200))
                     class348_sub27.anInt6893 = 0;
             }
             Class348_Sub3.aClass114_6584 = null;
@@ -1508,6 +1523,7 @@ final class Class348_Sub42_Sub8_Sub2 extends Class348_Sub42_Sub8 {
             Class348_Sub7.method2772(i_202_, (byte) 123);
             Class239.method1713(false, 520);
             Class66.method703(r.anInt9721);
+            net.runelite.client.game.GameEventBridgeHooks.postWorldChanged(i_202_);
             for (int i_203_ = 0; i_203_ < 100; i_203_++)
                 Class152.aBooleanArray2076[i_203_] = true;
             Class348_Sub3.aClass114_6584 = null;
@@ -1520,7 +1536,7 @@ final class Class348_Sub42_Sub8_Sub2 extends Class348_Sub42_Sub8 {
             Class348_Sub3.aClass114_6584 = null;
             return true;
         }
-        if (Class348_Sub3.aClass114_6584 == Class318_Sub1.aClass114_6383) {
+        if (Class348_Sub3.aClass114_6584 == SceneEntity.aClass114_6383) {
             int i = Class299.aClass348_Sub49_Sub2_3813.readUnsignedShort(842397944);
             if (i == 65535) i = -1;
             int i_204_ = Class299.aClass348_Sub49_Sub2_3813.readUnsignedByte(255);
@@ -1574,8 +1590,8 @@ final class Class348_Sub42_Sub8_Sub2 extends Class348_Sub42_Sub8 {
             return true;
         }
         if (Class348_Sub3.aClass114_6584 == Class314_Sub1.aClass114_6340) {
-            Class299.aClass348_Sub49_Sub2_3813.anInt7197 += 28;
-            if (Class299.aClass348_Sub49_Sub2_3813.method3352(-25541)) Class179.method1365((Class299.aClass348_Sub49_Sub2_3813.anInt7197) + -28, (byte) -126, Class299.aClass348_Sub49_Sub2_3813);
+            Class299.aClass348_Sub49_Sub2_3813.pos += 28;
+            if (Class299.aClass348_Sub49_Sub2_3813.method3352(-25541)) Class179.method1365((Class299.aClass348_Sub49_Sub2_3813.pos) + -28, (byte) -126, Class299.aClass348_Sub49_Sub2_3813);
             Class348_Sub3.aClass114_6584 = null;
             return true;
         }
@@ -1596,6 +1612,7 @@ final class Class348_Sub42_Sub8_Sub2 extends Class348_Sub42_Sub8 {
             for (int i_217_ = 0; i_216_ > i_217_; i_217_++) {
                 if (Class59_Sub1_Sub2.anIntArray8663[i_217_] <= i_215_) Class256.anIntArray3295[i_214_] = i_217_ - -2;
             }
+            net.runelite.client.game.GameEventBridgeHooks.postStatChanged(i_214_, i, i_215_, Class256.anIntArray3295[i_214_]);
             Class199.anIntArray2632[Class139.method1166(31, Class326.anInt4086++)] = i_214_;
             Class348_Sub3.aClass114_6584 = null;
             return true;
@@ -1610,6 +1627,7 @@ final class Class348_Sub42_Sub8_Sub2 extends Class348_Sub42_Sub8 {
             int i_218_ = Class299.aClass348_Sub49_Sub2_3813.readUnsignedByteSubtract((byte) 70);
             boolean bool_219_ = (0x1 & i_218_) == 1;
             Class348_Sub40_Sub3.method3054(bool_219_, i, -128);
+            net.runelite.client.game.GameEventBridgeHooks.postVarbitChanged(-1, i, bool_219_ ? 1 : 0);
             Class199.anIntArray2633[Class139.method1166(31, Class106.anInt1631++)] = i;
             Class348_Sub3.aClass114_6584 = null;
             return true;
@@ -1618,7 +1636,7 @@ final class Class348_Sub42_Sub8_Sub2 extends Class348_Sub42_Sub8 {
             int i = Class299.aClass348_Sub49_Sub2_3813.readUnsignedShort(842397944);
             int i_220_ = Class299.aClass348_Sub49_Sub2_3813.readUnsignedByte(255);
             boolean bool_221_ = (i_220_ & 0x1) == 1;
-            while ((Class299.aClass348_Sub49_Sub2_3813.anInt7197) < Class348_Sub40_Sub25.anInt9341) {
+            while ((Class299.aClass348_Sub49_Sub2_3813.pos) < Class348_Sub40_Sub25.anInt9341) {
                 int i_222_ = Class299.aClass348_Sub49_Sub2_3813.readSmart(-125);
                 int i_223_ = Class299.aClass348_Sub49_Sub2_3813.readUnsignedShort(842397944);
                 int i_224_ = 0;
@@ -1628,6 +1646,7 @@ final class Class348_Sub42_Sub8_Sub2 extends Class348_Sub42_Sub8 {
                 }
                 Canvas_Sub1.method121(i, -364570972, bool_221_, i_222_, i_224_, -1 + i_223_);
             }
+            net.runelite.client.game.GameEventBridgeHooks.postItemContainerChanged(i, null);
             Class199.anIntArray2633[Class139.method1166(31, Class106.anInt1631++)] = i;
             Class348_Sub3.aClass114_6584 = null;
             return true;
@@ -1678,7 +1697,7 @@ final class Class348_Sub42_Sub8_Sub2 extends Class348_Sub42_Sub8 {
             int i = Class299.aClass348_Sub49_Sub2_3813.readIntInverseMiddle(255);
             int i_232_ = Class299.aClass348_Sub49_Sub2_3813.readShortAdd(-110);
             Class318_Sub1_Sub1_Sub1.method2397((byte) -124);
-            Class348_Sub49_Sub2.method3411(i, 12, i_232_);
+            BitPacket.method3411(i, 12, i_232_);
             Class348_Sub3.aClass114_6584 = null;
             return true;
         }

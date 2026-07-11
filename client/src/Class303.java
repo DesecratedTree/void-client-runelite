@@ -24,20 +24,20 @@ final class Class303 {
         if (i != 114) anInt3844 = 87;
     }
 
-    static final Class125 method2287(Class348_Sub49 class348_sub49, byte i) {
+    static final Class125 method2287(Packet Packet, byte i) {
         anInt3846++;
-        int i_1_ = class348_sub49.readUnsignedByte(255);
-        Class221 class221 = Class158.method1248(87)[class348_sub49.readUnsignedByte(255)];
-        Class341 class341 = Class62.method596(20000)[class348_sub49.readUnsignedByte(255)];
-        int i_2_ = class348_sub49.readShort(13638);
-        int i_3_ = class348_sub49.readShort(13638);
-        int i_4_ = class348_sub49.readUnsignedShort(842397944);
-        int i_5_ = class348_sub49.readUnsignedShort(842397944);
-        int i_6_ = class348_sub49.readInt((byte) -126);
-        int i_7_ = class348_sub49.readInt((byte) -126);
-        int i_8_ = class348_sub49.readInt((byte) -126);
+        int i_1_ = Packet.readUnsignedByte(255);
+        Class221 class221 = Class158.method1248(87)[Packet.readUnsignedByte(255)];
+        Class341 class341 = Class62.method596(20000)[Packet.readUnsignedByte(255)];
+        int i_2_ = Packet.readShort(13638);
+        int i_3_ = Packet.readShort(13638);
+        int i_4_ = Packet.readUnsignedShort(842397944);
+        int i_5_ = Packet.readUnsignedShort(842397944);
+        int i_6_ = Packet.readInt((byte) -126);
+        int i_7_ = Packet.readInt((byte) -126);
+        int i_8_ = Packet.readInt((byte) -126);
         int i_9_ = -54 / ((i - -45) / 61);
-        boolean bool = class348_sub49.readUnsignedByte(255) == 1;
+        boolean bool = Packet.readUnsignedByte(255) == 1;
         return new Class125(i_1_, class221, class341, i_2_, i_3_, i_4_, i_5_, i_6_, i_7_, i_8_, bool);
     }
 

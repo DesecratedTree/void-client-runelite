@@ -5,7 +5,7 @@
 import jaggl.OpenGL;
 
 final class Class286_Sub7 extends Class286 {
-    static Class45 aClass45_6277;
+    static Js5Archive aClass45_6277;
     private final Class83 aClass83_6278;
     static int anInt6279;
     static int anInt6280;
@@ -166,7 +166,7 @@ final class Class286_Sub7 extends Class286 {
     }
 
     static final void method2168(int i, int i_7_, int i_8_) {
-        Class357 class357 = Class147.aClass357ArrayArrayArray2029[i][i_7_][i_8_];
+        Class357 class357 = ChatMessage.aClass357ArrayArrayArray2029[i][i_7_][i_8_];
         if (class357 != null) {
             Class183.method1376(class357.aClass318_Sub1_Sub5_4395);
             Class183.method1376(class357.aClass318_Sub1_Sub5_4407);

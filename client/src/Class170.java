@@ -11,7 +11,7 @@ final class Class170 implements Interface17 {
     static Class237_Sub1 aClass237_Sub1_5067;
     static int anInt5068;
     static int anInt5069;
-    private Class356 aClass356_5070 = new Class356(128);
+    private IterableHashTable aClass356_5070 = new IterableHashTable(128);
     static int anInt5071;
     static int anInt5072;
     static int anInt5073;
@@ -31,7 +31,7 @@ final class Class170 implements Interface17 {
         for (Class348_Sub14 class348_sub14 = (bool ? (Class348_Sub14) aClass356_5070.method3484(0) : (Class348_Sub14) aClass356_5070.method3482(0)); class348_sub14 != null; class348_sub14 = (Class348_Sub14) aClass356_5070.method3482(0)) {
             if (l > (class348_sub14.aLong6762 & 0x3fffffffffffffffL)) {
                 if ((0x4000000000000000L & class348_sub14.aLong6762) != 0L) {
-                    int i_0_ = (int) class348_sub14.aLong4291;
+                    int i_0_ = (int) class348_sub14.key;
                     this.anIntArray5063[i_0_] = anIntArray5078[i_0_];
                     class348_sub14.method2715((byte) 31);
                     return i_0_;
@@ -107,9 +107,9 @@ final class Class170 implements Interface17 {
         }
     }
 
-    static final Class52 method1312(byte i, Class348_Sub49 class348_sub49) {
+    static final Class52 method1312(byte i, Packet Packet) {
         anInt5075++;
-        int i_23_ = class348_sub49.readInt((byte) -126);
+        int i_23_ = Packet.readInt((byte) -126);
         if (i < 47) method1315(4);
         return new Class52(i_23_);
     }
@@ -134,7 +134,7 @@ final class Class170 implements Interface17 {
             }
         }
         anInt5076++;
-        aClass356_5070 = new Class356(128);
+        aClass356_5070 = new IterableHashTable(128);
         int i_27_ = -69 % ((25 - i) / 39);
     }
 
@@ -188,11 +188,11 @@ final class Class170 implements Interface17 {
             int i_40_ = Class299.aClass348_Sub49_Sub2_3813.readUnsignedByte(255);
             if ((0x10 & i_40_) != 0) i_40_ += Class299.aClass348_Sub49_Sub2_3813.readUnsignedByte(i ^ ~0xff00) << 8;
             if ((0x2 & i_40_) != 0) {
-                if (npc.aClass79_10505.method793(i ^ ~0xffff)) Class5.method181(true, npc);
+                if (npc.definition.method793(i ^ ~0xffff)) Class5.method181(true, npc);
                 npc.method2448((Class189.aClass278_2529.method2079(Class299.aClass348_Sub49_Sub2_3813.readShortAdd(-1), -1)), -2);
-                npc.method2434((byte) 95, npc.aClass79_10505.anInt1399);
-                npc.anInt10310 = npc.aClass79_10505.anInt1329 << 3;
-                if (npc.aClass79_10505.method793(0)) Class223.method1614(979190089, npc, (npc.plane), (npc.anIntArray10317[0]), (npc.anIntArray10320[0]), null, null, 0);
+                npc.method2434((byte) 95, npc.definition.anInt1399);
+                npc.anInt10310 = npc.definition.yawSpeed << 3;
+                if (npc.definition.method793(0)) Class223.method1614(979190089, npc, (npc.plane), (npc.anIntArray10317[0]), (npc.anIntArray10320[0]), null, null, 0);
             }
             if ((0x8 & i_40_) != 0) {
                 int[] is = new int[4];

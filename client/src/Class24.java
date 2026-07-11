@@ -4,7 +4,7 @@
 
 final class Class24 {
     static int anInt354;
-    static Class60 aClass60_355 = new Class60(260);
+    static ReferenceCache aClass60_355 = new ReferenceCache(260);
     static int anInt356;
     static Class318_Sub1_Sub3[] aClass318_Sub1_Sub3Array357;
     static byte[][] aByteArrayArray358 = new byte[1000][];

@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-abstract class Class348_Sub40 extends Class348 {
+abstract class Class348_Sub40 extends Node {
     static int anInt7026;
     static int anInt7027;
     static int anInt7028;
@@ -18,16 +18,16 @@ abstract class Class348_Sub40 extends Class348 {
     static int anInt7038;
     static int anInt7039;
     static int anInt7040;
-    static Class356 aClass356_7041 = new Class356(32);
+    static IterableHashTable aClass356_7041 = new IterableHashTable(32);
     static Class279 aClass279_7042;
     static int anInt7043;
     static int anInt7044;
     boolean aBoolean7045;
 
-    static final Class50_Sub2 method3036(Class348_Sub49 class348_sub49, int i) {
+    static final Class50_Sub2 method3036(Packet Packet, int i) {
         anInt7026++;
         if (i > -4) return null;
-        return new Class50_Sub2(class348_sub49.readShort(13638), class348_sub49.readShort(13638), class348_sub49.readShort(13638), class348_sub49.readShort(13638), class348_sub49.readMedium(-1), class348_sub49.readMedium(-1), class348_sub49.readUnsignedByte(255));
+        return new Class50_Sub2(Packet.readShort(13638), Packet.readShort(13638), Packet.readShort(13638), Packet.readShort(13638), Packet.readMedium(-1), Packet.readMedium(-1), Packet.readUnsignedByte(255));
     }
 
     int method3037(int i) {
@@ -244,7 +244,7 @@ abstract class Class348_Sub40 extends Class348 {
         return this.aClass348_Sub40Array7031[i_59_].method3042(i, i_58_ + -633706082);
     }
 
-    void method3049(Class348_Sub49 class348_sub49, int i, int i_60_) {
+    void method3049(Packet Packet, int i, int i_60_) {
         anInt7028++;
         if (i_60_ != 31015) method3038(-16);
     }

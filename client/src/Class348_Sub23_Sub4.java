@@ -54,33 +54,33 @@ final class Class348_Sub23_Sub4 extends Class348_Sub23 {
     final void method2964(byte i, OggPacket oggpacket) {
         anInt9063++;
         if (this.anInt6868 <= 0 || "SUB".equals(aString9057)) {
-            Class348_Sub49 class348_sub49 = new Class348_Sub49(oggpacket.getData());
-            int i_2_ = class348_sub49.readUnsignedByte(255);
+            Packet Packet = new Packet(oggpacket.getData());
+            int i_2_ = Packet.readUnsignedByte(255);
             if (this.anInt6868 <= 8) {
                 if ((i_2_ | 0x80) == 0) throw new IllegalStateException();
                 if (this.anInt6868 == 0) {
-                    class348_sub49.anInt7197 += 23;
-                    anInt9055 = class348_sub49.method3359(-89);
-                    anInt9054 = class348_sub49.method3359(-41);
+                    Packet.pos += 23;
+                    anInt9055 = Packet.method3359(-89);
+                    anInt9054 = Packet.method3359(-41);
                     if (anInt9055 == 0 || anInt9054 == 0) throw new IllegalStateException();
-                    Class348_Sub49 class348_sub49_3_ = new Class348_Sub49(16);
-                    class348_sub49.method3389(2147483647, 0, 16, (class348_sub49_3_.aByteArray7154));
+                    Packet class348_sub49_3_ = new Packet(16);
+                    Packet.method3389(2147483647, 0, 16, (class348_sub49_3_.data));
                     aString9051 = class348_sub49_3_.readString((byte) -91);
-                    class348_sub49_3_.anInt7197 = 0;
-                    class348_sub49.method3389(2147483647, 0, 16, (class348_sub49_3_.aByteArray7154));
+                    class348_sub49_3_.pos = 0;
+                    Packet.method3389(2147483647, 0, 16, (class348_sub49_3_.data));
                     aString9057 = class348_sub49_3_.readString((byte) -40);
                 }
             } else {
                 if (i_2_ == 0) {
-                    long l = class348_sub49.method3332((byte) 109);
-                    long l_4_ = class348_sub49.method3332((byte) 90);
-                    long l_5_ = class348_sub49.method3332((byte) 122);
+                    long l = Packet.method3332((byte) 109);
+                    long l_4_ = Packet.method3332((byte) 90);
+                    long l_5_ = Packet.method3332((byte) 122);
                     if (l < 0 || l_4_ < 0 || l_5_ < 0 || l_5_ > l) throw new IllegalStateException();
                     aFloat9062 = (float) ((long) anInt9054 * l) / (float) anInt9055;
                     aFloat9048 = ((float) ((l - -l_4_) * (long) anInt9054) / (float) anInt9055);
-                    int i_6_ = class348_sub49.method3359(-93);
-                    if (i_6_ < 0 || i_6_ > (-class348_sub49.anInt7197 + (class348_sub49.aByteArray7154).length)) throw new IllegalStateException();
-                    aString9058 = (Class239_Sub17.method1793(class348_sub49.aByteArray7154, class348_sub49.anInt7197, -123, i_6_));
+                    int i_6_ = Packet.method3359(-93);
+                    if (i_6_ < 0 || i_6_ > (-Packet.pos + (Packet.data).length)) throw new IllegalStateException();
+                    aString9058 = (Class239_Sub17.method1793(Packet.data, Packet.pos, -123, i_6_));
                 }
                 if ((i_2_ | 0x80) != 0) return;
             }
@@ -106,7 +106,7 @@ final class Class348_Sub23_Sub4 extends Class348_Sub23 {
                 }
             }
         } else {
-            Class357 class357 = Class147.aClass357ArrayArrayArray2029[i][i_10_][i_8_];
+            Class357 class357 = ChatMessage.aClass357ArrayArrayArray2029[i][i_10_][i_8_];
             if (class357 != null) {
                 if (i_7_ != 1) {
                     if (i_7_ == 2) class357.aShort4398 = (short) 0;
@@ -118,10 +118,10 @@ final class Class348_Sub23_Sub4 extends Class348_Sub23 {
     }
 
     static final void method2988(boolean bool) {
-        Class60.aHa1098.xa(((float) Class316.aClass348_Sub51_3959.aClass239_Sub10_7232.method1764(-32350) * 0.1F + 0.7F) * Class160.aFloat2137);
+        ReferenceCache.aHa1098.xa(((float) Class316.aClass348_Sub51_3959.aClass239_Sub10_7232.method1764(-32350) * 0.1F + 0.7F) * Class160.aFloat2137);
         anInt9049++;
-        Class60.aHa1098.ZA(Class119_Sub1.anInt4703, Class244.aFloat4626, Class361.aFloat4455, (float) (Class21.anInt325 << 2), (float) (Class318_Sub1_Sub3_Sub1.anInt10023 << 2), (float) (Class196.anInt2601 << 2));
-        Class60.aHa1098.method3653(Class158.aClass299_4938);
+        ReferenceCache.aHa1098.ZA(Class119_Sub1.anInt4703, Class244.aFloat4626, Class361.aFloat4455, (float) (Class21.anInt325 << 2), (float) (Class318_Sub1_Sub3_Sub1.anInt10023 << 2), (float) (Class196.anInt2601 << 2));
+        ReferenceCache.aHa1098.method3653(Class158.aClass299_4938);
         if (bool != true) anIntArray9050 = null;
     }
 

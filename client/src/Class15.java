@@ -3,7 +3,7 @@
  */
 
 final class Class15 {
-    static Class60 aClass60_225 = new Class60(4);
+    static ReferenceCache aClass60_225 = new ReferenceCache(4);
     static int anInt226;
     static int anInt227;
     static int anInt228;

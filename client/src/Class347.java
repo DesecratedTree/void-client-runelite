@@ -23,9 +23,9 @@ final class Class347 {
     static final void method2708(int i) {
         Class251.method1916(-9343, Class289.aClass46_3701);
         anInt4280++;
-        Class318_Sub1.anInt6392++;
+        SceneEntity.anInt6392++;
         if (!Class50_Sub1.aBoolean5221 || !Class127_Sub1.aBoolean8386) {
-            if (Class318_Sub1.anInt6392 > 1) Class289.aClass46_3701 = null;
+            if (SceneEntity.anInt6392 > 1) Class289.aClass46_3701 = null;
         } else {
             int i_0_ = 0;
             int i_1_ = 0;
@@ -45,7 +45,7 @@ final class Class347 {
                 int i_4_ = (-Class348_Sub40_Sub37.anInt9461 + (i_2_ - -Class331.aClass46_4130.anInt747));
                 int i_5_ = (-Class40.anInt558 + (i_3_ + Class331.aClass46_4130.anInt755));
                 if (Class258_Sub4.aClass373_8552.method3593(94)) {
-                    if (Class289.aClass46_3701.anInt703 < Class318_Sub1.anInt6392) {
+                    if (Class289.aClass46_3701.anInt703 < SceneEntity.anInt6392) {
                         int i_6_ = i_2_ + -ha_Sub3.anInt8001;
                         int i_7_ = -Class348_Sub40_Sub13.anInt9203 + i_3_;
                         if (Class289.aClass46_3701.anInt729 < i_6_ || (-Class289.aClass46_3701.anInt729 > i_6_) || (i_7_ > Class289.aClass46_3701.anInt729) || i_7_ < -Class289.aClass46_3701.anInt729) Class300.aBoolean3819 = true;

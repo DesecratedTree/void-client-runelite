@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-final class Class348_Sub39 extends Class348 {
+final class Class348_Sub39 extends Node {
     short[] aShortArray7024;
     byte[] aByteArray7025;
 

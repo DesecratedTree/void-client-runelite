@@ -61,6 +61,7 @@ final class Canvas_Sub1 extends Canvas {
     public final void update(Graphics graphics) {
         anInt61++;
         aComponent64.update(graphics);
+        net.runelite.client.plugins.inventorygrid.InventoryGridCanvasOverlay.paint(graphics, this);
     }
 
     public static void method120(boolean bool) {
@@ -97,6 +98,7 @@ final class Canvas_Sub1 extends Canvas {
 
     public final void paint(Graphics graphics) {
         aComponent64.paint(graphics);
+        net.runelite.client.plugins.inventorygrid.InventoryGridCanvasOverlay.paint(graphics, this);
         anInt65++;
     }
 
@@ -155,9 +157,9 @@ final class Canvas_Sub1 extends Canvas {
                     Class268.anInt3441++;
                 }
             }
-            if (Class322.anIntArray4031 != null && Class348_Sub50.aByteArrayArray7212[i_19_] == null && Class322.anIntArray4031[i_19_] != -1) {
-                Class348_Sub50.aByteArrayArray7212[i_19_] = (Class367_Sub10.aClass45_7382.method393(Class322.anIntArray4031[i_19_], 0, i + 2, Class239_Sub6.anIntArrayArray5894[i_19_]));
-                if (Class348_Sub50.aByteArrayArray7212[i_19_] == null) {
+            if (Class322.anIntArray4031 != null && StringNode.aByteArrayArray7212[i_19_] == null && Class322.anIntArray4031[i_19_] != -1) {
+                StringNode.aByteArrayArray7212[i_19_] = (Class367_Sub10.aClass45_7382.method393(Class322.anIntArray4031[i_19_], 0, i + 2, Class239_Sub6.anIntArrayArray5894[i_19_]));
+                if (StringNode.aByteArrayArray7212[i_19_] == null) {
                     bool = false;
                     Class268.anInt3441++;
                 }
@@ -262,7 +264,7 @@ final class Canvas_Sub1 extends Canvas {
                 if (Class312.anInt3931 == 0) {
                     Class289.method2193(true, (byte) -128);
                     Class122.method1090(Class14_Sub4.aByteArrayArray8642, i + 65536, Class338.aClass237_Sub1_4197);
-                    if (Class348_Sub50.aByteArrayArray7212 != null) Class92.method859(i ^ ~0x7e);
+                    if (StringNode.aByteArrayArray7212 != null) Class92.method859(i ^ ~0x7e);
                 } else {
                     Class289.method2193(true, (byte) -121);
                     Class101_Sub3.method944(i + -8212, Class14_Sub4.aByteArrayArray8642, Class338.aClass237_Sub1_4197);
@@ -285,7 +287,7 @@ final class Canvas_Sub1 extends Canvas {
                     Class289.method2193(true, (byte) -126);
                     Class243.method1879(false);
                 }
-                Class348_Sub50.method3419(13022);
+                StringNode.method3419(13022);
                 int i_29_ = Class338.aClass237_Sub1_4197.anInt5824;
                 if (i_29_ > Class355.anInt4372) i_29_ = Class355.anInt4372;
                 if (i_29_ < -1 + Class355.anInt4372) i_29_ = Class355.anInt4372 - 1;
@@ -324,13 +326,13 @@ final class Canvas_Sub1 extends Canvas {
                 }
                 if (Class240.anInt4674 != 4) {
                     if (Class240.anInt4674 != 8) {
-                        Class348_Sub49.method3379(2, 10);
+                        Packet.method3379(2, 10);
                         if (Class348_Sub40_Sub8.aClass238_9165 != null) {
                             Class348_Sub47 class348_sub47 = Class286_Sub3.method2148((Class340.aClass351_4223), (Class348_Sub23_Sub2.aClass77_9029), -106);
                             Class348_Sub42_Sub14.method3243(127, class348_sub47);
                         }
-                    } else Class348_Sub49.method3379(2, 7);
-                } else Class348_Sub49.method3379(i ^ 0x2, 3);
+                    } else Packet.method3379(2, 7);
+                } else Packet.method3379(i ^ 0x2, 3);
                 Class348_Sub1.method2718(-106);
                 Class369_Sub1.method3570(false);
                 Class94.method867(true);

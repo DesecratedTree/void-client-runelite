@@ -4,7 +4,7 @@
 
 import java.applet.Applet;
 
-final class Class348_Sub8 extends Class348 {
+final class Class348_Sub8 extends Node {
     static ha aHa6654;
     static int[] anIntArray6655;
     static boolean[][] aBooleanArrayArray6656;

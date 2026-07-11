@@ -7,19 +7,19 @@ final class Class375 {
     static boolean aBoolean4540 = false;
     static int anInt4541;
     static boolean aBoolean4542 = false;
-    static Class60 aClass60_4543 = new Class60(8);
+    static ReferenceCache aClass60_4543 = new ReferenceCache(8);
     static int anInt4544 = -1;
     static int anInt4545 = -1;
 
-    static final void method3612(int i, Class348_Sub49_Sub2 class348_sub49_sub2) {
+    static final void method3612(int i, BitPacket BitPacket) {
         if (i < 59) method3614(-51, 64, -115, null, -96);
         for (int i_0_ = 0; i_0_ < Class101_Sub3.anInt5768; i_0_++) {
             int i_1_ = Class18.anIntArray279[i_0_];
             Player player = Class294.aPlayerArray5058[i_1_];
-            int i_2_ = class348_sub49_sub2.readUnsignedByte(255);
-            if ((i_2_ & 0x40) != 0) i_2_ += class348_sub49_sub2.readUnsignedByte(255) << 8;
-            if ((i_2_ & 0x4000) != 0) i_2_ += class348_sub49_sub2.readUnsignedByte(255) << 16;
-            Class133.method1141(class348_sub49_sub2, i_1_, i_2_, 123, player);
+            int i_2_ = BitPacket.readUnsignedByte(255);
+            if ((i_2_ & 0x40) != 0) i_2_ += BitPacket.readUnsignedByte(255) << 8;
+            if ((i_2_ & 0x4000) != 0) i_2_ += BitPacket.readUnsignedByte(255) << 16;
+            Class133.method1141(BitPacket, i_1_, i_2_, 123, player);
         }
         anInt4541++;
     }

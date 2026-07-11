@@ -68,12 +68,12 @@ final class Class348_Sub42_Sub2 extends Class348_Sub42 implements Interface9 {
             Class331.anInt4135 = 0;
         }
         Class243.method1879(false);
-        Class348.aClass318_Sub1Array4293 = new Class318_Sub1[2];
-        Class250.aClass318_Sub1Array3226 = new Class318_Sub1[2];
-        Class115.aClass318_Sub1Array1754 = new Class318_Sub1[2];
-        Class239_Sub21.aClass318_Sub1Array6066 = new Class318_Sub1[10000];
+        Node.aClass318_Sub1Array4293 = new SceneEntity[2];
+        Class250.aClass318_Sub1Array3226 = new SceneEntity[2];
+        Class115.aClass318_Sub1Array1754 = new SceneEntity[2];
+        Class239_Sub21.aClass318_Sub1Array6066 = new SceneEntity[10000];
         Class5_Sub1_Sub1.anInt9930 = 0;
-        Class291.aClass318_Sub1Array3737 = new Class318_Sub1[5000];
+        Class291.aClass318_Sub1Array3737 = new SceneEntity[5000];
         Class348_Sub42_Sub3.anInt9504 = 0;
         Class24.aClass318_Sub1_Sub3Array357 = new Class318_Sub1_Sub3[5000];
         Class86.anInt1477 = 0;

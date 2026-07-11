@@ -36,18 +36,18 @@ final class Class38 {
         return null;
     }
 
-    private final void method361(int i, Class348_Sub49 class348_sub49, int i_2_) {
+    private final void method361(int i, Packet Packet, int i_2_) {
         if (i != -6617) method363(95);
         anInt497++;
-        if (i_2_ == 1) this.anInt501 = class348_sub49.readUnsignedShort(842397944);
+        if (i_2_ == 1) this.anInt501 = Packet.readUnsignedShort(842397944);
         else if (i_2_ == 2) this.aBoolean507 = true;
         else if (i_2_ == 3) {
-            this.anInt499 = class348_sub49.readShort(13638);
-            this.anInt502 = class348_sub49.readShort(13638);
-            this.anInt508 = class348_sub49.readShort(13638);
-        } else if (i_2_ == 4) this.anInt498 = class348_sub49.readUnsignedByte(255);
-        else if (i_2_ == 5) this.anInt504 = class348_sub49.readUnsignedShort(842397944);
-        else if (i_2_ == 6) this.anInt503 = class348_sub49.readMedium(-1);
+            this.anInt499 = Packet.readShort(13638);
+            this.anInt502 = Packet.readShort(13638);
+            this.anInt508 = Packet.readShort(13638);
+        } else if (i_2_ == 4) this.anInt498 = Packet.readUnsignedByte(255);
+        else if (i_2_ == 5) this.anInt504 = Packet.readUnsignedShort(842397944);
+        else if (i_2_ == 6) this.anInt503 = Packet.readMedium(-1);
     }
 
     static final void method362(int i) {
@@ -238,20 +238,20 @@ final class Class38 {
         }
     }
 
-    final void method364(Class348_Sub49 class348_sub49, byte i) {
+    final void method364(Packet Packet, byte i) {
         anInt511++;
         if (i >= 22) {
             for (; ; ) {
-                int i_10_ = class348_sub49.readUnsignedByte(255);
+                int i_10_ = Packet.readUnsignedByte(255);
                 if (i_10_ == 0) break;
-                method361(-6617, class348_sub49, i_10_);
+                method361(-6617, Packet, i_10_);
             }
         }
     }
 
-    static final void method365(Class318_Sub1 class318_sub1, Class348_Sub1[] class348_sub1s) {
+    static final void method365(SceneEntity SceneEntity, Class348_Sub1[] class348_sub1s) {
         if (Class318_Sub1_Sub3_Sub3.aBoolean10221) {
-            int i = class318_sub1.method2384(class348_sub1s, 49);
+            int i = SceneEntity.method2384(class348_sub1s, 49);
             Class9.aHa171.method3642(i, class348_sub1s);
         }
         if (Class332.aSArray4142 == aa_Sub1.aSArray5191) {
@@ -259,18 +259,18 @@ final class Class38 {
             boolean bool_11_ = false;
             int i;
             int i_12_;
-            if (class318_sub1 instanceof Class318_Sub1_Sub3) {
-                i = (((Class318_Sub1_Sub3) class318_sub1).aShort8743);
-                i_12_ = ((Class318_Sub1_Sub3) class318_sub1).aShort8750;
+            if (SceneEntity instanceof Class318_Sub1_Sub3) {
+                i = (((Class318_Sub1_Sub3) SceneEntity).aShort8743);
+                i_12_ = ((Class318_Sub1_Sub3) SceneEntity).aShort8750;
             } else {
-                i = (class318_sub1.x >> Class362.anInt4459);
-                i_12_ = (class318_sub1.y >> Class362.anInt4459);
+                i = (SceneEntity.x >> Class362.anInt4459);
+                i_12_ = (SceneEntity.y >> Class362.anInt4459);
             }
-            Class9.aHa171.EA((Class348_Sub1_Sub1.aSArray8801[0].method3986(class318_sub1.x, class318_sub1.y, (byte) -118)), Class367_Sub8.method3547(i, i_12_), Class318_Sub1_Sub5.method2483(i, i_12_), Class199.method1457(i, i_12_));
+            Class9.aHa171.EA((Class348_Sub1_Sub1.aSArray8801[0].method3986(SceneEntity.x, SceneEntity.y, (byte) -118)), Class367_Sub8.method3547(i, i_12_), Class318_Sub1_Sub5.method2483(i, i_12_), Class199.method1457(i, i_12_));
         }
-        Class318_Sub4 class318_sub4 = class318_sub1.method2386(1, Class9.aHa171);
+        Class318_Sub4 class318_sub4 = SceneEntity.method2386(1, Class9.aHa171);
         if (class318_sub4 != null) {
-            if (class318_sub1.aBoolean6391) {
+            if (SceneEntity.aBoolean6391) {
                 Class318_Sub3[] class318_sub3s = class318_sub4.aClass318_Sub3Array6414;
                 for (int i = 0; i < class318_sub3s.length; i++) {
                     Class318_Sub3 class318_sub3 = class318_sub3s[i];
@@ -278,7 +278,7 @@ final class Class38 {
                 }
             }
             if (class318_sub4.aBoolean6409) {
-                class318_sub4.aClass318_Sub1_6410 = class318_sub1;
+                class318_sub4.aClass318_Sub1_6410 = SceneEntity;
                 if (Class348_Sub40_Sub5.aBoolean9121) {
                     synchronized (Class71.aClass76_1208) {
                         Class71.aClass76_1208.method774(class318_sub4, 18802);

@@ -64,8 +64,8 @@ final class Class207 {
         }
     }
 
-    static final Class207 method1512(Class45 class45, int i) {
-        byte[] is = class45.method415((byte) 73, i);
+    static final Class207 method1512(Js5Archive Js5Archive, int i) {
+        byte[] is = Js5Archive.method415((byte) 73, i);
         if (is == null) return null;
         return method1517(is)[0];
     }
@@ -234,51 +234,51 @@ final class Class207 {
     }
 
     private static final Class207[] method1517(byte[] is) {
-        Class348_Sub49 class348_sub49 = new Class348_Sub49(is);
-        class348_sub49.anInt7197 = is.length - 2;
-        int i = class348_sub49.readUnsignedShort(842397944);
+        Packet Packet = new Packet(is);
+        Packet.pos = is.length - 2;
+        int i = Packet.readUnsignedShort(842397944);
         Class207[] class207s = new Class207[i];
         for (int i_72_ = 0; i_72_ < i; i_72_++)
             class207s[i_72_] = new Class207();
-        class348_sub49.anInt7197 = is.length - 7 - i * 8;
-        int i_73_ = class348_sub49.readUnsignedShort(842397944);
-        int i_74_ = class348_sub49.readUnsignedShort(842397944);
-        int i_75_ = (class348_sub49.readUnsignedByte(255) & 0xff) + 1;
+        Packet.pos = is.length - 7 - i * 8;
+        int i_73_ = Packet.readUnsignedShort(842397944);
+        int i_74_ = Packet.readUnsignedShort(842397944);
+        int i_75_ = (Packet.readUnsignedByte(255) & 0xff) + 1;
         for (int i_76_ = 0; i_76_ < i; i_76_++)
-            class207s[i_76_].anInt2703 = class348_sub49.readUnsignedShort(842397944);
+            class207s[i_76_].anInt2703 = Packet.readUnsignedShort(842397944);
         for (int i_77_ = 0; i_77_ < i; i_77_++)
-            class207s[i_77_].anInt2700 = class348_sub49.readUnsignedShort(842397944);
+            class207s[i_77_].anInt2700 = Packet.readUnsignedShort(842397944);
         for (int i_78_ = 0; i_78_ < i; i_78_++)
-            class207s[i_78_].anInt2702 = class348_sub49.readUnsignedShort(842397944);
+            class207s[i_78_].anInt2702 = Packet.readUnsignedShort(842397944);
         for (int i_79_ = 0; i_79_ < i; i_79_++)
-            class207s[i_79_].anInt2696 = class348_sub49.readUnsignedShort(842397944);
+            class207s[i_79_].anInt2696 = Packet.readUnsignedShort(842397944);
         for (int i_80_ = 0; i_80_ < i; i_80_++) {
             Class207 class207 = class207s[i_80_];
             class207.anInt2698 = (i_73_ - class207.anInt2702 - class207.anInt2703);
             class207.anInt2701 = (i_74_ - class207.anInt2696 - class207.anInt2700);
         }
-        class348_sub49.anInt7197 = is.length - 7 - i * 8 - (i_75_ - 1) * 3;
+        Packet.pos = is.length - 7 - i * 8 - (i_75_ - 1) * 3;
         int[] is_81_ = new int[i_75_];
         for (int i_82_ = 1; i_82_ < i_75_; i_82_++) {
-            is_81_[i_82_] = class348_sub49.readMedium(-1);
+            is_81_[i_82_] = Packet.readMedium(-1);
             if (is_81_[i_82_] == 0) is_81_[i_82_] = 1;
         }
         for (int i_83_ = 0; i_83_ < i; i_83_++)
             class207s[i_83_].anIntArray2697 = is_81_;
-        class348_sub49.anInt7197 = 0;
+        Packet.pos = 0;
         for (int i_84_ = 0; i_84_ < i; i_84_++) {
             Class207 class207 = class207s[i_84_];
             int i_85_ = (class207.anInt2702 * class207.anInt2696);
             class207.aByteArray2699 = new byte[i_85_];
-            int i_86_ = class348_sub49.readUnsignedByte(255);
+            int i_86_ = Packet.readUnsignedByte(255);
             if ((i_86_ & 0x2) == 0) {
                 if ((i_86_ & 0x1) == 0) {
                     for (int i_87_ = 0; i_87_ < i_85_; i_87_++)
-                        class207.aByteArray2699[i_87_] = class348_sub49.readByte(-126);
+                        class207.aByteArray2699[i_87_] = Packet.readByte(-126);
                 } else {
                     for (int i_88_ = 0; i_88_ < class207.anInt2702; i_88_++) {
                         for (int i_89_ = 0; i_89_ < class207.anInt2696; i_89_++)
-                            class207.aByteArray2699[(i_88_ + i_89_ * class207.anInt2702)] = class348_sub49.readByte(-96);
+                            class207.aByteArray2699[(i_88_ + i_89_ * class207.anInt2702)] = Packet.readByte(-96);
                     }
                 }
             } else {
@@ -286,19 +286,19 @@ final class Class207 {
                 class207.aByteArray2695 = new byte[i_85_];
                 if ((i_86_ & 0x1) == 0) {
                     for (int i_90_ = 0; i_90_ < i_85_; i_90_++)
-                        class207.aByteArray2699[i_90_] = class348_sub49.readByte(-118);
+                        class207.aByteArray2699[i_90_] = Packet.readByte(-118);
                     for (int i_91_ = 0; i_91_ < i_85_; i_91_++) {
-                        byte i_92_ = (class207.aByteArray2695[i_91_] = class348_sub49.readByte(-89));
+                        byte i_92_ = (class207.aByteArray2695[i_91_] = Packet.readByte(-89));
                         bool = bool | i_92_ != -1;
                     }
                 } else {
                     for (int i_93_ = 0; i_93_ < class207.anInt2702; i_93_++) {
                         for (int i_94_ = 0; i_94_ < class207.anInt2696; i_94_++)
-                            class207.aByteArray2699[(i_93_ + i_94_ * class207.anInt2702)] = class348_sub49.readByte(-84);
+                            class207.aByteArray2699[(i_93_ + i_94_ * class207.anInt2702)] = Packet.readByte(-84);
                     }
                     for (int i_95_ = 0; i_95_ < class207.anInt2702; i_95_++) {
                         for (int i_96_ = 0; i_96_ < class207.anInt2696; i_96_++) {
-                            byte i_97_ = (class207.aByteArray2695[i_95_ + i_96_ * (class207.anInt2702)] = class348_sub49.readByte(-122));
+                            byte i_97_ = (class207.aByteArray2695[i_95_ + i_96_ * (class207.anInt2702)] = Packet.readByte(-122));
                             bool = bool | i_97_ != -1;
                         }
                     }
@@ -341,8 +341,8 @@ final class Class207 {
         this.anInt2698 = i;
     }
 
-    static final Class207[] method1519(Class45 class45, int i, int i_105_) {
-        byte[] is = class45.method410(-1860, i, i_105_);
+    static final Class207[] method1519(Js5Archive Js5Archive, int i, int i_105_) {
+        byte[] is = Js5Archive.method410(-1860, i, i_105_);
         if (is == null) return null;
         return method1517(is);
     }
@@ -382,8 +382,8 @@ final class Class207 {
         /* empty */
     }
 
-    static final Class207 method1521(Class45 class45, int i, int i_112_) {
-        byte[] is = class45.method410(-1860, i, i_112_);
+    static final Class207 method1521(Js5Archive Js5Archive, int i, int i_112_) {
+        byte[] is = Js5Archive.method410(-1860, i, i_112_);
         if (is == null) return null;
         return method1517(is)[0];
     }
@@ -392,8 +392,8 @@ final class Class207 {
         return (this.anInt2696 + this.anInt2700 + this.anInt2701);
     }
 
-    static final Class207[] method1523(Class45 class45, int i) {
-        byte[] is = class45.method415((byte) 73, i);
+    static final Class207[] method1523(Js5Archive Js5Archive, int i) {
+        byte[] is = Js5Archive.method415((byte) 73, i);
         if (is == null) return null;
         return method1517(is);
     }

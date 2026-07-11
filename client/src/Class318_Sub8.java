@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-final class Class318_Sub8 extends Class318 {
+final class Class318_Sub8 extends Linkable {
     byte aByte6460;
     short[] aShortArray6461;
     byte[] aByteArray6462;

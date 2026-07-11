@@ -25,7 +25,7 @@ final class Class78 {
     private long aLong1319 = -1L;
     private int anInt1320;
     private long aLong1321 = -1L;
-    static Class45 aClass45_1322;
+    static Js5Archive aClass45_1322;
     private long aLong1323;
     private long aLong1324;
 

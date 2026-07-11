@@ -4,7 +4,7 @@
 
 final class Class216 implements Interface13 {
     int anInt4974;
-    static Class45 aClass45_4975;
+    static Js5Archive aClass45_4975;
     static int anInt4976;
     static int anInt4977;
     int anInt4978;

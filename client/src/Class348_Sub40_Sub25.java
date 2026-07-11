@@ -13,7 +13,7 @@ final class Class348_Sub40_Sub25 extends Class348_Sub40 {
     static Class150 aClass150_9342;
     private int anInt9343 = 20;
 
-    final void method3049(Class348_Sub49 class348_sub49, int i, int i_0_) {
+    final void method3049(Packet Packet, int i, int i_0_) {
         if (i_0_ != 31015) method3049(null, 44, 80);
         int i_1_ = i;
         while_200_:
@@ -22,7 +22,7 @@ final class Class348_Sub40_Sub25 extends Class348_Sub40 {
             do {
                 do {
                     if (i_1_ == 0) {
-                        anInt9340 = class348_sub49.readUnsignedShort(842397944);
+                        anInt9340 = Packet.readUnsignedShort(842397944);
                         break while_200_;
                     } else if (i_1_ != 1) {
                         if (i_1_ != 2) {
@@ -30,13 +30,13 @@ final class Class348_Sub40_Sub25 extends Class348_Sub40 {
                         } else break;
                         break while_199_;
                     }
-                    anInt9343 = class348_sub49.readUnsignedShort(i_0_ + 842366929);
+                    anInt9343 = Packet.readUnsignedShort(i_0_ + 842366929);
                     break while_200_;
                 } while (false);
-                anInt9339 = class348_sub49.readUnsignedShort(i_0_ + 842366929);
+                anInt9339 = Packet.readUnsignedShort(i_0_ + 842366929);
                 break while_200_;
             } while (false);
-            anInt9338 = class348_sub49.readUnsignedShort(842397944);
+            anInt9338 = Packet.readUnsignedShort(842397944);
         } while (false);
         anInt9337++;
     }

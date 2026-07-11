@@ -7,9 +7,9 @@ import java.awt.*;
 final class Class33 {
     static int anInt456;
     static int anInt457;
-    private final Class45 aClass45_458;
+    private final Js5Archive aClass45_458;
     static int anInt459;
-    private final Class60 aClass60_460 = new Class60(128);
+    private final ReferenceCache aClass60_460 = new ReferenceCache(128);
     static int anInt461;
 
     final Class117 method337(boolean bool, int i) {
@@ -21,7 +21,7 @@ final class Class33 {
         if (class117 != null) return class117;
         byte[] is = aClass45_458.method410(-1860, Class5_Sub3.method200(-107, i), Class348_Sub31.method3013(i, bool));
         class117 = new Class117();
-        if (is != null) class117.method1069(0, new Class348_Sub49(is));
+        if (is != null) class117.method1069(0, new Packet(is));
         synchronized (aClass60_460) {
             aClass60_460.method582(class117, i, (byte) -102);
         }
@@ -77,15 +77,15 @@ final class Class33 {
         return 1 + i;
     }
 
-    Class33(Class230 class230, int i, Class45 class45) {
+    Class33(Class230 class230, int i, Js5Archive Js5Archive) {
         do {
             try {
-                aClass45_458 = class45;
+                aClass45_458 = Js5Archive;
                 if (aClass45_458 == null) break;
                 int i_6_ = -1 + aClass45_458.method414(-1);
                 aClass45_458.method407(0, i_6_);
             } catch (RuntimeException runtimeexception) {
-                throw Class348_Sub17.method2929(runtimeexception, ("iba.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (class45 != null ? "{...}" : "null") + ')'));
+                throw Class348_Sub17.method2929(runtimeexception, ("iba.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (Js5Archive != null ? "{...}" : "null") + ')'));
             }
             break;
         } while (false);

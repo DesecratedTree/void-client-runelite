@@ -39,6 +39,7 @@ final class Class50_Sub3 extends Class50 {
                 i_8_ = i_8_ != -1 ? i_8_ : Class362.anInt4458;
                 if (i_0_ >= -65) method469((byte) 19);
                 Class348_Sub42_Sub12 class348_sub42_sub12 = new Class348_Sub42_Sub12(string_6_, string, i_8_, i_5_, i_3_, l_7_, i_2_, i, bool_4_, bool, l, bool_1_);
+                net.runelite.client.game.GameEventBridgeHooks.postMenuEntryAdded(string_6_, string, i_5_, (int) l, i_2_, i);
                 ha_Sub2.method3743((byte) 6, class348_sub42_sub12);
             }
         } catch (RuntimeException runtimeexception) {

@@ -24,7 +24,7 @@ final class Class348_Sub40_Sub23 extends Class348_Sub40 {
     private int anInt9322;
     private int anInt9323;
 
-    final void method3049(Class348_Sub49 class348_sub49, int i, int i_0_) {
+    final void method3049(Packet Packet, int i, int i_0_) {
         anInt9308++;
         if (i_0_ != 31015) aBoolean9307 = true;
         int i_1_ = i;
@@ -44,7 +44,7 @@ final class Class348_Sub40_Sub23 extends Class348_Sub40 {
                                 do {
                                     do {
                                         if (i_1_ == 0) {
-                                            anInt9318 = class348_sub49.readUnsignedByte(255);
+                                            anInt9318 = Packet.readUnsignedByte(255);
                                             return;
                                         } else if (i_1_ != 1) {
                                             if (i_1_ != 2) {
@@ -65,28 +65,28 @@ final class Class348_Sub40_Sub23 extends Class348_Sub40 {
                                             } else break;
                                             break while_190_;
                                         }
-                                        anInt9317 = class348_sub49.readUnsignedShort(842397944);
+                                        anInt9317 = Packet.readUnsignedShort(842397944);
                                         return;
                                     } while (false);
-                                    anInt9320 = class348_sub49.readUnsignedShort(842397944);
+                                    anInt9320 = Packet.readUnsignedShort(842397944);
                                     return;
                                 } while (false);
-                                anInt9322 = class348_sub49.readUnsignedShort(i_0_ ^ 0x323581df);
+                                anInt9322 = Packet.readUnsignedShort(i_0_ ^ 0x323581df);
                                 return;
                             } while (false);
-                            anInt9323 = class348_sub49.readUnsignedShort(842397944);
+                            anInt9323 = Packet.readUnsignedShort(842397944);
                             return;
                         } while (false);
-                        anInt9311 = class348_sub49.readUnsignedShort(842397944);
+                        anInt9311 = Packet.readUnsignedShort(842397944);
                         return;
                     } while (false);
-                    anInt9312 = class348_sub49.readUnsignedByte(i_0_ ^ 0x79d8);
+                    anInt9312 = Packet.readUnsignedByte(i_0_ ^ 0x79d8);
                     return;
                 } while (false);
-                anInt9314 = class348_sub49.readUnsignedShort(842397944);
+                anInt9314 = Packet.readUnsignedShort(842397944);
                 return;
             } while (false);
-            anInt9310 = class348_sub49.readUnsignedShort(842397944);
+            anInt9310 = Packet.readUnsignedShort(842397944);
         } while (false);
     }
 

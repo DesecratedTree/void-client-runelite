@@ -5,7 +5,7 @@
 import jaclib.memory.Buffer;
 import jaclib.memory.Stream;
 
-final class Class348_Sub38 extends Class348 {
+final class Class348_Sub38 extends Node {
     static int anInt7000;
     private float[][] aFloatArrayArray7001;
     private final Interface5_Impl2 anInterface5_Impl2_7002;
@@ -17,7 +17,7 @@ final class Class348_Sub38 extends Class348 {
     static int anInt7008 = 0;
     static int anInt7009;
     private final int anInt7010;
-    private Class356 aClass356_7011;
+    private IterableHashTable aClass356_7011;
     static int anInt7012;
     private int anInt7013;
     private final int anInt7014;
@@ -61,9 +61,9 @@ final class Class348_Sub38 extends Class348 {
         int i_14_ = aS_Sub3_7019.method3986(i_12_, i_13_, (byte) -127);
         if ((i_10_ & 0x7f) == 0 || (i_8_ & 0x7f) == 0) {
             l = ((long) i_13_ & 0xffffL) << 16 | (long) i_12_ & 0xffffL;
-            Class348 class348 = aClass356_7011.method3480(l, i_7_ + 23335);
-            if (class348 != null) {
-                method3034((((Class348_Sub29) class348).aShort6911), (byte) 49);
+            Node Node = aClass356_7011.method3480(l, i_7_ + 23335);
+            if (Node != null) {
+                method3034((((Class348_Sub29) Node).aShort6911), (byte) 49);
                 return;
             }
         }
@@ -220,7 +220,7 @@ final class Class348_Sub38 extends Class348 {
                 } else i_48_ += -anInt7023 + anInt7017;
             }
             if (anInt7018 > 0) {
-                aClass356_7011 = new Class356(Class33.method340(anInt7018, (byte) 108));
+                aClass356_7011 = new IterableHashTable(Class33.method340(anInt7018, (byte) 108));
                 anInterface5_Impl2_7002 = aHa_Sub3_7007.method3840(-28633, false);
                 anInterface5_Impl2_7002.method23(15959, anInt7018);
                 jaclib.memory.heap.NativeHeapBuffer nativeheapbuffer = aHa_Sub3_7007.method3869((byte) 86, false, 16 * anInt7018);

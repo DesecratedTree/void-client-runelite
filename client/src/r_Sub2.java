@@ -3,7 +3,7 @@
  */
 
 final class r_Sub2 extends r {
-    static Class45 aClass45_10480;
+    static Js5Archive aClass45_10480;
     static int anInt10481;
     int anInt10482;
     static int anInt10483 = 0;
@@ -348,7 +348,7 @@ final class r_Sub2 extends r {
     }
 
     static final Class318_Sub1_Sub4 method3297(int i, int i_20_, int i_21_) {
-        Class357 class357 = Class147.aClass357ArrayArrayArray2029[i][i_20_][i_21_];
+        Class357 class357 = ChatMessage.aClass357ArrayArrayArray2029[i][i_20_][i_21_];
         if (class357 == null) return null;
         return class357.aClass318_Sub1_Sub4_4406;
     }

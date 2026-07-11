@@ -7,7 +7,7 @@ final class Class59_Sub2_Sub2 extends Class59_Sub2 {
     static int anInt8676;
     static int anInt8677;
     static int anInt8678;
-    static Class356 aClass356_8679 = new Class356(16);
+    static IterableHashTable aClass356_8679 = new IterableHashTable(16);
     static int anInt8680;
     private byte[] aByteArray8681;
     static int anInt8682;
@@ -15,29 +15,29 @@ final class Class59_Sub2_Sub2 extends Class59_Sub2 {
     static int[] anIntArray8684;
     static int anInt8685;
 
-    static final void method569(byte i, Class348_Sub49 class348_sub49) {
+    static final void method569(byte i, Packet Packet) {
         anInt8675++;
-        int i_0_ = class348_sub49.readSmart(-128);
+        int i_0_ = Packet.readSmart(-128);
         Class373_Sub2.aClass283Array7446 = new Class283[i_0_];
         for (int i_1_ = 0; i_0_ > i_1_; i_1_++) {
             Class373_Sub2.aClass283Array7446[i_1_] = new Class283();
-            Class373_Sub2.aClass283Array7446[i_1_].anInt3657 = class348_sub49.readSmart(-124);
-            Class373_Sub2.aClass283Array7446[i_1_].aString3663 = class348_sub49.method3371(-13487);
+            Class373_Sub2.aClass283Array7446[i_1_].anInt3657 = Packet.readSmart(-124);
+            Class373_Sub2.aClass283Array7446[i_1_].aString3663 = Packet.method3371(-13487);
         }
-        Class318_Sub1_Sub2.anInt8731 = class348_sub49.readSmart(-127);
-        Class239_Sub29.anInt6151 = class348_sub49.readSmart(-119);
-        Class225.anInt2956 = class348_sub49.readSmart(-122);
+        Class318_Sub1_Sub2.anInt8731 = Packet.readSmart(-127);
+        Class239_Sub29.anInt6151 = Packet.readSmart(-119);
+        Class225.anInt2956 = Packet.readSmart(-122);
         OutputStream_Sub1.aClass110_Sub1Array97 = new Class110_Sub1[1 + (Class239_Sub29.anInt6151 + -Class318_Sub1_Sub2.anInt8731)];
         for (int i_2_ = 0; Class225.anInt2956 > i_2_; i_2_++) {
-            int i_3_ = class348_sub49.readSmart(-126);
+            int i_3_ = Packet.readSmart(-126);
             Class110_Sub1 class110_sub1 = (OutputStream_Sub1.aClass110_Sub1Array97[i_3_] = new Class110_Sub1());
-            class110_sub1.anInt1711 = class348_sub49.readUnsignedByte(255);
-            class110_sub1.anInt1708 = class348_sub49.readInt((byte) -126);
+            class110_sub1.anInt1711 = Packet.readUnsignedByte(255);
+            class110_sub1.anInt1708 = Packet.readInt((byte) -126);
             class110_sub1.anInt5786 = Class318_Sub1_Sub2.anInt8731 + i_3_;
-            class110_sub1.aString5787 = class348_sub49.method3371(-13487);
-            class110_sub1.aString5794 = class348_sub49.method3371(-13487);
+            class110_sub1.aString5787 = Packet.method3371(-13487);
+            class110_sub1.aString5794 = Packet.method3371(-13487);
         }
-        Class5_Sub1.anInt8349 = class348_sub49.readInt((byte) -126);
+        Class5_Sub1.anInt8349 = Packet.readInt((byte) -126);
         Class195.aBoolean5013 = true;
         if (i > -110) method569((byte) -34, null);
     }

@@ -131,9 +131,9 @@ final class Class377 extends ha_Sub3 {
         int i_0_ = 0;
         i &= 0x7fffffff;
         while (!aClass262_9899.method2002((byte) 18)) {
-            Class348_Sub35 class348_sub35 = (Class348_Sub35) aClass262_9899.method1997(8);
-            Class107.anIntArray1650[i_0_++] = (int) class348_sub35.aLong4291;
-            this.anInt8063 -= class348_sub35.anInt6976;
+            IntNode IntNode = (IntNode) aClass262_9899.method1997(8);
+            Class107.anIntArray1650[i_0_++] = (int) IntNode.key;
+            this.anInt8063 -= IntNode.anInt6976;
             if (i_0_ == 1000) {
                 OpenGL.glDeleteBuffersARB(i_0_, Class107.anIntArray1650, 0);
                 i_0_ = 0;
@@ -144,9 +144,9 @@ final class Class377 extends ha_Sub3 {
             i_0_ = 0;
         }
         while (!aClass262_9901.method2002((byte) 18)) {
-            Class348_Sub35 class348_sub35 = (Class348_Sub35) aClass262_9901.method1997(8);
-            Class107.anIntArray1650[i_0_++] = (int) class348_sub35.aLong4291;
-            this.anInt8062 -= class348_sub35.anInt6976;
+            IntNode IntNode = (IntNode) aClass262_9901.method1997(8);
+            Class107.anIntArray1650[i_0_++] = (int) IntNode.key;
+            this.anInt8062 -= IntNode.anInt6976;
             if (i_0_ == 1000) {
                 OpenGL.glDeleteTextures(i_0_, Class107.anIntArray1650, 0);
                 i_0_ = 0;
@@ -157,8 +157,8 @@ final class Class377 extends ha_Sub3 {
             i_0_ = 0;
         }
         while (!aClass262_9902.method2002((byte) 18)) {
-            Class348_Sub35 class348_sub35 = (Class348_Sub35) aClass262_9902.method1997(8);
-            Class107.anIntArray1650[i_0_++] = class348_sub35.anInt6976;
+            IntNode IntNode = (IntNode) aClass262_9902.method1997(8);
+            Class107.anIntArray1650[i_0_++] = IntNode.anInt6976;
             if (i_0_ == 1000) {
                 OpenGL.glDeleteFramebuffersEXT(i_0_, Class107.anIntArray1650, 0);
                 i_0_ = 0;
@@ -169,9 +169,9 @@ final class Class377 extends ha_Sub3 {
             i_0_ = 0;
         }
         while (!aClass262_9903.method2002((byte) 18)) {
-            Class348_Sub35 class348_sub35 = (Class348_Sub35) aClass262_9903.method1997(8);
-            Class107.anIntArray1650[i_0_++] = (int) class348_sub35.aLong4291;
-            this.anInt8079 -= class348_sub35.anInt6976;
+            IntNode IntNode = (IntNode) aClass262_9903.method1997(8);
+            Class107.anIntArray1650[i_0_++] = (int) IntNode.key;
+            this.anInt8079 -= IntNode.anInt6976;
             if (i_0_ == 1000) {
                 OpenGL.glDeleteRenderbuffersEXT(i_0_, Class107.anIntArray1650, 0);
                 i_0_ = 0;
@@ -182,20 +182,20 @@ final class Class377 extends ha_Sub3 {
             boolean bool = false;
         }
         while (!aClass262_9869.method2002((byte) 18)) {
-            Class348_Sub35 class348_sub35 = (Class348_Sub35) aClass262_9869.method1997(8);
-            OpenGL.glDeleteLists((int) class348_sub35.aLong4291, class348_sub35.anInt6976);
+            IntNode IntNode = (IntNode) aClass262_9869.method1997(8);
+            OpenGL.glDeleteLists((int) IntNode.key, IntNode.anInt6976);
         }
         while (!aClass262_9904.method2002((byte) 18)) {
-            Class348 class348 = aClass262_9904.method1997(8);
-            OpenGL.glDeleteProgramARB((int) class348.aLong4291);
+            Node Node = aClass262_9904.method1997(8);
+            OpenGL.glDeleteProgramARB((int) Node.key);
         }
         while (!aClass262_9905.method2002((byte) 18)) {
-            Class348 class348 = aClass262_9905.method1997(8);
-            OpenGL.glDeleteObjectARB(class348.aLong4291);
+            Node Node = aClass262_9905.method1997(8);
+            OpenGL.glDeleteObjectARB(Node.key);
         }
         while (!aClass262_9869.method2002((byte) 18)) {
-            Class348_Sub35 class348_sub35 = (Class348_Sub35) aClass262_9869.method1997(8);
-            OpenGL.glDeleteLists((int) class348_sub35.aLong4291, class348_sub35.anInt6976);
+            IntNode IntNode = (IntNode) aClass262_9869.method1997(8);
+            OpenGL.glDeleteLists((int) IntNode.key, IntNode.anInt6976);
         }
         if (this.E() > 100663296 && (Class62.method599(-82) > 60000L + aLong9906)) {
             System.gc();
@@ -301,9 +301,9 @@ final class Class377 extends ha_Sub3 {
     final synchronized void method3966(long l, int i) {
         try {
             anInt9853++;
-            Class348 class348 = new Class348();
-            class348.aLong4291 = l;
-            if (i == 34192) aClass262_9905.method1999(class348, i ^ ~0xcb43);
+            Node Node = new Node();
+            Node.key = l;
+            if (i == 34192) aClass262_9905.method1999(Node, i ^ ~0xcb43);
         } catch (RuntimeException runtimeexception) {
             throw Class348_Sub17.method2929(runtimeexception, "bga.N(" + l + ',' + i + ')');
         }
@@ -332,10 +332,10 @@ final class Class377 extends ha_Sub3 {
 
     final synchronized void method3967(int i, byte i_8_, int i_9_) {
         anInt9898++;
-        Class348_Sub35 class348_sub35 = new Class348_Sub35(i);
+        IntNode IntNode = new IntNode(i);
         if (i_8_ != 59) method3818(false);
-        class348_sub35.aLong4291 = i_9_;
-        aClass262_9901.method1999(class348_sub35, -20180);
+        IntNode.key = i_9_;
+        aClass262_9901.method1999(IntNode, -20180);
     }
 
     final void method3884(byte i) {
@@ -536,9 +536,9 @@ final class Class377 extends ha_Sub3 {
     final synchronized void method3969(int i, int i_26_, int i_27_) {
         if (i_27_ != 3089) this.anIntArray9927 = null;
         anInt9850++;
-        Class348_Sub35 class348_sub35 = new Class348_Sub35(i);
-        class348_sub35.aLong4291 = i_26_;
-        aClass262_9899.method1999(class348_sub35, i_27_ ^ ~0x42c2);
+        IntNode IntNode = new IntNode(i);
+        IntNode.key = i_26_;
+        aClass262_9899.method1999(IntNode, i_27_ ^ ~0x42c2);
     }
 
     final void method3842(boolean bool) {
@@ -628,7 +628,12 @@ final class Class377 extends ha_Sub3 {
 
     final void method3937(byte i) {
         if (i != -33) method3832(35, (byte) -122);
-        OpenGL.glViewport(this.anInt8181, this.anInt8109, this.anInt7931, this.anInt7962);
+        if (Applet_Sub1.shouldScaleOpenGLFrame() && Class305.aCanvas3869 != null) {
+            Dimension dimension = Class305.aCanvas3869.getSize();
+            OpenGL.glViewport(this.anInt8181, this.anInt8109, dimension.width, dimension.height);
+        } else {
+            OpenGL.glViewport(this.anInt8181, this.anInt8109, this.anInt7931, this.anInt7962);
+        }
         anInt9827++;
     }
 
@@ -636,8 +641,8 @@ final class Class377 extends ha_Sub3 {
         anInt9833++;
     }
 
-    Class377(OpenGL opengl, Canvas canvas, long l, d var_d, Class45 class45, int i) {
-        super(canvas, new Long(l), var_d, class45, i, 1);
+    Class377(OpenGL opengl, Canvas canvas, long l, d var_d, Js5Archive Js5Archive, int i) {
+        super(canvas, new Long(l), var_d, Js5Archive, i, 1);
         try {
             try {
                 anOpenGL9856 = opengl;
@@ -725,7 +730,7 @@ final class Class377 extends ha_Sub3 {
                 throw new RuntimeException("");
             }
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("bga.<init>(" + (opengl != null ? "{...}" : "null") + ',' + (canvas != null ? "{...}" : "null") + ',' + l + ',' + (var_d != null ? "{...}" : "null") + ',' + (class45 != null ? "{...}" : "null") + ',' + i + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("bga.<init>(" + (opengl != null ? "{...}" : "null") + ',' + (canvas != null ? "{...}" : "null") + ',' + l + ',' + (var_d != null ? "{...}" : "null") + ',' + (Js5Archive != null ? "{...}" : "null") + ',' + i + ')'));
         }
     }
 
@@ -966,9 +971,9 @@ final class Class377 extends ha_Sub3 {
 
     final synchronized void method3971(int i, int i_70_) {
         anInt9819++;
-        Class348 class348 = new Class348();
-        class348.aLong4291 = i_70_;
-        aClass262_9904.method1999(class348, -20180);
+        Node Node = new Node();
+        Node.key = i_70_;
+        aClass262_9904.method1999(Node, -20180);
         if (i != 16386) method3928(-86);
     }
 
@@ -1175,7 +1180,18 @@ final class Class377 extends ha_Sub3 {
     final void method3888(int i) {
         if (i != 6259) aClass285_Sub1Array9907 = null;
         anInt9817++;
-        OpenGL.glScissor(this.anInt8181 - -this.anInt8106, -this.anInt8096 + (this.anInt8109 - -this.anInt7962), -this.anInt8106 + this.anInt8183, this.anInt8096 - this.anInt8165);
+        if (Applet_Sub1.shouldScaleOpenGLFrame() && Class305.aCanvas3869 != null) {
+            Dimension dimension = Class305.aCanvas3869.getSize();
+            double scaleX = (double) dimension.width / Math.max(1, this.anInt7931);
+            double scaleY = (double) dimension.height / Math.max(1, this.anInt7962);
+            OpenGL.glScissor(
+                    this.anInt8181 + (int) Math.floor(this.anInt8106 * scaleX),
+                    this.anInt8109 + dimension.height - (int) Math.ceil(this.anInt8096 * scaleY),
+                    Math.max(0, (int) Math.ceil((-this.anInt8106 + this.anInt8183) * scaleX)),
+                    Math.max(0, (int) Math.ceil((this.anInt8096 - this.anInt8165) * scaleY)));
+        } else {
+            OpenGL.glScissor(this.anInt8181 - -this.anInt8106, -this.anInt8096 + (this.anInt8109 - -this.anInt7962), -this.anInt8106 + this.anInt8183, this.anInt8096 - this.anInt8165);
+        }
     }
 
     final void method3647(boolean bool) {
@@ -1204,6 +1220,30 @@ final class Class377 extends ha_Sub3 {
 
     final int[] na(int i, int i_90_, int i_91_, int i_92_) {
         anInt9820++;
+        if (Applet_Sub1.shouldScaleOpenGLFrame() && Class305.aCanvas3869 != null) {
+            Dimension dimension = Class305.aCanvas3869.getSize();
+            int actualH = dimension.height;
+            double scaleX = (double) dimension.width / Math.max(1, this.anInt7931);
+            double scaleY = (double) actualH / Math.max(1, this.anInt7962);
+            int px = (int) Math.floor(i * scaleX);
+            int py = (int) Math.floor(i_90_ * scaleY);
+            int pw = Math.max(1, (int) Math.ceil(i_91_ * scaleX));
+            int ph = Math.max(1, (int) Math.ceil(i_92_ * scaleY));
+            int[] pixels = new int[pw * ph];
+            for (int r = 0; r < ph; r++)
+                OpenGL.glReadPixelsi(px, (-1 + (-r + -py) + actualH), pw, 1, 32993, this.anInt9918, pixels, pw * r);
+            int[] out = new int[i_91_ * i_92_];
+            for (int y = 0; y < i_92_; y++) {
+                int srcY = Math.min(ph - 1, (int) ((y + 0.5) * scaleY));
+                int rowOff = srcY * pw;
+                int dstOff = y * i_91_;
+                for (int x = 0; x < i_91_; x++) {
+                    int srcX = Math.min(pw - 1, (int) ((x + 0.5) * scaleX));
+                    out[dstOff + x] = pixels[rowOff + srcX];
+                }
+            }
+            return out;
+        }
         int[] is = new int[i_92_ * i_91_];
         for (int i_93_ = 0; i_93_ < i_92_; i_93_++)
             OpenGL.glReadPixelsi(i, (-1 + (-i_93_ + -i_90_) + this.anInt7962), i_91_, 1, 32993, this.anInt9918, is, i_91_ * i_93_);

@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-final class Class318_Sub10 extends Class318 {
+final class Class318_Sub10 extends Linkable {
     boolean aBoolean6470;
     private long aLong6471;
     private long aLong6472;

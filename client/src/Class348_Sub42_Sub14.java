@@ -87,7 +87,7 @@ final class Class348_Sub42_Sub14 extends Class348_Sub42 {
         anInt9637++;
         if (!Class348_Sub40_Sub23.aBoolean9307 || !Class23.aBoolean351) Class348_Sub42_Sub10.anInt9577 = 0;
         else {
-            if (Class348_Sub40_Sub26.aBoolean9352) Class213.aLong2789 = Class50_Sub4.aClass47_5262.method446(1);
+            if (Class348_Sub40_Sub26.aBoolean9352) ObjType.aLong2789 = Class50_Sub4.aClass47_5262.method446(1);
             Class42.anInt562 = 0;
             Class348_Sub23_Sub2.anInt9039 = 0;
             Class348_Sub40_Sub4.anInt9112 = 0;
@@ -98,7 +98,7 @@ final class Class348_Sub42_Sub14 extends Class348_Sub42 {
             if ((Class306.anInt3872 != (int) ((float) Class348_Sub40_Sub34.anIntArray9436[0] / 3.0F)) || Class86.anInt1480 != (int) ((float) Class348_Sub40_Sub34.anIntArray9436[1] / 3.0F)) {
                 Class86.anInt1480 = (int) ((float) Class348_Sub40_Sub34.anIntArray9436[1] / 3.0F);
                 Class306.anInt3872 = (int) ((float) Class348_Sub40_Sub34.anIntArray9436[0] / 3.0F);
-                Class348_Sub49_Sub2.anInt9759 = Class86.anInt1480 >> 1;
+                BitPacket.anInt9759 = Class86.anInt1480 >> 1;
                 Class14.anIntArray5091 = new int[Class86.anInt1480 * Class306.anInt3872];
                 Class69.anInt1202 = Class306.anInt3872 >> 1;
             }
@@ -107,7 +107,7 @@ final class Class348_Sub42_Sub14 extends Class348_Sub42 {
             int i_8_ = 0;
             if (i_7_ < 37) method3241(-25, (byte) 65, null);
             for (/**/; Class239_Sub26.anInt6115 > i_8_; i_8_++)
-                Class318_Sub2.method2498(Class147.aClass338Array2034[i_8_], var_ha, (byte) -112, i);
+                Class318_Sub2.method2498(ChatMessage.aClass338Array2034[i_8_], var_ha, (byte) -112, i);
             for (int i_9_ = 0; i_9_ < Class69.anInt1200; i_9_++)
                 Class318_Sub2.method2498((Class318_Sub1_Sub3_Sub4.aClass338Array10330[i_9_]), var_ha, (byte) -127, i);
             for (int i_10_ = 0; i_10_ < Class348_Sub44.anInt7101; i_10_++)
@@ -136,7 +136,7 @@ final class Class348_Sub42_Sub14 extends Class348_Sub42 {
                 }
                 Class350.anInt4319 = 2;
             }
-            if (Class348_Sub40_Sub26.aBoolean9352) Class286_Sub6.aLong6276 = (Class50_Sub4.aClass47_5262.method446(1) + -Class213.aLong2789);
+            if (Class348_Sub40_Sub26.aBoolean9352) Class286_Sub6.aLong6276 = (Class50_Sub4.aClass47_5262.method446(1) + -ObjType.aLong2789);
         }
     }
 
@@ -155,8 +155,20 @@ final class Class348_Sub42_Sub14 extends Class348_Sub42 {
     static final void method3243(int i, Class348_Sub47 class348_sub47) {
         anInt9630++;
         Class348_Sub40_Sub13.aClass262_9201.method1999(class348_sub47, -20180);
-        class348_sub47.anInt7119 = class348_sub47.aClass348_Sub49_Sub2_7116.anInt7197;
-        class348_sub47.aClass348_Sub49_Sub2_7116.anInt7197 = 0;
+        class348_sub47.anInt7119 = class348_sub47.aClass348_Sub49_Sub2_7116.pos;
+        try {
+            if (class348_sub47.aClass351_7118 != null) {
+                net.runelite.client.game.GameEventBridgeHooks.postOutgoingPacket(
+                    class348_sub47.aClass351_7118.method3456(200),
+                    class348_sub47.anInt7122,
+                    class348_sub47.anInt7119,
+                    "queue"
+                );
+            }
+        } catch (Throwable ignored) {
+            /* Network logger hooks must never break packet queueing. */
+        }
+        class348_sub47.aClass348_Sub49_Sub2_7116.pos = 0;
         Class348_Sub34.anInt6969 += class348_sub47.anInt7119;
         int i_17_ = -41 / ((i - 79) / 37);
     }

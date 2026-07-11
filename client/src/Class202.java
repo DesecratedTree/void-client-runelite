@@ -34,7 +34,7 @@ final class Class202 implements Runnable {
     private final Socket aSocket2668;
     private final int anInt2669;
     static int anInt2670 = 0;
-    static Class60 aClass60_2671 = new Class60(10);
+    static ReferenceCache aClass60_2671 = new ReferenceCache(10);
 
     final int method1467(byte i) throws IOException {
         anInt2651++;

@@ -19,21 +19,21 @@ final class Class160 {
         if (i <= 11) aBooleanArrayArray2133 = null;
     }
 
-    final void method1255(Class348_Sub49 class348_sub49, int i) {
+    final void method1255(Packet Packet, int i) {
         for (; ; ) {
-            int i_0_ = class348_sub49.readUnsignedByte(255);
+            int i_0_ = Packet.readUnsignedByte(255);
             if (i_0_ == 0) break;
-            method1256(-90, i_0_, class348_sub49);
+            method1256(-90, i_0_, Packet);
         }
         if (i != -1) aBoolean2130 = false;
         anInt2129++;
     }
 
-    private final void method1256(int i, int i_1_, Class348_Sub49 class348_sub49) {
+    private final void method1256(int i, int i_1_, Packet Packet) {
         anInt2136++;
         if (i_1_ != 1) {
             if (i_1_ == 2) this.anInt2135 = 0;
-        } else this.aChar2132 = Class50_Sub1.method462(class348_sub49.readByte(-119), -128);
+        } else this.aChar2132 = Class50_Sub1.method462(Packet.readByte(-119), -128);
         if (i >= -73) method1255(null, -43);
     }
 

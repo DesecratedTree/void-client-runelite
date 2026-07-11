@@ -10,9 +10,9 @@ final class Class348_Sub40_Sub15 extends Class348_Sub40 {
     private int anInt9220 = 4096;
     static int anInt9221;
 
-    final void method3049(Class348_Sub49 class348_sub49, int i, int i_0_) {
+    final void method3049(Packet Packet, int i, int i_0_) {
         int i_1_ = i;
-        if (i_1_ == 0) anInt9220 = (class348_sub49.readUnsignedByte(255) << 12) / 255;
+        if (i_1_ == 0) anInt9220 = (Packet.readUnsignedByte(255) << 12) / 255;
         if (i_0_ == 31015) anInt9217++;
     }
 
@@ -34,14 +34,14 @@ final class Class348_Sub40_Sub15 extends Class348_Sub40 {
         anInt9220 = i;
     }
 
-    static final void method3086(int i, Class348_Sub16_Sub3 class348_sub16_sub3, int i_5_, Class45 class45, boolean bool, int i_6_, int i_7_) {
+    static final void method3086(int i, Class348_Sub16_Sub3 class348_sub16_sub3, int i_5_, Js5Archive Js5Archive, boolean bool, int i_6_, int i_7_) {
         try {
             anInt9219++;
             if (i != 2) aClass114_9216 = null;
-            Class348_Sub1_Sub3.method2732(i_6_, i_7_, bool, 96, class45, i_5_);
+            Class348_Sub1_Sub3.method2732(i_6_, i_7_, bool, 96, Js5Archive, i_5_);
             Class285.aClass348_Sub16_Sub3_4743 = class348_sub16_sub3;
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("pba.D(" + i + ',' + (class348_sub16_sub3 != null ? "{...}" : "null") + ',' + i_5_ + ',' + (class45 != null ? "{...}" : "null") + ',' + bool + ',' + i_6_ + ',' + i_7_ + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("pba.D(" + i + ',' + (class348_sub16_sub3 != null ? "{...}" : "null") + ',' + i_5_ + ',' + (Js5Archive != null ? "{...}" : "null") + ',' + bool + ',' + i_6_ + ',' + i_7_ + ')'));
         }
     }
 

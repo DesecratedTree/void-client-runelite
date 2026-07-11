@@ -12,48 +12,48 @@ final class Class243 {
     static int anInt3163;
     static int anInt3164;
     static Class351 aClass351_3165 = new Class351(60, 8);
-    private final Class318 aClass318_3166 = new Class318();
-    private Class318 aClass318_3167;
+    private final Linkable aClass318_3166 = new Linkable();
+    private Linkable aClass318_3167;
     static int anInt3168;
 
-    final void method1869(int i, Class318 class318) {
-        if (class318.aClass318_3976 != null) class318.method2373(false);
+    final void method1869(int i, Linkable Linkable) {
+        if (Linkable.previousLink != null) Linkable.method2373(false);
         anInt3158++;
-        class318.aClass318_3976 = aClass318_3166.aClass318_3976;
+        Linkable.previousLink = aClass318_3166.previousLink;
         if (i > -81) aClass318_3167 = null;
-        class318.aClass318_3970 = aClass318_3166;
-        class318.aClass318_3976.aClass318_3970 = class318;
-        class318.aClass318_3970.aClass318_3976 = class318;
+        Linkable.nextLink = aClass318_3166;
+        Linkable.previousLink.nextLink = Linkable;
+        Linkable.nextLink.previousLink = Linkable;
     }
 
-    final Class318 method1870(int i) {
+    final Linkable method1870(int i) {
         if (i > -103) aClass318_3167 = null;
         anInt3162++;
-        Class318 class318 = aClass318_3166.aClass318_3976;
-        if (aClass318_3166 == class318) {
+        Linkable Linkable = aClass318_3166.previousLink;
+        if (aClass318_3166 == Linkable) {
             aClass318_3167 = null;
             return null;
         }
-        aClass318_3167 = class318.aClass318_3976;
-        return class318;
+        aClass318_3167 = Linkable.previousLink;
+        return Linkable;
     }
 
     final boolean method1871(byte i) {
         anInt3157++;
         if (i <= 98) method1879(true);
-        return aClass318_3166 == aClass318_3166.aClass318_3970;
+        return aClass318_3166 == aClass318_3166.nextLink;
     }
 
-    final Class318 method1872(int i) {
+    final Linkable method1872(int i) {
         anInt3163++;
-        Class318 class318 = aClass318_3166.aClass318_3970;
+        Linkable Linkable = aClass318_3166.nextLink;
         if (i != 8) method1878((byte) 126);
-        if (class318 == aClass318_3166) {
+        if (Linkable == aClass318_3166) {
             aClass318_3167 = null;
             return null;
         }
-        aClass318_3167 = class318.aClass318_3970;
-        return class318;
+        aClass318_3167 = Linkable.nextLink;
+        return Linkable;
     }
 
     public static void method1873(byte i) {
@@ -64,27 +64,27 @@ final class Class243 {
     final int method1874(int i) {
         anInt3161++;
         int i_0_ = i;
-        for (Class318 class318 = aClass318_3166.aClass318_3970; aClass318_3166 != class318; class318 = class318.aClass318_3970)
+        for (Linkable Linkable = aClass318_3166.nextLink; aClass318_3166 != Linkable; Linkable = Linkable.nextLink)
             i_0_++;
         return i_0_;
     }
 
-    final Class318 method1875(int i) {
+    final Linkable method1875(int i) {
         anInt3160++;
-        Class318 class318 = aClass318_3166.aClass318_3970;
-        if (class318 == aClass318_3166) return null;
-        class318.method2373(false);
+        Linkable Linkable = aClass318_3166.nextLink;
+        if (Linkable == aClass318_3166) return null;
+        Linkable.method2373(false);
         if (i != 60) method1878((byte) 16);
-        return class318;
+        return Linkable;
     }
 
     final void method1876(byte i) {
         if (i == -45) {
             anInt3168++;
             for (; ; ) {
-                Class318 class318 = aClass318_3166.aClass318_3970;
-                if (class318 == aClass318_3166) break;
-                class318.method2373(false);
+                Linkable Linkable = aClass318_3166.nextLink;
+                if (Linkable == aClass318_3166) break;
+                Linkable.method2373(false);
             }
             aClass318_3167 = null;
         }
@@ -98,31 +98,31 @@ final class Class243 {
         }
     }
 
-    final Class318 method1878(byte i) {
+    final Linkable method1878(byte i) {
         anInt3159++;
-        Class318 class318 = aClass318_3167;
+        Linkable Linkable = aClass318_3167;
         int i_1_ = -59 % ((67 - i) / 55);
-        if (class318 == aClass318_3166) {
+        if (Linkable == aClass318_3166) {
             aClass318_3167 = null;
             return null;
         }
-        aClass318_3167 = class318.aClass318_3970;
-        return class318;
+        aClass318_3167 = Linkable.nextLink;
+        return Linkable;
     }
 
     static final void method1879(boolean bool) {
         if (bool) {
-            Class147.aClass357ArrayArrayArray2029 = Class348_Sub31_Sub2.aClass357ArrayArrayArray9082;
+            ChatMessage.aClass357ArrayArrayArray2029 = Class348_Sub31_Sub2.aClass357ArrayArrayArray9082;
             aa_Sub1.aSArray5191 = Class332.aSArray4142;
         } else {
-            Class147.aClass357ArrayArrayArray2029 = Class65.aClass357ArrayArrayArray1148;
+            ChatMessage.aClass357ArrayArrayArray2029 = Class65.aClass357ArrayArrayArray1148;
             aa_Sub1.aSArray5191 = Class348_Sub1_Sub1.aSArray8801;
         }
-        Class189.anInt2524 = Class147.aClass357ArrayArrayArray2029.length;
+        Class189.anInt2524 = ChatMessage.aClass357ArrayArrayArray2029.length;
     }
 
     public Class243() {
-        aClass318_3166.aClass318_3976 = aClass318_3166;
-        aClass318_3166.aClass318_3970 = aClass318_3166;
+        aClass318_3166.previousLink = aClass318_3166;
+        aClass318_3166.nextLink = aClass318_3166;
     }
 }

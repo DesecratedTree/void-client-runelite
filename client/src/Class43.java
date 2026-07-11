@@ -3,7 +3,7 @@
  */
 
 final class Class43 {
-    static Class45 aClass45_611;
+    static Js5Archive aClass45_611;
     static int anInt612;
     static int anInt613;
     Class348_Sub42_Sub10 aClass348_Sub42_Sub10_614;

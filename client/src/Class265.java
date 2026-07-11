@@ -10,7 +10,7 @@ final class Class265 implements Interface1 {
     static int anInt4691;
     static int[] anIntArray4692;
     static boolean[][] aBooleanArrayArray4693 = {new boolean[4], new boolean[4], {false, false, true, false}, {false, false, true, false}, {false, false, true, false}, {false, false, true, false}, {true, false, true, false}, {true, false, false, true}, {true, false, false, true}, new boolean[4], new boolean[4], new boolean[4], new boolean[4]};
-    private final Class45 aClass45_4694;
+    private final Js5Archive aClass45_4694;
     static int anInt4695;
     static int anInt4696;
 
@@ -20,10 +20,10 @@ final class Class265 implements Interface1 {
         anInt4695++;
     }
 
-    static final Class50_Sub1 method2022(Class348_Sub49 class348_sub49, int i) {
+    static final Class50_Sub1 method2022(Packet Packet, int i) {
         if (i != 0) return null;
         anInt4691++;
-        return new Class50_Sub1(class348_sub49.readShort(13638), class348_sub49.readShort(13638), class348_sub49.readShort(i + 13638), class348_sub49.readShort(13638), class348_sub49.readMedium(-1), class348_sub49.readMedium(-1), class348_sub49.readUnsignedByte(255));
+        return new Class50_Sub1(Packet.readShort(13638), Packet.readShort(13638), Packet.readShort(i + 13638), Packet.readShort(13638), Packet.readMedium(-1), Packet.readMedium(-1), Packet.readUnsignedByte(255));
     }
 
     public final void method9(byte i, boolean bool) {
@@ -55,12 +55,12 @@ final class Class265 implements Interface1 {
         aBooleanArrayArray4693 = null;
     }
 
-    Class265(Class45 class45, Class120 class120) {
+    Class265(Js5Archive Js5Archive, Class120 class120) {
         try {
-            aClass45_4694 = class45;
+            aClass45_4694 = Js5Archive;
             aClass120_4687 = class120;
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("uk.<init>(" + (class45 != null ? "{...}" : "null") + ',' + (class120 != null ? "{...}" : "null") + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("uk.<init>(" + (Js5Archive != null ? "{...}" : "null") + ',' + (class120 != null ? "{...}" : "null") + ')'));
         }
     }
 

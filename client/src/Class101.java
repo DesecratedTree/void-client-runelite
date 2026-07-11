@@ -31,7 +31,7 @@ abstract class Class101 {
         if (i != -49) anInt1597 = 115;
         int i_6_ = 18;
         Class322.anIntArray4031 = new int[i_6_];
-        Class348_Sub50.aByteArrayArray7212 = new byte[i_6_][];
+        StringNode.aByteArrayArray7212 = new byte[i_6_][];
         Class239_Sub6.anIntArrayArray5894 = new int[i_6_][4];
         aa_Sub1.anIntArray5192 = new int[i_6_];
         Class14_Sub4.aByteArrayArray8642 = new byte[i_6_][];

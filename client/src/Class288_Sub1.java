@@ -24,14 +24,14 @@ final class Class288_Sub1 extends Class288 {
         return 16;
     }
 
-    static final Class288 method2189(Class348_Sub49 class348_sub49, int i) {
+    static final Class288 method2189(Packet Packet, int i) {
         anInt8576++;
-        int i_3_ = class348_sub49.readUnsignedShort(842397944);
-        Class221 class221 = Class158.method1248(48)[class348_sub49.readUnsignedByte(255)];
-        Class341 class341 = Class62.method596(20000)[class348_sub49.readUnsignedByte(255)];
+        int i_3_ = Packet.readUnsignedShort(842397944);
+        Class221 class221 = Class158.method1248(48)[Packet.readUnsignedByte(255)];
+        Class341 class341 = Class62.method596(20000)[Packet.readUnsignedByte(255)];
         if (i <= 27) method2189(null, -35);
-        int i_4_ = class348_sub49.readShort(13638);
-        int i_5_ = class348_sub49.readShort(13638);
+        int i_4_ = Packet.readShort(13638);
+        int i_5_ = Packet.readShort(13638);
         return new Class288(i_3_, class221, class341, i_4_, i_5_);
     }
 

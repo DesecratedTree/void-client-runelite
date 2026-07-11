@@ -44,7 +44,7 @@ final class RuntimeException_Sub1 extends RuntimeException {
         this.aThrowable4595 = throwable;
     }
 
-    static final void method4011(int i, Class45 class45) {
+    static final void method4011(int i, Js5Archive Js5Archive) {
         anInt4598++;
         if (i != 1024) method4012(null, (byte) 68);
         client.anInt5171 = 0;
@@ -54,17 +54,17 @@ final class RuntimeException_Sub1 extends RuntimeException {
         Class348_Sub51.aClass318_Sub10Array7249 = new Class318_Sub10[(Class348_Sub42_Sub9.anIntArray9558[Class348_Sub6.anInt6637]) + 1];
         Class258_Sub3.anInt8550 = 0;
         Class376.anInt4559 = 0;
-        Class117.method1072(class45, (byte) -107);
-        Class2.method172(30284, class45);
+        Class117.method1072(Js5Archive, (byte) -107);
+        Class2.method172(30284, Js5Archive);
     }
 
     static final void method4012(byte[] is, byte i) {
         anInt4605++;
-        Class348_Sub49 class348_sub49 = new Class348_Sub49(is);
+        Packet Packet = new Packet(is);
         int i_7_ = -91 % ((i - -51) / 42);
         boolean bool = false;
         for (; ; ) {
-            int i_8_ = class348_sub49.readUnsignedByte(255);
+            int i_8_ = Packet.readUnsignedByte(255);
             if (i_8_ == 0) break;
             if (i_8_ == 1) {
                 if (Class118.anIntArray1786 == null) {
@@ -73,17 +73,17 @@ final class RuntimeException_Sub1 extends RuntimeException {
                     Class106.anIntArray1636 = new int[4];
                 }
                 for (int i_9_ = 0; i_9_ < Class118.anIntArray1786.length; i_9_++) {
-                    Class118.anIntArray1786[i_9_] = class348_sub49.readShort(13638);
-                    Class106.anIntArray1636[i_9_] = class348_sub49.readShort(13638);
+                    Class118.anIntArray1786[i_9_] = Packet.readShort(13638);
+                    Class106.anIntArray1636[i_9_] = Packet.readShort(13638);
                 }
                 bool = true;
             } else if (i_8_ != 2) {
                 if (i_8_ == 3) {
-                    Class132.anInt1905 = class348_sub49.readUnsignedByte(255);
+                    Class132.anInt1905 = Packet.readUnsignedByte(255);
                     Class118.anIntArray1786 = new int[Class132.anInt1905];
                     Class106.anIntArray1636 = new int[Class132.anInt1905];
                 }
-            } else Class348_Sub31.anInt6923 = class348_sub49.readUnsignedShort(842397944);
+            } else Class348_Sub31.anInt6923 = Packet.readUnsignedShort(842397944);
         }
         if (!bool) {
             if (Class118.anIntArray1786 == null) {

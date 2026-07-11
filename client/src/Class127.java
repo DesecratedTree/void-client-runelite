@@ -12,7 +12,7 @@ class Class127 implements Interface1 {
     static int anInt4658;
     Class288 aClass288_4659;
     static int anInt4660;
-    private final Class45 aClass45_4661;
+    private final Js5Archive aClass45_4661;
     static int anInt4662;
 
     public final boolean method8(byte i) {
@@ -58,12 +58,12 @@ class Class127 implements Interface1 {
         anInt4660++;
     }
 
-    Class127(Class45 class45, Class288 class288) {
+    Class127(Js5Archive Js5Archive, Class288 class288) {
         try {
-            aClass45_4661 = class45;
+            aClass45_4661 = Js5Archive;
             this.aClass288_4659 = class288;
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("nl.<init>(" + (class45 != null ? "{...}" : "null") + ',' + (class288 != null ? "{...}" : "null") + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("nl.<init>(" + (Js5Archive != null ? "{...}" : "null") + ',' + (class288 != null ? "{...}" : "null") + ')'));
         }
     }
 }

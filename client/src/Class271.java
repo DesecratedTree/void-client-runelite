@@ -3,9 +3,9 @@
  */
 
 final class Class271 {
-    private final Class60 aClass60_3466 = new Class60(64);
+    private final ReferenceCache aClass60_3466 = new ReferenceCache(64);
     static Class114 aClass114_3467 = new Class114(45, 8);
-    private final Class45 aClass45_3468;
+    private final Js5Archive aClass45_3468;
     static int anInt3469;
 
     final Class348_Sub42_Sub7 method2044(int i, int i_0_) {
@@ -21,7 +21,7 @@ final class Class271 {
         }
         class348_sub42_sub7 = new Class348_Sub42_Sub7();
         if (i < 78) method2046();
-        if (is != null) class348_sub42_sub7.method3192((byte) 16, new Class348_Sub49(is));
+        if (is != null) class348_sub42_sub7.method3192((byte) 16, new Packet(is));
         synchronized (aClass60_3466) {
             aClass60_3466.method582(class348_sub42_sub7, i_0_, (byte) -93);
         }
@@ -37,12 +37,12 @@ final class Class271 {
         Class71.aClass76_1208 = Class71.aClass76_1210;
     }
 
-    Class271(Class230 class230, int i, Class45 class45) {
+    Class271(Class230 class230, int i, Js5Archive Js5Archive) {
         try {
-            aClass45_3468 = class45;
+            aClass45_3468 = Js5Archive;
             aClass45_3468.method407(0, 5);
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("ut.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (class45 != null ? "{...}" : "null") + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("ut.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (Js5Archive != null ? "{...}" : "null") + ')'));
         }
     }
 }

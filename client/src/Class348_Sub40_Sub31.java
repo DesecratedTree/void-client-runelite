@@ -51,15 +51,15 @@ final class Class348_Sub40_Sub31 extends Class348_Sub40 {
         return is;
     }
 
-    final void method3049(Class348_Sub49 class348_sub49, int i, int i_14_) {
+    final void method3049(Packet Packet, int i, int i_14_) {
         if (i_14_ == 31015) {
             int i_15_ = i;
             do {
                 if (i_15_ == 0) {
-                    anInt9405 = class348_sub49.readUnsignedByte(255);
+                    anInt9405 = Packet.readUnsignedByte(255);
                     break;
                 } else if (i_15_ != 1) break;
-                anInt9410 = class348_sub49.readUnsignedByte(255);
+                anInt9410 = Packet.readUnsignedByte(255);
             } while (false);
             anInt9413++;
         }

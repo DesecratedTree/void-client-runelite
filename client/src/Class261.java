@@ -9,9 +9,9 @@ final class Class261 {
     static int anInt3316;
     static int anInt3317;
     static int anInt3318;
-    private final Class45 aClass45_3319;
+    private final Js5Archive aClass45_3319;
     static int anInt3320;
-    private final Class60 aClass60_3321 = new Class60(64);
+    private final ReferenceCache aClass60_3321 = new ReferenceCache(64);
     static int anInt3322;
 
     public static void method1980(int i) {
@@ -75,7 +75,7 @@ final class Class261 {
             is = aClass45_3319.method410(-1860, i_9_, i);
         }
         class225 = new Class225();
-        if (is != null) class225.method1620(new Class348_Sub49(is), -108);
+        if (is != null) class225.method1620(new Packet(is), -108);
         synchronized (aClass60_3321) {
             aClass60_3321.method582(class225, i, (byte) -109);
         }
@@ -122,9 +122,9 @@ final class Class261 {
         Class166.aClass262_2187.method1988(Class348_Sub40_Sub4.aClass262_9111, (byte) -115);
         Class348_Sub40_Sub38.aClass262_9478.method1988(Class348_Sub40_Sub4.aClass262_9111, (byte) -115);
         if (Class73.anInt4776 > 1) {
-            if (!Class116.shiftClick || !Class182.aClass346_2449.method2696(81, -122) || Class73.anInt4776 <= 2) Class316.aClass348_Sub42_Sub12_3963 = ((Class348_Sub42_Sub12) Class348_Sub40_Sub4.aClass262_9111.aClass348_3334.aClass348_4295);
-            else Class316.aClass348_Sub42_Sub12_3963 = ((Class348_Sub42_Sub12) Class348_Sub40_Sub4.aClass262_9111.aClass348_3334.aClass348_4295.aClass348_4295);
-            Class135_Sub2.aClass348_Sub42_Sub12_4846 = ((Class348_Sub42_Sub12) Class348_Sub40_Sub4.aClass262_9111.aClass348_3334.aClass348_4295);
+            if (!Class116.shiftClick || !Class182.aClass346_2449.method2696(81, -122) || Class73.anInt4776 <= 2) Class316.aClass348_Sub42_Sub12_3963 = ((Class348_Sub42_Sub12) Class348_Sub40_Sub4.aClass262_9111.aClass348_3334.previous);
+            else Class316.aClass348_Sub42_Sub12_3963 = ((Class348_Sub42_Sub12) Class348_Sub40_Sub4.aClass262_9111.aClass348_3334.previous.previous);
+            Class135_Sub2.aClass348_Sub42_Sub12_4846 = ((Class348_Sub42_Sub12) Class348_Sub40_Sub4.aClass262_9111.aClass348_3334.previous);
         } else {
             Class316.aClass348_Sub42_Sub12_3963 = null;
             Class135_Sub2.aClass348_Sub42_Sub12_4846 = null;
@@ -277,12 +277,12 @@ final class Class261 {
         }
     }
 
-    Class261(Class230 class230, int i, Class45 class45) {
+    Class261(Class230 class230, int i, Js5Archive Js5Archive) {
         try {
-            aClass45_3319 = class45;
+            aClass45_3319 = Js5Archive;
             aClass45_3319.method407(0, 32);
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("uga.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (class45 != null ? "{...}" : "null") + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("uga.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (Js5Archive != null ? "{...}" : "null") + ')'));
         }
     }
 }

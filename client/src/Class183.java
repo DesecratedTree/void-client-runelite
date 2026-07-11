@@ -4,10 +4,10 @@
 
 final class Class183 {
     static int anInt2457;
-    private final Class60 aClass60_2458 = new Class60(128);
+    private final ReferenceCache aClass60_2458 = new ReferenceCache(128);
     static int anInt2459;
     static int anInt2460;
-    private final Class45 aClass45_2461;
+    private final Js5Archive aClass45_2461;
     static Class250 aClass250_2462;
     static int anInt2463;
     static int anInt2464;
@@ -15,22 +15,22 @@ final class Class183 {
     static int[] anIntArray2466 = new int[14];
     static int anInt2467;
 
-    static final void method1376(Class318_Sub1 class318_sub1) {
-        if (class318_sub1 != null) {
+    static final void method1376(SceneEntity SceneEntity) {
+        if (SceneEntity != null) {
             for (int i = 0; i < 2; i++) {
-                Class318_Sub1 class318_sub1_0_ = null;
-                for (Class318_Sub1 class318_sub1_1_ = Class348.aClass318_Sub1Array4293[i]; class318_sub1_1_ != null; class318_sub1_1_ = (class318_sub1_1_.aClass318_Sub1_6379)) {
-                    if (class318_sub1_1_ == class318_sub1) {
+                SceneEntity class318_sub1_0_ = null;
+                for (SceneEntity class318_sub1_1_ = Node.aClass318_Sub1Array4293[i]; class318_sub1_1_ != null; class318_sub1_1_ = (class318_sub1_1_.aClass318_Sub1_6379)) {
+                    if (class318_sub1_1_ == SceneEntity) {
                         if (class318_sub1_0_ != null) class318_sub1_0_.aClass318_Sub1_6379 = (class318_sub1_1_.aClass318_Sub1_6379);
-                        else Class348.aClass318_Sub1Array4293[i] = (class318_sub1_1_.aClass318_Sub1_6379);
+                        else Node.aClass318_Sub1Array4293[i] = (class318_sub1_1_.aClass318_Sub1_6379);
                         Class348_Sub16_Sub2.aBoolean8870 = true;
                         return;
                     }
                     class318_sub1_0_ = class318_sub1_1_;
                 }
                 class318_sub1_0_ = null;
-                for (Class318_Sub1 class318_sub1_2_ = Class250.aClass318_Sub1Array3226[i]; class318_sub1_2_ != null; class318_sub1_2_ = (class318_sub1_2_.aClass318_Sub1_6379)) {
-                    if (class318_sub1_2_ == class318_sub1) {
+                for (SceneEntity class318_sub1_2_ = Class250.aClass318_Sub1Array3226[i]; class318_sub1_2_ != null; class318_sub1_2_ = (class318_sub1_2_.aClass318_Sub1_6379)) {
+                    if (class318_sub1_2_ == SceneEntity) {
                         if (class318_sub1_0_ != null) class318_sub1_0_.aClass318_Sub1_6379 = (class318_sub1_2_.aClass318_Sub1_6379);
                         else Class250.aClass318_Sub1Array3226[i] = (class318_sub1_2_.aClass318_Sub1_6379);
                         Class348_Sub16_Sub2.aBoolean8870 = true;
@@ -39,8 +39,8 @@ final class Class183 {
                     class318_sub1_0_ = class318_sub1_2_;
                 }
                 class318_sub1_0_ = null;
-                for (Class318_Sub1 class318_sub1_3_ = Class115.aClass318_Sub1Array1754[i]; class318_sub1_3_ != null; class318_sub1_3_ = (class318_sub1_3_.aClass318_Sub1_6379)) {
-                    if (class318_sub1_3_ == class318_sub1) {
+                for (SceneEntity class318_sub1_3_ = Class115.aClass318_Sub1Array1754[i]; class318_sub1_3_ != null; class318_sub1_3_ = (class318_sub1_3_.aClass318_Sub1_6379)) {
+                    if (class318_sub1_3_ == SceneEntity) {
                         if (class318_sub1_0_ != null) class318_sub1_0_.aClass318_Sub1_6379 = (class318_sub1_3_.aClass318_Sub1_6379);
                         else Class115.aClass318_Sub1Array1754[i] = (class318_sub1_3_.aClass318_Sub1_6379);
                         Class348_Sub16_Sub2.aBoolean8870 = true;
@@ -85,7 +85,7 @@ final class Class183 {
             is = aClass45_2461.method410(-1860, 1, i);
         }
         class22 = new Class22();
-        if (is != null) class22.method290(new Class348_Sub49(is), -1);
+        if (is != null) class22.method290(new Packet(is), -1);
         synchronized (aClass60_2458) {
             aClass60_2458.method582(class22, i, (byte) -124);
         }
@@ -123,12 +123,12 @@ final class Class183 {
         if (i != 32841) anInt2464 = 86;
     }
 
-    Class183(Class230 class230, int i, Class45 class45) {
+    Class183(Class230 class230, int i, Js5Archive Js5Archive) {
         try {
-            aClass45_2461 = class45;
+            aClass45_2461 = Js5Archive;
             aClass45_2461.method407(0, 1);
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("qe.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (class45 != null ? "{...}" : "null") + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("qe.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (Js5Archive != null ? "{...}" : "null") + ')'));
         }
     }
 }

@@ -15,7 +15,7 @@ final class Class348_Sub40_Sub36 extends Class348_Sub40 {
         super(0, true);
     }
 
-    final void method3049(Class348_Sub49 class348_sub49, int i, int i_0_) {
+    final void method3049(Packet Packet, int i, int i_0_) {
         anInt9450++;
         if (i_0_ != 31015) anInt9451 = -15;
         int i_1_ = i;
@@ -23,16 +23,16 @@ final class Class348_Sub40_Sub36 extends Class348_Sub40 {
         do {
             do {
                 if (i_1_ == 0) {
-                    anInt9451 = class348_sub49.readUnsignedByte(255);
+                    anInt9451 = Packet.readUnsignedByte(255);
                     return;
                 } else if (i_1_ != 1) {
                     if (i_1_ == 3) break;
                     break while_211_;
                 }
-                anInt9455 = class348_sub49.readUnsignedByte(255);
+                anInt9455 = Packet.readUnsignedByte(255);
                 return;
             } while (false);
-            anInt9453 = class348_sub49.readUnsignedByte(255);
+            anInt9453 = Packet.readUnsignedByte(255);
         } while (false);
     }
 

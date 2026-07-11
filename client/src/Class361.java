@@ -200,7 +200,7 @@ final class Class361 {
                 anInt4442++;
                 var_ha.KA(i_39_, i_41_, i_40_ + i_39_, i_41_ + i);
                 var_ha.method3675(i_40_, (byte) -125, i_39_, i_41_, i, -16777216);
-                if (Class348.anInt4290 >= 100) {
+                if (Node.anInt4290 >= 100) {
                     float f = ((float) Class75.anInt1267 / (float) Class75.anInt1259);
                     int i_42_ = i_40_;
                     int i_43_ = i;
@@ -229,7 +229,7 @@ final class Class361 {
                     else i_49_ = -(5 * Class164.anInt2173) + 500;
                     for (Class348_Sub21 class348_sub21 = ((Class348_Sub21) Class75.aClass262_1254.method1995(4)); class348_sub21 != null; class348_sub21 = (Class348_Sub21) Class75.aClass262_1254.method1990((byte) 126)) {
                         Class42 class42 = (Class75.aClass153_1238.method1225(class348_sub21.anInt6847, (byte) 71));
-                        if (Class60.method589(class42, -4)) {
+                        if (ReferenceCache.method589(class42, -4)) {
                             if (Class348_Sub40_Sub30.anInt9399 == (class348_sub21.anInt6847)) {
                                 int i_50_ = (i_39_ + (i_42_ * (class348_sub21.anInt6852) / Class75.anInt1259));
                                 int i_51_ = (((Class75.anInt1267 - (class348_sub21.anInt6851)) * i_43_ / Class75.anInt1267) + i_41_);

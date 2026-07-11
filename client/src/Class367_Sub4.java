@@ -301,17 +301,17 @@ final class Class367_Sub4 extends Class367 {
         }
     }
 
-    static final int method3544(Class348_Sub49 class348_sub49, int i, String string) {
+    static final int method3544(Packet Packet, int i, String string) {
         try {
             anInt7321++;
-            int i_38_ = class348_sub49.anInt7197;
+            int i_38_ = Packet.pos;
             byte[] is = Class348_Sub24.method2992(string, (byte) -20);
             int i_39_ = 1 % ((-6 - i) / 63);
-            class348_sub49.method3381(5537, is.length);
-            class348_sub49.anInt7197 += (Class64.aClass296_1131.method2227(is.length, 0, class348_sub49.anInt7197, is, 103, class348_sub49.aByteArray7154));
-            return class348_sub49.anInt7197 + -i_38_;
+            Packet.method3381(5537, is.length);
+            Packet.pos += (Class64.aClass296_1131.method2227(is.length, 0, Packet.pos, is, 103, Packet.data));
+            return Packet.pos + -i_38_;
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("bk.O(" + (class348_sub49 != null ? "{...}" : "null") + ',' + i + ',' + (string != null ? "{...}" : "null") + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("bk.O(" + (Packet != null ? "{...}" : "null") + ',' + i + ',' + (string != null ? "{...}" : "null") + ')'));
         }
     }
 

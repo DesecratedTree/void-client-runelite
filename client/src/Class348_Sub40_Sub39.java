@@ -61,19 +61,19 @@ final class Class348_Sub40_Sub39 extends Class348_Sub40 {
         Class5_Sub1.aBoolean8335 = false;
     }
 
-    final void method3049(Class348_Sub49 class348_sub49, int i, int i_6_) {
+    final void method3049(Packet Packet, int i, int i_6_) {
         if (i_6_ != 31015) aClass70_9485 = null;
         if (i == 0) {
-            aClass50Array9481 = new Class50[class348_sub49.readUnsignedByte(255)];
+            aClass50Array9481 = new Class50[Packet.readUnsignedByte(255)];
             while_216_:
             for (int i_7_ = 0; aClass50Array9481.length > i_7_; i_7_++) {
-                int i_8_ = class348_sub49.readUnsignedByte(255);
+                int i_8_ = Packet.readUnsignedByte(255);
                 int i_9_ = i_8_;
                 while_214_:
                 do {
                     do {
                         if (i_9_ == 0) {
-                            aClass50Array9481[i_7_] = Class182.method1374(107, class348_sub49);
+                            aClass50Array9481[i_7_] = Class182.method1374(107, Packet);
                             continue while_216_;
                         } else if (i_9_ != 1) {
                             if (i_9_ != 2) {
@@ -81,15 +81,15 @@ final class Class348_Sub40_Sub39 extends Class348_Sub40 {
                             } else break;
                             break while_214_;
                         }
-                        aClass50Array9481[i_7_] = (Class348_Sub23_Sub1.method2970(Class348_Sub21.method2955(i_6_, 31013), class348_sub49));
+                        aClass50Array9481[i_7_] = (Class348_Sub23_Sub1.method2970(Class348_Sub21.method2955(i_6_, 31013), Packet));
                         continue while_216_;
                     } while (false);
-                    aClass50Array9481[i_7_] = (Class348_Sub40.method3036(class348_sub49, Class348_Sub21.method2955(i_6_, -31102)));
+                    aClass50Array9481[i_7_] = (Class348_Sub40.method3036(Packet, Class348_Sub21.method2955(i_6_, -31102)));
                     continue while_216_;
                 } while (false);
-                aClass50Array9481[i_7_] = Class265.method2022(class348_sub49, 0);
+                aClass50Array9481[i_7_] = Class265.method2022(Packet, 0);
             }
-        } else if (i == 1) this.aBoolean7045 = class348_sub49.readUnsignedByte(255) == 1;
+        } else if (i == 1) this.aBoolean7045 = Packet.readUnsignedByte(255) == 1;
         anInt9484++;
     }
 

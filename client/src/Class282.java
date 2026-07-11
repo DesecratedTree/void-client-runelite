@@ -6,7 +6,7 @@ final class Class282 {
     static int anInt3651;
     static boolean aBoolean3652;
     static int anInt3653;
-    static Class356 aClass356_3654;
+    static IterableHashTable aClass356_3654;
     static int anInt3655 = 0;
 
     static final void method2109(int i) {
@@ -43,7 +43,7 @@ final class Class282 {
     }
 
     static final Class318_Sub1_Sub2 method2110(int i, int i_1_, int i_2_) {
-        Class357 class357 = Class147.aClass357ArrayArrayArray2029[i][i_1_][i_2_];
+        Class357 class357 = ChatMessage.aClass357ArrayArrayArray2029[i][i_1_][i_2_];
         if (class357 == null) return null;
         Class318_Sub1_Sub2 class318_sub1_sub2 = class357.aClass318_Sub1_Sub2_4408;
         class357.aClass318_Sub1_Sub2_4408 = null;
@@ -63,6 +63,6 @@ final class Class282 {
     }
 
     static {
-        aClass356_3654 = new Class356(64);
+        aClass356_3654 = new IterableHashTable(64);
     }
 }

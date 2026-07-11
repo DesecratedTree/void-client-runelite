@@ -13,10 +13,10 @@ final class Class348_Sub40_Sub18 extends Class348_Sub40 {
     static int anInt9251;
     private int anInt9252;
 
-    static final void method3094(int i, Class348_Sub49_Sub2 class348_sub49_sub2) {
+    static final void method3094(int i, BitPacket BitPacket) {
         anInt9247++;
         int i_0_ = 0;
-        class348_sub49_sub2.startBitAccess(-87);
+        BitPacket.startBitAccess(-87);
         for (int i_1_ = 0; i_1_ < Class328_Sub1.anInt6513; i_1_++) {
             int i_2_ = Class286_Sub7.anIntArray6290[i_1_];
             if ((0x1 & Class348_Sub5.aByteArray6624[i_2_]) == 0) {
@@ -24,19 +24,19 @@ final class Class348_Sub40_Sub18 extends Class348_Sub40 {
                     Class348_Sub5.aByteArray6624[i_2_] = (byte) Class273.method2057((Class348_Sub5.aByteArray6624[i_2_]), 2);
                     i_0_--;
                 } else {
-                    int i_3_ = class348_sub49_sub2.readBits((byte) -24, 1);
+                    int i_3_ = BitPacket.readBits((byte) -24, 1);
                     if (i_3_ == 0) {
-                        i_0_ = Class318_Sub1_Sub3.method2413(1, class348_sub49_sub2);
+                        i_0_ = Class318_Sub1_Sub3.method2413(1, BitPacket);
                         Class348_Sub5.aByteArray6624[i_2_] = (byte) Class273.method2057((Class348_Sub5.aByteArray6624[i_2_]), 2);
                     } else {
-                        Class286_Sub9.method2177(1, i_2_, class348_sub49_sub2);
+                        Class286_Sub9.method2177(1, i_2_, BitPacket);
                     }
                 }
             }
         }
-        class348_sub49_sub2.stopBitAccess(false);
+        BitPacket.stopBitAccess(false);
         if (i_0_ != 0) throw new RuntimeException("nsn0");
-        class348_sub49_sub2.startBitAccess(-65);
+        BitPacket.startBitAccess(-65);
         for (int i_4_ = 0; i_4_ < Class328_Sub1.anInt6513; i_4_++) {
             int i_5_ = Class286_Sub7.anIntArray6290[i_4_];
             if ((0x1 & Class348_Sub5.aByteArray6624[i_5_]) != 0) {
@@ -44,17 +44,17 @@ final class Class348_Sub40_Sub18 extends Class348_Sub40 {
                     Class348_Sub5.aByteArray6624[i_5_] = (byte) Class273.method2057((Class348_Sub5.aByteArray6624[i_5_]), 2);
                     i_0_--;
                 } else {
-                    int i_6_ = class348_sub49_sub2.readBits((byte) -24, 1);
+                    int i_6_ = BitPacket.readBits((byte) -24, 1);
                     if (i_6_ == 0) {
-                        i_0_ = Class318_Sub1_Sub3.method2413(1, class348_sub49_sub2);
+                        i_0_ = Class318_Sub1_Sub3.method2413(1, BitPacket);
                         Class348_Sub5.aByteArray6624[i_5_] = (byte) Class273.method2057((Class348_Sub5.aByteArray6624[i_5_]), 2);
-                    } else Class286_Sub9.method2177(i ^ ~0x53e4, i_5_, class348_sub49_sub2);
+                    } else Class286_Sub9.method2177(i ^ ~0x53e4, i_5_, BitPacket);
                 }
             }
         }
-        class348_sub49_sub2.stopBitAccess(false);
+        BitPacket.stopBitAccess(false);
         if (i_0_ != 0) throw new RuntimeException("nsn1");
-        class348_sub49_sub2.startBitAccess(i ^ ~0x5398);
+        BitPacket.startBitAccess(i ^ ~0x5398);
         for (int i_7_ = 0; (i_7_ < Class348_Sub42_Sub4.anInt9513); i_7_++) {
             int i_8_ = Class135_Sub1.anIntArray4709[i_7_];
             if ((0x1 & Class348_Sub5.aByteArray6624[i_8_]) != 0) {
@@ -62,18 +62,18 @@ final class Class348_Sub40_Sub18 extends Class348_Sub40 {
                     Class348_Sub5.aByteArray6624[i_8_] = (byte) Class273.method2057((Class348_Sub5.aByteArray6624[i_8_]), 2);
                     i_0_--;
                 } else {
-                    int i_9_ = class348_sub49_sub2.readBits((byte) -24, 1);
+                    int i_9_ = BitPacket.readBits((byte) -24, 1);
                     if (i_9_ == 0) {
-                        i_0_ = Class318_Sub1_Sub3.method2413(i + 21479, class348_sub49_sub2);
+                        i_0_ = Class318_Sub1_Sub3.method2413(i + 21479, BitPacket);
                         Class348_Sub5.aByteArray6624[i_8_] = (byte) Class273.method2057((Class348_Sub5.aByteArray6624[i_8_]), 2);
-                    } else if (Class211.method1538(i_8_, (byte) 105, class348_sub49_sub2)) Class348_Sub5.aByteArray6624[i_8_] = (byte) Class273.method2057((Class348_Sub5.aByteArray6624[i_8_]), 2);
+                    } else if (Class211.method1538(i_8_, (byte) 105, BitPacket)) Class348_Sub5.aByteArray6624[i_8_] = (byte) Class273.method2057((Class348_Sub5.aByteArray6624[i_8_]), 2);
                 }
             }
         }
-        class348_sub49_sub2.stopBitAccess(false);
+        BitPacket.stopBitAccess(false);
         if (i == -21478) {
             if (i_0_ != 0) throw new RuntimeException("nsn2");
-            class348_sub49_sub2.startBitAccess(36);
+            BitPacket.startBitAccess(36);
             for (int i_10_ = 0; (Class348_Sub42_Sub4.anInt9513 > i_10_); i_10_++) {
                 int i_11_ = Class135_Sub1.anIntArray4709[i_10_];
                 if ((Class348_Sub5.aByteArray6624[i_11_] & 0x1) == 0) {
@@ -81,15 +81,15 @@ final class Class348_Sub40_Sub18 extends Class348_Sub40 {
                         Class348_Sub5.aByteArray6624[i_11_] = (byte) Class273.method2057((Class348_Sub5.aByteArray6624[i_11_]), 2);
                         i_0_--;
                     } else {
-                        int i_12_ = class348_sub49_sub2.readBits((byte) -24, 1);
+                        int i_12_ = BitPacket.readBits((byte) -24, 1);
                         if (i_12_ == 0) {
-                            i_0_ = Class318_Sub1_Sub3.method2413(1, class348_sub49_sub2);
+                            i_0_ = Class318_Sub1_Sub3.method2413(1, BitPacket);
                             Class348_Sub5.aByteArray6624[i_11_] = (byte) Class273.method2057((Class348_Sub5.aByteArray6624[i_11_]), 2);
-                        } else if (Class211.method1538(i_11_, (byte) 105, class348_sub49_sub2)) Class348_Sub5.aByteArray6624[i_11_] = (byte) Class273.method2057((Class348_Sub5.aByteArray6624[i_11_]), 2);
+                        } else if (Class211.method1538(i_11_, (byte) 105, BitPacket)) Class348_Sub5.aByteArray6624[i_11_] = (byte) Class273.method2057((Class348_Sub5.aByteArray6624[i_11_]), 2);
                     }
                 }
             }
-            class348_sub49_sub2.stopBitAccess(false);
+            BitPacket.stopBitAccess(false);
             if (i_0_ != 0) throw new RuntimeException("nsn3");
             Class328_Sub1.anInt6513 = 0;
             Class348_Sub42_Sub4.anInt9513 = 0;
@@ -138,9 +138,9 @@ final class Class348_Sub40_Sub18 extends Class348_Sub40 {
         if (i != 32462) aClass319_9245 = null;
     }
 
-    final void method3049(Class348_Sub49 class348_sub49, int i, int i_20_) {
+    final void method3049(Packet Packet, int i, int i_20_) {
         int i_21_ = i;
-        if (i_21_ == 0) method3095(-124, class348_sub49.readMedium(-1));
+        if (i_21_ == 0) method3095(-124, Packet.readMedium(-1));
         anInt9251++;
         if (i_20_ != 31015) anInt9250 = 105;
     }

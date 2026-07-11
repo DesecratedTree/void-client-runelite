@@ -98,18 +98,18 @@ final class Class318_Sub1_Sub1_Sub1 extends Class318_Sub1_Sub1 implements Interf
             else var_ha.method3684(class98);
         }
         aBoolean9945 = (class64.F() || (this.aClass235_9955.aClass318_Sub10_3081) != null);
-        if (aClass30_9950 != null) Class255.method1935(this.y, this.anInt6382, aClass30_9950, class64, false, this.x);
+        if (aClass30_9950 != null) ObjTypeList.method1935(this.y, this.anInt6382, aClass30_9950, class64, false, this.x);
         else aClass30_9950 = (Class348_Sub23_Sub1.method2967(this.x, class64, this.y, this.anInt6382, 2));
         return class318_sub4;
     }
 
-    final void method2380(ha var_ha, int i, boolean bool, Class318_Sub1 class318_sub1, int i_4_, byte i_5_, int i_6_) {
+    final void method2380(ha var_ha, int i, boolean bool, SceneEntity SceneEntity, int i_4_, byte i_5_, int i_6_) {
         try {
             anInt9946++;
             if (i_5_ > -106) this.aClass235_9955 = null;
             throw new IllegalStateException();
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("saa.N(" + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + bool + ',' + (class318_sub1 != null ? "{...}" : "null") + ',' + i_4_ + ',' + i_5_ + ',' + i_6_ + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("saa.N(" + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + bool + ',' + (SceneEntity != null ? "{...}" : "null") + ',' + i_4_ + ',' + i_5_ + ',' + i_6_ + ')'));
         }
     }
 

@@ -304,7 +304,7 @@ final class Class237_Sub1 extends Class237 {
         return interface10;
     }
 
-    final void method1691(int i, ha var_ha, Class348_Sub49 class348_sub49, int[] is, int i_39_, byte i_40_) {
+    final void method1691(int i, ha var_ha, Packet Packet, int[] is, int i_39_, byte i_40_) {
         do {
             try {
                 anInt5818++;
@@ -313,16 +313,16 @@ final class Class237_Sub1 extends Class237 {
                     Class190 class190 = null;
                     int i_41_ = -112 / ((-71 - i_40_) / 38);
                     if (is != null) is[0] = -1;
-                    while (class348_sub49.anInt7197 < (class348_sub49.aByteArray7154).length) {
-                        int i_42_ = class348_sub49.readUnsignedByte(255);
-                        if (i_42_ == 0) class190 = new Class190(class348_sub49);
+                    while (Packet.pos < (Packet.data).length) {
+                        int i_42_ = Packet.readUnsignedByte(255);
+                        if (i_42_ == 0) class190 = new Class190(Packet);
                         else if (i_42_ == 1) {
-                            int i_58_ = class348_sub49.readUnsignedByte(255);
+                            int i_58_ = Packet.readUnsignedByte(255);
                             if (i_58_ > 0) {
                                 for (int i_59_ = 0; i_58_ > i_59_; i_59_++) {
-                                    Class211 class211 = new Class211(var_ha, class348_sub49, 2);
+                                    Class211 class211 = new Class211(var_ha, Packet, 2);
                                     if (class211.anInt2734 == 31) {
-                                        Class253 class253 = (Class348_Sub1.aClass185_6559.method1391((byte) -1, class348_sub49.readUnsignedShort(842397944)));
+                                        Class253 class253 = (Class348_Sub1.aClass185_6559.method1391((byte) -1, Packet.readUnsignedShort(842397944)));
                                         class211.method1539(class253.anInt3251, (byte) 115, class253.anInt3249, class253.anInt3245, class253.anInt3244);
                                     }
                                     if (var_ha.method3704() > 0) {
@@ -340,12 +340,12 @@ final class Class237_Sub1 extends Class237 {
                             }
                         } else if (i_42_ == 2) {
                             if (class190 == null) class190 = new Class190();
-                            class190.method1423(8, class348_sub49);
+                            class190.method1423(8, Packet);
                         } else if (i_42_ != 128) {
                             if (i_42_ == 129) {
                                 if ((this.aByteArrayArrayArray3104) == null) this.aByteArrayArrayArray3104 = new byte[4][][];
                                 for (int i_43_ = 0; i_43_ < 4; i_43_++) {
-                                    byte i_44_ = class348_sub49.readByte(-102);
+                                    byte i_44_ = Packet.readByte(-102);
                                     if (i_44_ != 0 || (this.aByteArrayArrayArray3104[i_43_]) == null) {
                                         if (i_44_ == 1) {
                                             if ((this.aByteArrayArrayArray3104[i_43_]) == null) this.aByteArrayArrayArray3104[i_43_] = (new byte
@@ -353,7 +353,7 @@ final class Class237_Sub1 extends Class237 {
                                                     [1 + (this.anInt3114)]);
                                             for (int i_49_ = 0; (i_49_ < 64); i_49_ += 4) {
                                                 for (int i_50_ = 0; (i_50_ < 64); i_50_ += 4) {
-                                                    byte i_51_ = (class348_sub49.readByte(-103));
+                                                    byte i_51_ = (Packet.readByte(-103));
                                                     for (int i_52_ = (i_49_ + i_39_); (i_52_ < (4 + i_49_ + i_39_)); i_52_++) {
                                                         for (int i_53_ = i + i_50_; ((4 + i + i_50_) > i_53_); i_53_++) {
                                                             if (i_52_ >= 0 && (this.anInt3117 > i_52_) && (i_53_ >= 0) && (i_53_ < (this.anInt3114))) this.aByteArrayArrayArray3104[i_43_][i_52_][i_53_] = i_51_;
@@ -410,12 +410,12 @@ final class Class237_Sub1 extends Class237 {
                                 bool = true;
                             } else throw new IllegalStateException("");
                         } else if (is != null) {
-                            is[0] = class348_sub49.readUnsignedShort(842397944);
-                            is[1] = class348_sub49.readShort(13638);
-                            is[2] = class348_sub49.readShort(13638);
-                            is[3] = class348_sub49.readShort(13638);
-                            is[4] = class348_sub49.readUnsignedShort(842397944);
-                        } else class348_sub49.anInt7197 += 10;
+                            is[0] = Packet.readUnsignedShort(842397944);
+                            is[1] = Packet.readShort(13638);
+                            is[2] = Packet.readShort(13638);
+                            is[3] = Packet.readShort(13638);
+                            is[4] = Packet.readUnsignedShort(842397944);
+                        } else Packet.pos += 10;
                     }
                     if (class190 != null) {
                         for (int i_64_ = 0; i_64_ < 8; i_64_++) {
@@ -440,7 +440,7 @@ final class Class237_Sub1 extends Class237 {
                     }
                 }
             } catch (RuntimeException runtimeexception) {
-                throw Class348_Sub17.method2929(runtimeexception, ("vaa.AA(" + i + ',' + (var_ha != null ? "{...}" : "null") + ',' + (class348_sub49 != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ',' + i_39_ + ',' + i_40_ + ')'));
+                throw Class348_Sub17.method2929(runtimeexception, ("vaa.AA(" + i + ',' + (var_ha != null ? "{...}" : "null") + ',' + (Packet != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ',' + i_39_ + ',' + i_40_ + ')'));
             }
             break;
         } while (false);
@@ -450,21 +450,21 @@ final class Class237_Sub1 extends Class237 {
         try {
             anInt5826++;
             if (i_78_ != 7) method1693('\uffb8', -54);
-            Class348_Sub49 class348_sub49 = new Class348_Sub49(is);
+            Packet Packet = new Packet(is);
             int i_80_ = -1;
             for (; ; ) {
-                int i_81_ = class348_sub49.method3334(-85);
+                int i_81_ = Packet.method3334(-85);
                 if (i_81_ == 0) break;
                 i_80_ += i_81_;
                 int i_82_ = 0;
                 for (; ; ) {
-                    int i_83_ = class348_sub49.readSmart(-117);
+                    int i_83_ = Packet.readSmart(-117);
                     if (i_83_ == 0) break;
                     i_82_ += -1 + i_83_;
                     int i_84_ = i_82_ & 0x3f;
                     int i_85_ = i_82_ >> 6 & 0x3f;
                     int i_86_ = i_82_ >> 12;
-                    int i_87_ = class348_sub49.readUnsignedByte(255);
+                    int i_87_ = Packet.readUnsignedByte(255);
                     int i_88_ = i_87_ >> 2;
                     int i_89_ = i_87_ & 0x3;
                     if (i_74_ == i_86_ && i <= i_85_ && i - -8 > i_85_ && i_75_ <= i_84_ && i_75_ - -8 > i_84_) {
@@ -553,21 +553,21 @@ final class Class237_Sub1 extends Class237 {
         try {
             anInt5820++;
             if (i_100_ == 1359) {
-                Class348_Sub49 class348_sub49 = new Class348_Sub49(is);
+                Packet Packet = new Packet(is);
                 int i_101_ = -1;
                 for (; ; ) {
-                    int i_102_ = class348_sub49.method3334(-57);
+                    int i_102_ = Packet.method3334(-57);
                     if (i_102_ == 0) break;
                     i_101_ += i_102_;
                     int i_103_ = 0;
                     for (; ; ) {
-                        int i_104_ = class348_sub49.readSmart(-122);
+                        int i_104_ = Packet.readSmart(-122);
                         if (i_104_ == 0) break;
                         i_103_ += i_104_ + -1;
                         int i_105_ = 0x3f & i_103_;
                         int i_106_ = i_103_ >> 6 & 0x3f;
                         int i_107_ = i_103_ >> 12;
-                        int i_108_ = class348_sub49.readUnsignedByte(255);
+                        int i_108_ = Packet.readUnsignedByte(255);
                         int i_109_ = i_108_ >> 2;
                         int i_110_ = 0x3 & i_108_;
                         int i_111_ = i_99_ + i_106_;
@@ -593,7 +593,7 @@ final class Class237_Sub1 extends Class237 {
         super(i, i_114_, i_115_, bool, Class229.aClass268_2979, Class362.aClass183_4460);
     }
 
-    final void method1696(Class348_Sub49 class348_sub49, boolean bool, int i, int i_116_, int i_117_, int i_118_, int i_119_, int i_120_, ha var_ha, int[] is, int i_121_) {
+    final void method1696(Packet Packet, boolean bool, int i, int i_116_, int i_117_, int i_118_, int i_119_, int i_120_, ha var_ha, int[] is, int i_121_) {
         do {
             try {
                 anInt5825++;
@@ -603,16 +603,16 @@ final class Class237_Sub1 extends Class237 {
                     if (is != null) is[0] = -1;
                     int i_123_ = 8 * (0x7 & i_116_);
                     int i_124_ = (i & 0x7) * 8;
-                    while ((class348_sub49.aByteArray7154).length > class348_sub49.anInt7197) {
-                        int i_125_ = class348_sub49.readUnsignedByte(255);
+                    while ((Packet.data).length > Packet.pos) {
+                        int i_125_ = Packet.readUnsignedByte(255);
                         if (i_125_ != 0) {
                             if (i_125_ == 1) {
-                                int i_126_ = class348_sub49.readUnsignedByte(255);
+                                int i_126_ = Packet.readUnsignedByte(255);
                                 if (i_126_ > 0) {
                                     for (int i_127_ = 0; (i_126_ > i_127_); i_127_++) {
-                                        Class211 class211 = new Class211(var_ha, class348_sub49, 2);
+                                        Class211 class211 = new Class211(var_ha, Packet, 2);
                                         if (class211.anInt2734 == 31) {
-                                            Class253 class253 = (Class348_Sub1.aClass185_6559.method1391((byte) 111, (class348_sub49.readUnsignedShort(842397944))));
+                                            Class253 class253 = (Class348_Sub1.aClass185_6559.method1391((byte) 111, (Packet.readUnsignedShort(842397944))));
                                             class211.method1539((class253.anInt3251), (byte) 124, (class253.anInt3249), (class253.anInt3245), (class253.anInt3244));
                                         }
                                         if (var_ha.method3704() > 0) {
@@ -634,19 +634,19 @@ final class Class237_Sub1 extends Class237 {
                                 }
                             } else if (i_125_ == 2) {
                                 if (class190 == null) class190 = new Class190();
-                                class190.method1423(8, class348_sub49);
+                                class190.method1423(8, Packet);
                             } else if (i_125_ == 128) {
                                 if (is != null) {
-                                    is[0] = class348_sub49.readUnsignedShort(842397944);
-                                    is[1] = class348_sub49.readShort(13638);
-                                    is[2] = class348_sub49.readShort(13638);
-                                    is[3] = class348_sub49.readShort(13638);
-                                    is[4] = class348_sub49.readUnsignedShort(842397944);
-                                } else class348_sub49.anInt7197 += 10;
+                                    is[0] = Packet.readUnsignedShort(842397944);
+                                    is[1] = Packet.readShort(13638);
+                                    is[2] = Packet.readShort(13638);
+                                    is[3] = Packet.readShort(13638);
+                                    is[4] = Packet.readUnsignedShort(842397944);
+                                } else Packet.pos += 10;
                             } else if (i_125_ == 129) {
                                 if (this.aByteArrayArrayArray3104 == null) this.aByteArrayArrayArray3104 = new byte[4][][];
                                 for (int i_132_ = 0; i_132_ < 4; i_132_++) {
-                                    byte i_133_ = class348_sub49.readByte(-112);
+                                    byte i_133_ = Packet.readByte(-112);
                                     if (i_133_ == 0 && ((this.aByteArrayArrayArray3104[i_118_]) != null)) {
                                         if (i_121_ >= i_132_) {
                                             int i_134_ = i_117_;
@@ -674,7 +674,7 @@ final class Class237_Sub1 extends Class237 {
                                                 [1 + (this.anInt3114)]);
                                         for (int i_138_ = 0; i_138_ < 64; i_138_ += 4) {
                                             for (int i_139_ = 0; i_139_ < 64; i_139_ += 4) {
-                                                byte i_140_ = class348_sub49.readByte(-113);
+                                                byte i_140_ = Packet.readByte(-113);
                                                 if (i_132_ <= i_121_) {
                                                     for (int i_141_ = i_138_; (i_141_ < i_138_ - -4); i_141_++) {
                                                         for (int i_142_ = i_139_; (i_142_ < i_139_ - -4); i_142_++) {
@@ -691,7 +691,7 @@ final class Class237_Sub1 extends Class237 {
                                     }
                                 }
                             } else throw new IllegalStateException("");
-                        } else class190 = new Class190(class348_sub49);
+                        } else class190 = new Class190(Packet);
                     }
                     if (class190 != null) Class5_Sub2.method192(class190, 10000, i_117_ >> 3, i_120_ >> 3);
                     if (bool_122_ || this.aByteArrayArrayArray3104 == null || (this.aByteArrayArrayArray3104[i_118_] == null)) break;
@@ -703,7 +703,7 @@ final class Class237_Sub1 extends Class237 {
                     }
                 }
             } catch (RuntimeException runtimeexception) {
-                throw Class348_Sub17.method2929(runtimeexception, ("vaa.O(" + (class348_sub49 != null ? "{...}" : "null") + ',' + bool + ',' + i + ',' + i_116_ + ',' + i_117_ + ',' + i_118_ + ',' + i_119_ + ',' + i_120_ + ',' + (var_ha != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ',' + i_121_ + ')'));
+                throw Class348_Sub17.method2929(runtimeexception, ("vaa.O(" + (Packet != null ? "{...}" : "null") + ',' + bool + ',' + i + ',' + i_116_ + ',' + i_117_ + ',' + i_118_ + ',' + i_119_ + ',' + i_120_ + ',' + (var_ha != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ',' + i_121_ + ')'));
             }
             break;
         } while (false);

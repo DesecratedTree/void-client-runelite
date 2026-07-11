@@ -5,7 +5,7 @@
 final class Class260 {
     static Class114 aClass114_3307 = new Class114(56, 2);
     static int anInt3308;
-    static Class45 aClass45_3309;
+    static Js5Archive aClass45_3309;
     static int anInt3310;
     static int[] anIntArray3311;
     static int anInt3312 = 0;

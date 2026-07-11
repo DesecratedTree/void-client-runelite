@@ -3,20 +3,20 @@
  */
 
 final class Class141 {
-    private Class60 aClass60_1963 = new Class60(64);
+    private ReferenceCache aClass60_1963 = new ReferenceCache(64);
     static int anInt1964;
-    Class45 aClass45_1965;
+    Js5Archive aClass45_1965;
     static Class273 aClass273_1966;
     static int anInt1967;
     static int anInt1968;
     static int anInt1969;
     static int anInt1970;
-    private final Class45 aClass45_1971;
+    private final Js5Archive aClass45_1971;
     static int anInt1972;
     static int[] anIntArray1973 = {0, 1, 2, 3, 4, 5, 6, 14};
     static int anInt1974;
     static int[] anIntArray1975;
-    Class60 aClass60_1976 = new Class60(64);
+    ReferenceCache aClass60_1976 = new ReferenceCache(64);
     static Class26 aClass26_1977;
 
     final Class218 method1173(byte i, int i_0_) {
@@ -33,7 +33,7 @@ final class Class141 {
         class218 = new Class218();
         if (i != 31) return null;
         class218.aClass141_2851 = this;
-        if (is != null) class218.method1597((byte) -114, new Class348_Sub49(is));
+        if (is != null) class218.method1597((byte) -114, new Packet(is));
         synchronized (aClass60_1963) {
             aClass60_1963.method582(class218, i_0_, (byte) -108);
         }
@@ -83,8 +83,8 @@ final class Class141 {
     final void method1178(int i, int i_2_, int i_3_) {
         anInt1972++;
         if (i_2_ != 1) aClass273_1966 = null;
-        aClass60_1963 = new Class60(i_3_);
-        this.aClass60_1976 = new Class60(i);
+        aClass60_1963 = new ReferenceCache(i_3_);
+        this.aClass60_1976 = new ReferenceCache(i);
     }
 
     public static void method1179(byte i) {
@@ -95,13 +95,13 @@ final class Class141 {
         if (i >= -111) method1177((byte) 47);
     }
 
-    Class141(Class230 class230, int i, Class45 class45, Class45 class45_4_) {
+    Class141(Class230 class230, int i, Js5Archive Js5Archive, Js5Archive class45_4_) {
         try {
             this.aClass45_1965 = class45_4_;
-            aClass45_1971 = class45;
+            aClass45_1971 = Js5Archive;
             aClass45_1971.method407(0, 34);
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("oda.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (class45 != null ? "{...}" : "null") + ',' + (class45_4_ != null ? "{...}" : "null") + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("oda.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (Js5Archive != null ? "{...}" : "null") + ',' + (class45_4_ != null ? "{...}" : "null") + ')'));
         }
     }
 

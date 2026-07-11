@@ -12,7 +12,7 @@ final class oa extends ha implements Interface19 {
     private final Class262 aClass262_5123;
     private boolean aBoolean5124 = false;
     private Class101 aClass101_5125;
-    private final Class356 aClass356_5126;
+    private final IterableHashTable aClass356_5126;
     private int anInt5127;
     private int anInt5128;
     private static final float[] aFloatArray5129 = new float[20];
@@ -460,7 +460,7 @@ final class oa extends ha implements Interface19 {
         aClass262_5123 = new Class262();
         anInt5127 = 4096;
         anInt5128 = 4096;
-        aClass356_5126 = new Class356(4);
+        aClass356_5126 = new IterableHashTable(4);
         aBoolean5142 = false;
         do {
             try {

@@ -7,7 +7,7 @@ final class Class239_Sub12 extends Class239 {
     static int anInt5961;
     static int anInt5962;
     static int anInt5963;
-    static Class45 aClass45_5964;
+    static Js5Archive aClass45_5964;
     static int anInt5965;
     static String aString5966 = null;
     static int anInt5967;
@@ -21,7 +21,7 @@ final class Class239_Sub12 extends Class239 {
     final int method1714(int i, int i_0_) {
         anInt5972++;
         if (i != 3) return 121;
-        if (!Class348.method2714(7351, this.aClass348_Sub51_3136.aClass239_Sub25_7271.method1829(-32350))) return 3;
+        if (!Node.method2714(7351, this.aClass348_Sub51_3136.aClass239_Sub25_7271.method1829(-32350))) return 3;
         return 1;
     }
 
@@ -58,7 +58,7 @@ final class Class239_Sub12 extends Class239 {
     final void method1716(boolean bool) {
         if (bool != false) method1716(false);
         anInt5962++;
-        if (this.aClass348_Sub51_3136.aClass239_Sub25_7271.method1830((byte) -119) && !Class348.method2714(7351, this.aClass348_Sub51_3136.aClass239_Sub25_7271.method1829(-32350))) this.anInt3138 = 0;
+        if (this.aClass348_Sub51_3136.aClass239_Sub25_7271.method1830((byte) -119) && !Node.method2714(7351, this.aClass348_Sub51_3136.aClass239_Sub25_7271.method1829(-32350))) this.anInt3138 = 0;
         if (this.anInt3138 < 0 || this.anInt3138 > 1) this.anInt3138 = method1710(20014);
     }
 
@@ -69,7 +69,7 @@ final class Class239_Sub12 extends Class239 {
     final boolean method1774(int i) {
         if (i < 85) method1773((byte) 116);
         anInt5961++;
-        return Class348.method2714(7351, this.aClass348_Sub51_3136.aClass239_Sub25_7271.method1829(-32350));
+        return Node.method2714(7351, this.aClass348_Sub51_3136.aClass239_Sub25_7271.method1829(-32350));
     }
 
     final int method1710(int i) {

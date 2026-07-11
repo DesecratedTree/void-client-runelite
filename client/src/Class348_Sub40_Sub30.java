@@ -27,7 +27,7 @@ final class Class348_Sub40_Sub30 extends Class348_Sub40 {
 
     static final void method3126(byte i) {
         if (i != 98) anInt9388 = 46;
-        Class60.aHa1098.method3700(Class239_Sub10.aFloat5945, Class348_Sub3.aFloat6586, Class269.aFloat3462);
+        ReferenceCache.aHa1098.method3700(Class239_Sub10.aFloat5945, Class348_Sub3.aFloat6586, Class269.aFloat3462);
         anInt9387++;
     }
 
@@ -242,7 +242,7 @@ final class Class348_Sub40_Sub30 extends Class348_Sub40 {
         }
     }
 
-    final void method3049(Class348_Sub49 class348_sub49, int i, int i_39_) {
+    final void method3049(Packet Packet, int i, int i_39_) {
         while_209_:
         do {
             try {
@@ -251,21 +251,21 @@ final class Class348_Sub40_Sub30 extends Class348_Sub40 {
                     int i_40_ = i;
                     do {
                         if (i_40_ == 0) {
-                            anInt9402 = class348_sub49.readShort(13638);
+                            anInt9402 = Packet.readShort(13638);
                             return;
                         } else if (i_40_ != 1) {
                             if (i_40_ == 2) break;
                             break while_209_;
                         }
-                        anInt9390 = (class348_sub49.readByte(-83) << 12) / 100;
+                        anInt9390 = (Packet.readByte(-83) << 12) / 100;
                         return;
                     } while (false);
-                    anInt9398 = (class348_sub49.readByte(i_39_ + -31101) << 12) / 100;
+                    anInt9398 = (Packet.readByte(i_39_ + -31101) << 12) / 100;
                     break;
                 }
                 break;
             } catch (RuntimeException runtimeexception) {
-                throw Class348_Sub17.method2929(runtimeexception, ("vj.F(" + (class348_sub49 != null ? "{...}" : "null") + ',' + i + ',' + i_39_ + ')'));
+                throw Class348_Sub17.method2929(runtimeexception, ("vj.F(" + (Packet != null ? "{...}" : "null") + ',' + i + ',' + i_39_ + ')'));
             }
         } while (false);
     }

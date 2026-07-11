@@ -3,10 +3,10 @@
  */
 
 final class Class59_Sub2_Sub1 extends Class59_Sub2 {
-    static Class45 aClass45_8667;
+    static Js5Archive aClass45_8667;
     static int anInt8668;
     static int anInt8669;
-    static Class45 aClass45_8670;
+    static Js5Archive aClass45_8670;
     static int anInt8671;
     static int anInt8672;
     static int anInt8673;

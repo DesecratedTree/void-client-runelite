@@ -36,7 +36,7 @@ final class Class348_Sub16_Sub4 extends Class348_Sub16 {
                     method2882(class348_sub30);
                 } else {
                     class348_sub30.anInt6912 = i_1_;
-                    method2881(class348_sub30.aClass348_4294, class348_sub30);
+                    method2881(class348_sub30.next, class348_sub30);
                 }
             }
         } while (i != 0);
@@ -46,20 +46,20 @@ final class Class348_Sub16_Sub4 extends Class348_Sub16 {
         return (Class348_Sub16) aClass262_8965.method1995(4);
     }
 
-    private final void method2881(Class348 class348, Class348_Sub30 class348_sub30) {
-        for (/**/; (class348 != aClass262_8966.aClass348_3334 && (((Class348_Sub30) class348).anInt6912 <= class348_sub30.anInt6912)); class348 = class348.aClass348_4294) {
+    private final void method2881(Node Node, Class348_Sub30 class348_sub30) {
+        for (/**/; (Node != aClass262_8966.aClass348_3334 && (((Class348_Sub30) Node).anInt6912 <= class348_sub30.anInt6912)); Node = Node.next) {
             /* empty */
         }
-        Class348_Sub42_Sub16_Sub2.method3265(-106, class348_sub30, class348);
-        anInt8967 = ((Class348_Sub30) aClass262_8966.aClass348_3334.aClass348_4294).anInt6912;
+        Class348_Sub42_Sub16_Sub2.method3265(-106, class348_sub30, Node);
+        anInt8967 = ((Class348_Sub30) aClass262_8966.aClass348_3334.next).anInt6912;
     }
 
     private final void method2882(Class348_Sub30 class348_sub30) {
         class348_sub30.method2715((byte) 105);
         class348_sub30.method3006();
-        Class348 class348 = (aClass262_8966.aClass348_3334.aClass348_4294);
-        if (class348 == aClass262_8966.aClass348_3334) anInt8967 = -1;
-        else anInt8967 = ((Class348_Sub30) class348).anInt6912;
+        Node Node = (aClass262_8966.aClass348_3334.next);
+        if (Node == aClass262_8966.aClass348_3334) anInt8967 = -1;
+        else anInt8967 = ((Class348_Sub30) Node).anInt6912;
     }
 
     final synchronized void method2883(Class348_Sub16 class348_sub16) {
@@ -122,7 +122,7 @@ final class Class348_Sub16_Sub4 extends Class348_Sub16 {
                     method2882(class348_sub30);
                 } else {
                     class348_sub30.anInt6912 = i_5_;
-                    method2881(class348_sub30.aClass348_4294, class348_sub30);
+                    method2881(class348_sub30.next, class348_sub30);
                 }
             }
         } while (i_3_ != 0);

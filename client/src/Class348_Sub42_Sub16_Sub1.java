@@ -11,7 +11,7 @@ final class Class348_Sub42_Sub16_Sub1 extends Class348_Sub42_Sub16 {
     static boolean aBoolean10450;
     static int anInt10451;
     static int anInt10452;
-    Class348_Sub49 aClass348_Sub49_10453;
+    Packet aClass348_Sub49_10453;
     static int anInt10454;
     static int anInt10455;
     int anInt10456;
@@ -19,8 +19,8 @@ final class Class348_Sub42_Sub16_Sub1 extends Class348_Sub42_Sub16 {
     final byte[] method3259(int i) {
         anInt10454++;
         if (i != 16) return null;
-        if (this.aBoolean9664 || (this.aClass348_Sub49_10453.anInt7197 < (-this.aByte10449 + (this.aClass348_Sub49_10453.aByteArray7154).length))) throw new RuntimeException();
-        return (this.aClass348_Sub49_10453.aByteArray7154);
+        if (this.aBoolean9664 || (this.aClass348_Sub49_10453.pos < (-this.aByte10449 + (this.aClass348_Sub49_10453.data).length))) throw new RuntimeException();
+        return (this.aClass348_Sub49_10453.data);
     }
 
     static final void method3260(int i) {
@@ -73,7 +73,7 @@ final class Class348_Sub42_Sub16_Sub1 extends Class348_Sub42_Sub16 {
         if (i != 16) this.aByte10449 = (byte) -4;
         anInt10452++;
         if (this.aClass348_Sub49_10453 == null) return 0;
-        return (100 * this.aClass348_Sub49_10453.anInt7197 / (-this.aByte10449 + (this.aClass348_Sub49_10453.aByteArray7154).length));
+        return (100 * this.aClass348_Sub49_10453.pos / (-this.aByte10449 + (this.aClass348_Sub49_10453.data).length));
     }
 
     static final boolean method3262(int i, int i_8_, int i_9_) {

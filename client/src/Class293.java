@@ -50,16 +50,16 @@ final class Class293 implements Runnable {
                 }
             } else {
                 aBoolean3744 = true;
-                Class318 class318 = aClass315_3743.method2362(25061);
-                if (class318 instanceof Class318_Sub1) {
-                    Class318_Sub1 class318_sub1 = (Class318_Sub1) class318;
-                    if (class318_sub1.aBoolean6387) class318_sub1.method2387(Class9.aHa171, -127);
+                Linkable Linkable = aClass315_3743.method2362(25061);
+                if (Linkable instanceof SceneEntity) {
+                    SceneEntity SceneEntity = (SceneEntity) Linkable;
+                    if (SceneEntity.aBoolean6387) SceneEntity.method2387(Class9.aHa171, -127);
                     else {
-                        Class38.method365(class318_sub1, aClass348_Sub1Array3748);
-                        if (Class362.aClass324_4456 != null) Class362.aClass324_4456.method2576(aClass315_3743.aString3953, -256, class318_sub1.anInt6380, class318_sub1.anInt6386, -16777216, -114);
+                        Class38.method365(SceneEntity, aClass348_Sub1Array3748);
+                        if (Class362.aClass324_4456 != null) Class362.aClass324_4456.method2576(aClass315_3743.aString3953, -256, SceneEntity.anInt6380, SceneEntity.anInt6386, -16777216, -114);
                     }
                 } else {
-                    int i = ((Class318_Sub2) class318).anInt6394;
+                    int i = ((Class318_Sub2) Linkable).anInt6394;
                     if (i >= 1 && i <= 4) {
                         s var_s = aa_Sub1.aSArray5191[i - 1];
                         for (int i_0_ = 0; i_0_ < (Class318_Sub1_Sub4_Sub1.anInt10084 + Class318_Sub1_Sub4_Sub1.anInt10084); i_0_++) {

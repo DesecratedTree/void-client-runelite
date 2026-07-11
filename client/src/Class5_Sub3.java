@@ -32,7 +32,7 @@ final class Class5_Sub3 extends Class5 {
         Class42 class42 = Class75.aClass153_1238.method1225(class348_sub21.anInt6847, (byte) 50);
         if (i != 1) anInt8370 = -75;
         if (class42 != null && class42.aBoolean609 && class42.method373(Class75.anInterface17_1244, 98)) return class348_sub21;
-        return Class356.method3479(-1);
+        return IterableHashTable.method3479(-1);
     }
 
     public final boolean method8(byte i) {
@@ -48,8 +48,8 @@ final class Class5_Sub3 extends Class5 {
         return i_3_ >>> 8;
     }
 
-    Class5_Sub3(Class45 class45, Class45 class45_4_, Class369_Sub1 class369_sub1) {
-        super(class45, class45_4_, class369_sub1);
+    Class5_Sub3(Js5Archive Js5Archive, Js5Archive class45_4_, Class369_Sub1 class369_sub1) {
+        super(Js5Archive, class45_4_, class369_sub1);
     }
 
     static final void method201(int i, int i_5_, String string) {

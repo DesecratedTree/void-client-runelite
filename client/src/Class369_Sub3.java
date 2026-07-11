@@ -10,7 +10,7 @@ class Class369_Sub3 extends Class369 {
     static int anInt8598;
     int anInt8599;
     int anInt8600;
-    static Class45 aClass45_8601;
+    static Js5Archive aClass45_8601;
     int anInt8602;
     int anInt8603;
 

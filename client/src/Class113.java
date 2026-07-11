@@ -7,7 +7,7 @@ final class Class113 {
     static int anInt1740;
     static int anInt1741;
     static int anInt1742;
-    static Class45 aClass45_1743;
+    static Js5Archive aClass45_1743;
     static Class105[] aClass105Array1744;
     static int anInt1745 = 100;
 

@@ -60,12 +60,12 @@ abstract class Class110 {
         return (0x8 & this.anInt1708) != 0;
     }
 
-    static final void method1034(int i, Class348_Sub49 class348_sub49, Class297 class297, int i_5_) {
+    static final void method1034(int i, Packet Packet, Class297 class297, int i_5_) {
         try {
             anInt1710++;
             Class348_Sub48 class348_sub48 = new Class348_Sub48();
-            class348_sub48.anInt7126 = class348_sub49.readUnsignedByte(255);
-            class348_sub48.anInt7130 = class348_sub49.readInt((byte) -126);
+            class348_sub48.anInt7126 = Packet.readUnsignedByte(255);
+            class348_sub48.anInt7130 = Packet.readInt((byte) -126);
             class348_sub48.anIntArray7132 = new int[class348_sub48.anInt7126];
             class348_sub48.aByteArrayArrayArray7128 = new byte[class348_sub48.anInt7126][][];
             class348_sub48.aClass144Array7127 = new Class144[class348_sub48.anInt7126];
@@ -76,21 +76,21 @@ abstract class Class110 {
                 class348_sub48.anIntArray7136 = new int[class348_sub48.anInt7126];
                 for (int i_6_ = 0; i_6_ < class348_sub48.anInt7126; i_6_++) {
                     try {
-                        int i_7_ = class348_sub49.readUnsignedByte(255);
+                        int i_7_ = Packet.readUnsignedByte(255);
                         if (i_7_ != 0 && i_7_ != 1 && i_7_ != 2) {
                             if (i_7_ == 3 || i_7_ == 4) {
-                                String string = class348_sub49.readString((byte) 89);
-                                String string_8_ = class348_sub49.readString((byte) -81);
-                                int i_9_ = class348_sub49.readUnsignedByte(255);
+                                String string = Packet.readString((byte) 89);
+                                String string_8_ = Packet.readString((byte) -81);
+                                int i_9_ = Packet.readUnsignedByte(255);
                                 String[] strings = new String[i_9_];
                                 for (int i_10_ = 0; i_9_ > i_10_; i_10_++)
-                                    strings[i_10_] = class348_sub49.readString((byte) -23);
+                                    strings[i_10_] = Packet.readString((byte) -23);
                                 byte[][] is = new byte[i_9_][];
                                 if (i_7_ == 3) {
                                     for (int i_11_ = 0; i_11_ < i_9_; i_11_++) {
-                                        int i_12_ = class348_sub49.readInt((byte) -126);
+                                        int i_12_ = Packet.readInt((byte) -126);
                                         is[i_11_] = new byte[i_12_];
-                                        class348_sub49.method3389(2147483647, 0, i_12_, is[i_11_]);
+                                        Packet.method3389(2147483647, 0, i_12_, is[i_11_]);
                                     }
                                 }
                                 class348_sub48.anIntArray7132[i_6_] = i_7_;
@@ -101,10 +101,10 @@ abstract class Class110 {
                                 class348_sub48.aByteArrayArrayArray7128[i_6_] = is;
                             }
                         } else {
-                            String string = class348_sub49.readString((byte) 103);
-                            String string_14_ = class348_sub49.readString((byte) 109);
+                            String string = Packet.readString((byte) 103);
+                            String string_14_ = Packet.readString((byte) 109);
                             int i_15_ = 0;
-                            if (i_7_ == 1) i_15_ = class348_sub49.readInt((byte) -126);
+                            if (i_7_ == 1) i_15_ = Packet.readInt((byte) -126);
                             class348_sub48.anIntArray7132[i_6_] = i_7_;
                             class348_sub48.anIntArray7136[i_6_] = i_15_;
                             class348_sub48.aClass144Array7135[i_6_] = (class297.method2243(0, string_14_, Class348_Sub40_Sub1.method3052(11012, string)));
@@ -121,10 +121,10 @@ abstract class Class110 {
                         class348_sub48.anIntArray7131[i_6_] = -5;
                     }
                 }
-                Class348_Sub35.aClass262_6978.method1999(class348_sub48, -20180);
+                IntNode.aClass262_6978.method1999(class348_sub48, -20180);
             }
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("mr.E(" + i + ',' + (class348_sub49 != null ? "{...}" : "null") + ',' + (class297 != null ? "{...}" : "null") + ',' + i_5_ + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("mr.E(" + i + ',' + (Packet != null ? "{...}" : "null") + ',' + (class297 != null ? "{...}" : "null") + ',' + i_5_ + ')'));
         }
     }
 

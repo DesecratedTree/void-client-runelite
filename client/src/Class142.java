@@ -22,6 +22,10 @@ final class Class142 implements Interface5_Impl2 {
 
     public final boolean method22(int i) {
         if (i != -23) anInt8516 = 118;
+        if (aBoolean8520 && this.anIDirect3DIndexBuffer8517 == null) {
+            aBoolean8520 = false;
+            return false;
+        }
         if (aBoolean8520 && ue.a(this.anIDirect3DIndexBuffer8517.Unlock(), false)) {
             aBoolean8520 = false;
             return true;

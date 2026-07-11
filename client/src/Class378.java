@@ -8,6 +8,20 @@ import jagdx.*;
 import java.awt.*;
 
 public final class Class378 extends ha_Sub3 {
+    private static final int DIRECT3D_SDK_VERSION = 0x80000020;
+    private static final int D3DADAPTER_DEFAULT = 0;
+    private static final int D3DDEVTYPE_HAL = 1;
+    private static final int D3DCREATE_FPU_PRESERVE = 0x2;
+    private static final int D3DCREATE_MULTITHREADED = 0x4;
+    private static final int D3DCREATE_PUREDEVICE = 0x10;
+    private static final int D3DCREATE_SOFTWARE_VERTEXPROCESSING = 0x20;
+    private static final int D3DCREATE_HARDWARE_VERTEXPROCESSING = 0x40;
+    private static final int D3DCREATE_MIXED_VERTEXPROCESSING = 0x80;
+    private static final int D3DDEVCAPS_HWTRANSFORMANDLIGHT = 0x10000;
+    private static final int D3DDEVCAPS_PUREDEVICE = 0x100000;
+    private static final int D3DPRESENT_INTERVAL_IMMEDIATE = 0x80000000;
+    private static final int D3DPRESENTFLAG_DISCARD_DEPTHSTENCIL = 0x2;
+    private static final int D3DSWAPEFFECT_DISCARD = 1;
     private final boolean[] aBooleanArray9784;
     private int anInt9785 = 0;
     private boolean[] aBooleanArray9786;
@@ -219,14 +233,14 @@ public final class Class378 extends ha_Sub3 {
         this.anIDirect3DDevice9810.SetTextureStageState(this.anInt8175, 11, i_18_);
     }
 
-    static final ha createToolkit(Canvas canvas, d var_d, Class45 class45, Integer integer) {
+    static final ha createToolkit(Canvas canvas, d var_d, Js5Archive Js5Archive, Integer integer) {
         Class378 class378 = null;
         Class378 class378_19_;
         try {
-            int i = 0;
-            int i_20_ = 1;
+            int i = D3DADAPTER_DEFAULT;
+            int i_20_ = D3DDEVTYPE_HAL;
             hb var_hb = new hb();
-            IDirect3D idirect3d = IDirect3D.a(-2147483616, var_hb);
+            IDirect3D idirect3d = IDirect3D.a(DIRECT3D_SDK_VERSION, var_hb);
             D3DCAPS d3dcaps = idirect3d.b(i, i_20_);
             if ((d3dcaps.RasterCaps & 0x1000000) == 0) throw new RuntimeException("");
             if (d3dcaps.MaxSimultaneousTextures < 2) throw new RuntimeException("");
@@ -242,20 +256,15 @@ public final class Class378 extends ha_Sub3 {
             if (d3dcaps.MaxStreams < 5) throw new RuntimeException("");
             D3DPRESENT_PARAMETERS d3dpresent_parameters = new D3DPRESENT_PARAMETERS(canvas);
             if (!method3964(d3dpresent_parameters, 0, i, idirect3d, i_20_, integer.intValue())) throw new RuntimeException("");
-            d3dpresent_parameters.PresentationInterval = -2147483648;
+            d3dpresent_parameters.BackBufferCount = 1;
+            d3dpresent_parameters.SwapEffect = D3DSWAPEFFECT_DISCARD;
+            d3dpresent_parameters.Flags = D3DPRESENTFLAG_DISCARD_DEPTHSTENCIL;
+            d3dpresent_parameters.PresentationInterval = D3DPRESENT_INTERVAL_IMMEDIATE;
             d3dpresent_parameters.EnableAutoDepthStencil = true;
             d3dpresent_parameters.Windowed = true;
-            int i_21_ = 2;
-            if ((0x100000 & d3dcaps.DevCaps) != 0) i_21_ |= 0x10;
-            Object object = null;
-            IDirect3DDevice idirect3ddevice;
-            try {
-                idirect3ddevice = idirect3d.a(i, i_20_, canvas, i_21_ | 0x40, d3dpresent_parameters);
-            } catch (fda var_fda) {
-                idirect3ddevice = idirect3d.a(i, i_20_, canvas, i_21_ | 0x20, d3dpresent_parameters);
-            }
+            IDirect3DDevice idirect3ddevice = method3965(idirect3d, i, i_20_, canvas, d3dcaps, d3dpresent_parameters);
             Class53 class53 = new Class53(idirect3ddevice.b(0), idirect3ddevice.c());
-            class378 = new Class378(i, i_20_, canvas, var_hb, idirect3d, idirect3ddevice, class53, d3dpresent_parameters, d3dcaps, var_d, class45, integer.intValue());
+            class378 = new Class378(i, i_20_, canvas, var_hb, idirect3d, idirect3ddevice, class53, d3dpresent_parameters, d3dcaps, var_d, Js5Archive, integer.intValue());
             class378.method3930((byte) 26);
             class378_19_ = class378;
         } catch (RuntimeException runtimeexception) {
@@ -263,6 +272,32 @@ public final class Class378 extends ha_Sub3 {
             throw runtimeexception;
         }
         return class378_19_;
+    }
+
+    private static final IDirect3DDevice method3965(IDirect3D idirect3d, int i, int i_20_, Canvas canvas, D3DCAPS d3dcaps, D3DPRESENT_PARAMETERS d3dpresent_parameters) {
+        int i_21_ = D3DCREATE_FPU_PRESERVE | D3DCREATE_MULTITHREADED;
+        int i_22_ = ((d3dcaps.DevCaps & D3DDEVCAPS_PUREDEVICE) != 0 ? D3DCREATE_PUREDEVICE : 0);
+        int[] is;
+        if ((d3dcaps.DevCaps & D3DDEVCAPS_HWTRANSFORMANDLIGHT) != 0) {
+            is = new int[]{
+                    i_21_ | i_22_ | D3DCREATE_HARDWARE_VERTEXPROCESSING,
+                    i_21_ | D3DCREATE_HARDWARE_VERTEXPROCESSING,
+                    i_21_ | i_22_ | D3DCREATE_MIXED_VERTEXPROCESSING,
+                    i_21_ | D3DCREATE_MIXED_VERTEXPROCESSING,
+                    i_21_ | D3DCREATE_SOFTWARE_VERTEXPROCESSING
+            };
+        } else {
+            is = new int[]{i_21_ | D3DCREATE_SOFTWARE_VERTEXPROCESSING};
+        }
+        fda var_fda = null;
+        for (int i_23_ = 0; i_23_ < is.length; i_23_++) {
+            try {
+                return idirect3d.a(i, i_20_, canvas, is[i_23_], d3dpresent_parameters);
+            } catch (fda fda) {
+                var_fda = fda;
+            }
+        }
+        throw var_fda != null ? var_fda : new RuntimeException("");
     }
 
     final void method3911(Canvas canvas, int i, Object object) {
@@ -362,7 +397,7 @@ public final class Class378 extends ha_Sub3 {
                 if (Class348_Sub40_Sub38.aClass304_9471 == class304) return 28;
                 if (Class348_Sub40_Sub22.aClass304_9303 == class304) return 50;
                 if (class304 == Class191.aClass304_2571) return 51;
-                if (class304 == Class318.aClass304_3977) return 77;
+                if (class304 == Linkable.aClass304_3977) return 77;
             } else return 22;
         }
         if (i != 22) anIntArray9790 = null;
@@ -432,8 +467,8 @@ public final class Class378 extends ha_Sub3 {
         if (i >= -19) method3855(null, -78, 86, null, false, 82, 55, -34);
     }
 
-    private Class378(int i, int i_38_, Canvas canvas, hb var_hb, IDirect3D idirect3d, IDirect3DDevice idirect3ddevice, Class53 class53, D3DPRESENT_PARAMETERS d3dpresent_parameters, D3DCAPS d3dcaps, d var_d, Class45 class45, int i_39_) {
-        super(canvas, class53, var_d, class45, i_39_, 0);
+    private Class378(int i, int i_38_, Canvas canvas, hb var_hb, IDirect3D idirect3d, IDirect3DDevice idirect3ddevice, Class53 class53, D3DPRESENT_PARAMETERS d3dpresent_parameters, D3DCAPS d3dcaps, d var_d, Js5Archive Js5Archive, int i_39_) {
+        super(canvas, class53, var_d, Js5Archive, i_39_, 0);
         try {
             this.aHb9788 = var_hb;
             aD3DPRESENT_PARAMETERS9800 = d3dpresent_parameters;
@@ -841,7 +876,7 @@ public final class Class378 extends ha_Sub3 {
                     int i2 = 0;
                     do {
                         if (anIntArray9809.length <= i2) continue label1;
-                        if (idirect3d.CheckDeviceFormat(j, k, d3ddisplaymode.Format, 2, 1, anIntArray9809[i2]) == 0 && idirect3d.CheckDepthStencilMatch(j, k, d3ddisplaymode.Format, anIntArray9790[l1], anIntArray9809[i2]) == 0 && (l == 0 || idirect3d.CheckDeviceMultiSampleType(j, k, anIntArray9809[l1], true, k1) == 0)) {
+                        if (idirect3d.CheckDeviceFormat(j, k, d3ddisplaymode.Format, 2, 1, anIntArray9809[i2]) == 0 && idirect3d.CheckDepthStencilMatch(j, k, d3ddisplaymode.Format, anIntArray9790[l1], anIntArray9809[i2]) == 0 && (l == 0 || idirect3d.CheckDeviceMultiSampleType(j, k, anIntArray9809[i2], true, k1) == 0)) {
                             i1 = anIntArray9809[i2];
                             j1 = anIntArray9790[l1];
                             break label0;

@@ -3,7 +3,7 @@
  */
 
 final class Class138 {
-    static Class45 aClass45_1940;
+    static Js5Archive aClass45_1940;
     int anInt1941;
     static Class46[] aClass46Array1942;
     int anInt1943;

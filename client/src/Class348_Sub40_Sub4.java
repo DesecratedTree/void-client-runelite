@@ -29,7 +29,7 @@ final class Class348_Sub40_Sub4 extends Class348_Sub40 {
     }
 
     static final void method3058(int i, int i_1_, int i_2_) {
-        Class357 class357 = Class147.aClass357ArrayArrayArray2029[i][i_1_][i_2_];
+        Class357 class357 = ChatMessage.aClass357ArrayArrayArray2029[i][i_1_][i_2_];
         if (class357 != null) {
             Class183.method1376(class357.aClass318_Sub1_Sub4_4406);
             Class183.method1376(class357.aClass318_Sub1_Sub4_4403);

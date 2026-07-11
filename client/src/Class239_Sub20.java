@@ -21,7 +21,7 @@ final class Class239_Sub20 extends Class239 {
 
     final int method1714(int i, int i_0_) {
         anInt6051++;
-        if (!Class348.method2714(7351, this.aClass348_Sub51_3136.aClass239_Sub25_7271.method1829(-32350))) return 3;
+        if (!Node.method2714(7351, this.aClass348_Sub51_3136.aClass239_Sub25_7271.method1829(-32350))) return 3;
         if (i != 3) method1807((byte) 64);
         return 1;
     }
@@ -33,7 +33,7 @@ final class Class239_Sub20 extends Class239 {
     final boolean method1806(int i) {
         if (i < 85) method1714(-53, -119);
         anInt6049++;
-        return Class348.method2714(7351, this.aClass348_Sub51_3136.aClass239_Sub25_7271.method1829(-32350));
+        return Node.method2714(7351, this.aClass348_Sub51_3136.aClass239_Sub25_7271.method1829(-32350));
     }
 
     public static void method1807(byte i) {
@@ -61,7 +61,7 @@ final class Class239_Sub20 extends Class239 {
     final void method1716(boolean bool) {
         anInt6050++;
         if (bool != false) method1714(-51, -128);
-        if (this.aClass348_Sub51_3136.aClass239_Sub25_7271.method1830((byte) -123) && !Class348.method2714(7351, this.aClass348_Sub51_3136.aClass239_Sub25_7271.method1829(-32350))) this.anInt3138 = 0;
+        if (this.aClass348_Sub51_3136.aClass239_Sub25_7271.method1830((byte) -123) && !Node.method2714(7351, this.aClass348_Sub51_3136.aClass239_Sub25_7271.method1829(-32350))) this.anInt3138 = 0;
         if (this.anInt3138 < 0 || this.anInt3138 > 2) this.anInt3138 = method1710(20014);
     }
 }

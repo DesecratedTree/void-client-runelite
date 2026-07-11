@@ -75,12 +75,12 @@ public final class client extends Applet_Sub1 {
                 }
                 if (Class47.anInt846 == 2) {
                     Class193.aClass202_2589 = new Class202((Socket) aa.aClass144_114.anObject1998, Class348_Sub23_Sub1.aClass297_8992, 25000);
-                    Class348_Sub49 class348_sub49 = new Class348_Sub49(5);
-                    class348_sub49.writeByte(false, (Class178.aClass29_2341.anInt400));
-                    class348_sub49.writeInt((byte) 103, 634);
-                    Class193.aClass202_2589.method1470((class348_sub49.aByteArray7154), 5, 0, -1);
+                    Packet Packet = new Packet(5);
+                    Packet.writeByte(false, (Class178.aClass29_2341.anInt400));
+                    Packet.writeInt((byte) 103, 634);
+                    Class193.aClass202_2589.method1470((Packet.data), 5, 0, -1);
                     Class47.anInt846++;
-                    Class45.aLong667 = Class62.method599(-70);
+                    Js5Archive.aLong667 = Class62.method599(-70);
                 }
                 if (Class47.anInt846 == 3) {
                     if (Class139.method1167(Class240.anInt4674, (byte) -100) || Class193.aClass202_2589.method1467((byte) 83) > 0) {
@@ -90,7 +90,7 @@ public final class client extends Applet_Sub1 {
                             return;
                         }
                         Class47.anInt846++;
-                    } else if (Class62.method599(-63) - Class45.aLong667 > 30000) {
+                    } else if (Class62.method599(-63) - Js5Archive.aLong667 > 30000) {
                         method103(1001, (byte) 85);
                         return;
                     }
@@ -98,10 +98,10 @@ public final class client extends Applet_Sub1 {
                 if (Class47.anInt846 == 4) {
                     boolean bool = (Class139.method1167(Class240.anInt4674, (byte) -100) || Class348_Sub42_Sub8.method3196(Class240.anInt4674, -87) || Class340.method2672(Class240.anInt4674, -127));
                     Class267[] class267s = Class267.method2029(105);
-                    Class348_Sub49 class348_sub49 = new Class348_Sub49(class267s.length * 4);
-                    Class193.aClass202_2589.method1474(class348_sub49.aByteArray7154, 0, (byte) -72, (class348_sub49.aByteArray7154).length);
+                    Packet Packet = new Packet(class267s.length * 4);
+                    Class193.aClass202_2589.method1474(Packet.data, 0, (byte) -72, (Packet.data).length);
                     for (int i_1_ = 0; i_1_ < class267s.length; i_1_++)
-                        class267s[i_1_].method2030(1, class348_sub49.readInt((byte) -126));
+                        class267s[i_1_].method2030(1, Packet.readInt((byte) -126));
                     Class348_Sub4.aClass248_6601.method1903(false, !bool, Class193.aClass202_2589);
                     Class47.anInt846 = 0;
                     aa.aClass144_114 = null;
@@ -130,20 +130,20 @@ public final class client extends Applet_Sub1 {
         else if (Class315.method2354(Class8.aClass364_165, i ^ ~0x7044)) {
             Class135_Sub2.aClass161_4839.aString2147 = this.getCodeBase().getHost();
             Class135_Sub2.aClass161_4839.anInt2148 = 40000 - -Class135_Sub2.aClass161_4839.anInt2143;
-            Class255.aClass161_3285.anInt2148 = Class255.aClass161_3285.anInt2143 + 40000;
+            ObjTypeList.aClass161_3285.anInt2148 = ObjTypeList.aClass161_3285.anInt2143 + 40000;
             Class135_Sub2.aClass161_4839.anInt2138 = 50000 - -Class135_Sub2.aClass161_4839.anInt2143;
             Class348_Sub40_Sub35.aClass161_9443.anInt2148 = (Class348_Sub40_Sub35.aClass161_9443.anInt2143 + 40000);
-            Class255.aClass161_3285.anInt2138 = 50000 - -Class255.aClass161_3285.anInt2143;
+            ObjTypeList.aClass161_3285.anInt2138 = 50000 - -ObjTypeList.aClass161_3285.anInt2143;
             Class348_Sub40_Sub35.aClass161_9443.anInt2138 = (Class348_Sub40_Sub35.aClass161_9443.anInt2143 + 50000);
         } else if (Class76.aClass364_1279 == Class8.aClass364_165) {
             Class135_Sub2.aClass161_4839.aString2147 = "127.0.0.1";
-            Class255.aClass161_3285.aString2147 = "127.0.0.1";
+            ObjTypeList.aClass161_3285.aString2147 = "127.0.0.1";
             Class135_Sub2.aClass161_4839.anInt2148 = (40000 + Class135_Sub2.aClass161_4839.anInt2143);
             Class348_Sub40_Sub35.aClass161_9443.aString2147 = "127.0.0.1";
-            Class255.aClass161_3285.anInt2148 = 40000 - -Class255.aClass161_3285.anInt2143;
+            ObjTypeList.aClass161_3285.anInt2148 = 40000 - -ObjTypeList.aClass161_3285.anInt2143;
             Class348_Sub40_Sub35.aClass161_9443.anInt2148 = 40000 - -Class348_Sub40_Sub35.aClass161_9443.anInt2143;
             Class135_Sub2.aClass161_4839.anInt2138 = (Class135_Sub2.aClass161_4839.anInt2143 + 50000);
-            Class255.aClass161_3285.anInt2138 = Class255.aClass161_3285.anInt2143 + 50000;
+            ObjTypeList.aClass161_3285.anInt2138 = ObjTypeList.aClass161_3285.anInt2143 + 50000;
             Class348_Sub40_Sub35.aClass161_9443.anInt2138 = 50000 - -Class348_Sub40_Sub35.aClass161_9443.anInt2143;
         }
         Class318_Sub6.aShortArray6428 = Class348_Sub26.aShortArray6889 = Class348_Sub42_Sub3.aShortArray9502 = Class336.aShortArray4172 = new short[256];
@@ -163,7 +163,7 @@ public final class client extends Applet_Sub1 {
         }
         Class3.aClass161_125 = Class135_Sub2.aClass161_4839;
         try {
-            Class348_Sub40_Sub27.aClipboard9357 = Class79.aClient1367.getToolkit().getSystemClipboard();
+            Class348_Sub40_Sub27.aClipboard9357 = NPCType.aClient1367.getToolkit().getSystemClipboard();
         } catch (Exception exception) {
             /* empty */
         }
@@ -206,9 +206,9 @@ public final class client extends Applet_Sub1 {
         Class219.method1604(11868);
         Class157.method1246(-83);
         Class348_Sub42.method3161(0);
-        Class348.method2713(0);
+        Node.method2713(0);
         Class107.method1004((byte) 16);
-        Class356.method3478(false);
+        IterableHashTable.method3478(false);
         Applet_Sub1.method98(i + 32609);
         Class241.method1860((byte) -89);
         Class231.method1641((byte) 85);
@@ -223,9 +223,9 @@ public final class client extends Applet_Sub1 {
         Class112.method1052((byte) -124);
         Class340.method2671(0);
         Class314_Sub1.method2344(i + -108);
-        Class45.method390((byte) 10);
+        Js5Archive.method390((byte) 10);
         Class78.method786((byte) 0);
-        Class60.method584((byte) 116);
+        ReferenceCache.method584((byte) 116);
         Class261.method1980(i ^ 0xe);
         Class166.method1284(-21165);
         Class268.method2036((byte) 121);
@@ -235,7 +235,7 @@ public final class client extends Applet_Sub1 {
         Class185.method1395((byte) 82);
         Class263.method2011((byte) -71);
         Class141.method1179((byte) -124);
-        Class255.method1931(true);
+        ObjTypeList.method1931(true);
         Class187.method1407((byte) 124);
         Class84.method825(i + -204);
         Class25.method305((byte) 79);
@@ -248,8 +248,8 @@ public final class client extends Applet_Sub1 {
         Class226.method1624(28962);
         Class355.method3473(12949);
         Class238.method1704((byte) -95);
-        Class77.method782(1);
-        Class348_Sub49_Sub2.method3414(21515);
+        Isaac.method782(1);
+        BitPacket.method3414(21515);
         Class169.method1300((byte) -128);
         Class348_Sub26.method2998((byte) -35);
         Class361.method3508(2);
@@ -264,7 +264,7 @@ public final class client extends Applet_Sub1 {
         Class227.method1627((byte) 116);
         Class19.method284((byte) 51);
         Class54.method501(1);
-        Class348_Sub49.method3376(i ^ ~0x6d);
+        Packet.method3376(i ^ ~0x6d);
         Class348_Sub47.method3323(-44);
         Class318_Sub1_Sub3_Sub3.method2429(-123);
         Class357.method3487(-65);
@@ -275,7 +275,7 @@ public final class client extends Applet_Sub1 {
         Class348_Sub42_Sub8.method3199(i ^ 0x70);
         Class94.method866(-14603);
         Class93.method861(-76);
-        Class318.method2374((byte) -125);
+        Linkable.method2374((byte) -125);
         Class81.method810(true);
         Class62.method597((byte) -122);
         Class122.method1086(true);
@@ -301,8 +301,8 @@ public final class client extends Applet_Sub1 {
         Class124.method1096(i ^ 0x11);
         Class2.method171((byte) 72);
         s.method3988(i + -182);
-        Class79.method804(-3752);
-        Class213.method1564(104);
+        NPCType.method804(-3752);
+        ObjType.clearItemDefinitionSprites(104);
         Class324.method2572((byte) 23);
         Class234.method1659((byte) -71);
         Class199.method1461((byte) 112);
@@ -336,7 +336,7 @@ public final class client extends Applet_Sub1 {
         Class98.method879(96);
         Class348_Sub1.method2719(11339);
         Class318_Sub1_Sub3.method2412(true);
-        Class318_Sub1.method2389(1);
+        SceneEntity.method2389(1);
         Class348_Sub16_Sub3.method2871(-65);
         Class163.method1276(i + -199);
         Class10.method218((byte) 119);
@@ -431,7 +431,7 @@ public final class client extends Applet_Sub1 {
         Class103.method948(false);
         Class281.method2107((byte) 77);
         Class282.method2111((byte) 68);
-        Class147.method1195((byte) 127);
+        ChatMessage.method1195((byte) 127);
         Class91.method857(126);
         Class289.method2191(0);
         Class155.method1236((byte) -110);
@@ -490,8 +490,8 @@ public final class client extends Applet_Sub1 {
         Class92.method860((byte) 44);
         Class318_Sub1_Sub5_Sub1.method2490(4);
         Class348_Sub18.method2936((byte) -25);
-        Class348_Sub35.method3028(-11677);
-        Class348_Sub50.method3418(114);
+        IntNode.method3028(-11677);
+        StringNode.method3418(114);
         Class110.method1030(-24);
         Class283.method2113((byte) 74);
         Class348_Sub43.method3300(0);
@@ -839,7 +839,7 @@ public final class client extends Applet_Sub1 {
     }
 
     static final void method106() {
-        Class45.anInt669 = 0;
+        Js5Archive.anInt669 = 0;
         for (int i = 0; i < Class150.anInt2057; i++) {
             Npc npc = (((Class348_Sub22) Class282.aClass356_3654.method3480(Class74.anIntArray1233[i], -6008)).aNpc_6859);
             if ((npc.aBoolean10309) && npc.method2425(-1) != -1) {
@@ -851,19 +851,19 @@ public final class client extends Applet_Sub1 {
                     int i_23_ = (class318_sub1_sub3_sub3.anInt10290);
                     if (class318_sub1_sub3_sub3 instanceof Npc) i_23_ += 2048;
                     if ((class318_sub1_sub3_sub3.anInt10261) == 0 && class318_sub1_sub3_sub3.method2425(-1) != -1) {
-                        Class258_Sub4.anIntArray8557[Class45.anInt669] = i_23_;
-                        Class268.anIntArray3432[Class45.anInt669] = i_23_;
-                        Class45.anInt669++;
+                        Class258_Sub4.anIntArray8557[Js5Archive.anInt669] = i_23_;
+                        Class268.anIntArray3432[Js5Archive.anInt669] = i_23_;
+                        Js5Archive.anInt669++;
                         class318_sub1_sub3_sub3.anInt10261++;
                     }
-                    Class258_Sub4.anIntArray8557[Class45.anInt669] = i_23_;
-                    Class268.anIntArray3432[Class45.anInt669] = npc.anInt10290 + 2048;
-                    Class45.anInt669++;
+                    Class258_Sub4.anIntArray8557[Js5Archive.anInt669] = i_23_;
+                    Class268.anIntArray3432[Js5Archive.anInt669] = npc.anInt10290 + 2048;
+                    Js5Archive.anInt669++;
                     class318_sub1_sub3_sub3.anInt10261++;
                 }
             }
         }
-        Class34.method347(Class268.anIntArray3432, Class258_Sub4.anIntArray8557, 0, -22222, Class45.anInt669 - 1);
+        Class34.method347(Class268.anIntArray3432, Class258_Sub4.anIntArray8557, 0, -22222, Js5Archive.anInt669 - 1);
     }
 
     public static final void main(String[] strings) {
@@ -872,8 +872,8 @@ public final class client extends Applet_Sub1 {
                 if (strings.length != 6) Class55.method518("Argument count", (byte) 44);
                 Class135_Sub2.aClass161_4839 = new Class161();
                 Class135_Sub2.aClass161_4839.anInt2143 = Integer.parseInt(strings[0]);
-                Class255.aClass161_3285 = new Class161();
-                Class255.aClass161_3285.anInt2143 = Integer.parseInt(strings[1]);
+                ObjTypeList.aClass161_3285 = new Class161();
+                ObjTypeList.aClass161_3285.anInt2143 = Integer.parseInt(strings[1]);
                 Class348_Sub40_Sub35.aClass161_9443 = new Class161();
                 Class348_Sub40_Sub35.aClass161_9443.anInt2143 = Integer.parseInt(strings[2]);
                 Class8.aClass364_165 = Class76.aClass364_1279;
@@ -911,7 +911,7 @@ public final class client extends Applet_Sub1 {
                 ha.anInt4583 = 0;
                 Class14_Sub1.aString8605 = null;
                 client var_client = new client();
-                Class79.aClient1367 = var_client;
+                NPCType.aClient1367 = var_client;
                 var_client.method96(Class11.aClass231_196.method1640(0) + 32, 1024, false, 634, 37, (Class348_Sub42_Sub8_Sub2.aClass230_10434.aString2985), 23499, 768);
                 Class52.aFrame4904.setLocation(40, 40);
             } catch (Exception exception) {
@@ -942,9 +942,9 @@ public final class client extends Applet_Sub1 {
         if (this.method89(48)) {
             Class135_Sub2.aClass161_4839 = new Class161();
             Class135_Sub2.aClass161_4839.anInt2143 = Integer.parseInt(this.getParameter("worldid"));
-            Class255.aClass161_3285 = new Class161();
-            Class255.aClass161_3285.anInt2143 = Integer.parseInt(this.getParameter("lobbyid"));
-            Class255.aClass161_3285.aString2147 = this.getParameter("lobbyaddress");
+            ObjTypeList.aClass161_3285 = new Class161();
+            ObjTypeList.aClass161_3285.anInt2143 = Integer.parseInt(this.getParameter("lobbyid"));
+            ObjTypeList.aClass161_3285.aString2147 = this.getParameter("lobbyaddress");
             Class348_Sub40_Sub35.aClass161_9443 = new Class161();
             Class348_Sub40_Sub35.aClass161_9443.anInt2143 = Integer.parseInt(this.getParameter("demoid"));
             Class348_Sub40_Sub35.aClass161_9443.aString2147 = this.getParameter("demoaddress");
@@ -1027,7 +1027,7 @@ public final class client extends Applet_Sub1 {
                 Class92.anInt1524 = 640;
                 ha_Sub2.anInt7666 = 480;
             }
-            Class79.aClient1367 = this;
+            NPCType.aClient1367 = this;
             this.method95(Class92.anInt1524, 634, ha_Sub2.anInt7666, Class11.aClass231_196.method1640(0) + 32, 37, Class348_Sub42_Sub8_Sub2.aClass230_10434.aString2985, 50);
         }
     }
@@ -1081,7 +1081,7 @@ public final class client extends Applet_Sub1 {
                                     class348_sub36.aClass46_6989.aBoolean737 = false;
                                 }
                             }
-                            if (Class318_Sub1.anInt6392 == 0) {
+                            if (SceneEntity.anInt6392 == 0) {
                                 Class289.aClass46_3701 = null;
                                 Class331.aClass46_4130 = null;
                             }
@@ -1231,7 +1231,7 @@ public final class client extends Applet_Sub1 {
                                                 Class237.aBoolean3103 = true;
                                                 Class348_Sub40_Sub26.anInt9349 = is[0];
                                                 InputStream_Sub2.anInt85 = is[1];
-                                                Class79.anInt1404 = is[2];
+                                                NPCType.anInt1404 = is[2];
                                             }
                                             Class348_Sub42.anInt7059 = 1;
                                             Class348_Sub17.aBoolean6788 = false;
@@ -1612,7 +1612,7 @@ public final class client extends Applet_Sub1 {
         for (int i_96_ = 0; Class348_Sub32.anInt6930 > i_96_; i_96_++) {
             Npc npc = (Class348_Sub40_Sub23.aClass348_Sub22Array9319[i_96_].aNpc_6859);
             if (npc != null) {
-                byte i_97_ = (npc.aClass79_10505.aByte1325);
+                byte i_97_ = (npc.definition.movementCapabilities);
                 if ((i_97_ & 0x1) != 0) {
                     int i_98_ = npc.method2436((byte) 117);
                     if ((0x2 & i_97_) != 0 && npc.anInt10319 == 0 && Math.random() * 1000.0 < 10.0) {
@@ -1724,8 +1724,8 @@ public final class client extends Applet_Sub1 {
             Class367_Sub11.anInt7396++;
             if (Class367_Sub11.anInt7396 % 1000 == 1) {
                 GregorianCalendar gregoriancalendar = new GregorianCalendar();
-                Class356.anInt4383 = (gregoriancalendar.get(11) * 600 + gregoriancalendar.get(12) * 10 + gregoriancalendar.get(13) / 6);
-                OutputStream_Sub1.aRandom93.setSeed(Class356.anInt4383);
+                IterableHashTable.anInt4383 = (gregoriancalendar.get(11) * 600 + gregoriancalendar.get(12) * 10 + gregoriancalendar.get(13) / 6);
+                OutputStream_Sub1.aRandom93.setSeed(IterableHashTable.anInt4383);
             }
             if (Class367_Sub11.anInt7396 % 50 == 0) {
                 Class348_Sub48.anInt7134 = Class81.anInt1433;
@@ -1836,7 +1836,7 @@ public final class client extends Applet_Sub1 {
         }
         for (int i_115_ = 0; i_115_ < Class150.anInt2057; i_115_++) {
             Npc npc = (((Class348_Sub22) Class282.aClass356_3654.method3480(Class74.anIntArray1233[i_115_], -6008)).aNpc_6859);
-            if (!npc.method2445((byte) -4) || !(npc.aClass79_10505.method796(Class318_Sub1_Sub3_Sub3.aClass170_10209, 18627))) npc.anInt10285 = -1;
+            if (!npc.method2445((byte) -4) || !(npc.definition.method796(Class318_Sub1_Sub3_Sub3.aClass170_10209, 18627))) npc.anInt10285 = -1;
             else {
                 npc.method2409((byte) -118);
                 if ((npc.aShort8743) < 0 || (npc.aShort8750) < 0 || (npc.aShort8751) >= Class367_Sub4.anInt7319 || (npc.aShort8747) >= Class348_Sub40_Sub3.anInt9109)
@@ -1847,14 +1847,14 @@ public final class client extends Applet_Sub1 {
                     if (npc.anInt10223 > Class367_Sub11.anInt7396) i_116_ += 2;
                     i_116_ += 5 - npc.method2436((byte) 82) << 2;
                     if (Class37.anInt495 == 0) {
-                        if (npc.aClass79_10505.aBoolean1362) i_116_ += 64;
+                        if (npc.definition.isFollower) i_116_ += 64;
                         else i_116_ += 128;
                     } else if (Class37.anInt495 == 1) {
-                        if (npc.aClass79_10505.aBoolean1362) i_116_ += 32;
+                        if (npc.definition.isFollower) i_116_ += 32;
                         else i_116_ += 64;
                     }
-                    if (npc.aClass79_10505.aBoolean1345) i_116_ += 1024;
-                    else if (!npc.aClass79_10505.aBoolean1381) i_116_ += 256;
+                    if (npc.definition.renderHighPriority) i_116_ += 1024;
+                    else if (!npc.definition.aBoolean503) i_116_ += 256;
                     npc.anInt10285 = i_116_ + 1;
                 }
             }
@@ -1974,6 +1974,7 @@ public final class client extends Applet_Sub1 {
                     }
                 }
                 try {
+                    drawRuneLiteOverlays(Class348_Sub8.aHa6654);
                     if (!Class59_Sub1.aBoolean5300) Class348_Sub8.aHa6654.method3657(Class190.aRectangleArray2554, i, 66);
                     else Class140.method1168(i, 0, Class190.aRectangleArray2554);
                 } catch (Exception_Sub1 exception_sub1) {
@@ -1983,7 +1984,8 @@ public final class client extends Applet_Sub1 {
                 for (int i = 0; Class348_Sub38.anInt7008 > i; i++)
                     Class268.aBooleanArray3438[i] = false;
                 try {
-                    if (Class59_Sub1.aBoolean5300) Class45.method395(107);
+                    drawRuneLiteOverlays(Class348_Sub8.aHa6654);
+                    if (Class59_Sub1.aBoolean5300) Js5Archive.method395(107);
                     else Class348_Sub8.aHa6654.method3689((byte) 104);
                 } catch (Exception_Sub1 exception_sub1) {
                     Class156.method1242((exception_sub1.getMessage() + " (Recovered) " + method81((byte) 79)), exception_sub1, 15004);

@@ -20,7 +20,7 @@ final class Class203 {
         if (bool != true) return null;
         class348_sub47.anInt7122 = 0;
         class348_sub47.aClass351_7118 = null;
-        class348_sub47.aClass348_Sub49_Sub2_7116 = new Class348_Sub49_Sub2(5000);
+        class348_sub47.aClass348_Sub49_Sub2_7116 = new BitPacket(5000);
         return class348_sub47;
     }
 
@@ -28,7 +28,7 @@ final class Class203 {
         anInt2675++;
         int i_4_ = i_2_ - -za_Sub2.regionTileX;
         int i_5_ = Class90.regionTileY + i;
-        if (Class147.aClass357ArrayArrayArray2029 != null && i_2_ >= 0 && i >= 0 && Class367_Sub4.anInt7319 > i_2_ && Class348_Sub40_Sub3.anInt9109 > i && (Class316.aClass348_Sub51_3959.aClass239_Sub27_7261.method1840(-32350) != 0 || i_3_ == (Class132.aPlayer_1907.plane))) {
+        if (ChatMessage.aClass357ArrayArrayArray2029 != null && i_2_ >= 0 && i >= 0 && Class367_Sub4.anInt7319 > i_2_ && Class348_Sub40_Sub3.anInt9109 > i && (Class316.aClass348_Sub51_3959.aClass239_Sub27_7261.method1840(-32350) != 0 || i_3_ == (Class132.aPlayer_1907.plane))) {
             long l = i_5_ << 14 | i_3_ << 28 | i_4_;
             Class348_Sub37 class348_sub37 = ((Class348_Sub37) Class130.aClass356_1895.method3480(l, -6008));
             if (class348_sub37 == null) Class282.method2110(i_3_, i_2_, i);
@@ -66,7 +66,7 @@ final class Class203 {
                     class318_sub1_sub2_sub1.x = i_2_ << 9;
                     class318_sub1_sub2_sub1.anInt6382 = i_8_;
                     class318_sub1_sub2_sub1.aByte6376 = (byte) i_3_;
-                    if (Class79.method802(i, i_2_, true)) class318_sub1_sub2_sub1.aByte6376++;
+                    if (NPCType.method802(i, i_2_, true)) class318_sub1_sub2_sub1.aByte6376++;
                     Class367_Sub2.method3536(i_3_, i_2_, i, i_8_, class318_sub1_sub2_sub1);
                 }
             }

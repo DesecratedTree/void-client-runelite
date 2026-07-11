@@ -29,11 +29,11 @@ final class Class348_Sub23_Sub2 extends Class348_Sub23 {
     static int anInt9026;
     private int anInt9027;
     private boolean aBoolean9028;
-    static Class77 aClass77_9029;
+    static Isaac aClass77_9029;
     static int anInt9030;
     static Class153 aClass153_9031;
     private DecoderContext aDecoderContext9032;
-    static Class45 aClass45_9033;
+    static Js5Archive aClass45_9033;
     static Class351 aClass351_9034 = new Class351(30, 4);
     private final SetupInfo aSetupInfo9035 = new SetupInfo();
     static Class187 aClass187_9036;

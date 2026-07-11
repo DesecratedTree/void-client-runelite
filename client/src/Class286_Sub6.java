@@ -60,7 +60,7 @@ final class Class286_Sub6 extends Class286 {
         try {
             if (Class348_Sub43.anInt7068 == 2) {
                 if (Class286.aClass348_Sub2_3683 == null) {
-                    Class286.aClass348_Sub2_3683 = Class348_Sub2.method2734(Class124.aClass45_1848, (Class318_Sub1_Sub4_Sub1.anInt10074), Class318.anInt3971);
+                    Class286.aClass348_Sub2_3683 = Class348_Sub2.method2734(Class124.aClass45_1848, (Class318_Sub1_Sub4_Sub1.anInt10074), Linkable.anInt3971);
                     if (Class286.aClass348_Sub2_3683 == null) return false;
                 }
                 if (Class141.aClass26_1977 == null) Class141.aClass26_1977 = new Class26(Class43.aClass45_611, Class333.aClass45_4147);

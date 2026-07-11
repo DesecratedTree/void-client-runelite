@@ -4,7 +4,7 @@
 
 import java.math.BigInteger;
 
-abstract class Class318_Sub1_Sub4 extends Class318_Sub1 {
+abstract class Class318_Sub1_Sub4 extends SceneEntity {
     static int anInt8757;
     static int anInt8758;
     short aShort8759;
@@ -130,7 +130,7 @@ abstract class Class318_Sub1_Sub4 extends Class318_Sub1 {
     static final void method2480(int i) {
         if (i == -1) {
             anInt8761++;
-            Class348_Sub35.aClass262_6978 = new Class262();
+            IntNode.aClass262_6978 = new Class262();
         }
     }
 }

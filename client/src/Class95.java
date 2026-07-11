@@ -5,7 +5,7 @@
 final class Class95 {
     static int anInt1539;
     static Class114 aClass114_1540 = new Class114(113, 1);
-    static Class45 aClass45_1541;
+    static Js5Archive aClass45_1541;
     static Class221 aClass221_1542;
     static Class348_Sub42_Sub17[] aClass348_Sub42_Sub17Array1543 = new Class348_Sub42_Sub17[14];
 

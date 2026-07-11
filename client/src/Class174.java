@@ -22,7 +22,7 @@ final class Class174 {
     int anInt2303;
     int anInt2304;
     static Class114 aClass114_2305 = new Class114(57, 10);
-    static Class45 aClass45_2306;
+    static Js5Archive aClass45_2306;
     static Class223 aClass223_2307 = new Class223(7, 2);
     private boolean aBoolean2308;
     static Class105 aClass105_2309;
@@ -78,30 +78,30 @@ final class Class174 {
         aClass45_2306 = null;
     }
 
-    private final void method1335(Class348_Sub49 class348_sub49, int i, byte i_8_) {
+    private final void method1335(Packet Packet, int i, byte i_8_) {
         anInt2287++;
-        if (i == 1) anInt2302 = class348_sub49.readUnsignedShort(842397944);
-        else if (i == 2) class348_sub49.readUnsignedByte(255);
+        if (i == 1) anInt2302 = Packet.readUnsignedShort(842397944);
+        else if (i == 2) Packet.readUnsignedByte(255);
         else if (i == 3) {
-            this.anInt2291 = class348_sub49.readInt((byte) -126);
-            this.anInt2290 = class348_sub49.readInt((byte) -126);
-            this.anInt2294 = class348_sub49.readInt((byte) -126);
+            this.anInt2291 = Packet.readInt((byte) -126);
+            this.anInt2290 = Packet.readInt((byte) -126);
+            this.anInt2294 = Packet.readInt((byte) -126);
         } else if (i == 4) {
-            this.anInt2289 = class348_sub49.readUnsignedByte(255);
-            this.anInt2304 = class348_sub49.readInt((byte) -126);
+            this.anInt2289 = Packet.readUnsignedByte(255);
+            this.anInt2304 = Packet.readInt((byte) -126);
         } else if (i != 6) {
             if (i == 8) this.anInt2297 = 1;
             else if (i == 9) this.anInt2292 = 1;
             else if (i == 10) aBoolean2308 = true;
-        } else this.anInt2296 = class348_sub49.readUnsignedByte(255);
+        } else this.anInt2296 = Packet.readUnsignedByte(255);
         if (i_8_ >= -124) this.aLong2301 = 65L;
     }
 
-    final void method1336(int i, Class348_Sub49 class348_sub49) {
+    final void method1336(int i, Packet Packet) {
         for (; ; ) {
-            int i_9_ = class348_sub49.readUnsignedByte(255);
+            int i_9_ = Packet.readUnsignedByte(255);
             if (i_9_ == 0) break;
-            method1335(class348_sub49, i_9_, (byte) -128);
+            method1335(Packet, i_9_, (byte) -128);
         }
         anInt2288++;
         if (i <= 36) this.anInt2296 = 8;

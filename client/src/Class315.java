@@ -18,11 +18,11 @@ final class Class315 {
     private Class293 aClass293_3956;
     private volatile int anInt3957;
 
-    final void method2353(Class318_Sub1 class318_sub1, boolean bool) {
-        class318_sub1.aBoolean6387 = bool;
+    final void method2353(SceneEntity SceneEntity, boolean bool) {
+        SceneEntity.aBoolean6387 = bool;
         anInt3944++;
         synchronized (aClass243_3946) {
-            aClass243_3946.method1869(-90, class318_sub1);
+            aClass243_3946.method1869(-90, SceneEntity);
             anInt3957++;
         }
         if (aClass293_3956 != null) {
@@ -38,7 +38,7 @@ final class Class315 {
         return Class367_Sub8.aClass364_7361 == class364 || Class26.aClass364_382 == class364 || Class108.aClass364_1657 == class364 || class364 == Class342.aClass364_4246;
     }
 
-    static final void method2355(int i, byte i_0_, boolean bool, Class45 class45, int i_1_, int i_2_, int i_3_) {
+    static final void method2355(int i, byte i_0_, boolean bool, Js5Archive Js5Archive, int i_1_, int i_2_, int i_3_) {
         Class58.anInt1059 = i;
         anInt3948++;
         Class346.aBoolean4275 = bool;
@@ -47,8 +47,8 @@ final class Class315 {
         Class239_Sub14.anInt5994 = i_3_;
         Class348_Sub43.anInt7068 = 1;
         if (i_0_ != 50) method2357(-59, null);
-        Class318.anInt3971 = i_2_;
-        Class124.aClass45_1848 = class45;
+        Linkable.anInt3971 = i_2_;
+        Class124.aClass45_1848 = Js5Archive;
     }
 
     final void method2356(Class293 class293, byte i) {
@@ -96,11 +96,11 @@ final class Class315 {
         return anInt3957 == 0;
     }
 
-    final void method2361(int i, Class318_Sub1 class318_sub1) {
-        class318_sub1.aBoolean6387 = true;
+    final void method2361(int i, SceneEntity SceneEntity) {
+        SceneEntity.aBoolean6387 = true;
         anInt3950++;
         synchronized (aClass243_3946) {
-            aClass243_3946.method1869(-122, class318_sub1);
+            aClass243_3946.method1869(-122, SceneEntity);
             anInt3957++;
         }
         if (i != -15481) this.aString3953 = null;
@@ -111,17 +111,17 @@ final class Class315 {
         }
     }
 
-    final Class318 method2362(int i) {
+    final Linkable method2362(int i) {
         anInt3952++;
         Object object = null;
-        Class318 class318;
+        Linkable Linkable;
         synchronized (aClass243_3946) {
             if (i != 25061) method2353(null, true);
-            class318 = aClass243_3946.method1872(8);
-            class318.method2373(false);
+            Linkable = aClass243_3946.method1872(8);
+            Linkable.method2373(false);
             anInt3957--;
         }
-        return class318;
+        return Linkable;
     }
 
     Class315(String string) {

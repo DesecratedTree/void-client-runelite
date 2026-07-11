@@ -23,8 +23,8 @@ class Class5_Sub1 extends Class5 {
     static int anInt8351;
     static int anInt8352 = 0;
 
-    Class5_Sub1(Class45 class45, Class45 class45_0_, Class369_Sub3 class369_sub3) {
-        super(class45, class45_0_, class369_sub3);
+    Class5_Sub1(Js5Archive Js5Archive, Js5Archive class45_0_, Class369_Sub3 class369_sub3) {
+        super(Js5Archive, class45_0_, class369_sub3);
     }
 
     static final int[] method184(int i) {

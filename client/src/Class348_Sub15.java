@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-final class Class348_Sub15 extends Class348 {
+final class Class348_Sub15 extends Node {
     Class55_Sub1 aClass55_Sub1_6768;
     static int anInt6769;
     static int[] anIntArray6770 = new int[1000];

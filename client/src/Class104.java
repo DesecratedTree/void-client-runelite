@@ -24,7 +24,7 @@ final class Class104 {
     int anInt1624;
     private final int anInt1625;
     static int[] anIntArray1626 = new int[1];
-    static Class45 aClass45_1627;
+    static Js5Archive aClass45_1627;
     static int anInt1628;
     static int anInt1629;
     static int anInt1630;
@@ -182,7 +182,7 @@ final class Class104 {
                     int i_44_ = i_42_ << anInt1613;
                     int i_45_ = 1 + i_42_ << anInt1613;
                     Class348_Sub49_Sub1 class348_sub49_sub1 = aHa_Sub2_1616.aClass348_Sub49_Sub1_7798;
-                    class348_sub49_sub1.anInt7197 = 0;
+                    class348_sub49_sub1.pos = 0;
                     for (int i_46_ = i_40_; i_41_ > i_46_; i_46_++) {
                         if (-i_35_ <= -i_36_ + i_46_ && -i_36_ + i_46_ <= i_35_) {
                             int i_47_ = i_44_ + i_46_ * aS_Sub2_1622.anInt4587;
@@ -213,7 +213,7 @@ final class Class104 {
                         OpenGL.glScalef(f, f, 1.0F);
                         OpenGL.glTranslatef((float) -i_42_ / f, (float) -i_39_ / f, 1.0F);
                         OpenGL.glMatrixMode(5888);
-                        aClass232ArrayArray1623[i_42_][i_39_].method1643((class348_sub49_sub1.aByteArray7154), 5123, i_43_, (byte) 70);
+                        aClass232ArrayArray1623[i_42_][i_39_].method1643((class348_sub49_sub1.data), 5123, i_43_, (byte) 70);
                     }
                 }
             }
@@ -232,7 +232,7 @@ final class Class104 {
         }
     }
 
-    static final ha method958(boolean bool, int i, d var_d, int i_61_, Canvas canvas, Class45 class45) {
+    static final ha method958(boolean bool, int i, d var_d, int i_61_, Canvas canvas, Js5Archive Js5Archive) {
         try {
             if (bool != true) aClass221_1620 = null;
             anInt1610++;
@@ -243,9 +243,9 @@ final class Class104 {
                 i_63_ = dimension.height;
                 i_62_ = dimension.width;
             }
-            return ha.method3692(i_61_, i_63_, i_62_, class45, 0, var_d, canvas, i);
+            return ha.method3692(i_61_, i_63_, i_62_, Js5Archive, 0, var_d, canvas, i);
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("mha.E(" + bool + ',' + i + ',' + (var_d != null ? "{...}" : "null") + ',' + i_61_ + ',' + (canvas != null ? "{...}" : "null") + ',' + (class45 != null ? "{...}" : "null") + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("mha.E(" + bool + ',' + i + ',' + (var_d != null ? "{...}" : "null") + ',' + i_61_ + ',' + (canvas != null ? "{...}" : "null") + ',' + (Js5Archive != null ? "{...}" : "null") + ')'));
         }
     }
 

@@ -23,7 +23,7 @@ final class Class314_Sub1 extends Class314 {
     static int anInt6357;
     static int anInt6358;
     static int anInt6359;
-    private final Class356 aClass356_6360;
+    private final IterableHashTable aClass356_6360;
     private int anInt6361 = 0;
     static int anInt6362;
     static int anInt6363;
@@ -45,22 +45,22 @@ final class Class314_Sub1 extends Class314 {
         if (aClass291_6342 == null) return 0;
         if (!aBoolean6368) return aClass291_6342.anInt3727;
         if (i != 24940) method2345(-32);
-        Class348 class348 = aClass262_6372.method1995(i ^ 0x6168);
-        if (class348 == null) return 0;
-        return (int) class348.aLong4291;
+        Node Node = aClass262_6372.method1995(i ^ 0x6168);
+        if (Node == null) return 0;
+        return (int) Node.key;
     }
 
     final void method2342(int i) {
         anInt6349++;
         if (i != 0) aBoolean6375 = false;
         if (aClass262_6372 != null && method2340((byte) 56) != null) {
-            for (Class348 class348 = aClass262_6369.method1995(4); class348 != null; class348 = aClass262_6369.method1990((byte) 112)) {
-                int i_0_ = (int) class348.aLong4291;
-                if (i_0_ < 0 || (aClass291_6342.anInt3734 <= i_0_) || aClass291_6342.anIntArray3725[i_0_] == 0) class348.method2715((byte) 37);
+            for (Node Node = aClass262_6369.method1995(4); Node != null; Node = aClass262_6369.method1990((byte) 112)) {
+                int i_0_ = (int) Node.key;
+                if (i_0_ < 0 || (aClass291_6342.anInt3734 <= i_0_) || aClass291_6342.anIntArray3725[i_0_] == 0) Node.method2715((byte) 37);
                 else {
                     if (aByteArray6351[i_0_] == 0) method2350(i_0_, (byte) 65, 1);
                     if (aByteArray6351[i_0_] == -1) method2350(i_0_, (byte) 65, 2);
-                    if (aByteArray6351[i_0_] == 1) class348.method2715((byte) 29);
+                    if (aByteArray6351[i_0_] == 1) Node.method2715((byte) 29);
                 }
             }
         }
@@ -72,10 +72,10 @@ final class Class314_Sub1 extends Class314 {
             if (method2340((byte) 56) == null) return;
             if (aBoolean6368) {
                 boolean bool = true;
-                for (Class348 class348 = aClass262_6372.method1995(4); class348 != null; class348 = aClass262_6372.method1990((byte) 106)) {
-                    int i_1_ = (int) class348.aLong4291;
+                for (Node Node = aClass262_6372.method1995(4); Node != null; Node = aClass262_6372.method1990((byte) 106)) {
+                    int i_1_ = (int) Node.key;
                     if (aByteArray6351[i_1_] == 0) method2350(i_1_, (byte) 65, 1);
-                    if (aByteArray6351[i_1_] != 0) class348.method2715((byte) 22);
+                    if (aByteArray6351[i_1_] != 0) Node.method2715((byte) 22);
                     else bool = false;
                 }
                 while (aClass291_6342.anIntArray3725.length > anInt6373) {
@@ -87,9 +87,9 @@ final class Class314_Sub1 extends Class314 {
                         }
                         if (aByteArray6351[anInt6373] == 0) method2350(anInt6373, (byte) 65, 1);
                         if (aByteArray6351[anInt6373] == 0) {
-                            Class348 class348 = new Class348();
-                            class348.aLong4291 = anInt6373;
-                            aClass262_6372.method1999(class348, -20180);
+                            Node Node = new Node();
+                            Node.key = anInt6373;
+                            aClass262_6372.method1999(Node, -20180);
                             bool = false;
                         }
                         anInt6373++;
@@ -101,11 +101,11 @@ final class Class314_Sub1 extends Class314 {
                 }
             } else if (aBoolean6371) {
                 boolean bool = true;
-                for (Class348 class348 = aClass262_6372.method1995(4); class348 != null; class348 = aClass262_6372.method1990((byte) 43)) {
-                    int i_2_ = (int) class348.aLong4291;
+                for (Node Node = aClass262_6372.method1995(4); Node != null; Node = aClass262_6372.method1990((byte) 43)) {
+                    int i_2_ = (int) Node.key;
                     if (aByteArray6351[i_2_] != 1) method2350(i_2_, (byte) 65, 2);
                     if (aByteArray6351[i_2_] != 1) bool = false;
-                    else class348.method2715((byte) 60);
+                    else Node.method2715((byte) 60);
                 }
                 while (aClass291_6342.anIntArray3725.length > anInt6373) {
                     if (aClass291_6342.anIntArray3725[anInt6373] == 0) anInt6373++;
@@ -116,10 +116,10 @@ final class Class314_Sub1 extends Class314 {
                         }
                         if (aByteArray6351[anInt6373] != 1) method2350(anInt6373, (byte) 65, 2);
                         if (aByteArray6351[anInt6373] != 1) {
-                            Class348 class348 = new Class348();
-                            class348.aLong4291 = anInt6373;
+                            Node Node = new Node();
+                            Node.key = anInt6373;
                             bool = false;
-                            aClass262_6372.method1999(class348, i + -20179);
+                            aClass262_6372.method1999(Node, i + -20179);
                         }
                         anInt6373++;
                     }
@@ -180,12 +180,12 @@ final class Class314_Sub1 extends Class314 {
         anInt6345++;
         if (i != -52) aClass291_6342 = null;
         if (aClass137_6365 != null) {
-            for (Class348 class348 = aClass262_6369.method1995(i ^ ~0x37); class348 != null; class348 = aClass262_6369.method1990((byte) 124)) {
-                if ((long) i_5_ == class348.aLong4291) return;
+            for (Node Node = aClass262_6369.method1995(i ^ ~0x37); Node != null; Node = aClass262_6369.method1990((byte) 124)) {
+                if ((long) i_5_ == Node.key) return;
             }
-            Class348 class348 = new Class348();
-            class348.aLong4291 = i_5_;
-            aClass262_6369.method1999(class348, -20180);
+            Node Node = new Node();
+            Node.key = i_5_;
+            aClass262_6369.method1999(Node, -20180);
         }
     }
 
@@ -403,7 +403,7 @@ final class Class314_Sub1 extends Class314 {
     }
 
     Class314_Sub1(int i, Class137 class137, Class137 class137_23_, Class248 class248, Class112 class112, int i_24_, byte[] is, int i_25_, boolean bool) {
-        aClass356_6360 = new Class356(16);
+        aClass356_6360 = new IterableHashTable(16);
         anInt6373 = 0;
         aClass262_6369 = new Class262();
         aLong6374 = 0L;

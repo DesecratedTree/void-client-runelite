@@ -5,7 +5,7 @@
 final class Class27 {
     static int anInt387;
     static int anInt388 = 0;
-    static Class356 aClass356_389 = new Class356(4);
+    static IterableHashTable aClass356_389 = new IterableHashTable(4);
     static int anInt390;
     static int anInt391;
     static int anInt392;

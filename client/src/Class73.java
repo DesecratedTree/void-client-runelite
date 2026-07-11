@@ -16,7 +16,7 @@ final class Class73 implements Interface7 {
     static Class219 aClass219_4782;
     static long aLong4783 = 20000000L;
     static int anInt4784;
-    private final Class45 aClass45_4785;
+    private final Js5Archive aClass45_4785;
     static int anInt4786;
 
     public static void method741(byte i) {
@@ -34,7 +34,7 @@ final class Class73 implements Interface7 {
         byte[] is = Class369_Sub3.aClass45_8601.method410(-1860, 0, i_0_);
         if (i != 104) method741((byte) 98);
         class189 = new Class189();
-        if (is != null) class189.method1419(i_0_, new Class348_Sub49(is), (byte) 64);
+        if (is != null) class189.method1419(i_0_, new Packet(is), (byte) 64);
         Class217.aClass60_2844.method582(class189, i_0_, (byte) -114);
         return class189;
     }
@@ -58,12 +58,12 @@ final class Class73 implements Interface7 {
         return Class69.aClass69_1197;
     }
 
-    Class73(Class45 class45, String string) {
+    Class73(Js5Archive Js5Archive, String string) {
         try {
-            aClass45_4785 = class45;
+            aClass45_4785 = Js5Archive;
             aString4778 = string;
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("kk.<init>(" + (class45 != null ? "{...}" : "null") + ',' + (string != null ? "{...}" : "null") + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("kk.<init>(" + (Js5Archive != null ? "{...}" : "null") + ',' + (string != null ? "{...}" : "null") + ')'));
         }
     }
 

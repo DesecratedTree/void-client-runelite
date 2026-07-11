@@ -55,11 +55,11 @@ final class Class348_Sub40_Sub11 extends Class348_Sub40 {
         return is;
     }
 
-    final void method3049(Class348_Sub49 class348_sub49, int i, int i_8_) {
+    final void method3049(Packet Packet, int i, int i_8_) {
         anInt9188++;
         if (i_8_ == 31015) {
             int i_9_ = i;
-            if (i_9_ == 0) anInt9187 = class348_sub49.readUnsignedShort(842397944);
+            if (i_9_ == 0) anInt9187 = Packet.readUnsignedShort(842397944);
         }
     }
 }

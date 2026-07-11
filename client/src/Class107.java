@@ -66,7 +66,7 @@ final class Class107 {
                 Class127_Sub1.method1118(true, false, class348_sub41, 2533);
             }
             r.anInt9721 = -1;
-            Class125.aClass356_4915 = new Class356(8);
+            Class125.aClass356_4915 = new IterableHashTable(8);
             Class99.method882((byte) 11);
             r.anInt9721 = Class54.anInt970;
             Class239.method1713(false, 520);
@@ -103,13 +103,13 @@ final class Class107 {
                     int i_7_ = 48 - (-(i_4_ / 128) - -(Class367_Sub4.anInt7319 * 2)) - -208;
                     int i_8_ = (208 - (Class348_Sub40_Sub3.anInt9109 * 2 - 48) + 4 * Class348_Sub40_Sub3.anInt9109 - i_3_ / 128);
                     Class108.aClass105_1664.method967(((float) class46.anInt709 / 2.0F + (float) i), ((float) class46.anInt789 / 2.0F + (float) i_1_), (float) i_7_, (float) i_8_, i_5_, i_6_ << 2, var_aa, i, i_1_);
-                    for (Class348_Sub35 class348_sub35 = (Class348_Sub35) Class318_Sub1_Sub5_Sub1.aClass262_10125.method1995(i_2_ ^ 0x59b4); class348_sub35 != null; class348_sub35 = (Class348_Sub35) Class318_Sub1_Sub5_Sub1.aClass262_10125.method1990((byte) 92)) {
-                        int i_9_ = class348_sub35.anInt6976;
+                    for (IntNode IntNode = (IntNode) Class318_Sub1_Sub5_Sub1.aClass262_10125.method1995(i_2_ ^ 0x59b4); IntNode != null; IntNode = (IntNode) Class318_Sub1_Sub5_Sub1.aClass262_10125.method1990((byte) 92)) {
+                        int i_9_ = IntNode.anInt6976;
                         int i_10_ = (-za_Sub2.regionTileX + ((0xfffe5b0 & (r_Sub2.aClass252_10488.anIntArray3238[i_9_])) >> 14));
                         int i_11_ = (-Class90.regionTileY + (0x3fff & (r_Sub2.aClass252_10488.anIntArray3238[i_9_])));
                         int i_12_ = -(i_4_ / 128) + 2 + 4 * i_10_;
                         int i_13_ = 2 + (4 * i_11_ - i_3_ / 128);
-                        Class318_Sub1.method2385(class46, i_1_, var_aa, (r_Sub2.aClass252_10488.anIntArray3239[i_9_]), i_12_, i, (byte) -94, i_13_, var_ha);
+                        SceneEntity.method2385(class46, i_1_, var_aa, (r_Sub2.aClass252_10488.anIntArray3239[i_9_]), i_12_, i, (byte) -94, i_13_, var_ha);
                     }
                     for (int i_14_ = 0; (Class348_Sub40_Sub38.anInt9479 > i_14_); i_14_++) {
                         int i_15_ = (Class348_Sub15.anIntArray6770[i_14_] * 4 - -2 - i_4_ / 128);
@@ -119,13 +119,13 @@ final class Class107 {
                             class51 = class51.method480((Class318_Sub1_Sub3_Sub3.aClass170_10209), (byte) 47);
                             if (class51 == null || (class51.anInt921 == -1)) continue;
                         }
-                        Class318_Sub1.method2385(class46, i_1_, var_aa, class51.anInt921, i_15_, i, (byte) -113, i_16_, var_ha);
+                        SceneEntity.method2385(class46, i_1_, var_aa, class51.anInt921, i_15_, i, (byte) -113, i_16_, var_ha);
                     }
                     for (Class348_Sub37 class348_sub37 = (Class348_Sub37) Class130.aClass356_1895.method3484(i_2_ ^ 0x59b0); class348_sub37 != null; class348_sub37 = ((Class348_Sub37) Class130.aClass356_1895.method3482(0))) {
-                        int i_17_ = (int) (0x3L & (class348_sub37.aLong4291) >> 28);
+                        int i_17_ = (int) (0x3L & (class348_sub37.key) >> 28);
                         if (Class334.anInt4155 == i_17_) {
-                            int i_18_ = (-za_Sub2.regionTileX + (int) ((class348_sub37.aLong4291) & 0x3fffL));
-                            int i_19_ = (-Class90.regionTileY + (int) ((class348_sub37.aLong4291) >> 14 & 0x3fffL));
+                            int i_18_ = (-za_Sub2.regionTileX + (int) ((class348_sub37.key) & 0x3fffL));
+                            int i_19_ = (-Class90.regionTileY + (int) ((class348_sub37.key) >> 14 & 0x3fffL));
                             int i_20_ = -(i_4_ / 128) + (2 + i_18_ * 4);
                             int i_21_ = -(i_3_ / 128) + (2 + i_19_ * 4);
                             Class151.method1211(i_1_, (Class348_Sub12.aClass105Array6742[0]), i, class46, var_aa, i_21_, i_2_ ^ 0x59b2, i_20_);
@@ -136,12 +136,12 @@ final class Class107 {
                         if (class348_sub22 != null) {
                             Npc npc = (class348_sub22.aNpc_6859);
                             if (npc.method2445((byte) -126) && ((npc.plane) == (Class132.aPlayer_1907.plane))) {
-                                Class79 class79 = (npc.aClass79_10505);
-                                if (class79 != null && (class79.anIntArray1377 != null)) class79 = (class79.method794((Class318_Sub1_Sub3_Sub3.aClass170_10209), -1));
-                                if (class79 != null && class79.aBoolean1397 && class79.aBoolean1396) {
+                                NPCType NPCType = (npc.definition);
+                                if (NPCType != null && (NPCType.multinpcs != null)) NPCType = (NPCType.method794((Class318_Sub1_Sub3_Sub3.aClass170_10209), -1));
+                                if (NPCType != null && NPCType.displayOnMiniMap && NPCType.interactive) {
                                     int i_23_ = (-(i_4_ / 128) + (npc.x) / 128);
                                     int i_24_ = ((npc.y) / 128 + -(i_3_ / 128));
-                                    if (class79.anInt1383 != -1) Class318_Sub1.method2385(class46, i_1_, var_aa, class79.anInt1383, i_23_, i, (byte) -73, i_24_, var_ha);
+                                    if (NPCType.mapElement != -1) SceneEntity.method2385(class46, i_1_, var_aa, NPCType.mapElement, i_23_, i, (byte) -73, i_24_, var_ha);
                                     else Class151.method1211(i_1_, (Class348_Sub12.aClass105Array6742[1]), i, class46, var_aa, i_24_, 2, i_23_);
                                 }
                             }

@@ -25,8 +25,8 @@ final class Class239_Sub10 extends Class239 {
     static final void method1760(int i, int i_0_, boolean bool, int i_1_, byte i_2_, int i_3_, int i_4_, int i_5_) {
         if (i_2_ > -85) method1762(-14, 70, 13, -100);
         anInt5940++;
-        if ((bool ? Class316.aClass348_Sub51_3959.aClass239_Sub26_7215.method1838(-32350) : Class316.aClass348_Sub51_3959.aClass239_Sub26_7272.method1838(-32350)) != 0 && i_3_ != 0 && Class147.anInt2021 < 50 && i != -1)
-            Class258_Sub2.aClass10Array8531[Class147.anInt2021++] = new Class10(!bool ? (byte) 2 : (byte) 3, i, i_3_, i_5_, i_0_, i_1_, i_4_, null);
+        if ((bool ? Class316.aClass348_Sub51_3959.aClass239_Sub26_7215.method1838(-32350) : Class316.aClass348_Sub51_3959.aClass239_Sub26_7272.method1838(-32350)) != 0 && i_3_ != 0 && ChatMessage.anInt2021 < 50 && i != -1)
+            Class258_Sub2.aClass10Array8531[ChatMessage.anInt2021++] = new Class10(!bool ? (byte) 2 : (byte) 3, i, i_3_, i_5_, i_0_, i_1_, i_4_, null);
     }
 
     final void method1716(boolean bool) {
@@ -116,10 +116,10 @@ final class Class239_Sub10 extends Class239 {
         return c;
     }
 
-    static final Class143 method1766(byte i, int i_16_, Class45 class45) {
+    static final Class143 method1766(byte i, int i_16_, Js5Archive Js5Archive) {
         anInt5944++;
         if (i >= -24) return null;
-        byte[] is = class45.method415((byte) 73, i_16_);
+        byte[] is = Js5Archive.method415((byte) 73, i_16_);
         if (is == null) return null;
         return new Class143(is);
     }

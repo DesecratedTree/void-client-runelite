@@ -10,7 +10,7 @@ final class Class292 implements Interface7 {
     static int anInt4801;
     static int anInt4802;
     static int anInt4803 = -1;
-    private final Class45 aClass45_4804;
+    private final Js5Archive aClass45_4804;
     static int anInt4805;
 
     static final int method2201(int i) {
@@ -50,15 +50,15 @@ final class Class292 implements Interface7 {
         } catch (Exception exception) {
             String string = ("T2 - " + (Class348_Sub3.aClass114_6584 != null ? Class348_Sub3.aClass114_6584.method1058((byte) 119) : -1) + "," + (Class239.aClass114_3145 != null ? Class239.aClass114_3145.method1058((byte) 119) : -1) + "," + (Class348_Sub40_Sub36.aClass114_9456 == null ? -1 : Class348_Sub40_Sub36.aClass114_9456.method1058((byte) 113)) + " - " + Class348_Sub40_Sub25.anInt9341 + "," + ((Class132.aPlayer_1907.anIntArray10320[0]) + za_Sub2.regionTileX) + "," + (Class90.regionTileY - -(Class132.aPlayer_1907.anIntArray10317[0])) + " - ");
             for (int i_2_ = 0; Class348_Sub40_Sub25.anInt9341 > i_2_ && i_2_ < 50; i_2_++)
-                string += (Class299.aClass348_Sub49_Sub2_3813.aByteArray7154[i_2_]) + ",";
+                string += (Class299.aClass348_Sub49_Sub2_3813.data[i_2_]) + ",";
             Class156.method1242(string, exception, 15004);
             Class348_Sub40_Sub34.method3141(false, (byte) 11);
             return true;
         }
     }
 
-    Class292(Class45 class45) {
-        aClass45_4804 = class45;
+    Class292(Js5Archive Js5Archive) {
+        aClass45_4804 = Js5Archive;
     }
 
     static {

@@ -6,7 +6,7 @@ final class Class94 {
     static int anInt1535;
     static int anInt1536;
     static int anInt1537;
-    static Class45 aClass45_1538;
+    static Js5Archive aClass45_1538;
 
     static final void method865(int i, int i_0_) {
         anInt1536++;
@@ -23,7 +23,7 @@ final class Class94 {
         if (bool != true) aClass45_1538 = null;
         anInt1535++;
         for (int i = 0; i < 32; i++)
-            Class348_Sub49.aLongArray7206[i] = 0L;
+            Packet.aLongArray7206[i] = 0L;
         for (int i = 0; i < 32; i++)
             Class328_Sub2_Sub1.aLongArray8800[i] = 0L;
         Class101_Sub2.anInt5744 = 0;

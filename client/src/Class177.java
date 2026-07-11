@@ -47,7 +47,7 @@ final class Class177 implements Interface1 {
     }
 
     static final Class318_Sub1_Sub3 method1353(int i, int i_4_, int i_5_, Class var_class) {
-        Class357 class357 = Class147.aClass357ArrayArrayArray2029[i][i_4_][i_5_];
+        Class357 class357 = ChatMessage.aClass357ArrayArrayArray2029[i][i_4_][i_5_];
         if (class357 == null) return null;
         for (Class148 class148 = class357.aClass148_4396; class148 != null; class148 = class148.aClass148_2038) {
             Class318_Sub1_Sub3 class318_sub1_sub3 = class148.aClass318_Sub1_Sub3_2040;

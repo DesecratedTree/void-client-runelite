@@ -159,21 +159,21 @@ final class Class318_Sub1_Sub3_Sub1 extends Class318_Sub1_Sub3 implements Interf
         return aByte10015;
     }
 
-    final void method2380(ha var_ha, int i, boolean bool, Class318_Sub1 class318_sub1, int i_16_, byte i_17_, int i_18_) {
+    final void method2380(ha var_ha, int i, boolean bool, SceneEntity SceneEntity, int i_16_, byte i_17_, int i_18_) {
         do {
             try {
                 anInt10034++;
-                if (class318_sub1 instanceof Class318_Sub1_Sub4_Sub1) {
-                    Class318_Sub1_Sub4_Sub1 class318_sub1_sub4_sub1 = (Class318_Sub1_Sub4_Sub1) class318_sub1;
+                if (SceneEntity instanceof Class318_Sub1_Sub4_Sub1) {
+                    Class318_Sub1_Sub4_Sub1 class318_sub1_sub4_sub1 = (Class318_Sub1_Sub4_Sub1) SceneEntity;
                     if (this.aClass64_10028 != null && (class318_sub1_sub4_sub1.aClass64_10071) != null) this.aClass64_10028.method613(class318_sub1_sub4_sub1.aClass64_10071, i_18_, i, i_16_, bool);
-                } else if (class318_sub1 instanceof Class318_Sub1_Sub3_Sub1) {
-                    Class318_Sub1_Sub3_Sub1 class318_sub1_sub3_sub1_19_ = (Class318_Sub1_Sub3_Sub1) class318_sub1;
+                } else if (SceneEntity instanceof Class318_Sub1_Sub3_Sub1) {
+                    Class318_Sub1_Sub3_Sub1 class318_sub1_sub3_sub1_19_ = (Class318_Sub1_Sub3_Sub1) SceneEntity;
                     if (this.aClass64_10028 != null && (class318_sub1_sub3_sub1_19_.aClass64_10028 != null)) this.aClass64_10028.method613(class318_sub1_sub3_sub1_19_.aClass64_10028, i_18_, i, i_16_, bool);
                 }
                 if (i_17_ < -106) break;
                 method2392(false);
             } catch (RuntimeException runtimeexception) {
-                throw Class348_Sub17.method2929(runtimeexception, ("dm.N(" + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + bool + ',' + (class318_sub1 != null ? "{...}" : "null") + ',' + i_16_ + ',' + i_17_ + ',' + i_18_ + ')'));
+                throw Class348_Sub17.method2929(runtimeexception, ("dm.N(" + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + bool + ',' + (SceneEntity != null ? "{...}" : "null") + ',' + i_16_ + ',' + i_17_ + ',' + i_18_ + ')'));
             }
             break;
         } while (false);

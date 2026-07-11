@@ -9,8 +9,8 @@ final class Class348_Sub42_Sub7 extends Class348_Sub42 {
     static int anInt9543;
     static int anInt9544;
 
-    private final void method3191(int i, Class348_Sub49 class348_sub49, byte i_0_) {
-        if (i == 2) this.anInt9542 = class348_sub49.readUnsignedShort(842397944);
+    private final void method3191(int i, Packet Packet, byte i_0_) {
+        if (i == 2) this.anInt9542 = Packet.readUnsignedShort(842397944);
         anInt9544++;
         int i_1_ = -60 / ((i_0_ - -26) / 51);
     }
@@ -19,11 +19,11 @@ final class Class348_Sub42_Sub7 extends Class348_Sub42 {
         /* empty */
     }
 
-    final void method3192(byte i, Class348_Sub49 class348_sub49) {
+    final void method3192(byte i, Packet Packet) {
         for (; ; ) {
-            int i_2_ = class348_sub49.readUnsignedByte(i + 239);
+            int i_2_ = Packet.readUnsignedByte(i + 239);
             if (i_2_ == 0) break;
-            method3191(i_2_, class348_sub49, (byte) 70);
+            method3191(i_2_, Packet, (byte) 70);
         }
         if (i != 16) anInt9541 = -83;
         anInt9543++;

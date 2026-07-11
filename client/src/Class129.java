@@ -8,7 +8,7 @@ final class Class129 {
     byte aByte1875;
     int anInt1876;
     int anInt1877;
-    static Class45 aClass45_1878;
+    static Js5Archive aClass45_1878;
     static int anInt1879;
     int anInt1880;
     int anInt1881;

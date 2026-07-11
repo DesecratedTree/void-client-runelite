@@ -9,7 +9,7 @@ final class Class348_Sub42_Sub1 extends Class348_Sub42 {
     static float[] aFloatArray9491;
     static int anInt9492 = 0;
     static int anInt9493;
-    private Class356 aClass356_9494;
+    private IterableHashTable aClass356_9494;
     static boolean[][] aBooleanArrayArray9495;
     static int anInt9496;
     static int anInt9497;
@@ -24,38 +24,38 @@ final class Class348_Sub42_Sub1 extends Class348_Sub42 {
     final int method3166(int i, int i_0_, byte i_1_) {
         anInt9490++;
         if (aClass356_9494 == null) return i_0_;
-        Class348_Sub35 class348_sub35 = (Class348_Sub35) aClass356_9494.method3480(i, -6008);
+        IntNode IntNode = (IntNode) aClass356_9494.method3480(i, -6008);
         if (i_1_ < 91) return 72;
-        if (class348_sub35 == null) return i_0_;
-        return class348_sub35.anInt6976;
+        if (IntNode == null) return i_0_;
+        return IntNode.anInt6976;
     }
 
-    private final void method3167(int i, Class348_Sub49 class348_sub49, byte i_2_) {
+    private final void method3167(int i, Packet Packet, byte i_2_) {
         if (i_2_ == -86) {
             anInt9489++;
             if (i == 249) {
-                int i_3_ = class348_sub49.readUnsignedByte(255);
+                int i_3_ = Packet.readUnsignedByte(255);
                 if (aClass356_9494 == null) {
                     int i_4_ = Class33.method340(i_3_, (byte) 108);
-                    aClass356_9494 = new Class356(i_4_);
+                    aClass356_9494 = new IterableHashTable(i_4_);
                 }
                 for (int i_5_ = 0; i_5_ < i_3_; i_5_++) {
-                    boolean bool = class348_sub49.readUnsignedByte(i_2_ + 341) == 1;
-                    int i_6_ = class348_sub49.readMedium(-1);
-                    Class348 class348;
-                    if (bool) class348 = new Class348_Sub50(class348_sub49.readString((byte) -39));
-                    else class348 = new Class348_Sub35(class348_sub49.readInt((byte) -126));
-                    aClass356_9494.method3483((byte) 29, i_6_, class348);
+                    boolean bool = Packet.readUnsignedByte(i_2_ + 341) == 1;
+                    int i_6_ = Packet.readMedium(-1);
+                    Node Node;
+                    if (bool) Node = new StringNode(Packet.readString((byte) -39));
+                    else Node = new IntNode(Packet.readInt((byte) -126));
+                    aClass356_9494.method3483((byte) 29, i_6_, Node);
                 }
             }
         }
     }
 
-    final void method3168(Class348_Sub49 class348_sub49, byte i) {
+    final void method3168(Packet Packet, byte i) {
         for (; ; ) {
-            int i_7_ = class348_sub49.readUnsignedByte(255);
+            int i_7_ = Packet.readUnsignedByte(255);
             if (i_7_ == 0) break;
-            method3167(i_7_, class348_sub49, (byte) -86);
+            method3167(i_7_, Packet, (byte) -86);
         }
         anInt9497++;
         if (i >= -59) method3169(-56, -67);
@@ -78,9 +78,9 @@ final class Class348_Sub42_Sub1 extends Class348_Sub42 {
         anInt9493++;
         if (aClass356_9494 == null) return string;
         if (i != -250) method3165((byte) 0);
-        Class348_Sub50 class348_sub50 = (Class348_Sub50) aClass356_9494.method3480(i_9_, -6008);
-        if (class348_sub50 == null) return string;
-        return class348_sub50.aString7211;
+        StringNode StringNode = (StringNode) aClass356_9494.method3480(i_9_, -6008);
+        if (StringNode == null) return string;
+        return StringNode.aString7211;
     }
 
     static {

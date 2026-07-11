@@ -52,7 +52,7 @@ final class Class318_Sub9_Sub1 extends Class318_Sub9 {
         if (i_7_ != 105) aFloat8784 = 0.99212307F;
         if (class348_sub42_sub15 == null) {
             class348_sub42_sub15 = new Class348_Sub42_Sub15(i_8_, i);
-            Class100.aClass356_1585.method3483((byte) 91, (class348_sub42_sub15.aLong4291), class348_sub42_sub15);
+            Class100.aClass356_1585.method3483((byte) 91, (class348_sub42_sub15.key), class348_sub42_sub15);
         }
         return class348_sub42_sub15;
     }

@@ -5,7 +5,7 @@
 final class Class175 {
     static int anInt2310;
     private int anInt2311;
-    private final Class356 aClass356_2312;
+    private final IterableHashTable aClass356_2312;
     static int anInt2313;
     static int anInt2314;
     static Class351 aClass351_2315;
@@ -56,7 +56,7 @@ final class Class175 {
                 } else {
                     if (class348_sub42_sub9.method3206((byte) -128)) {
                         Class348_Sub42_Sub9_Sub1 class348_sub42_sub9_sub1 = (new Class348_Sub42_Sub9_Sub1(interface14, object, (class348_sub42_sub9.anInt9556)));
-                        aClass356_2312.method3483((byte) 125, (class348_sub42_sub9.aLong4291), class348_sub42_sub9_sub1);
+                        aClass356_2312.method3483((byte) 125, (class348_sub42_sub9.key), class348_sub42_sub9_sub1);
                         aClass107_2316.method1005(true, class348_sub42_sub9_sub1);
                         class348_sub42_sub9_sub1.aLong7057 = 0L;
                         class348_sub42_sub9.method2715((byte) 65);
@@ -144,7 +144,7 @@ final class Class175 {
                     }
                 } else if (++class348_sub42_sub9.aLong7057 > (long) i_4_) {
                     Class348_Sub42_Sub9 class348_sub42_sub9_5_ = Class103.aClass345_1607.method2694(-1, class348_sub42_sub9);
-                    aClass356_2312.method3483((byte) 120, (class348_sub42_sub9.aLong4291), class348_sub42_sub9_5_);
+                    aClass356_2312.method3483((byte) 120, (class348_sub42_sub9.key), class348_sub42_sub9_5_);
                     Class59_Sub2_Sub2.method573(class348_sub42_sub9_5_, class348_sub42_sub9, (byte) 63);
                     class348_sub42_sub9.method2715((byte) 70);
                     class348_sub42_sub9.method3162(true);
@@ -250,7 +250,7 @@ final class Class175 {
         for (i_22_ = 1; i_22_ + i_22_ < i; i_22_ += i_22_) {
             /* empty */
         }
-        aClass356_2312 = new Class356(i_22_);
+        aClass356_2312 = new IterableHashTable(i_22_);
     }
 
     static {

@@ -264,10 +264,10 @@ final class Class348_Sub40_Sub7 extends Class348_Sub40 {
                                             int i_50_ = class46.anInt749;
                                             String string = (class46.aString792);
                                             if (class46.anInt812 != -1) {
-                                                Class213 class213 = (Exception_Sub1.aClass255_112.method1940(-67, (class46.anInt812)));
-                                                string = (class213.aString2795);
+                                                ObjType ObjType = (Exception_Sub1.aClass255_112.getItemDefinitions(-67, (class46.anInt812)));
+                                                string = (ObjType.name);
                                                 if (string == null) string = "null";
-                                                if (((class213.anInt2820) == 1 || (class46.anInt781) != 1) && (class46.anInt781) != -1) string = ("<col=ff9040>" + string + "</col> x" + (Class37.method356(-127, (class46.anInt781))));
+                                                if (((ObjType.stackable) == 1 || (class46.anInt781) != 1) && (class46.anInt781) != -1) string = ("<col=ff9040>" + string + "</col> x" + (Class37.method356(-127, (class46.anInt781))));
                                             }
                                             if (class46.anInt806 != -1) {
                                                 string = (Class286_Sub4.method2157((class46.anInt806), -1431655765));
@@ -345,12 +345,12 @@ final class Class348_Sub40_Sub7 extends Class348_Sub40 {
                                         Class64 class64 = null;
                                         int i_60_ = 0;
                                         if (class46.anInt812 != -1) {
-                                            Class213 class213 = (Exception_Sub1.aClass255_112.method1940(103, (class46.anInt812)));
-                                            if (class213 != null) {
-                                                class213 = (class213.method1560((class46.anInt781), (byte) 97));
+                                            ObjType ObjType = (Exception_Sub1.aClass255_112.getItemDefinitions(103, (class46.anInt812)));
+                                            if (ObjType != null) {
+                                                ObjType = (ObjType.getStackVariant((class46.anInt781), (byte) 97));
                                                 Class17 class17 = ((class46.anInt699) == -1 ? null : (Class10.aClass87_191.method835((class46.anInt699), 7)));
                                                 Class154 class154 = (!(class46.aBoolean720) ? null : (Class132.aPlayer_1907.aClass154_10536));
-                                                class64 = (class213.method1559(class154, class17, Class348_Sub8.aHa6654, 2048, (class46.anInt841), 1, (class46.anInt795), (byte) 88, (class46.anInt730)));
+                                                class64 = (ObjType.getModel(class154, class17, Class348_Sub8.aHa6654, 2048, (class46.anInt841), 1, (class46.anInt795), (byte) 88, (class46.anInt730)));
                                                 if (class64 != null) i_60_ = (-class64.fa() >> 1);
                                                 else Class251.method1916(-9343, class46);
                                             }
@@ -461,7 +461,7 @@ final class Class348_Sub40_Sub7 extends Class348_Sub40 {
         }
     }
 
-    final void method3049(Class348_Sub49 class348_sub49, int i, int i_72_) {
+    final void method3049(Packet Packet, int i, int i_72_) {
         while_146_:
         do {
             try {
@@ -470,21 +470,21 @@ final class Class348_Sub40_Sub7 extends Class348_Sub40 {
                     int i_73_ = i;
                     do {
                         if (i_73_ == 0) {
-                            aBoolean9140 = class348_sub49.readUnsignedByte(255) == 1;
+                            aBoolean9140 = Packet.readUnsignedByte(255) == 1;
                             return;
                         } else if (i_73_ != 1) {
                             if (i_73_ == 2) break;
                             break while_146_;
                         }
-                        aBoolean9147 = class348_sub49.readUnsignedByte(255) == 1;
+                        aBoolean9147 = Packet.readUnsignedByte(255) == 1;
                         return;
                     } while (false);
-                    this.aBoolean7045 = class348_sub49.readUnsignedByte(255) == 1;
+                    this.aBoolean7045 = Packet.readUnsignedByte(255) == 1;
                     break;
                 }
                 break;
             } catch (RuntimeException runtimeexception) {
-                throw Class348_Sub17.method2929(runtimeexception, ("jia.F(" + (class348_sub49 != null ? "{...}" : "null") + ',' + i + ',' + i_72_ + ')'));
+                throw Class348_Sub17.method2929(runtimeexception, ("jia.F(" + (Packet != null ? "{...}" : "null") + ',' + i + ',' + i_72_ + ')'));
             }
         } while (false);
     }

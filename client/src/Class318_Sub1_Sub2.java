@@ -2,11 +2,11 @@
  * Visit http://jode.sourceforge.net/
  */
 
-abstract class Class318_Sub1_Sub2 extends Class318_Sub1 {
+abstract class Class318_Sub1_Sub2 extends SceneEntity {
     static int anInt8729;
     static int anInt8730;
     static int anInt8731;
-    static Class60 aClass60_8732 = new Class60(64);
+    static ReferenceCache aClass60_8732 = new ReferenceCache(64);
     static int anInt8733;
     static int anInt8734;
     static int anInt8735;
@@ -19,17 +19,17 @@ abstract class Class318_Sub1_Sub2 extends Class318_Sub1 {
         Class234 class234 = null;
         try {
             class234 = Class297.method2231("2", -1141472112);
-            Class348_Sub49 class348_sub49 = new Class348_Sub49(3 + 6 * Class335.anInt4168);
-            class348_sub49.writeByte(false, 1);
-            class348_sub49.writeShort((byte) 107, Class335.anInt4168);
+            Packet Packet = new Packet(3 + 6 * Class335.anInt4168);
+            Packet.writeByte(false, 1);
+            Packet.writeShort((byte) 107, Class335.anInt4168);
             int i_0_ = -4 % ((-12 - i) / 38);
-            for (int i_1_ = 0; (i_1_ < Class77.anIntArray1303.length); i_1_++) {
+            for (int i_1_ = 0; (i_1_ < Isaac.anIntArray1303.length); i_1_++) {
                 if (Class286_Sub6.aBooleanArray6270[i_1_]) {
-                    class348_sub49.writeShort((byte) 107, i_1_);
-                    class348_sub49.writeInt((byte) 124, Class77.anIntArray1303[i_1_]);
+                    Packet.writeShort((byte) 107, i_1_);
+                    Packet.writeInt((byte) 124, Isaac.anIntArray1303[i_1_]);
                 }
             }
-            class234.method1658((byte) 117, 0, class348_sub49.anInt7197, (class348_sub49.aByteArray7154));
+            class234.method1658((byte) 117, 0, Packet.pos, (Packet.data));
         } catch (Exception exception) {
             /* empty */
         }
@@ -80,13 +80,13 @@ abstract class Class318_Sub1_Sub2 extends Class318_Sub1 {
         return false;
     }
 
-    final void method2380(ha var_ha, int i, boolean bool, Class318_Sub1 class318_sub1, int i_3_, byte i_4_, int i_5_) {
+    final void method2380(ha var_ha, int i, boolean bool, SceneEntity SceneEntity, int i_3_, byte i_4_, int i_5_) {
         try {
             if (i_4_ > -106) method2405(-8);
             anInt8736++;
             throw new IllegalStateException();
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("fha.N(" + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + bool + ',' + (class318_sub1 != null ? "{...}" : "null") + ',' + i_3_ + ',' + i_4_ + ',' + i_5_ + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("fha.N(" + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + bool + ',' + (SceneEntity != null ? "{...}" : "null") + ',' + i_3_ + ',' + i_4_ + ',' + i_5_ + ')'));
         }
     }
 

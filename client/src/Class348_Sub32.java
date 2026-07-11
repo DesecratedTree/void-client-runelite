@@ -2,17 +2,17 @@
  * Visit http://jode.sourceforge.net/
  */
 
-final class Class348_Sub32 extends Class348 {
+final class Class348_Sub32 extends Node {
     private final Class123 aClass123_6927;
     private float[][] aFloatArrayArray6928;
     private final s_Sub2 aS_Sub2_6929;
     static int anInt6930 = 0;
     static int anInt6931;
-    private Class356 aClass356_6932;
+    private IterableHashTable aClass356_6932;
     static int anInt6933;
     private int anInt6934;
     private final int anInt6935;
-    private Class348_Sub49 aClass348_Sub49_6936;
+    private Packet aClass348_Sub49_6936;
     private final Class348_Sub1 aClass348_Sub1_6937;
     static int anInt6938;
     static int anInt6939;
@@ -26,7 +26,7 @@ final class Class348_Sub32 extends Class348 {
     private float[][] aFloatArrayArray6947;
     private final int anInt6948;
     private float[][] aFloatArrayArray6949;
-    static Class45 aClass45_6950;
+    static Js5Archive aClass45_6950;
     private final ha_Sub2 aHa_Sub2_6951;
     private final Interface2 anInterface2_6952;
     private Class348_Sub49_Sub1 aClass348_Sub49_Sub1_6953;
@@ -43,9 +43,9 @@ final class Class348_Sub32 extends Class348 {
         int i_8_ = aS_Sub2_6929.method3986(i_6_, i_7_, (byte) -17);
         if ((i_3_ & 0x7f) == 0 || (i & 0x7f) == 0) {
             l = ((long) i_7_ << 16 & 65535L << 16 | 0xffffL & (long) i_6_);
-            Class348 class348 = aClass356_6932.method3480(l, -6008);
-            if (class348 != null) {
-                method3022((byte) -46, (((Class348_Sub29) class348).aShort6911));
+            Node Node = aClass356_6932.method3480(l, -6008);
+            if (Node != null) {
+                method3022((byte) -46, (((Class348_Sub29) Node).aShort6911));
                 return;
             }
         }
@@ -230,9 +230,9 @@ final class Class348_Sub32 extends Class348 {
                 } else i_50_ += anInt6942 - anInt6935;
             }
             if (anInt6934 > 0) {
-                aClass348_Sub49_6936 = new Class348_Sub49(anInt6934 * 2);
+                aClass348_Sub49_6936 = new Packet(anInt6934 * 2);
                 aClass348_Sub49_Sub1_6953 = new Class348_Sub49_Sub1(anInt6934 * 16);
-                aClass356_6932 = new Class356(Class33.method340(anInt6934, (byte) 108));
+                aClass356_6932 = new IterableHashTable(Class33.method340(anInt6934, (byte) 108));
                 int i_56_ = 0;
                 i_50_ = 0;
                 for (int i_57_ = anInt6948; anInt6944 >= i_57_; i_57_++) {
@@ -283,8 +283,8 @@ final class Class348_Sub32 extends Class348 {
                     } else i_50_ += anInt6942 - anInt6935;
                     i_56_++;
                 }
-                anInterface8_6945 = (aHa_Sub2_6951.method3733(5123, -49, aClass348_Sub49_6936.anInt7197, aClass348_Sub49_6936.aByteArray7154, false));
-                anInterface2_6952 = aHa_Sub2_6951.method3731(2, false, 16, (aClass348_Sub49_Sub1_6953.aByteArray7154), (aClass348_Sub49_Sub1_6953.anInt7197));
+                anInterface8_6945 = (aHa_Sub2_6951.method3733(5123, -49, aClass348_Sub49_6936.pos, aClass348_Sub49_6936.data, false));
+                anInterface2_6952 = aHa_Sub2_6951.method3731(2, false, 16, (aClass348_Sub49_Sub1_6953.data), (aClass348_Sub49_Sub1_6953.pos));
                 aClass123_6927 = new Class123(anInterface2_6952, 5126, 3, 0);
                 aClass123_6943 = new Class123(anInterface2_6952, 5121, 4, 12);
             } else {

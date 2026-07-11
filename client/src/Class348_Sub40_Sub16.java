@@ -14,15 +14,15 @@ final class Class348_Sub40_Sub16 extends Class348_Sub40 {
     static int[] anIntArray9230 = {0, -1, 0, 1};
     static int anInt9231;
 
-    final void method3049(Class348_Sub49 class348_sub49, int i, int i_0_) {
+    final void method3049(Packet Packet, int i, int i_0_) {
         if (i_0_ != 31015) anInt9226 = -83;
         int i_1_ = i;
         do {
             if (i_1_ == 0) {
-                anInt9226 = class348_sub49.readUnsignedByte(255);
+                anInt9226 = Packet.readUnsignedByte(255);
                 break;
             } else if (i_1_ != 1) break;
-            this.aBoolean7045 = class348_sub49.readUnsignedByte(255) == 1;
+            this.aBoolean7045 = Packet.readUnsignedByte(255) == 1;
         } while (false);
         anInt9227++;
     }
@@ -354,7 +354,7 @@ final class Class348_Sub40_Sub16 extends Class348_Sub40 {
         anInt9228++;
         if (Class76.aClass364_1279 != Class8.aClass364_165 && i == 9) {
             try {
-                Class224.method1617((byte) 125, Class79.aClient1367, "tbrefresh");
+                Class224.method1617((byte) 125, NPCType.aClient1367, "tbrefresh");
             } catch (Throwable throwable) {
                 /* empty */
             }

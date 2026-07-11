@@ -2,7 +2,11 @@
  * Visit http://jode.sourceforge.net/
  */
 
+import com.GameClient;
 import jagex3.jagmisc.jagmisc;
+import net.runelite.api.Skill;
+import net.runelite.api.hooks.Callbacks;
+import net.runelite.client.RuneLite;
 
 import java.applet.Applet;
 import java.applet.AppletContext;
@@ -11,11 +15,16 @@ import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
+import java.awt.image.BufferedImage;
+import java.awt.image.DataBufferInt;
 import java.lang.reflect.Method;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
+import java.util.List;
 
-public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListener, WindowListener {
+public abstract class Applet_Sub1 extends GameClient implements Runnable, FocusListener, WindowListener {
     static int anInt1;
     static int anInt2;
     static int anInt3;
@@ -68,6 +77,18 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
     public static boolean aBoolean50;
     public static boolean aBoolean51;
     public static boolean aBoolean52;
+    public static Thread currentThread;
+    private static Applet parameterApplet;
+    private boolean stretchedEnabled;
+    private boolean stretchedFast;
+    private boolean stretchedIntegerScaling;
+    private boolean stretchedKeepAspectRatio = true;
+    private int scalingFactor = 100;
+    private boolean animationSmoothingEnabled;
+    private static BufferedImage runeLiteOverlayImage;
+    private static int[] runeLiteOverlayPixels;
+    private static int runeLiteOverlayWidth;
+    private static int runeLiteOverlayHeight;
     public static int anInt53;
     public static boolean aBoolean54;
     public static int anInt55;
@@ -85,6 +106,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 
     public final String getParameter(String string) {
         anInt3++;
+        if (parameterApplet != null) return parameterApplet.getParameter(string);
         if (Class52.aFrame4904 != null) return null;
         if (Class93.anApplet1530 != null && Class93.anApplet1530 != this) return Class93.anApplet1530.getParameter(string);
         return super.getParameter(string);
@@ -151,9 +173,9 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
         paint(graphics);
     }
 
-    static final void method85(int i, Class45 class45) {
+    static final void method85(int i, Js5Archive Js5Archive) {
         anInt32++;
-        Class369_Sub3.aClass45_8601 = class45;
+        Class369_Sub3.aClass45_8601 = Js5Archive;
         if (i != 0) anInt37 = 101;
     }
 
@@ -164,6 +186,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 
     public final URL getDocumentBase() {
         anInt30++;
+        if (parameterApplet != null) return parameterApplet.getDocumentBase();
         if (Class52.aFrame4904 != null) return null;
         if (Class93.anApplet1530 != null && this != Class93.anApplet1530) return Class93.anApplet1530.getDocumentBase();
         return super.getDocumentBase();
@@ -196,13 +219,14 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
         } else container = Class34.aFrame476;
         container.setLayout(null);
         Class305.aCanvas3869 = new Canvas_Sub1(this);
+        Class305.aCanvas3869.setIgnoreRepaint(true);
         container.add(Class305.aCanvas3869);
-        Class305.aCanvas3869.setSize(Class321.anInt4017, Class348_Sub42_Sub8_Sub2.anInt10432);
+        applyCanvasSize();
         Class305.aCanvas3869.setVisible(true);
         if (container == Class52.aFrame4904) {
             Insets insets = Class52.aFrame4904.getInsets();
-            Class305.aCanvas3869.setLocation((insets.left + Class348_Sub48.anInt7129), insets.top - -Class335.anInt4167);
-        } else Class305.aCanvas3869.setLocation(Class348_Sub48.anInt7129, Class335.anInt4167);
+            applyCanvasLocation(container, (insets.left + Class348_Sub48.anInt7129), insets.top - -Class335.anInt4167);
+        } else applyCanvasLocation(container, Class348_Sub48.anInt7129, Class335.anInt4167);
         Class305.aCanvas3869.addFocusListener(this);
         Class305.aCanvas3869.requestFocus();
         Class348_Sub40_Sub16.aBoolean9229 = true;
@@ -230,8 +254,8 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
     private final void method88(int i) {
         anInt2++;
         long l = Class62.method599(-119);
-        long l_2_ = Class348_Sub49.aLongArray7206[Class152.anInt2071];
-        Class348_Sub49.aLongArray7206[Class152.anInt2071] = l;
+        long l_2_ = Packet.aLongArray7206[Class152.anInt2071];
+        Packet.aLongArray7206[Class152.anInt2071] = l;
         if (l_2_ != 0L && l_2_ < l) {
             int i_3_ = (int) (l - l_2_);
             Class239_Sub5.anInt5891 = (32000 + (i_3_ >> 1)) / i_3_;
@@ -240,15 +264,76 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
         if (Class159.anInt2127++ > 50) {
             Class159.anInt2127 -= 50;
             Class49.aBoolean4726 = true;
-            Class305.aCanvas3869.setSize(Class321.anInt4017, Class348_Sub42_Sub8_Sub2.anInt10432);
+            applyCanvasSize();
             Class305.aCanvas3869.setVisible(true);
             if (Class52.aFrame4904 != null && Class34.aFrame476 == null) {
                 Insets insets = Class52.aFrame4904.getInsets();
-                Class305.aCanvas3869.setLocation((insets.left - -Class348_Sub48.anInt7129), (insets.top + Class335.anInt4167));
-            } else Class305.aCanvas3869.setLocation(Class348_Sub48.anInt7129, Class335.anInt4167);
+                applyCanvasLocation(Class52.aFrame4904, (insets.left - -Class348_Sub48.anInt7129), (insets.top + Class335.anInt4167));
+            } else applyCanvasLocation(Class305.aCanvas3869.getParent(), Class348_Sub48.anInt7129, Class335.anInt4167);
         }
         method93(-11018);
+        fireRuneLiteClientLoop();
         if (i > -107) method90(true, true);
+    }
+
+    private void fireRuneLiteClientLoop() {
+        try {
+            if (RuneLite.getInjector() != null) {
+                RuneLite.getInjector().getInstance(Callbacks.class).clientMainLoop();
+            }
+        } catch (Throwable ignored) {
+        }
+    }
+
+    static void drawRuneLiteOverlays(ha renderer) {
+        try {
+            if (RuneLite.getInjector() == null || renderer == null) {
+                return;
+            }
+
+            int width = Math.max(1, Class321.anInt4017);
+            int height = Math.max(1, Class348_Sub42_Sub8_Sub2.anInt10432);
+            ensureRuneLiteOverlayBuffer(width, height);
+
+            Graphics2D graphics = runeLiteOverlayImage.createGraphics();
+            try {
+                graphics.setComposite(AlphaComposite.Clear);
+                graphics.fillRect(0, 0, width, height);
+                graphics.setComposite(AlphaComposite.SrcOver);
+                graphics.setClip(0, 0, width, height);
+                RuneLite.getInjector().getInstance(Callbacks.class).draw(null, graphics, 0, 0);
+            } finally {
+                graphics.dispose();
+            }
+
+            if (!hasRuneLiteOverlayPixels()) {
+                return;
+            }
+
+            Class105 sprite = renderer.method3711(runeLiteOverlayPixels, 0, width, width, height, false);
+            sprite.method970(0, 0, width, height, 1, -1, 1);
+        } catch (Throwable ignored) {
+        }
+    }
+
+    private static void ensureRuneLiteOverlayBuffer(int width, int height) {
+        if (runeLiteOverlayImage != null && runeLiteOverlayWidth == width && runeLiteOverlayHeight == height) {
+            return;
+        }
+
+        runeLiteOverlayWidth = width;
+        runeLiteOverlayHeight = height;
+        runeLiteOverlayImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
+        runeLiteOverlayPixels = ((DataBufferInt) runeLiteOverlayImage.getRaster().getDataBuffer()).getData();
+    }
+
+    private static boolean hasRuneLiteOverlayPixels() {
+        for (int pixel : runeLiteOverlayPixels) {
+            if ((pixel >>> 24) != 0) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public final void windowDeiconified(WindowEvent windowevent) {
@@ -334,7 +419,13 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 
     public static final void provideLoaderApplet(Applet applet) {
         anInt11++;
+        parameterApplet = applet;
         Class93.anApplet1530 = applet;
+    }
+
+    public void supplyApplet(Applet applet) {
+        parameterApplet = applet;
+        Class93.anApplet1530 = this;
     }
 
     abstract void method91(byte i);
@@ -348,6 +439,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 
     public final URL getCodeBase() {
         anInt29++;
+        if (parameterApplet != null) return parameterApplet.getCodeBase();
         if (Class52.aFrame4904 != null) return null;
         if (Class93.anApplet1530 != null && this != Class93.anApplet1530) return Class93.anApplet1530.getCodeBase();
         return super.getCodeBase();
@@ -366,6 +458,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
     }
 
     public final void run() {
+        currentThread = Thread.currentThread();
         anInt28++;
         do {
             try {
@@ -422,6 +515,732 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
                 method90(true, false);
             }
         } while (false);
+    }
+
+    static Dimension getActiveCanvasSize() {
+        Applet_Sub1 applet = Class348_Sub40_Sub9.anApplet_Sub1_9169;
+        if (applet != null && applet.shouldStretchCanvas()) {
+            return applet.getStretchedDimensions();
+        }
+        return new Dimension(Class321.anInt4017, Class348_Sub42_Sub8_Sub2.anInt10432);
+    }
+
+    static boolean shouldScaleCanvasFrame() {
+        Applet_Sub1 applet = Class348_Sub40_Sub9.anApplet_Sub1_9169;
+        return applet != null && applet.shouldStretchCanvas() && Class348_Sub8.aHa6654 instanceof ha_Sub1;
+    }
+
+    static boolean shouldScaleOpenGLFrame() {
+        Applet_Sub1 applet = Class348_Sub40_Sub9.anApplet_Sub1_9169;
+        return applet != null
+                && applet.shouldStretchCanvas()
+                && (Class348_Sub8.aHa6654 instanceof ha_Sub2 || Class348_Sub8.aHa6654 instanceof Class377 || Class348_Sub8.aHa6654 instanceof Class378);
+    }
+
+    static boolean useFastCanvasScaling() {
+        Applet_Sub1 applet = Class348_Sub40_Sub9.anApplet_Sub1_9169;
+        return applet != null && applet.stretchedFast;
+    }
+
+    static void applyCanvasSize() {
+        if (Class305.aCanvas3869 == null) {
+            return;
+        }
+
+        Dimension size = getActiveCanvasSize();
+        Applet_Sub1 applet = Class348_Sub40_Sub9.anApplet_Sub1_9169;
+        if (!size.equals(Class305.aCanvas3869.getPreferredSize())) {
+            Class305.aCanvas3869.setPreferredSize(size);
+        }
+        if (!size.equals(Class305.aCanvas3869.getSize())) {
+            Class305.aCanvas3869.setSize(size);
+        }
+    }
+
+    static void applyCanvasLocation(Container container, int x, int y) {
+        if (Class305.aCanvas3869 == null) {
+            return;
+        }
+
+        Applet_Sub1 applet = Class348_Sub40_Sub9.anApplet_Sub1_9169;
+        if (applet != null && applet.shouldStretchCanvas() && container != null) {
+            Dimension size = getActiveCanvasSize();
+            Insets insets = container.getInsets();
+            int width = Math.max(0, container.getWidth() - insets.left - insets.right);
+            int height = Math.max(0, container.getHeight() - insets.top - insets.bottom);
+            x = insets.left + Math.max(0, (width - size.width) / 2);
+            y = insets.top + Math.max(0, (height - size.height) / 2);
+        }
+
+        Class305.aCanvas3869.setLocation(x, y);
+    }
+
+    static void refreshCanvasAfterDisplayChange() {
+        Canvas canvas = Class305.aCanvas3869;
+        if (canvas == null) {
+            return;
+        }
+
+        try {
+            Applet_Sub1 applet = Class348_Sub40_Sub9.anApplet_Sub1_9169;
+            if (applet != null) {
+                applet.invalidateStretching(true);
+            } else {
+                applyCanvasSize();
+            }
+            revalidateDisplayTree(canvas);
+        } catch (Throwable throwable) {
+            revalidateDisplayTree(canvas);
+        }
+    }
+
+    private static void pulseWindowAfterDisplayChange(final Canvas canvas) {
+        EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                try {
+                    Container container = canvas.getParent();
+                    while (container != null && !(container instanceof Frame)) {
+                        container = container.getParent();
+                    }
+
+                    if (!(container instanceof Frame)) {
+                        repaintDisplayTree(canvas);
+                        return;
+                    }
+
+                    final Frame frame = (Frame) container;
+                    final int state = frame.getExtendedState();
+                    final boolean maximized = (state & Frame.MAXIMIZED_BOTH) == Frame.MAXIMIZED_BOTH;
+
+                    if (maximized) {
+                        frame.setExtendedState(state & ~Frame.MAXIMIZED_BOTH);
+                        repaintDisplayTree(canvas);
+                        EventQueue.invokeLater(new Runnable() {
+                            public void run() {
+                                try {
+                                    frame.setExtendedState(state);
+                                } catch (Throwable ignored) {
+                                }
+                                repaintDisplayTree(canvas);
+                                scheduleRepaintPass(canvas);
+                            }
+                        });
+                        return;
+                    }
+
+                    Rectangle bounds = frame.getBounds();
+                    if (bounds.width > 1 && bounds.height > 1) {
+                        frame.setBounds(bounds.x, bounds.y, bounds.width - 1, bounds.height);
+                        frame.setBounds(bounds);
+                    }
+                    repaintDisplayTree(canvas);
+                    scheduleRepaintPass(canvas);
+                } catch (Throwable throwable) {
+                    repaintDisplayTree(canvas);
+                }
+            }
+        });
+    }
+
+    private static void scheduleRepaintPass(final Canvas canvas) {
+        EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                repaintDisplayTree(canvas);
+                EventQueue.invokeLater(new Runnable() {
+                    public void run() {
+                        repaintDisplayTree(canvas);
+                    }
+                });
+            }
+        });
+    }
+
+    private static void repaintDisplayTree(Canvas canvas) {
+        try {
+            canvas.invalidate();
+            canvas.validate();
+            canvas.repaint();
+
+            Container container = canvas.getParent();
+            while (container != null) {
+                container.invalidate();
+                container.validate();
+                container.doLayout();
+                container.repaint();
+                container = container.getParent();
+            }
+
+            Applet_Sub1 applet = Class348_Sub40_Sub9.anApplet_Sub1_9169;
+            if (applet != null) {
+                applet.invalidate();
+                applet.validate();
+                applet.repaint();
+            }
+
+            canvas.getToolkit().sync();
+        } catch (Throwable ignored) {
+            try {
+                canvas.repaint();
+            } catch (Throwable ignoredAgain) {
+            }
+        }
+    }
+
+    private static void revalidateDisplayTree(Canvas canvas) {
+        try {
+            canvas.invalidate();
+            canvas.validate();
+
+            Container container = canvas.getParent();
+            while (container != null) {
+                container.invalidate();
+                container.validate();
+                container.doLayout();
+                container = container.getParent();
+            }
+
+            Applet_Sub1 applet = Class348_Sub40_Sub9.anApplet_Sub1_9169;
+            if (applet != null) {
+                applet.invalidate();
+                applet.validate();
+            }
+        } catch (Throwable ignored) {
+        }
+    }
+
+    static int scaleMouseX(int x) {
+        Applet_Sub1 applet = Class348_Sub40_Sub9.anApplet_Sub1_9169;
+        if (applet == null || !applet.shouldStretchCanvas() || Class305.aCanvas3869 == null) {
+            return x;
+        }
+
+        int width = Math.max(1, Class305.aCanvas3869.getWidth());
+        return Math.max(0, Math.min(Class321.anInt4017 - 1, (int) Math.round((double) x * Class321.anInt4017 / width)));
+    }
+
+    static int scaleMouseY(int y) {
+        Applet_Sub1 applet = Class348_Sub40_Sub9.anApplet_Sub1_9169;
+        if (applet == null || !applet.shouldStretchCanvas() || Class305.aCanvas3869 == null) {
+            return y;
+        }
+
+        int height = Math.max(1, Class305.aCanvas3869.getHeight());
+        return Math.max(0, Math.min(Class348_Sub42_Sub8_Sub2.anInt10432 - 1, (int) Math.round((double) y * Class348_Sub42_Sub8_Sub2.anInt10432 / height)));
+    }
+
+    @Override
+    public Canvas getCanvas() {
+        return Class305.aCanvas3869;
+    }
+
+    @Override
+    public int getCanvasWidth() {
+        return Class321.anInt4017;
+    }
+
+    @Override
+    public int getCanvasHeight() {
+        return Class348_Sub42_Sub8_Sub2.anInt10432;
+    }
+
+    @Override
+    public Dimension getRealDimensions() {
+        Canvas canvas = getCanvas();
+        if (canvas != null && canvas.getWidth() > 0 && canvas.getHeight() > 0) {
+            return canvas.getSize();
+        }
+        return new Dimension(Class321.anInt4017, Class348_Sub42_Sub8_Sub2.anInt10432);
+    }
+
+    @Override
+    public Dimension getStretchedDimensions() {
+        int baseW = Math.max(1, Class321.anInt4017);
+        int baseH = Math.max(1, Class348_Sub42_Sub8_Sub2.anInt10432);
+        Dimension base = new Dimension(baseW, baseH);
+        if (!shouldStretchCanvas()) {
+            return base;
+        }
+
+        int contW;
+        int contH;
+        Container parent = Class305.aCanvas3869 != null ? Class305.aCanvas3869.getParent() : getParent();
+        if (parent != null && parent.getWidth() > 0 && parent.getHeight() > 0) {
+            Insets insets = parent.getInsets();
+            contW = Math.max(1, parent.getWidth() - insets.left - insets.right);
+            contH = Math.max(1, parent.getHeight() - insets.top - insets.bottom);
+        } else {
+            contW = Math.max(1, Class272.anInt3473);
+            contH = Math.max(1, Class348_Sub22.anInt6857);
+        }
+
+        double fit = Math.min((double) contW / baseW, (double) contH / baseH);
+
+        if (stretchedIntegerScaling) {
+            double rounded = Math.rint(fit);
+            double scale = (rounded > fit && rounded - fit <= 0.03) ? rounded : Math.floor(fit);
+            scale = Math.max(1.0, scale);
+            int width = (int) Math.round(baseW * scale);
+            int height = (int) Math.round(baseH * scale);
+            return new Dimension(Math.min(contW, Math.max(1, width)), Math.min(contH, Math.max(1, height)));
+        }
+
+        if (stretchedKeepAspectRatio) {
+            int width = (int) Math.round(baseW * fit);
+            int height = (int) Math.round(baseH * fit);
+            return new Dimension(Math.max(1, width), Math.max(1, height));
+        }
+
+        return new Dimension(contW, contH);
+    }
+
+    static void applyStretchedLogicalSize() {
+        Applet_Sub1 applet = Class348_Sub40_Sub9.anApplet_Sub1_9169;
+        if (applet == null || !applet.stretchedEnabled) {
+            return;
+        }
+        int mode = Class348_Sub42_Sub12.method3229(-86);
+        if (mode != 2) {
+            return;
+        }
+        double scale = Math.max(25, Math.min(800, applet.scalingFactor)) / 100.0;
+        if (Math.abs(scale - 1.0) < 0.001) {
+            return;
+        }
+        int logicalW = Math.max(256, (int) Math.round(Class321.anInt4017 / scale));
+        int logicalH = Math.max(192, (int) Math.round(Class348_Sub42_Sub8_Sub2.anInt10432 / scale));
+        Class321.anInt4017 = logicalW;
+        Class348_Sub42_Sub8_Sub2.anInt10432 = logicalH;
+    }
+
+    private boolean shouldStretchCanvas() {
+        if (!stretchedEnabled) {
+            return false;
+        }
+        int mode = Class348_Sub42_Sub12.method3229(-86);
+        return mode == 1 || mode == 2;
+    }
+
+    @Override
+    public void setStretchedEnabled(boolean state) {
+        boolean changed = stretchedEnabled != state;
+        stretchedEnabled = state;
+        if (changed) {
+            refreshCanvasAfterDisplayChange();
+        }
+    }
+
+    @Override
+    public boolean isStretchedEnabled() {
+        return stretchedEnabled;
+    }
+
+    @Override
+    public void setStretchedFast(boolean state) {
+        stretchedFast = state;
+    }
+
+    @Override
+    public boolean isStretchedFast() {
+        return stretchedFast;
+    }
+
+    @Override
+    public void setStretchedIntegerScaling(boolean state) {
+        stretchedIntegerScaling = state;
+    }
+
+    @Override
+    public boolean isStretchedIntegerScaling() {
+        return stretchedIntegerScaling;
+    }
+
+    @Override
+    public void setStretchedKeepAspectRatio(boolean state) {
+        stretchedKeepAspectRatio = state;
+    }
+
+    @Override
+    public boolean isStretchedKeepAspectRatio() {
+        return stretchedKeepAspectRatio;
+    }
+
+    @Override
+    public void setScalingFactor(int factor) {
+        scalingFactor = Math.max(25, Math.min(800, factor));
+    }
+
+    @Override
+    public int getScalingFactor() {
+        return scalingFactor;
+    }
+
+    @Override
+    public void invalidateStretching(boolean resize) {
+        if (!resize) {
+            repaint();
+            return;
+        }
+
+        boolean onGameThread = currentThread != null && Thread.currentThread() == currentThread;
+        if (onGameThread) {
+            try {
+                Class367_Sub11.method3556(false);
+            } catch (Throwable ignored) {
+            }
+            Container parent = getParent();
+            if (parent != null) {
+                parent.invalidate();
+            }
+            return;
+        }
+
+        int mode = Class348_Sub42_Sub12.method3229(-86);
+        if (mode == 2) {
+            Class286_Sub5.method2158((byte) 56);
+        }
+
+        Dimension size = stretchedEnabled ? getStretchedDimensions() : new Dimension(Class321.anInt4017, Class348_Sub42_Sub8_Sub2.anInt10432);
+        Canvas canvas = getCanvas();
+        if (canvas != null) {
+            if (!size.equals(canvas.getPreferredSize())) {
+                canvas.setPreferredSize(size);
+            }
+            if (!size.equals(canvas.getSize())) {
+                canvas.setSize(size);
+                canvas.invalidate();
+            }
+            if (Class348_Sub8.aHa6654 != null) {
+                try {
+                    Class348_Sub8.aHa6654.method3669(canvas, Class321.anInt4017, Class348_Sub42_Sub8_Sub2.anInt10432);
+                } catch (Throwable ignored) {
+                }
+            }
+        }
+
+        Container parent = getParent();
+        if (parent != null) {
+            parent.invalidate();
+            applyCanvasLocation(parent, Class348_Sub48.anInt7129, Class335.anInt4167);
+        }
+    }
+
+    @Override
+    public void setAnimationSmoothingEnabled(boolean state) {
+        animationSmoothingEnabled = state;
+        Class28.aBoolean5002 = state;
+    }
+
+    @Override
+    public boolean isAnimationSmoothingEnabled() {
+        return animationSmoothingEnabled;
+    }
+
+    @Override
+    public int getLocalPlayerLocalX() {
+        return Class132.aPlayer_1907 == null ? -1 : Class132.aPlayer_1907.x;
+    }
+
+    @Override
+    public int getLocalPlayerLocalY() {
+        return Class132.aPlayer_1907 == null ? -1 : Class132.aPlayer_1907.y;
+    }
+
+    @Override
+    public int getLocalPlayerSceneX() {
+        return Class132.aPlayer_1907 == null ? -1 : Class132.aPlayer_1907.anIntArray10320[0];
+    }
+
+    @Override
+    public int getLocalPlayerSceneY() {
+        return Class132.aPlayer_1907 == null ? -1 : Class132.aPlayer_1907.anIntArray10317[0];
+    }
+
+    @Override
+    public int getLocalPlayerSize() {
+        return Class132.aPlayer_1907 == null ? 1 : Class132.aPlayer_1907.method2436((byte) 72);
+    }
+
+    @Override
+    public int getLocalPlayerCombatLevel() {
+        return Class132.aPlayer_1907 == null ? 0 : Class132.aPlayer_1907.anInt10516;
+    }
+
+    @Override
+    public boolean hasLocalPlayer() {
+        return Class132.aPlayer_1907 != null;
+    }
+
+    @Override
+    public int getCameraX() {
+        return Class286_Sub4.anInt6246;
+    }
+
+    @Override
+    public int getCameraY() {
+        return Class305.anInt3855;
+    }
+
+    @Override
+    public int getCameraZ() {
+        return Class59_Sub2_Sub2.anInt8685;
+    }
+
+    @Override
+    public int getCameraPitch() {
+        return Class348_Sub42_Sub19.anInt9701;
+    }
+
+    @Override
+    public int getCameraYaw() {
+        return Class5.anInt4638;
+    }
+
+    @Override
+    public int getCameraScale() {
+        return Class132.anInt1906;
+    }
+
+    @Override
+    public int getTileHeight(int localX, int localY, int plane) {
+        return Class275.method2064(localX << 2, plane, 11219, localY << 2);
+    }
+
+    @Override
+    public net.runelite.api.Point projectLocalToCanvas(int localX, int localY, int height) {
+        if (Class348_Sub8.aHa6654 == null) {
+            return null;
+        }
+
+        int[] point = new int[3];
+        int worldX = localX << 2;
+        int worldY = localY << 2;
+        if (!Class305.aBoolean3870) {
+            Class348_Sub8.aHa6654.da(worldX, height, worldY, point);
+        } else {
+            Class348_Sub8.aHa6654.HA(worldX, height, worldY, Math.max(1, Class132.anInt1906), point);
+        }
+
+        if (point[0] < 0 || point[1] < 0) {
+            return null;
+        }
+
+        if (point[0] > Class321.anInt4017 || point[1] > Class348_Sub42_Sub8_Sub2.anInt10432) {
+            return null;
+        }
+
+        return new net.runelite.api.Point(point[0], point[1]);
+    }
+
+    @Override
+    public boolean hasNativeProjection() {
+        return Class348_Sub8.aHa6654 != null;
+    }
+
+    @Override
+    public List<GroundItemInfo> getGroundItems() {
+        if (ChatMessage.aClass357ArrayArrayArray2029 == null || Exception_Sub1.aClass255_112 == null) {
+            return Collections.emptyList();
+        }
+
+        List<GroundItemInfo> items = new ArrayList<>();
+        int planes = ChatMessage.aClass357ArrayArrayArray2029.length;
+        for (int plane = 0; plane < planes; plane++) {
+            Class357[][] planeTiles = ChatMessage.aClass357ArrayArrayArray2029[plane];
+            if (planeTiles == null) {
+                continue;
+            }
+
+            for (int sceneX = 0; sceneX < planeTiles.length; sceneX++) {
+                Class357[] column = planeTiles[sceneX];
+                if (column == null) {
+                    continue;
+                }
+
+                for (int sceneY = 0; sceneY < column.length; sceneY++) {
+                    Class357 tile = column[sceneY];
+                    if (tile == null || !(tile.aClass318_Sub1_Sub2_4408 instanceof Class318_Sub1_Sub2_Sub1)) {
+                        continue;
+                    }
+
+                    Class318_Sub1_Sub2_Sub1 pile = (Class318_Sub1_Sub2_Sub1) tile.aClass318_Sub1_Sub2_4408;
+                    addGroundItem(items, pile.anInt10181, pile.anInt10185, pile.x >> 2, pile.y >> 2, plane);
+                    if (pile.anInt10189 != -1) {
+                        addGroundItem(items, pile.anInt10189, pile.anInt10190, pile.x >> 2, pile.y >> 2, plane);
+                    }
+                    if (pile.anInt10180 != -1) {
+                        addGroundItem(items, pile.anInt10180, pile.anInt10186, pile.x >> 2, pile.y >> 2, plane);
+                    }
+                }
+            }
+        }
+        return items;
+    }
+
+    private void addGroundItem(List<GroundItemInfo> items, int id, int quantity, int localX, int localY, int plane) {
+        if (id < 0) {
+            return;
+        }
+
+        ObjType definition = Exception_Sub1.aClass255_112.getItemDefinitions(-115, id);
+        String name = definition == null || definition.name == null ? "Item " + id : definition.name;
+        int price = definition == null ? 0 : Math.max(0, definition.cost);
+        items.add(new GroundItemInfo(id, quantity, name, price, localX, localY, plane));
+    }
+
+    @Override
+    public List<NpcInfo> getNpcs() {
+        if (Class282.aClass356_3654 != null) {
+            int count = Class282.aClass356_3654.method3474(1);
+            if (count > 0) {
+                if (Class348_Sub40_Sub23.aClass348_Sub22Array9319 == null || Class348_Sub40_Sub23.aClass348_Sub22Array9319.length < count) {
+                    Class348_Sub40_Sub23.aClass348_Sub22Array9319 = new Class348_Sub22[Math.max(1024, count)];
+                }
+                Class348_Sub32.anInt6930 = Class282.aClass356_3654.method3477(3, Class348_Sub40_Sub23.aClass348_Sub22Array9319);
+            }
+        }
+
+        if (Class348_Sub40_Sub23.aClass348_Sub22Array9319 == null) {
+            return Collections.emptyList();
+        }
+
+        List<NpcInfo> npcs = new ArrayList<>();
+        int count = Math.min(Class348_Sub32.anInt6930, Class348_Sub40_Sub23.aClass348_Sub22Array9319.length);
+        for (int i = 0; i < count; i++) {
+            Class348_Sub22 entry = Class348_Sub40_Sub23.aClass348_Sub22Array9319[i];
+            if (entry == null || entry.aNpc_6859 == null || entry.aNpc_6859.definition == null) {
+                continue;
+            }
+
+            Npc npc = entry.aNpc_6859;
+            NPCType definition = npc.definition.multinpcs == null ? npc.definition : npc.definition.method794(Class318_Sub1_Sub3_Sub3.aClass170_10209, -1);
+            if (definition == null || definition.name == null || definition.name.length() == 0 || "null".equalsIgnoreCase(definition.name)) {
+                continue;
+            }
+
+            int size = Math.max(1, definition.anInt1399);
+            int height = Math.max(128, npc.method2426(200));
+            int trueLocalX = (npc.anIntArray10320 != null && npc.anIntArray10320.length > 0)
+                ? ((npc.anIntArray10320[0] << 9) + (size << 8)) >> 2
+                : npc.x >> 2;
+            int trueLocalY = (npc.anIntArray10317 != null && npc.anIntArray10317.length > 0)
+                ? ((npc.anIntArray10317[0] << 9) + (size << 8)) >> 2
+                : npc.y >> 2;
+            int localX = npc.x <= 0 ? trueLocalX : npc.x >> 2;
+            int localY = npc.y <= 0 ? trueLocalY : npc.y >> 2;
+
+            npcs.add(new NpcInfo(
+                npc.anInt10290,
+                definition.id,
+                definition.name,
+                localX,
+                localY,
+                trueLocalX,
+                trueLocalY,
+                npc.plane,
+                height,
+                size,
+                definition.combatLevel,
+                definition.isFollower,
+                false
+            ));
+        }
+        return npcs;
+    }
+
+    @Override
+    public NpcHullInfo getNpcHull(int npcIndex) {
+        return NpcHullHooks.get(npcIndex);
+    }
+
+    @Override
+    public List<SkillSnapshot> getSkillSnapshots() {
+        if (Class161.anIntArray2145 == null || Class256.anIntArray3295 == null || Class186.anIntArray2497 == null) {
+            return Collections.emptyList();
+        }
+
+        Skill[] skills = Skill.values();
+        int count = Math.min(Math.min(Class161.anIntArray2145.length, Class256.anIntArray3295.length), Class186.anIntArray2497.length);
+        count = Math.min(count, skills.length);
+
+        List<SkillSnapshot> snapshots = new ArrayList<>(count);
+        for (int index = 0; index < count; index++) {
+            Skill skill = skills[index];
+            if (skill == Skill.OVERALL) {
+                continue;
+            }
+
+            snapshots.add(new SkillSnapshot(
+                skill,
+                Math.max(0, Class186.anIntArray2497[index]),
+                Math.max(0, Class256.anIntArray3295[index]),
+                Math.max(0, Class161.anIntArray2145[index])
+            ));
+        }
+        return snapshots;
+    }
+
+    @Override
+    public void addMenuEntry(String option, String target, int type, int identifier, int param0, int param1) {
+        Class50_Sub3.method466(false, target == null ? "" : target, 0, (byte) -93, false, param0, -1, true, type, identifier, option == null ? "" : option, identifier, -1);
+    }
+
+    @Override
+    public byte[][][] getTileSettings() {
+        return new byte[0][][];
+    }
+
+    @Override
+    public int[][][] getTileHeights() {
+        return new int[0][][];
+    }
+
+    @Override
+    public int getPlane() {
+        return Class132.aPlayer_1907 == null ? Class348_Sub40_Sub12.anInt9200 : Class132.aPlayer_1907.plane;
+    }
+
+    @Override
+    public int getBaseX() {
+        return za_Sub2.regionTileX;
+    }
+
+    @Override
+    public int getBaseY() {
+        return Class90.regionTileY;
+    }
+
+    @Override
+    public boolean isInInstancedRegion() {
+        return false;
+    }
+
+    @Override
+    public int[][][] getInstanceTemplateChunks() {
+        return new int[0][][];
+    }
+
+    @Override
+    public int[][] getCollisionMaps(int plane) {
+        return new int[0][];
+    }
+
+    @Override
+    public boolean isClientThread() {
+        return Thread.currentThread() == currentThread;
+    }
+
+    @Override
+    public boolean isShiftPressed() {
+        try {
+            return Class182.aClass346_2449 != null && Class182.aClass346_2449.method2696(81, -121);
+        } catch (Throwable ignored) {
+            return false;
+        }
+    }
+
+    @Override
+    public boolean isShiftClickEnabled() {
+        return Class116.shiftClick;
     }
 
     abstract void method92(int i);

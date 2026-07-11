@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-abstract class za extends Class348 {
+abstract class za extends Node {
     static Class138 aClass138_7274 = new Class138(10, 2, 2, 0);
     static int anInt7275;
     static int anInt7276 = 0;

@@ -3,7 +3,7 @@
  */
 
 abstract class Class186 {
-    static Class45 aClass45_2490;
+    static Js5Archive aClass45_2490;
     static Class74 aClass74_2491;
     static boolean aBoolean2492 = false;
     static int anInt2493;

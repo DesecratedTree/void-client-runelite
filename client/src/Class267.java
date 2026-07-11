@@ -42,6 +42,7 @@ final class Class267 {
     static Class267 aClass267_3426 = new Class267(Class69.aClass69_1198);
     static Class114 aClass114_3427 = new Class114(93, -2);
     static int anInt3428 = -1;
+    static Class267 aClass267_3429 = new Class267(Class69.aClass69_1199);
 
     final int method2024(int i) {
         if (i != -1) return 41;
@@ -62,6 +63,7 @@ final class Class267 {
         aClass267_3404 = null;
         aClass267_3405 = null;
         aClass267_3403 = null;
+        aClass267_3429 = null;
         aClass267_3411 = null;
         if (i == 23377) {
             aClass267_3410 = null;

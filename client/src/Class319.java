@@ -4,9 +4,9 @@
 
 final class Class319 {
     static int anInt3978;
-    private final Class45 aClass45_3979;
+    private final Js5Archive aClass45_3979;
     static double aDouble3980;
-    Class45 aClass45_3981;
+    Js5Archive aClass45_3981;
     static Class315[] aClass315Array3982;
     static int anInt3983;
     static int anInt3984;
@@ -14,8 +14,8 @@ final class Class319 {
     static int anInt3986;
     static int anInt3987;
     static boolean aBoolean3988 = false;
-    private final Class60 aClass60_3989 = new Class60(64);
-    Class60 aClass60_3990 = new Class60(60);
+    private final ReferenceCache aClass60_3989 = new ReferenceCache(64);
+    ReferenceCache aClass60_3990 = new ReferenceCache(60);
     int anInt3991;
 
     final void method2541(int i, int i_0_) {
@@ -53,7 +53,7 @@ final class Class319 {
         class368 = new Class368();
         class368.aClass319_4513 = this;
         class368.anInt4501 = i_1_;
-        if (is != null) class368.method3559(28105, new Class348_Sub49(is));
+        if (is != null) class368.method3559(28105, new Packet(is));
         synchronized (aClass60_3989) {
             aClass60_3989.method582(class368, i_1_, (byte) -127);
         }
@@ -88,14 +88,14 @@ final class Class319 {
         }
     }
 
-    Class319(Class230 class230, int i, Class45 class45, Class45 class45_3_) {
+    Class319(Class230 class230, int i, Js5Archive Js5Archive, Js5Archive class45_3_) {
         try {
             this.aClass45_3981 = class45_3_;
-            aClass45_3979 = class45;
+            aClass45_3979 = Js5Archive;
             int i_4_ = -1 + aClass45_3979.method414(-1);
             aClass45_3979.method407(0, i_4_);
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("cn.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (class45 != null ? "{...}" : "null") + ',' + (class45_3_ != null ? "{...}" : "null") + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("cn.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (Js5Archive != null ? "{...}" : "null") + ',' + (class45_3_ != null ? "{...}" : "null") + ')'));
         }
     }
 }

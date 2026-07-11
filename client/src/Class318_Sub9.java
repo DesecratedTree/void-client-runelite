@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-class Class318_Sub9 extends Class318 {
+class Class318_Sub9 extends Linkable {
     static int anInt6467;
     Class318_Sub9 aClass318_Sub9_6468;
     Class318_Sub9 aClass318_Sub9_6469;

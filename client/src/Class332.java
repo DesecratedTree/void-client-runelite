@@ -6,7 +6,7 @@ import java.awt.*;
 
 final class Class332 {
     static int anInt4138;
-    static Class60 aClass60_4139;
+    static ReferenceCache aClass60_4139;
     static int anInt4140;
     static int anInt4141 = -1;
     static s[] aSArray4142;
@@ -41,7 +41,7 @@ final class Class332 {
     }
 
     static {
-        aClass60_4139 = new Class60(20);
+        aClass60_4139 = new ReferenceCache(20);
         anInt4143 = -1;
     }
 }

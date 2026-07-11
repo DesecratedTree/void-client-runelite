@@ -3,10 +3,10 @@
  */
 
 final class Class187 {
-    private Class45 aClass45_2498;
+    private Js5Archive aClass45_2498;
     static int anInt2499;
     static int anInt2500;
-    private Class60 aClass60_2501 = new Class60(64);
+    private ReferenceCache aClass60_2501 = new ReferenceCache(64);
     static int anInt2502;
     static int anInt2503;
     static int anInt2504;
@@ -62,7 +62,7 @@ final class Class187 {
             is = aClass45_2498.method410(-1860, 35, i_3_);
         }
         class321 = new Class321();
-        if (is != null) class321.method2551(-125, new Class348_Sub49(is));
+        if (is != null) class321.method2551(-125, new Packet(is));
         if (i != -12637) aClass60_2501 = null;
         class321.method2548((byte) 127);
         synchronized (aClass60_2501) {
@@ -87,14 +87,14 @@ final class Class187 {
         anInt2502++;
     }
 
-    Class187(Class230 class230, int i, Class45 class45) {
+    Class187(Class230 class230, int i, Js5Archive Js5Archive) {
         do {
             try {
-                aClass45_2498 = class45;
+                aClass45_2498 = Js5Archive;
                 if (aClass45_2498 == null) break;
                 aClass45_2498.method407(0, 35);
             } catch (RuntimeException runtimeexception) {
-                throw Class348_Sub17.method2929(runtimeexception, ("qga.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (class45 != null ? "{...}" : "null") + ')'));
+                throw Class348_Sub17.method2929(runtimeexception, ("qga.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (Js5Archive != null ? "{...}" : "null") + ')'));
             }
             break;
         } while (false);

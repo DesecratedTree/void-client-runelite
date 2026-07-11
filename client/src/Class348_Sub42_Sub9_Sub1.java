@@ -6,7 +6,7 @@ final class Class348_Sub42_Sub9_Sub1 extends Class348_Sub42_Sub9 {
     static int anInt10439;
     private final Object anObject10440;
     static int anInt10441;
-    static Class356 aClass356_10442;
+    static IterableHashTable aClass356_10442;
     static int anInt10443 = 2;
     static int anInt10444;
     static int anInt10445;
@@ -55,6 +55,6 @@ final class Class348_Sub42_Sub9_Sub1 extends Class348_Sub42_Sub9 {
     }
 
     static {
-        aClass356_10442 = new Class356(8);
+        aClass356_10442 = new IterableHashTable(8);
     }
 }

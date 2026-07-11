@@ -8,7 +8,7 @@ final class Class372 {
     private final d aD4528;
     static int anInt4529;
     static int anInt4530;
-    private final Class60 aClass60_4531 = new Class60(256);
+    private final ReferenceCache aClass60_4531 = new ReferenceCache(256);
     static int anInt4532 = 1407;
 
     final void method3585(int i) {

@@ -25,7 +25,7 @@ final class Class302 {
     static final void method2284(byte i, long l) {
         try {
             anInt3841++;
-            if (Class147.aClass357ArrayArrayArray2029 != null) {
+            if (ChatMessage.aClass357ArrayArrayArray2029 != null) {
                 if (Class348_Sub40_Sub21.anInt9282 != 1 && Class348_Sub40_Sub21.anInt9282 != 5) {
                     if (Class348_Sub40_Sub21.anInt9282 == 4) Class82.method814((byte) 125, l);
                 } else Canvas_Sub1.method119(-1, l);

@@ -36,14 +36,14 @@ final class Class337 {
     static final boolean method2659(byte i, int i_0_, int i_1_) {
         int i_2_ = 24 % ((i - 76) / 42);
         anInt4176++;
-        return (0x70000 & i_0_) != 0 | Class348.method2709(i_1_, i_0_, -1) || Class288.method2187(i_0_, -84, i_1_);
+        return (0x70000 & i_0_) != 0 | Node.method2709(i_1_, i_0_, -1) || Class288.method2187(i_0_, -84, i_1_);
     }
 
-    static final Class288_Sub1 method2660(byte i, Class348_Sub49 class348_sub49) {
+    static final Class288_Sub1 method2660(byte i, Packet Packet) {
         anInt4180++;
         if (i != 26) return null;
-        Class288 class288 = Class288_Sub1.method2189(class348_sub49, i + 59);
-        int i_3_ = class348_sub49.method3369((byte) 125);
+        Class288 class288 = Class288_Sub1.method2189(Packet, i + 59);
+        int i_3_ = Packet.method3369((byte) 125);
         return new Class288_Sub1(class288.anInt4958, class288.aClass221_4955, class288.aClass341_4952, class288.anInt4950, class288.anInt4951, i_3_);
     }
 }

@@ -10,7 +10,7 @@ final class Class351 {
     static int anInt4324;
     static int anInt4325;
     private int anInt4326;
-    static Class60 aClass60_4327 = new Class60(3000000, 200);
+    static ReferenceCache aClass60_4327 = new ReferenceCache(3000000, 200);
     static boolean aBoolean4328 = false;
     static Font aFont4329;
 

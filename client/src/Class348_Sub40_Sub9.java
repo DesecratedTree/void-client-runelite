@@ -8,7 +8,7 @@ final class Class348_Sub40_Sub9 extends Class348_Sub40 {
     static int anInt9168;
     static Applet_Sub1 anApplet_Sub1_9169 = null;
     static int anInt9170;
-    static Class60 aClass60_9171 = new Class60(4);
+    static ReferenceCache aClass60_9171 = new ReferenceCache(4);
     static int anInt9172;
     static Class324 aClass324_9173;
 
@@ -40,10 +40,10 @@ final class Class348_Sub40_Sub9 extends Class348_Sub40 {
         Class318_Sub1_Sub3_Sub5.anInt10395 = Class355.anInt4372;
     }
 
-    final void method3049(Class348_Sub49 class348_sub49, int i, int i_2_) {
+    final void method3049(Packet Packet, int i, int i_2_) {
         if (i_2_ != 31015) method3042(-111, 25);
         anInt9170++;
-        if (i == 0) anInt9167 = class348_sub49.readUnsignedShort(842397944);
+        if (i == 0) anInt9167 = Packet.readUnsignedShort(842397944);
     }
 
     static final boolean method3073(int i, int i_3_, byte i_4_) {

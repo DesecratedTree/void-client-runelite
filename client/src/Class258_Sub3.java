@@ -155,7 +155,7 @@ class Class258_Sub3 extends Class258 {
     }
 
     static final void method1966(int i, int i_43_, int i_44_, int i_45_, byte i_46_, int i_47_, int i_48_, int i_49_, int i_50_) {
-        Class147.aClass338Array2034[Class239_Sub26.anInt6115++] = new Class338(i_47_, i_49_, i_50_, i, i, i_50_, i_45_, i_43_, i_43_, i_45_, i_44_, i_44_, i_48_, i_48_);
+        ChatMessage.aClass338Array2034[Class239_Sub26.anInt6115++] = new Class338(i_47_, i_49_, i_50_, i, i, i_50_, i_45_, i_43_, i_43_, i_45_, i_44_, i_44_, i_48_, i_48_);
         anInt8548++;
         if (i_46_ != 0) method1968();
     }
@@ -188,11 +188,11 @@ class Class258_Sub3 extends Class258 {
         for (; ; ) {
             try {
                 Image image = Toolkit.getDefaultToolkit().createImage(is);
-                MediaTracker mediatracker = new MediaTracker(Class79.aClient1367);
+                MediaTracker mediatracker = new MediaTracker(NPCType.aClient1367);
                 mediatracker.addImage(image, 0);
                 mediatracker.waitForAll();
-                int i_58_ = image.getWidth(Class79.aClient1367);
-                int i_59_ = image.getHeight(Class79.aClient1367);
+                int i_58_ = image.getWidth(NPCType.aClient1367);
+                int i_59_ = image.getHeight(NPCType.aClient1367);
                 if (mediatracker.isErrorAny() || i_58_ < 0 || i_59_ < 0) throw new RuntimeException("");
                 int[] is_60_ = new int[i_59_ * i_58_];
                 PixelGrabber pixelgrabber = new PixelGrabber(image, 0, 0, i_58_, i_59_, is_60_, 0, i_58_);

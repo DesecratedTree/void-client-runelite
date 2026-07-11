@@ -51,7 +51,7 @@ final class Class161 {
                 Class239_Sub24.aClass299_6098 = Class158.aClass299_4938;
                 Class64.aFloat1136 = Class244.aFloat4626;
                 Class245.aFloat3172 = Class269.aFloat3462;
-                Class45.aFloat670 = Class348_Sub3.aFloat6586;
+                Js5Archive.aFloat670 = Class348_Sub3.aFloat6586;
                 Class258_Sub4.aFloat8560 = Class239_Sub10.aFloat5945;
                 Class246.aFloat3177 = Class361.aFloat4455;
                 Class318_Sub1_Sub3.anInt8739 = Class119_Sub1.anInt4703;
@@ -94,6 +94,7 @@ final class Class161 {
         Class316.aClass348_Sub51_3959.method3429((byte) 74, (Class316.aClass348_Sub51_3959.aClass239_Sub12_7243), 0);
         Class237.method1686(55);
         Class316.aClass348_Sub51_3959.method3429((byte) 74, (Class316.aClass348_Sub51_3959.aClass239_Sub23_7231), 2);
+        Class316.aClass348_Sub51_3959.method3429((byte) 74, (Class316.aClass348_Sub51_3959.aClass239_Sub3_7222), 0);
         Class316.aClass348_Sub51_3959.method3429((byte) 74, (Class316.aClass348_Sub51_3959.aClass239_Sub29_7229), 2);
         Class348_Sub40.method3038(-1);
         Class76.method773(bool);

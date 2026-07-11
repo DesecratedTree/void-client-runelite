@@ -169,7 +169,7 @@ abstract class ha_Sub3 extends ha {
     static int anInt8036;
     static int anInt8037;
     static int anInt8038;
-    Class45 aClass45_8039;
+    Js5Archive aClass45_8039;
     static int anInt8040;
     static int anInt8041;
     static int anInt8042;
@@ -581,7 +581,7 @@ abstract class ha_Sub3 extends ha {
     static final void method3824(int i, int i_35_, int i_36_, int i_37_, int i_38_, int i_39_, int i_40_, int i_41_) {
         anInt7933++;
         if (i_37_ >= 0 && i >= 0 && -1 + Class367_Sub4.anInt7319 > i_37_ && (i < -1 + Class348_Sub40_Sub3.anInt9109)) {
-            if (Class147.aClass357ArrayArrayArray2029 == null) return;
+            if (ChatMessage.aClass357ArrayArrayArray2029 == null) return;
             if (i_41_ == 0) {
                 Interface10 interface10 = (Interface10) r_Sub2.method3297(i_40_, i_37_, i);
                 Interface10 interface10_42_ = (Interface10) Class82.method813(i_40_, i_37_, i);
@@ -654,8 +654,8 @@ abstract class ha_Sub3 extends ha {
     void method3652() {
         anInt8065++;
         if (!aBoolean8176) {
-            for (Class348 class348 = aClass262_7927.method1995(4); class348 != null; class348 = aClass262_7927.method1990((byte) 102))
-                ((za_Sub2) class348).method3445(-9503);
+            for (Node Node = aClass262_7927.method1995(4); Node != null; Node = aClass262_7927.method1990((byte) 102))
+                ((za_Sub2) Node).method3445(-9503);
             Enumeration enumeration = aHashtable8014.keys();
             while (enumeration.hasMoreElements()) {
                 Canvas canvas = (Canvas) enumeration.nextElement();
@@ -2103,8 +2103,13 @@ abstract class ha_Sub3 extends ha {
         if (aCanvas7910 == null) anInt7958 = anInt7987 = 1;
         else {
             Dimension dimension = aCanvas7910.getSize();
-            anInt7987 = dimension.height;
-            anInt7958 = dimension.width;
+            if (Applet_Sub1.shouldScaleOpenGLFrame()) {
+                anInt7987 = Class348_Sub42_Sub8_Sub2.anInt10432;
+                anInt7958 = Class321.anInt4017;
+            } else {
+                anInt7987 = dimension.height;
+                anInt7958 = dimension.width;
+            }
         }
         if (bool != false) aHashtable8014 = null;
         anInt8033++;
@@ -2607,7 +2612,7 @@ abstract class ha_Sub3 extends ha {
         return true;
     }
 
-    ha_Sub3(Canvas canvas, Object object, d var_d, Class45 class45, int i, int i_289_) {
+    ha_Sub3(Canvas canvas, Object object, d var_d, Js5Archive Js5Archive, int i, int i_289_) {
         super(var_d);
         this.aFloat8089 = 3584.0F;
         this.anInt8095 = 50;
@@ -2676,12 +2681,17 @@ abstract class ha_Sub3 extends ha {
         try {
             try {
                 this.anInt8117 = i;
-                this.aClass45_8039 = class45;
+                this.aClass45_8039 = Js5Archive;
                 aCanvas7910 = this.aCanvas7925 = canvas;
                 anObject8020 = this.anObject7919 = object;
                 Dimension dimension = canvas.getSize();
-                this.anInt7962 = anInt7987 = dimension.height;
-                this.anInt7931 = anInt7958 = dimension.width;
+                if (Applet_Sub1.shouldScaleOpenGLFrame()) {
+                    this.anInt7962 = anInt7987 = Class348_Sub42_Sub8_Sub2.anInt10432;
+                    this.anInt7931 = anInt7958 = Class321.anInt4017;
+                } else {
+                    this.anInt7962 = anInt7987 = dimension.height;
+                    this.anInt7931 = anInt7958 = dimension.width;
+                }
                 this.anInt8178 = i_289_;
                 Class59_Sub2_Sub1.method566(false, true, (byte) -127);
                 if (this.aD4579 == null) {
@@ -2701,7 +2711,7 @@ abstract class ha_Sub3 extends ha {
                 throw new RuntimeException("");
             }
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("wga.<init>(" + (canvas != null ? "{...}" : "null") + ',' + (object != null ? "{...}" : "null") + ',' + (var_d != null ? "{...}" : "null") + ',' + (class45 != null ? "{...}" : "null") + ',' + i + ',' + i_289_ + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("wga.<init>(" + (canvas != null ? "{...}" : "null") + ',' + (object != null ? "{...}" : "null") + ',' + (var_d != null ? "{...}" : "null") + ',' + (Js5Archive != null ? "{...}" : "null") + ',' + i + ',' + i_289_ + ')'));
         }
     }
 

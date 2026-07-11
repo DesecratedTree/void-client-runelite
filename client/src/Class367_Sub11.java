@@ -117,20 +117,20 @@ final class Class367_Sub11 extends Class367 {
         anInt7412++;
     }
 
-    static final void method3555(Class45 class45, int i, boolean bool, long l, int i_7_, int i_8_, int i_9_) {
+    static final void method3555(Js5Archive Js5Archive, int i, boolean bool, long l, int i_7_, int i_8_, int i_9_) {
         try {
             anInt7410++;
-            Class299_Sub1_Sub1.method2260(i_9_, i_8_, l, 0, bool, class45, (byte) 126, i_7_);
+            Class299_Sub1_Sub1.method2260(i_9_, i_8_, l, 0, bool, Js5Archive, (byte) 126, i_7_);
             int i_10_ = -35 / ((-41 - i) / 38);
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("or.Q(" + (class45 != null ? "{...}" : "null") + ',' + i + ',' + bool + ',' + l + ',' + i_7_ + ',' + i_8_ + ',' + i_9_ + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("or.Q(" + (Js5Archive != null ? "{...}" : "null") + ',' + i + ',' + bool + ',' + l + ',' + i_7_ + ',' + i_8_ + ',' + i_9_ + ')'));
         }
     }
 
     static final void method3556(boolean bool) {
         anInt7405++;
         if (bool == false) {
-            synchronized (Class79.aClient1367) {
+            synchronized (NPCType.aClient1367) {
                 if (Class34.aFrame476 == null) {
                     Container container;
                     if (Class52.aFrame4904 != null) container = Class52.aFrame4904;
@@ -154,15 +154,15 @@ final class Class367_Sub11 extends Class367 {
                             /* empty */
                         }
                     }
-                    Class305.aCanvas3869.setSize(Class321.anInt4017, (Class348_Sub42_Sub8_Sub2.anInt10432));
+                    Applet_Sub1.applyCanvasSize();
                     if (Class348_Sub8.aHa6654 != null) {
                         if (Class59_Sub1.aBoolean5300) s.method3980(120, Class305.aCanvas3869);
                         else Class348_Sub8.aHa6654.method3669(Class305.aCanvas3869, Class321.anInt4017, Class348_Sub42_Sub8_Sub2.anInt10432);
                     }
                     if (Class52.aFrame4904 == container) {
                         Insets insets = Class52.aFrame4904.getInsets();
-                        Class305.aCanvas3869.setLocation(insets.left - -Class348_Sub48.anInt7129, Class335.anInt4167 + insets.top);
-                    } else Class305.aCanvas3869.setLocation((Class348_Sub48.anInt7129), Class335.anInt4167);
+                        Applet_Sub1.applyCanvasLocation(container, insets.left - -Class348_Sub48.anInt7129, Class335.anInt4167 + insets.top);
+                    } else Applet_Sub1.applyCanvasLocation(container, Class348_Sub48.anInt7129, Class335.anInt4167);
                     if (r.anInt9721 != -1) Class239.method1713(true, 520);
                     Class140.method1170((byte) -78);
                 } else {
@@ -172,14 +172,14 @@ final class Class367_Sub11 extends Class367 {
         }
     }
 
-    Class367_Sub11(Class377 class377, Class45 class45) {
+    Class367_Sub11(Class377 class377, Js5Archive Js5Archive) {
         super(class377);
         try {
-            if (class45 != null && class377.aBoolean9923) {
-                aClass193_7395 = za_Sub2.method3442(34336, class45.method391("gl", "uw_ground_unlit", -29832), class377, 4);
-                aClass193_7392 = za_Sub2.method3442(34336, class45.method391("gl", "uw_ground_lit", -29832), class377, 4);
-                aClass193_7404 = za_Sub2.method3442(34336, class45.method391("gl", "uw_model_unlit", -29832), class377, 4);
-                aClass193_7407 = za_Sub2.method3442(34336, class45.method391("gl", "uw_model_lit", -29832), class377, 4);
+            if (Js5Archive != null && class377.aBoolean9923) {
+                aClass193_7395 = za_Sub2.method3442(34336, Js5Archive.method391("gl", "uw_ground_unlit", -29832), class377, 4);
+                aClass193_7392 = za_Sub2.method3442(34336, Js5Archive.method391("gl", "uw_ground_lit", -29832), class377, 4);
+                aClass193_7404 = za_Sub2.method3442(34336, Js5Archive.method391("gl", "uw_model_unlit", -29832), class377, 4);
+                aClass193_7407 = za_Sub2.method3442(34336, Js5Archive.method391("gl", "uw_model_lit", -29832), class377, 4);
                 if (aClass193_7395 != null & aClass193_7392 != null & aClass193_7404 != null & aClass193_7407 != null) {
                     anInterface18_Impl3_7390 = this.aHa_Sub3_4479.method3839(1, 2, -15137, false, (new int[]{0, -1}));
                     anInterface18_Impl3_7390.method66(false, false, 25688);
@@ -187,7 +187,7 @@ final class Class367_Sub11 extends Class367 {
                 } else aBoolean7391 = false;
             } else aBoolean7391 = false;
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("or.<init>(" + (class377 != null ? "{...}" : "null") + ',' + (class45 != null ? "{...}" : "null") + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("or.<init>(" + (class377 != null ? "{...}" : "null") + ',' + (Js5Archive != null ? "{...}" : "null") + ')'));
         }
     }
 

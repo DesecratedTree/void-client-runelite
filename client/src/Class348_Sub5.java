@@ -6,7 +6,7 @@ import java.awt.*;
 import java.io.IOException;
 import java.net.Socket;
 
-abstract class Class348_Sub5 extends Class348 {
+abstract class Class348_Sub5 extends Node {
     ha_Sub2 aHa_Sub2_6618;
     static int anInt6619;
     static int anInt6620;
@@ -74,13 +74,13 @@ abstract class Class348_Sub5 extends Class348 {
                             Class352.anInt4337 = -5;
                             return;
                         }
-                        Class255.aClass161_3285.method1259(0);
+                        ObjTypeList.aClass161_3285.method1259(0);
                         Class367_Sub2.anInt7297 = 1;
                         Class169.anInt2264 = 0;
                         Class105_Sub1.anInt8398++;
                     }
                     if (Class367_Sub2.anInt7297 == 1) {
-                        Class130_Sub1.aClass144_5800 = (Class255.aClass161_3285.method1262(Class348_Sub23_Sub1.aClass297_8992, (byte) 36));
+                        Class130_Sub1.aClass144_5800 = (ObjTypeList.aClass161_3285.method1262(Class348_Sub23_Sub1.aClass297_8992, (byte) 36));
                         Class367_Sub2.anInt7297 = 2;
                     }
                     if (Class367_Sub2.anInt7297 == 2) {
@@ -93,8 +93,8 @@ abstract class Class348_Sub5 extends Class348 {
                     }
                     if (Class367_Sub2.anInt7297 == 4) {
                         if (Class348_Sub40_Sub8.aClass238_9165.method1705(1, 104)) {
-                            Class348_Sub40_Sub8.aClass238_9165.method1701(1, 0, (byte) -116, (Class299.aClass348_Sub49_Sub2_3813.aByteArray7154));
-                            int i_11_ = 0xff & (Class299.aClass348_Sub49_Sub2_3813.aByteArray7154[0]);
+                            Class348_Sub40_Sub8.aClass238_9165.method1701(1, 0, (byte) -116, (Class299.aClass348_Sub49_Sub2_3813.data));
+                            int i_11_ = 0xff & (Class299.aClass348_Sub49_Sub2_3813.data[0]);
                             Class352.anInt4337 = i_11_;
                             Class367_Sub2.anInt7297 = 0;
                             Class348_Sub40_Sub8.aClass238_9165.method1700((byte) 36);
@@ -108,7 +108,7 @@ abstract class Class348_Sub5 extends Class348 {
                     Class348_Sub40_Sub8.aClass238_9165 = null;
                 }
                 if (Class105_Sub1.anInt8398 < 2) {
-                    Class255.aClass161_3285.method1259(0);
+                    ObjTypeList.aClass161_3285.method1259(0);
                     Class169.anInt2264 = 0;
                     Class105_Sub1.anInt8398++;
                     Class367_Sub2.anInt7297 = 1;

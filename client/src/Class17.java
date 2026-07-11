@@ -92,48 +92,48 @@ final class Class17 {
         return 0x20 | i_2_;
     }
 
-    private final void method264(Class348_Sub49 class348_sub49, int i, int i_10_) {
+    private final void method264(Packet Packet, int i, int i_10_) {
         if (i_10_ == -14861) {
             if (i == 1) {
-                int i_11_ = class348_sub49.readUnsignedShort(842397944);//short
+                int i_11_ = Packet.readUnsignedShort(842397944);//short
                 this.anIntArray267 = new int[i_11_];
                 this.anIntArray237 = new int[i_11_];
                 for (int i_12_ = 0; i_12_ < i_11_; i_12_++)
-                    this.anIntArray267[i_12_] = class348_sub49.readUnsignedShort(842397944);
+                    this.anIntArray267[i_12_] = Packet.readUnsignedShort(842397944);
                 for (int i_13_ = 0; i_13_ < i_11_; i_13_++)
-                    this.anIntArray237[i_13_] = class348_sub49.readUnsignedShort(842397944);
+                    this.anIntArray237[i_13_] = Packet.readUnsignedShort(842397944);
                 for (int i_14_ = 0; i_14_ < i_11_; i_14_++)
-                    this.anIntArray237[i_14_] = ((class348_sub49.readUnsignedShort(842397944) << 16) + this.anIntArray237[i_14_]);
+                    this.anIntArray237[i_14_] = ((Packet.readUnsignedShort(842397944) << 16) + this.anIntArray237[i_14_]);
             } else if (i != 2) {
                 if (i == 3) {
                     this.aBooleanArray263 = new boolean[256];
-                    int i_15_ = class348_sub49.readUnsignedByte(255);//byte
+                    int i_15_ = Packet.readUnsignedByte(255);//byte
                     for (int i_16_ = 0; i_16_ < i_15_; i_16_++)
-                        this.aBooleanArray263[class348_sub49.readUnsignedByte(255)] = true;
+                        this.aBooleanArray263[Packet.readUnsignedByte(255)] = true;
                 } else if (i != 5) {
                     if (i != 6) {
                         if (i != 7) {
                             if (i != 8) {
-                                if (i == 9) this.anInt262 = class348_sub49.readUnsignedByte(i_10_ + 15116);
-                                else if (i == 10) this.anInt245 = class348_sub49.readUnsignedByte(i_10_ ^ ~0x3af3);
+                                if (i == 9) this.anInt262 = Packet.readUnsignedByte(i_10_ + 15116);
+                                else if (i == 10) this.anInt245 = Packet.readUnsignedByte(i_10_ ^ ~0x3af3);
                                 else if (i != 11) {
                                     if (i == 12) {
-                                        int i_17_ = class348_sub49.readUnsignedByte(i_10_ ^ ~0x3af3);
+                                        int i_17_ = Packet.readUnsignedByte(i_10_ ^ ~0x3af3);
                                         anIntArray260 = new int[i_17_];
                                         for (int i_18_ = 0; (i_18_ < i_17_); i_18_++)
-                                            anIntArray260[i_18_] = class348_sub49.readUnsignedShort(842397944);
+                                            anIntArray260[i_18_] = Packet.readUnsignedShort(842397944);
                                         for (int i_19_ = 0; (i_17_ > i_19_); i_19_++)
-                                            anIntArray260[i_19_] = ((class348_sub49.readUnsignedShort(842397944) << 16) - -anIntArray260[i_19_]);
+                                            anIntArray260[i_19_] = ((Packet.readUnsignedShort(842397944) << 16) - -anIntArray260[i_19_]);
                                     } else if (i == 13) {
-                                        int i_20_ = class348_sub49.readUnsignedShort(842397944);
+                                        int i_20_ = Packet.readUnsignedShort(842397944);
                                         this.anIntArrayArray264 = new int[i_20_][];
                                         for (int i_21_ = 0; (i_21_ < i_20_); i_21_++) {
-                                            int i_22_ = class348_sub49.readUnsignedByte(255);
+                                            int i_22_ = Packet.readUnsignedByte(255);
                                             if (i_22_ > 0) {
                                                 this.anIntArrayArray264[i_21_] = new int[i_22_];
-                                                this.anIntArrayArray264[i_21_][0] = class348_sub49.readMedium(-1);
+                                                this.anIntArrayArray264[i_21_][0] = Packet.readMedium(-1);
                                                 for (int i_23_ = 1; (i_22_ > i_23_); i_23_++)
-                                                    this.anIntArrayArray264[i_21_][i_23_] = (class348_sub49.readUnsignedShort(842397944));
+                                                    this.anIntArrayArray264[i_21_][i_23_] = (Packet.readUnsignedShort(842397944));
                                             }
                                         }
                                     } else if (i != 14) {
@@ -146,7 +146,7 @@ final class Class17 {
                                                 for (int i_24_ = 0; ((this.anIntArrayArray264).length > i_24_); i_24_++)
                                                     this.anIntArray253[i_24_] = 255;
                                             }
-                                            this.anIntArray253[class348_sub49.readUnsignedByte(255)] = (class348_sub49.readUnsignedByte(Class348_Sub21.method2955(i_10_, -15092)));
+                                            this.anIntArray253[Packet.readUnsignedByte(255)] = (Packet.readUnsignedByte(Class348_Sub21.method2955(i_10_, -15092)));
                                         } else if (i == 20) {
                                             if ((this.anIntArray236 == null) || (this.anIntArray265) == null) {
                                                 this.anIntArray236 = (new int[(this.anIntArrayArray264).length]);
@@ -156,17 +156,17 @@ final class Class17 {
                                                     this.anIntArray265[i_25_] = 256;
                                                 }
                                             }
-                                            int i_26_ = class348_sub49.readUnsignedByte(255);
-                                            this.anIntArray236[i_26_] = class348_sub49.readUnsignedShort(842397944);
-                                            this.anIntArray265[i_26_] = class348_sub49.readUnsignedShort(842397944);
+                                            int i_26_ = Packet.readUnsignedByte(255);
+                                            this.anIntArray236[i_26_] = Packet.readUnsignedShort(842397944);
+                                            this.anIntArray265[i_26_] = Packet.readUnsignedShort(842397944);
                                         }
                                     } else this.aBoolean242 = true;
-                                } else this.anInt248 = class348_sub49.readUnsignedByte(255);
-                            } else this.anInt244 = class348_sub49.readUnsignedByte(255);
-                        } else this.anInt261 = class348_sub49.readUnsignedShort(842397944);
-                    } else this.anInt249 = class348_sub49.readUnsignedShort(842397944);
-                } else this.anInt239 = class348_sub49.readUnsignedByte(i_10_ + 15116);
-            } else this.anInt238 = class348_sub49.readUnsignedShort(i_10_ ^ ~0x3235c2f4);
+                                } else this.anInt248 = Packet.readUnsignedByte(255);
+                            } else this.anInt244 = Packet.readUnsignedByte(255);
+                        } else this.anInt261 = Packet.readUnsignedShort(842397944);
+                    } else this.anInt249 = Packet.readUnsignedShort(842397944);
+                } else this.anInt239 = Packet.readUnsignedByte(i_10_ + 15116);
+            } else this.anInt238 = Packet.readUnsignedShort(i_10_ ^ ~0x3235c2f4);
             anInt257++;
         }
     }
@@ -208,12 +208,12 @@ final class Class17 {
         return class64_35_;
     }
 
-    final void method267(Class348_Sub49 class348_sub49, boolean bool) {
+    final void method267(Packet Packet, boolean bool) {
         anInt243++;
         for (; ; ) {
-            int i = class348_sub49.readUnsignedByte(255);
+            int i = Packet.readUnsignedByte(255);
             if (i == 0) break;
-            method264(class348_sub49, i, -14861);
+            method264(Packet, i, -14861);
         }
         if (bool != false) this.anIntArray267 = null;
     }

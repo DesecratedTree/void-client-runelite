@@ -25,10 +25,10 @@ final class OutputStream_Sub2 extends OutputStream {
 
     static final Class318_Sub4 method136(int i, boolean bool, boolean bool_2_) {
         anInt105++;
-        synchronized (Class318.aClass243Array3974) {
+        synchronized (Linkable.aClass243Array3974) {
             Class318_Sub4 class318_sub4;
-            if (Class318.aClass243Array3974.length > i && !Class318.aClass243Array3974[i].method1871((byte) 111)) {
-                class318_sub4 = (Class318_Sub4) Class318.aClass243Array3974[i].method1870(-104);
+            if (Linkable.aClass243Array3974.length > i && !Linkable.aClass243Array3974[i].method1871((byte) 111)) {
+                class318_sub4 = (Class318_Sub4) Linkable.aClass243Array3974[i].method1870(-104);
                 class318_sub4.method2373(false);
                 Class331.anIntArray4128[i]--;
             } else {
@@ -59,9 +59,9 @@ final class OutputStream_Sub2 extends OutputStream {
                     Class348_Sub22 class348_sub22 = ((Class348_Sub22) (Class282.aClass356_3654.method3480((int) class348_sub42_sub12.aLong9605, -6008)));
                     if (class348_sub22 != null) {
                         Npc npc = (class348_sub22.aNpc_6859);
-                        Class79 class79 = (npc.aClass79_10505);
-                        if (class79.anIntArray1377 != null) class79 = class79.method794((Class318_Sub1_Sub3_Sub3.aClass170_10209), -1);
-                        if (class79 != null) is = class79.anIntArray1342;
+                        NPCType NPCType = (npc.definition);
+                        if (NPCType.multinpcs != null) NPCType = NPCType.method794((Class318_Sub1_Sub3_Sub3.aClass170_10209), -1);
+                        if (NPCType != null) is = NPCType.quests;
                     }
                 } else if (Class239_Sub21.method1813(8806, (class348_sub42_sub12.anInt9608))) {
                     Object object = null;
@@ -71,8 +71,8 @@ final class OutputStream_Sub2 extends OutputStream {
                     if (class51.anIntArray945 != null) class51 = class51.method480((Class318_Sub1_Sub3_Sub3.aClass170_10209), (byte) 47);
                     if (class51 != null) is = class51.anIntArray917;
                 }
-            } else is = (Exception_Sub1.aClass255_112.method1940(-76, class348_sub42_sub12.anInt9599).anIntArray2772);
-        } else is = (Exception_Sub1.aClass255_112.method1940(-115, (int) class348_sub42_sub12.aLong9605).anIntArray2772);
+            } else is = (Exception_Sub1.aClass255_112.getItemDefinitions(-76, class348_sub42_sub12.anInt9599).quests);
+        } else is = (Exception_Sub1.aClass255_112.getItemDefinitions(-115, (int) class348_sub42_sub12.aLong9605).quests);
         if (is != null) string += Class163.method1273(is, true);
         int i = Class369.aClass143_4962.method1186(string, Class341.aClass105Array4234, bool);
         if (class348_sub42_sub12.aBoolean9597) i += Class239_Sub24.aClass105_6097.method971() + 4;

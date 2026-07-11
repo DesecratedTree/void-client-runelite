@@ -34,7 +34,7 @@ final class Class264 {
 
     static final void method2017(int i, Class17 class17, int i_3_) {
         anInt3367++;
-        if (Class147.anInt2021 < 50 && (class17 != null && class17.anIntArrayArray264 != null && (class17.anIntArrayArray264.length > i) && class17.anIntArrayArray264[i] != null)) {
+        if (ChatMessage.anInt2021 < 50 && (class17 != null && class17.anIntArrayArray264 != null && (class17.anIntArrayArray264.length > i) && class17.anIntArrayArray264[i] != null)) {
             int i_4_ = class17.anIntArrayArray264[i][0];
             int i_5_ = i_4_ >> 8;
             if (class17.anIntArrayArray264[i].length > 1) {

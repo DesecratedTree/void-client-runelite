@@ -7,7 +7,7 @@ final class Class39 {
     static Class74 aClass74_515 = new Class74(7, 7);
     static int anInt516;
     long aLong517;
-    static Class45 aClass45_518;
+    static Js5Archive aClass45_518;
     private final Class377 aClass377_519;
     static Class112 aClass112_520;
     static Class323 aClass323_521;

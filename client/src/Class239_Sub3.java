@@ -113,12 +113,12 @@ final class Class239_Sub3 extends Class239 {
 
     final int method1714(int i, int i_24_) {
         anInt5866++;
-        if (Class60.method576(i_24_, 29)) {
+        if (ReferenceCache.method576(i_24_, 29)) {
             if (this.aClass348_Sub51_3136.aClass239_Sub25_7271.method1830((byte) -97) && !Class151.method1210((byte) -113, this.aClass348_Sub51_3136.aClass239_Sub25_7271.method1829(-32350))) return 3;
             if (this.aClass348_Sub51_3136.aClass239_Sub8_7254.method1751(-32350) == 1) return 3;
         }
         if (i_24_ == i) return 3;
-        if (Class60.method576(i_24_, i ^ 0x56)) return 2;
+        if (ReferenceCache.method576(i_24_, i ^ 0x56)) return 2;
         return 1;
     }
 
@@ -157,6 +157,6 @@ final class Class239_Sub3 extends Class239 {
     final boolean method1735(boolean bool) {
         if (bool != false) anInt5871 = -86;
         anInt5858++;
-        return Class60.method576(this.anInt3138, 29);
+        return ReferenceCache.method576(this.anInt3138, 29);
     }
 }

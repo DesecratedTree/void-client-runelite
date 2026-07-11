@@ -112,12 +112,12 @@ final class Class14_Sub1 extends Class14 implements Interface18_Impl3 {
 
     static final void method241(byte i) {
         anInt8617++;
-        int i_16_ = Class348_Sub35.anInt6981 * 512 + 256;
+        int i_16_ = IntNode.anInt6981 * 512 + 256;
         int i_17_ = 512 * Class275.anInt3550 + 256;
         int i_18_ = (Class275.method2064(i_16_, Class355.anInt4372, 11219, i_17_) + -Class348_Sub42_Sub4.anInt9515);
         if (Class258_Sub2.anInt8537 >= 100) {
             Class59_Sub2_Sub2.anInt8685 = 256 + 512 * Class275.anInt3550;
-            Class286_Sub4.anInt6246 = Class348_Sub35.anInt6981 * 512 + 256;
+            Class286_Sub4.anInt6246 = IntNode.anInt6981 * 512 + 256;
             Class305.anInt3855 = (Class275.method2064(Class286_Sub4.anInt6246, Class355.anInt4372, 11219, Class59_Sub2_Sub2.anInt8685) + -Class348_Sub42_Sub4.anInt9515);
         } else {
             if (Class286_Sub4.anInt6246 < i_16_) {

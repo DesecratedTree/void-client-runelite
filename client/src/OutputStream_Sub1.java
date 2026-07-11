@@ -19,7 +19,7 @@ final class OutputStream_Sub1 extends OutputStream {
 
     static final void method132(int i, boolean bool, int i_0_, int i_1_, int i_2_, int i_3_) {
         anInt94++;
-        if (Class147.aClass357ArrayArrayArray2029 == null) Class348_Sub8.aHa6654.method3675(i_0_, (byte) -125, i_1_, i_3_, i_2_, -16777216);
+        if (ChatMessage.aClass357ArrayArrayArray2029 == null) Class348_Sub8.aHa6654.method3675(i_0_, (byte) -125, i_1_, i_3_, i_2_, -16777216);
         else if (Class132.aPlayer_1907.x < 0 || (Class132.aPlayer_1907.x >= Class367_Sub4.anInt7319 * 512) || Class132.aPlayer_1907.y < 0 || (512 * Class348_Sub40_Sub3.anInt9109 <= Class132.aPlayer_1907.y))
             Class348_Sub8.aHa6654.method3675(i_0_, (byte) -125, i_1_, i_3_, i_2_, -16777216);
         else {
@@ -40,14 +40,14 @@ final class OutputStream_Sub1 extends OutputStream {
             i_0_ = Class127.anInt4656;
             if (Class348_Sub40_Sub21.anInt9282 == 1) {
                 int i_4_ = (int) Class76.aFloat1287;
-                if (Class348_Sub35.anInt6979 >> 8 > i_4_) i_4_ = Class348_Sub35.anInt6979 >> 8;
-                if (Class181.aBooleanArray2374[4] && Class255.anIntArray3273[4] + 128 > i_4_) i_4_ = Class255.anIntArray3273[4] + 128;
+                if (IntNode.anInt6979 >> 8 > i_4_) i_4_ = IntNode.anInt6979 >> 8;
+                if (Class181.aBooleanArray2374[4] && ObjTypeList.anIntArray3273[4] + 128 > i_4_) i_4_ = ObjTypeList.anIntArray3273[4] + 128;
                 int i_5_ = (int) Class314.aFloat3938 + Class195.anInt5016 & 0x3fff;
                 Class17.method268(i_4_, -200 + (Class275.method2064((Class132.aPlayer_1907.x), Class355.anInt4372, 11219, (Class132.aPlayer_1907.y))), i_5_, Class192.anInt2578, i_2_, -19360, Class130_Sub1.anInt5799, (i_4_ >> 3) * 3 + 600 << 2);
             } else if (Class348_Sub40_Sub21.anInt9282 == 4) {
                 int i_6_ = (int) Class76.aFloat1287;
-                if (i_6_ < Class348_Sub35.anInt6979 >> 8) i_6_ = Class348_Sub35.anInt6979 >> 8;
-                if (Class181.aBooleanArray2374[4] && (i_6_ < Class255.anIntArray3273[4] + 128)) i_6_ = 128 + Class255.anIntArray3273[4];
+                if (i_6_ < IntNode.anInt6979 >> 8) i_6_ = IntNode.anInt6979 >> 8;
+                if (Class181.aBooleanArray2374[4] && (i_6_ < ObjTypeList.anIntArray3273[4] + 128)) i_6_ = 128 + ObjTypeList.anIntArray3273[4];
                 int i_7_ = (int) Class314.aFloat3938 & 0x3fff;
                 Class17.method268(i_6_, -200 + Class275.method2064(Class348_Sub6.anInt6633, Class355.anInt4372, 11219, Class348_Sub7.anInt6652), i_7_, Class192.anInt2578, i_2_, -19360, Class130_Sub1.anInt5799, 600 - -((i_6_ >> 3) * 3) << 2);
             } else if (Class348_Sub40_Sub21.anInt9282 == 5) Class268.method2035(i_2_, 0);
@@ -58,7 +58,7 @@ final class OutputStream_Sub1 extends OutputStream {
             int i_12_ = Class5.anInt4638;
             for (int i_13_ = 0; i_13_ < 5; i_13_++) {
                 if (Class181.aBooleanArray2374[i_13_]) {
-                    int i_14_ = (int) ((Math.random() * (double) ((Class275.anIntArray3552[i_13_] * 2) - -1)) - (double) Class275.anIntArray3552[i_13_] + (Math.sin((double) (Class318_Sub1_Sub1_Sub2.anIntArray9981[i_13_]) * ((double) (Class338.anIntArray4196[i_13_]) / 100.0)) * (double) (Class255.anIntArray3273[i_13_])));
+                    int i_14_ = (int) ((Math.random() * (double) ((Class275.anIntArray3552[i_13_] * 2) - -1)) - (double) Class275.anIntArray3552[i_13_] + (Math.sin((double) (Class318_Sub1_Sub1_Sub2.anIntArray9981[i_13_]) * ((double) (Class338.anIntArray4196[i_13_]) / 100.0)) * (double) (ObjTypeList.anIntArray3273[i_13_])));
                     if (i_13_ == 4) {
                         Class348_Sub42_Sub19.anInt9701 += i_14_;
                         if (Class348_Sub42_Sub19.anInt9701 >= 1024) {

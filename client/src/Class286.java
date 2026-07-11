@@ -22,7 +22,7 @@ abstract class Class286 {
 
     static final boolean method2138(int i) {
         anInt3681++;
-        Class348_Sub48 class348_sub48 = (Class348_Sub48) Class348_Sub35.aClass262_6978.method1995(4);
+        Class348_Sub48 class348_sub48 = (Class348_Sub48) IntNode.aClass262_6978.method1995(4);
         if (class348_sub48 == null) return false;
         int i_3_ = 118 % ((-40 - i) / 50);
         for (int i_4_ = 0; (class348_sub48.anInt7126 > i_4_); i_4_++) {

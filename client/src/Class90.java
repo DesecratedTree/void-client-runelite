@@ -37,7 +37,7 @@ final class Class90 {
             }
         }
         Class299.aClass348_Sub49_Sub2_3813.stopBitAccess(false);
-        int i_7_ = (-Class299.aClass348_Sub49_Sub2_3813.anInt7197 + Class348_Sub40_Sub25.anInt9341) / 16;
+        int i_7_ = (-Class299.aClass348_Sub49_Sub2_3813.pos + Class348_Sub40_Sub25.anInt9341) / 16;
         Class239_Sub6.anIntArrayArray5894 = new int[i_7_][4];
         int i_8_ = 0;
         if (i != 99) method852(-55);
@@ -51,7 +51,7 @@ final class Class90 {
         aa_Sub1.anIntArray5192 = new int[i_7_];
         Class348_Sub23_Sub3.anIntArray9042 = new int[i_7_];
         Class295.anIntArray3759 = new int[i_7_];
-        Class348_Sub50.aByteArrayArray7212 = null;
+        StringNode.aByteArrayArray7212 = null;
         Class348_Sub23_Sub1.aByteArrayArray8996 = new byte[i_7_][];
         Class129.aByteArrayArray1887 = new byte[i_7_][];
         Class14_Sub4.aByteArrayArray8642 = new byte[i_7_][];

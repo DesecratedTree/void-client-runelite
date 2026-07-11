@@ -73,7 +73,7 @@ final class Class195 implements Interface16 {
     }
 
     static final Class148 method1449(int i, int i_2_, int i_3_) {
-        Class357 class357 = Class147.aClass357ArrayArrayArray2029[i][i_2_][i_3_];
+        Class357 class357 = ChatMessage.aClass357ArrayArrayArray2029[i][i_2_][i_3_];
         if (class357 == null) return null;
         return class357.aClass148_4396;
     }

@@ -4,7 +4,7 @@
 
 import java.lang.reflect.Field;
 
-final class Class348_Sub51 extends Class348 {
+final class Class348_Sub51 extends Node {
     Class239_Sub26 aClass239_Sub26_7215;
     Class239_Sub20 aClass239_Sub20_7216;
     static int anInt7217;
@@ -65,69 +65,69 @@ final class Class348_Sub51 extends Class348 {
     Class239_Sub26 aClass239_Sub26_7272;
     /*synthetic*/ static Class aClass7273;
 
-    private final void method3421(int i, Class348_Sub49 class348_sub49, int i_0_) {
+    private final void method3421(int i, Packet Packet, int i_0_) {
         do {
             try {
-                this.aClass239_Sub10_7232 = new Class239_Sub10(class348_sub49.readUnsignedByte(255), this);
+                this.aClass239_Sub10_7232 = new Class239_Sub10(Packet.readUnsignedByte(255), this);
                 anInt7233++;
-                this.aClass239_Sub27_7255 = new Class239_Sub27(class348_sub49.readUnsignedByte(i ^ 0x7860), this);
-                this.aClass239_Sub14_7250 = new Class239_Sub14(1 + class348_sub49.readUnsignedByte(255), this);
-                this.aClass239_Sub4_7220 = new Class239_Sub4(class348_sub49.readUnsignedByte(255), this);
-                this.aClass239_Sub2_7228 = new Class239_Sub2(class348_sub49.readUnsignedByte(i ^ 0x7860), this);
-                this.aClass239_Sub13_7236 = new Class239_Sub13(class348_sub49.readUnsignedByte(255), this);
-                this.aClass239_Sub1_7246 = new Class239_Sub1(class348_sub49.readUnsignedByte(255), this);
-                class348_sub49.readUnsignedByte(i ^ 0x7860);
-                this.aClass239_Sub21_7270 = new Class239_Sub21(class348_sub49.readUnsignedByte(255), this);
-                int i_1_ = class348_sub49.readUnsignedByte(i ^ 0x7860);
+                this.aClass239_Sub27_7255 = new Class239_Sub27(Packet.readUnsignedByte(i ^ 0x7860), this);
+                this.aClass239_Sub14_7250 = new Class239_Sub14(1 + Packet.readUnsignedByte(255), this);
+                this.aClass239_Sub4_7220 = new Class239_Sub4(Packet.readUnsignedByte(255), this);
+                this.aClass239_Sub2_7228 = new Class239_Sub2(Packet.readUnsignedByte(i ^ 0x7860), this);
+                this.aClass239_Sub13_7236 = new Class239_Sub13(Packet.readUnsignedByte(255), this);
+                this.aClass239_Sub1_7246 = new Class239_Sub1(Packet.readUnsignedByte(255), this);
+                Packet.readUnsignedByte(i ^ 0x7860);
+                this.aClass239_Sub21_7270 = new Class239_Sub21(Packet.readUnsignedByte(255), this);
+                int i_1_ = Packet.readUnsignedByte(i ^ 0x7860);
                 int i_2_ = 0;
-                if (i_0_ >= 17) i_2_ = class348_sub49.readUnsignedByte(255);
+                if (i_0_ >= 17) i_2_ = Packet.readUnsignedByte(255);
                 this.aClass239_Sub7_7238 = new Class239_Sub7((Math.max(i_1_, i_2_)), this);
                 boolean bool = true;
                 boolean bool_3_ = true;
                 if (i_0_ >= 2) {
-                    bool = class348_sub49.readUnsignedByte(i + -30624) == 1;
-                    if (i_0_ >= 17) bool_3_ = class348_sub49.readUnsignedByte(255) == 1;
+                    bool = Packet.readUnsignedByte(i + -30624) == 1;
+                    if (i_0_ >= 17) bool_3_ = Packet.readUnsignedByte(255) == 1;
                 } else {
-                    bool = class348_sub49.readUnsignedByte(255) == 1;
-                    class348_sub49.readUnsignedByte(255);
+                    bool = Packet.readUnsignedByte(255) == 1;
+                    Packet.readUnsignedByte(255);
                 }
                 this.aClass239_Sub28_7230 = new Class239_Sub28(!(bool | bool_3_) ? 0 : 1, this);
-                this.aClass239_Sub18_7259 = new Class239_Sub18(class348_sub49.readUnsignedByte(255), this);
-                this.aClass239_Sub16_7247 = new Class239_Sub16(class348_sub49.readUnsignedByte(i ^ 0x7860), this);
-                this.aClass239_Sub20_7216 = new Class239_Sub20(class348_sub49.readUnsignedByte(255), this);
-                this.aClass239_Sub5_7240 = new Class239_Sub5(class348_sub49.readUnsignedByte(255), this);
-                this.aClass239_Sub26_7272 = new Class239_Sub26(class348_sub49.readUnsignedByte(i + -30624), this);
-                if (i_0_ >= 20) this.aClass239_Sub26_7215 = new Class239_Sub26(class348_sub49.readUnsignedByte(255), this);
+                this.aClass239_Sub18_7259 = new Class239_Sub18(Packet.readUnsignedByte(255), this);
+                this.aClass239_Sub16_7247 = new Class239_Sub16(Packet.readUnsignedByte(i ^ 0x7860), this);
+                this.aClass239_Sub20_7216 = new Class239_Sub20(Packet.readUnsignedByte(255), this);
+                this.aClass239_Sub5_7240 = new Class239_Sub5(Packet.readUnsignedByte(255), this);
+                this.aClass239_Sub26_7272 = new Class239_Sub26(Packet.readUnsignedByte(i + -30624), this);
+                if (i_0_ >= 20) this.aClass239_Sub26_7215 = new Class239_Sub26(Packet.readUnsignedByte(255), this);
                 else this.aClass239_Sub26_7215 = new Class239_Sub26(this.aClass239_Sub26_7272.method1838(-32350), this);
-                this.aClass239_Sub26_7260 = new Class239_Sub26(class348_sub49.readUnsignedByte(255), this);
-                this.aClass239_Sub26_7234 = new Class239_Sub26(class348_sub49.readUnsignedByte(255), this);
-                if (i_0_ >= 21) this.aClass239_Sub26_7245 = new Class239_Sub26(class348_sub49.readUnsignedByte(255), this);
+                this.aClass239_Sub26_7260 = new Class239_Sub26(Packet.readUnsignedByte(255), this);
+                this.aClass239_Sub26_7234 = new Class239_Sub26(Packet.readUnsignedByte(255), this);
+                if (i_0_ >= 21) this.aClass239_Sub26_7245 = new Class239_Sub26(Packet.readUnsignedByte(255), this);
                 else this.aClass239_Sub26_7245 = new Class239_Sub26(this.aClass239_Sub26_7260.method1838(-32350), this);
                 if (i_0_ >= 1) {
-                    class348_sub49.readUnsignedShort(842397944);
-                    class348_sub49.readUnsignedShort(842397944);
+                    Packet.readUnsignedShort(842397944);
+                    Packet.readUnsignedShort(842397944);
                 }
-                if (i_0_ >= 3 && i_0_ < 6) class348_sub49.readUnsignedByte(255);
-                if (i_0_ >= 4) this.aClass239_Sub15_7224 = new Class239_Sub15(class348_sub49.readUnsignedByte(255), this);
+                if (i_0_ >= 3 && i_0_ < 6) Packet.readUnsignedByte(255);
+                if (i_0_ >= 4) this.aClass239_Sub15_7224 = new Class239_Sub15(Packet.readUnsignedByte(255), this);
                 if (i != 30879) method3428((byte) -10);
-                class348_sub49.readInt((byte) -126);
-                if (i_0_ >= 6) this.aClass239_Sub8_7227 = new Class239_Sub8(class348_sub49.readUnsignedByte(i ^ 0x7860), this);
-                if (i_0_ >= 7) this.aClass239_Sub11_7265 = new Class239_Sub11(class348_sub49.readUnsignedByte(255), this);
-                if (i_0_ >= 8) class348_sub49.readUnsignedByte(255);
-                if (i_0_ >= 9) this.aClass239_Sub6_7226 = new Class239_Sub6(class348_sub49.readUnsignedByte(i ^ 0x7860), this);
-                if (i_0_ >= 10) this.aClass239_Sub12_7243 = new Class239_Sub12(class348_sub49.readUnsignedByte(255), this);
-                if (i_0_ >= 11) this.aClass239_Sub22_7253 = new Class239_Sub22(class348_sub49.readUnsignedByte(255), this);
-                if (i_0_ >= 12) this.aClass239_Sub13_7236 = new Class239_Sub13(class348_sub49.readUnsignedByte(255), this);
-                if (i_0_ >= 13) this.aClass239_Sub9_7256 = new Class239_Sub9(class348_sub49.readUnsignedByte(255), this);
-                if (i_0_ >= 14) this.aClass239_Sub25_7251 = new Class239_Sub25(class348_sub49.readUnsignedByte(255), this);
-                if (i_0_ >= 15) this.aClass239_Sub17_7263 = new Class239_Sub17(class348_sub49.readUnsignedByte(255), this);
-                if (i_0_ >= 16) this.aClass239_Sub24_7235 = new Class239_Sub24(class348_sub49.readUnsignedByte(i ^ 0x7860), this);
-                if (i_0_ >= 18) this.aClass239_Sub29_7229 = new Class239_Sub29(class348_sub49.readUnsignedByte(255), this);
-                if (i_0_ >= 19) this.aClass239_Sub23_7231 = new Class239_Sub23(class348_sub49.readUnsignedByte(255), this);
+                Packet.readInt((byte) -126);
+                if (i_0_ >= 6) this.aClass239_Sub8_7227 = new Class239_Sub8(Packet.readUnsignedByte(i ^ 0x7860), this);
+                if (i_0_ >= 7) this.aClass239_Sub11_7265 = new Class239_Sub11(Packet.readUnsignedByte(255), this);
+                if (i_0_ >= 8) Packet.readUnsignedByte(255);
+                if (i_0_ >= 9) this.aClass239_Sub6_7226 = new Class239_Sub6(Packet.readUnsignedByte(i ^ 0x7860), this);
+                if (i_0_ >= 10) this.aClass239_Sub12_7243 = new Class239_Sub12(Packet.readUnsignedByte(255), this);
+                if (i_0_ >= 11) this.aClass239_Sub22_7253 = new Class239_Sub22(Packet.readUnsignedByte(255), this);
+                if (i_0_ >= 12) this.aClass239_Sub13_7236 = new Class239_Sub13(Packet.readUnsignedByte(255), this);
+                if (i_0_ >= 13) this.aClass239_Sub9_7256 = new Class239_Sub9(Packet.readUnsignedByte(255), this);
+                if (i_0_ >= 14) this.aClass239_Sub25_7251 = new Class239_Sub25(Packet.readUnsignedByte(255), this);
+                if (i_0_ >= 15) this.aClass239_Sub17_7263 = new Class239_Sub17(Packet.readUnsignedByte(255), this);
+                if (i_0_ >= 16) this.aClass239_Sub24_7235 = new Class239_Sub24(Packet.readUnsignedByte(i ^ 0x7860), this);
+                if (i_0_ >= 18) this.aClass239_Sub29_7229 = new Class239_Sub29(Packet.readUnsignedByte(255), this);
+                if (i_0_ >= 19) this.aClass239_Sub23_7231 = new Class239_Sub23(Packet.readUnsignedByte(255), this);
                 if (i_0_ < 22) break;
-                this.aClass239_Sub19_7257 = new Class239_Sub19(class348_sub49.readUnsignedByte(255), this);
+                this.aClass239_Sub19_7257 = new Class239_Sub19(Packet.readUnsignedByte(255), this);
             } catch (RuntimeException runtimeexception) {
-                throw Class348_Sub17.method2929(runtimeexception, ("dh.I(" + i + ',' + (class348_sub49 != null ? "{...}" : "null") + ',' + i_0_ + ')'));
+                throw Class348_Sub17.method2929(runtimeexception, ("dh.I(" + i + ',' + (Packet != null ? "{...}" : "null") + ',' + i_0_ + ')'));
             }
             break;
         } while (false);
@@ -182,58 +182,58 @@ final class Class348_Sub51 extends Class348 {
         if (bool || this.aClass239_Sub5_7240 == null) this.aClass239_Sub5_7240 = new Class239_Sub5(this);
     }
 
-    private final void method3424(int i, Class348_Sub49 class348_sub49) {
+    private final void method3424(int i, Packet Packet) {
         try {
             if (i == 925) {
                 anInt7266++;
-                if (class348_sub49 != null && (class348_sub49.aByteArray7154 != null)) {
-                    int i_4_ = class348_sub49.readUnsignedByte(i + -670);
+                if (Packet != null && (Packet.data != null)) {
+                    int i_4_ = Packet.readUnsignedByte(i + -670);
                     if (i_4_ >= 23) {
                         if (i_4_ > 24) method3423(true, 31286);
                         else {
-                            this.aClass239_Sub20_7216 = new Class239_Sub20(class348_sub49.readUnsignedByte(i + -670), this);
+                            this.aClass239_Sub20_7216 = new Class239_Sub20(Packet.readUnsignedByte(i + -670), this);
                             this.aClass239_Sub20_7248 = new Class239_Sub20((this.aClass239_Sub20_7216.method1808(i ^ ~0x7dc0)), this);
-                            this.aClass239_Sub12_7243 = new Class239_Sub12(class348_sub49.readUnsignedByte(255), this);
-                            this.aClass239_Sub10_7232 = new Class239_Sub10(class348_sub49.readUnsignedByte(i + -670), this);
-                            this.aClass239_Sub6_7226 = new Class239_Sub6(class348_sub49.readUnsignedByte(i + -670), this);
-                            this.aClass239_Sub1_7246 = new Class239_Sub1(class348_sub49.readUnsignedByte(255), this);
-                            this.aClass239_Sub16_7247 = new Class239_Sub16(class348_sub49.readUnsignedByte(255), this);
-                            this.aClass239_Sub9_7256 = new Class239_Sub9(class348_sub49.readUnsignedByte(255), this);
-                            this.aClass239_Sub4_7220 = new Class239_Sub4(class348_sub49.readUnsignedByte(255), this);
-                            this.aClass239_Sub13_7236 = new Class239_Sub13(class348_sub49.readUnsignedByte(255), this);
-                            this.aClass239_Sub28_7230 = new Class239_Sub28(class348_sub49.readUnsignedByte(i + -670), this);
-                            this.aClass239_Sub7_7238 = new Class239_Sub7(class348_sub49.readUnsignedByte(255), this);
-                            if (i_4_ >= 24) this.aClass239_Sub3_7222 = new Class239_Sub3(class348_sub49.readUnsignedByte(255), this);
-                            this.aClass239_Sub15_7224 = new Class239_Sub15(class348_sub49.readUnsignedByte(255), this);
-                            this.aClass239_Sub14_7250 = new Class239_Sub14(class348_sub49.readUnsignedByte(i + -670), this);
+                            this.aClass239_Sub12_7243 = new Class239_Sub12(Packet.readUnsignedByte(255), this);
+                            this.aClass239_Sub10_7232 = new Class239_Sub10(Packet.readUnsignedByte(i + -670), this);
+                            this.aClass239_Sub6_7226 = new Class239_Sub6(Packet.readUnsignedByte(i + -670), this);
+                            this.aClass239_Sub1_7246 = new Class239_Sub1(Packet.readUnsignedByte(255), this);
+                            this.aClass239_Sub16_7247 = new Class239_Sub16(Packet.readUnsignedByte(255), this);
+                            this.aClass239_Sub9_7256 = new Class239_Sub9(Packet.readUnsignedByte(255), this);
+                            this.aClass239_Sub4_7220 = new Class239_Sub4(Packet.readUnsignedByte(255), this);
+                            this.aClass239_Sub13_7236 = new Class239_Sub13(Packet.readUnsignedByte(255), this);
+                            this.aClass239_Sub28_7230 = new Class239_Sub28(Packet.readUnsignedByte(i + -670), this);
+                            this.aClass239_Sub7_7238 = new Class239_Sub7(Packet.readUnsignedByte(255), this);
+                            if (i_4_ >= 24) this.aClass239_Sub3_7222 = new Class239_Sub3(Packet.readUnsignedByte(255), this);
+                            this.aClass239_Sub15_7224 = new Class239_Sub15(Packet.readUnsignedByte(255), this);
+                            this.aClass239_Sub14_7250 = new Class239_Sub14(Packet.readUnsignedByte(i + -670), this);
                             this.aClass239_Sub14_7264 = new Class239_Sub14(this.aClass239_Sub14_7250.method1778(-32350), this);
-                            this.aClass239_Sub23_7231 = new Class239_Sub23(class348_sub49.readUnsignedByte(255), this);
-                            this.aClass239_Sub21_7270 = new Class239_Sub21(class348_sub49.readUnsignedByte(255), this);
-                            this.aClass239_Sub2_7228 = new Class239_Sub2(class348_sub49.readUnsignedByte(255), this);
-                            this.aClass239_Sub24_7235 = new Class239_Sub24(class348_sub49.readUnsignedByte(255), this);
-                            this.aClass239_Sub25_7251 = new Class239_Sub25(class348_sub49.readUnsignedByte(255), this);
+                            this.aClass239_Sub23_7231 = new Class239_Sub23(Packet.readUnsignedByte(255), this);
+                            this.aClass239_Sub21_7270 = new Class239_Sub21(Packet.readUnsignedByte(255), this);
+                            this.aClass239_Sub2_7228 = new Class239_Sub2(Packet.readUnsignedByte(255), this);
+                            this.aClass239_Sub24_7235 = new Class239_Sub24(Packet.readUnsignedByte(255), this);
+                            this.aClass239_Sub25_7251 = new Class239_Sub25(Packet.readUnsignedByte(255), this);
                             this.aClass239_Sub25_7271 = new Class239_Sub25(this.aClass239_Sub25_7251.method1829(-32350), this);
-                            this.aClass239_Sub27_7255 = new Class239_Sub27(class348_sub49.readUnsignedByte(255), this);
+                            this.aClass239_Sub27_7255 = new Class239_Sub27(Packet.readUnsignedByte(255), this);
                             this.aClass239_Sub27_7261 = new Class239_Sub27(this.aClass239_Sub27_7255.method1840(-32350), this);
-                            this.aClass239_Sub18_7259 = new Class239_Sub18(class348_sub49.readUnsignedByte(255), this);
-                            this.aClass239_Sub8_7227 = new Class239_Sub8(class348_sub49.readUnsignedByte(255), this);
+                            this.aClass239_Sub18_7259 = new Class239_Sub18(Packet.readUnsignedByte(255), this);
+                            this.aClass239_Sub8_7227 = new Class239_Sub8(Packet.readUnsignedByte(255), this);
                             this.aClass239_Sub8_7254 = (new Class239_Sub8(this.aClass239_Sub8_7227.method1751(i + -33275), this));
-                            this.aClass239_Sub22_7253 = new Class239_Sub22(class348_sub49.readUnsignedByte(255), this);
-                            this.aClass239_Sub29_7229 = new Class239_Sub29(class348_sub49.readUnsignedByte(255), this);
-                            this.aClass239_Sub17_7263 = new Class239_Sub17(class348_sub49.readUnsignedByte(255), this);
-                            this.aClass239_Sub19_7257 = new Class239_Sub19(class348_sub49.readUnsignedByte(255), this);
-                            this.aClass239_Sub11_7265 = new Class239_Sub11(class348_sub49.readUnsignedByte(255), this);
-                            this.aClass239_Sub26_7272 = new Class239_Sub26(class348_sub49.readUnsignedByte(255), this);
-                            this.aClass239_Sub26_7234 = new Class239_Sub26(class348_sub49.readUnsignedByte(255), this);
-                            this.aClass239_Sub26_7215 = new Class239_Sub26(class348_sub49.readUnsignedByte(255), this);
-                            this.aClass239_Sub26_7260 = new Class239_Sub26(class348_sub49.readUnsignedByte(255), this);
-                            this.aClass239_Sub26_7245 = new Class239_Sub26(class348_sub49.readUnsignedByte(i + -670), this);
-                            this.aClass239_Sub5_7240 = new Class239_Sub5(class348_sub49.readUnsignedByte(255), this);
+                            this.aClass239_Sub22_7253 = new Class239_Sub22(Packet.readUnsignedByte(255), this);
+                            this.aClass239_Sub29_7229 = new Class239_Sub29(Packet.readUnsignedByte(255), this);
+                            this.aClass239_Sub17_7263 = new Class239_Sub17(Packet.readUnsignedByte(255), this);
+                            this.aClass239_Sub19_7257 = new Class239_Sub19(Packet.readUnsignedByte(255), this);
+                            this.aClass239_Sub11_7265 = new Class239_Sub11(Packet.readUnsignedByte(255), this);
+                            this.aClass239_Sub26_7272 = new Class239_Sub26(Packet.readUnsignedByte(255), this);
+                            this.aClass239_Sub26_7234 = new Class239_Sub26(Packet.readUnsignedByte(255), this);
+                            this.aClass239_Sub26_7215 = new Class239_Sub26(Packet.readUnsignedByte(255), this);
+                            this.aClass239_Sub26_7260 = new Class239_Sub26(Packet.readUnsignedByte(255), this);
+                            this.aClass239_Sub26_7245 = new Class239_Sub26(Packet.readUnsignedByte(i + -670), this);
+                            this.aClass239_Sub5_7240 = new Class239_Sub5(Packet.readUnsignedByte(255), this);
                             method3423(false, 31286);
                         }
                     } else {
                         try {
-                            method3421(i + 29954, class348_sub49, i_4_);
+                            method3421(i + 29954, Packet, i_4_);
                         } catch (Exception exception) {
                             method3423(true, 31286);
                         }
@@ -243,7 +243,7 @@ final class Class348_Sub51 extends Class348 {
                 method3426((byte) 36);
             }
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("dh.C(" + i + ',' + (class348_sub49 != null ? "{...}" : "null") + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("dh.C(" + i + ',' + (Packet != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -274,44 +274,44 @@ final class Class348_Sub51 extends Class348 {
         }
     }
 
-    final Class348_Sub49 method3427(int i) {
+    final Packet method3427(int i) {
         anInt7237++;
-        Class348_Sub49 class348_sub49 = new Class348_Sub49(Class110.method1032(i ^ ~0x18));
-        class348_sub49.writeByte(false, i);
-        class348_sub49.writeByte(false, this.aClass239_Sub20_7216.method1808(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub12_7243.method1771(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub10_7232.method1764(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub6_7226.method1743(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub1_7246.method1720(i ^ ~0x7e45));
-        class348_sub49.writeByte(false, this.aClass239_Sub16_7247.method1789(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub9_7256.method1759(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub4_7220.method1737(i + -32374));
-        class348_sub49.writeByte(false, this.aClass239_Sub13_7236.method1776(i + -32374));
-        class348_sub49.writeByte(false, this.aClass239_Sub28_7230.method1845(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub7_7238.method1748(i ^ ~0x7e45));
-        class348_sub49.writeByte(false, this.aClass239_Sub3_7222.method1727(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub15_7224.method1784(i + -32374));
-        class348_sub49.writeByte(false, this.aClass239_Sub14_7250.method1778(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub23_7231.method1818(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub21_7270.method1812(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub2_7228.method1726(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub24_7235.method1820(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub25_7251.method1829(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub27_7255.method1840(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub18_7259.method1800(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub8_7227.method1751(i + -32374));
-        class348_sub49.writeByte(false, this.aClass239_Sub22_7253.method1815(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub29_7229.method1848(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub17_7263.method1798(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub19_7257.method1805(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub11_7265.method1768(i ^ ~0x7e45));
-        class348_sub49.writeByte(false, this.aClass239_Sub26_7272.method1838(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub26_7234.method1838(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub26_7215.method1838(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub26_7260.method1838(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub26_7245.method1838(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub5_7240.method1739(-32350));
-        return class348_sub49;
+        Packet Packet = new Packet(Class110.method1032(i ^ ~0x18));
+        Packet.writeByte(false, i);
+        Packet.writeByte(false, this.aClass239_Sub20_7216.method1808(-32350));
+        Packet.writeByte(false, this.aClass239_Sub12_7243.method1771(-32350));
+        Packet.writeByte(false, this.aClass239_Sub10_7232.method1764(-32350));
+        Packet.writeByte(false, this.aClass239_Sub6_7226.method1743(-32350));
+        Packet.writeByte(false, this.aClass239_Sub1_7246.method1720(i ^ ~0x7e45));
+        Packet.writeByte(false, this.aClass239_Sub16_7247.method1789(-32350));
+        Packet.writeByte(false, this.aClass239_Sub9_7256.method1759(-32350));
+        Packet.writeByte(false, this.aClass239_Sub4_7220.method1737(i + -32374));
+        Packet.writeByte(false, this.aClass239_Sub13_7236.method1776(i + -32374));
+        Packet.writeByte(false, this.aClass239_Sub28_7230.method1845(-32350));
+        Packet.writeByte(false, this.aClass239_Sub7_7238.method1748(i ^ ~0x7e45));
+        Packet.writeByte(false, this.aClass239_Sub3_7222.method1727(-32350));
+        Packet.writeByte(false, this.aClass239_Sub15_7224.method1784(i + -32374));
+        Packet.writeByte(false, this.aClass239_Sub14_7250.method1778(-32350));
+        Packet.writeByte(false, this.aClass239_Sub23_7231.method1818(-32350));
+        Packet.writeByte(false, this.aClass239_Sub21_7270.method1812(-32350));
+        Packet.writeByte(false, this.aClass239_Sub2_7228.method1726(-32350));
+        Packet.writeByte(false, this.aClass239_Sub24_7235.method1820(-32350));
+        Packet.writeByte(false, this.aClass239_Sub25_7251.method1829(-32350));
+        Packet.writeByte(false, this.aClass239_Sub27_7255.method1840(-32350));
+        Packet.writeByte(false, this.aClass239_Sub18_7259.method1800(-32350));
+        Packet.writeByte(false, this.aClass239_Sub8_7227.method1751(i + -32374));
+        Packet.writeByte(false, this.aClass239_Sub22_7253.method1815(-32350));
+        Packet.writeByte(false, this.aClass239_Sub29_7229.method1848(-32350));
+        Packet.writeByte(false, this.aClass239_Sub17_7263.method1798(-32350));
+        Packet.writeByte(false, this.aClass239_Sub19_7257.method1805(-32350));
+        Packet.writeByte(false, this.aClass239_Sub11_7265.method1768(i ^ ~0x7e45));
+        Packet.writeByte(false, this.aClass239_Sub26_7272.method1838(-32350));
+        Packet.writeByte(false, this.aClass239_Sub26_7234.method1838(-32350));
+        Packet.writeByte(false, this.aClass239_Sub26_7215.method1838(-32350));
+        Packet.writeByte(false, this.aClass239_Sub26_7260.method1838(-32350));
+        Packet.writeByte(false, this.aClass239_Sub26_7245.method1838(-32350));
+        Packet.writeByte(false, this.aClass239_Sub5_7240.method1739(-32350));
+        return Packet;
     }
 
     final Class199 method3428(byte i) {
@@ -352,14 +352,14 @@ final class Class348_Sub51 extends Class348 {
         }
     }
 
-    Class348_Sub51(Class348_Sub49 class348_sub49, Class230 class230, int i) {
+    Class348_Sub51(Packet Packet, Class230 class230, int i) {
         try {
             aClass230_7269 = class230;
             aClass199_7221 = new Class199((Class348_Sub23_Sub1.aClass297_8992.aBoolean3777), Class226.anInt2964, Class348_Sub40_Sub29.anInt9372, Class297.aString3780.indexOf("arm") != -1);
             this.aClass239_Sub25_7271 = new Class239_Sub25(i, this);
-            method3424(925, class348_sub49);
+            method3424(925, Packet);
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("dh.<init>(" + (class348_sub49 != null ? "{...}" : "null") + ',' + (class230 != null ? "{...}" : "null") + ',' + i + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("dh.<init>(" + (Packet != null ? "{...}" : "null") + ',' + (class230 != null ? "{...}" : "null") + ',' + i + ')'));
         }
     }
 

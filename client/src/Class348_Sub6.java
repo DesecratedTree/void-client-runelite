@@ -5,7 +5,7 @@
 import java.io.File;
 import java.lang.reflect.Method;
 
-final class Class348_Sub6 extends Class348 {
+final class Class348_Sub6 extends Node {
     int anInt6630;
     static int[] anIntArray6631 = new int[13];
     static int anInt6632;

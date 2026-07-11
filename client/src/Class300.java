@@ -31,31 +31,31 @@ final class Class300 {
         return -1;
     }
 
-    final void method2275(Class348_Sub49 class348_sub49, byte i) {
+    final void method2275(Packet Packet, byte i) {
         anInt3818++;
         for (; ; ) {
-            int i_1_ = class348_sub49.readUnsignedByte(255);
+            int i_1_ = Packet.readUnsignedByte(255);
             if (i_1_ == 0) break;
-            method2276(0, class348_sub49, i_1_);
+            method2276(0, Packet, i_1_);
         }
         int i_2_ = -63 / ((72 - i) / 37);
     }
 
-    private final void method2276(int i, Class348_Sub49 class348_sub49, int i_3_) {
-        if (i_3_ == 1) this.anInt3817 = class348_sub49.readUnsignedShort(842397944);
+    private final void method2276(int i, Packet Packet, int i_3_) {
+        if (i_3_ == 1) this.anInt3817 = Packet.readUnsignedShort(842397944);
         else if (i_3_ == 2) {
-            this.anIntArray3821 = new int[class348_sub49.readUnsignedByte(255)];
+            this.anIntArray3821 = new int[Packet.readUnsignedByte(255)];
             for (int i_4_ = 0; (i_4_ < this.anIntArray3821.length); i_4_++)
-                this.anIntArray3821[i_4_] = class348_sub49.readUnsignedShort(842397944);
-        } else if (i_3_ == 3) this.anInt3823 = class348_sub49.readUnsignedByte(255);
+                this.anIntArray3821[i_4_] = Packet.readUnsignedShort(842397944);
+        } else if (i_3_ == 3) this.anInt3823 = Packet.readUnsignedByte(255);
         if (i != 0) aBoolean3819 = true;
         anInt3822++;
     }
 
-    static final Class124 method2277(int i, Class45 class45, int i_5_, int i_6_) {
+    static final Class124 method2277(int i, Js5Archive Js5Archive, int i_5_, int i_6_) {
         if (i_6_ != -1) aBoolean3819 = true;
         anInt3815++;
-        byte[] is = class45.method410(-1860, i_5_, i);
+        byte[] is = Js5Archive.method410(-1860, i_5_, i);
         if (is == null) return null;
         return new Class124(is);
     }

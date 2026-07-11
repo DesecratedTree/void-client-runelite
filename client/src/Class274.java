@@ -183,10 +183,10 @@ final class Class274 {
     }
 
     static final void method2062(byte i) {
-        if (Class147.aClass338Array2034 != null) {
+        if (ChatMessage.aClass338Array2034 != null) {
             for (int i_3_ = 0; i_3_ < Class239_Sub26.anInt6115; i_3_++)
-                Class147.aClass338Array2034[i_3_] = null;
-            Class147.aClass338Array2034 = null;
+                ChatMessage.aClass338Array2034[i_3_] = null;
+            ChatMessage.aClass338Array2034 = null;
         }
         anInt3480++;
         if (Class318_Sub1_Sub3_Sub4.aClass338Array10330 != null) {
@@ -329,7 +329,7 @@ final class Class274 {
         new Class274("Loading wordpack - ", "Lade Wordpack - ", "Chargement du module texte - ", "Carregando pacote de palavras - ");
         new Class274("Loaded wordpack", "Wordpack geladen.", "Module texte charg\u00e9", "Pacote de palavras carregado");
         new Class274("Loading interfaces - ", "Lade Benutzeroberfl\u00e4che - ", "Chargement des interfaces - ", "Carregando interfaces - ");
-        new Class274("Loaded interfaces", "Benutzeroberfl\u00e4che geladen.", "Interfaces charg\u00e9es", "Interfaces carregadas");
+        new Class274("Loaded interfaces", "Benutzeroberfläche geladen.", "Interfaces charg\u00e9es", "Interfaces carregadas");
         new Class274("Loading interface scripts - ", "Lade Interface-Skripte - ", "Chargement des interfaces - ", "Carregando interfaces - ");
         new Class274("Loaded interface scripts", "Interface-Skripte geladen", "Interfaces charg\u00e9es", "Interfaces carregadas");
         new Class274("Loading additional fonts - ", "Lade Zusatzschriftarten - ", "Chargement de polices secondaires - ", "Carregando fontes principais - ");
@@ -341,7 +341,7 @@ final class Class274 {
         new Class274("Loaded client variable data", "Client-Variablen geladen", "Variables du client charg\u00e9es", "As vari\u00e1veis do sistema foram carregadas");
         aClass274_3501 = new Class274("Loading...", "Lade...", "Chargement en cours...", "Carregando...");
         new Class274("Please close the interface you have open before using 'Report Abuse'.", "Bitte schlie\u00df die momentan ge\u00f6ffnete Benutzeroberfl\u00e4che,", "Fermez l'interface que vous avez ouverte avant d'utiliser le bouton \u00ab Signaler un abus \u00bb.", "Feche a interface aberta antes de usar o recurso \"Denunciar abuso\".");
-        new Class274(null, "bevor du die Option 'Regelversto\u00df melden' benutzt.", null, null);
+        new Class274(null, "bevor du die Option 'Regelverstoß melden' benutzt.", null, null);
         new Class274("System update in: ", "System-Update in: ", "Mise \u00e0 jour syst\u00e8me dans : ", "Atualiza\u00e7\u00e3o do sistema em: ");
         aClass274_3502 = new Class274(" has logged in.", " loggt sich ein.", " s'est connect\u00e9.", " entrou no jogo.");
         aClass274_3503 = new Class274(" has logged out.", " loggt sich aus.", " s'est d\u00e9connect\u00e9.", " saiu do jogo.");
@@ -349,7 +349,7 @@ final class Class274 {
         new Class274("Use", "Benutzen", "Utiliser", "Usar");
         aClass274_3505 = new Class274("Examine", "Untersuchen", "Examiner", "Examinar");
         aClass274_3506 = new Class274("Attack", "Angreifen", "Attaquer", "Atacar");
-        aClass274_3507 = new Class274("Choose Option", "W\u00e4hl eine Option", "Choisir une option", "Selecionar op\u00e7\u00e3o");
+        aClass274_3507 = new Class274("Choose Option", "Wähl eine Option", "Choisir une option", "Selecionar op\u00e7\u00e3o");
         aClass274_3508 = new Class274(" more options", " weitere Optionen", " autres options", " mais op\u00e7\u00f5es");
         aClass274_3509 = new Class274("Walk here", "Hierhin gehen", "Atteindre", "Caminhar para c\u00e1");
         aClass274_3510 = new Class274("Face here", "Hierhin drehen", "Regarder dans cette direction", "Virar para c\u00e1");

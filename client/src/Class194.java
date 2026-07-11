@@ -6,10 +6,10 @@ final class Class194 {
     static int anInt2591;
     static int anInt2592;
     static int anInt2593;
-    private Class60 aClass60_2594 = new Class60(64);
+    private ReferenceCache aClass60_2594 = new ReferenceCache(64);
     static int anInt2595;
     static Class279 aClass279_2596;
-    private final Class45 aClass45_2597;
+    private final Js5Archive aClass45_2597;
     static int anInt2598;
 
     public static void method1441(byte i) {
@@ -38,7 +38,7 @@ final class Class194 {
         anInt2591++;
         synchronized (aClass60_2594) {
             aClass60_2594.method590(0);
-            aClass60_2594 = new Class60(i);
+            aClass60_2594 = new ReferenceCache(i);
         }
     }
 
@@ -64,22 +64,22 @@ final class Class194 {
         }
         class146 = new Class146();
         if (i_4_ != -1) return null;
-        if (is != null) class146.method1191(i_4_ ^ ~0x800, new Class348_Sub49(is));
+        if (is != null) class146.method1191(i_4_ ^ ~0x800, new Packet(is));
         synchronized (aClass60_2594) {
             aClass60_2594.method582(class146, i, (byte) -105);
         }
         return class146;
     }
 
-    Class194(Class230 class230, int i, Class45 class45) {
+    Class194(Class230 class230, int i, Js5Archive Js5Archive) {
         do {
             try {
-                aClass45_2597 = class45;
+                aClass45_2597 = Js5Archive;
                 if (aClass45_2597 == null) break;
                 int i_5_ = aClass45_2597.method414(-1) + -1;
                 aClass45_2597.method407(0, i_5_);
             } catch (RuntimeException runtimeexception) {
-                throw Class348_Sub17.method2929(runtimeexception, ("qs.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (class45 != null ? "{...}" : "null") + ')'));
+                throw Class348_Sub17.method2929(runtimeexception, ("qs.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (Js5Archive != null ? "{...}" : "null") + ')'));
             }
             break;
         } while (false);

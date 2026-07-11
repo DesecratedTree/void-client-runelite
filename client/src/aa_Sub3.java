@@ -12,7 +12,7 @@ final class aa_Sub3 extends aa {
     static Class351 aClass351_5204 = new Class351(15, 8);
     static int anInt5205;
     static Class348_Sub6 aClass348_Sub6_5206 = new Class348_Sub6(0, 0);
-    static Class45 aClass45_5207;
+    static Js5Archive aClass45_5207;
     /*synthetic*/ static Class aClass5208;
 
     static final boolean method166(byte i, int i_0_, int i_1_) {

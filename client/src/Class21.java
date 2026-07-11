@@ -4,7 +4,7 @@
 
 final class Class21 {
     static int anInt321;
-    static Class45 aClass45_322;
+    static Js5Archive aClass45_322;
     static Class46 aClass46_323 = null;
     static int anInt324;
     static int anInt325 = -50;

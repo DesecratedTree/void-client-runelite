@@ -11,7 +11,7 @@ final class Class100 {
     private Class83 aClass83_1582;
     static int[] anIntArray1583 = new int[14];
     private int anInt1584 = 0;
-    static Class356 aClass356_1585 = new Class356(16);
+    static IterableHashTable aClass356_1585 = new IterableHashTable(16);
     Class286_Sub1 aClass286_Sub1_1586;
     static int anInt1587;
     private final Class286[] aClass286Array1588;
@@ -71,7 +71,7 @@ final class Class100 {
             if (Class289.aClass46_3701 == null && !Class5_Sub1.aBoolean8335 && (class46 != null && (Exception_Sub1.method141(class46, (byte) -79) != null))) {
                 Class289.aClass46_3701 = class46;
                 Class331.aClass46_4130 = Exception_Sub1.method141(class46, (byte) -117);
-                Class318_Sub1.anInt6392 = 0;
+                SceneEntity.anInt6392 = 0;
                 Class219.anInt2872 = i_5_;
                 Class318_Sub4.anInt6411 = i;
                 Class300.aBoolean3819 = false;

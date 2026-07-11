@@ -20,7 +20,7 @@ final class Class167 {
     int anInt2205;
     static int anInt2206;
     static Class229 aClass229_2207 = new Class229();
-    static Class45 aClass45_2208;
+    static Js5Archive aClass45_2208;
     Class101_Sub1 aClass101_Sub1_2209;
     int anInt2210;
     int anInt2211;
@@ -84,33 +84,33 @@ final class Class167 {
 
     static final boolean method1294(byte i, byte[] is) {
         anInt2199++;
-        Class348_Sub49 class348_sub49 = new Class348_Sub49(is);
+        Packet Packet = new Packet(is);
         if (i > -98) method1294((byte) 73, null);
-        int i_0_ = class348_sub49.readUnsignedByte(255);
+        int i_0_ = Packet.readUnsignedByte(255);
         if (i_0_ != 2) return false;
-        boolean bool = class348_sub49.readUnsignedByte(255) == 1;
-        if (bool) Class59_Sub2_Sub2.method569((byte) -123, class348_sub49);
-        Class348_Sub42_Sub6.method3188((byte) -67, class348_sub49);
+        boolean bool = Packet.readUnsignedByte(255) == 1;
+        if (bool) Class59_Sub2_Sub2.method569((byte) -123, Packet);
+        Class348_Sub42_Sub6.method3188((byte) -67, Packet);
         return true;
     }
 
-    static final void method1295(Class318_Sub1[] class318_sub1s, int i, int i_1_) {
+    static final void method1295(SceneEntity[] class318_sub1s, int i, int i_1_) {
         if (i < i_1_) {
             int i_2_ = (i + i_1_) / 2;
             int i_3_ = i;
-            Class318_Sub1 class318_sub1 = class318_sub1s[i_2_];
+            SceneEntity SceneEntity = class318_sub1s[i_2_];
             class318_sub1s[i_2_] = class318_sub1s[i_1_];
-            class318_sub1s[i_1_] = class318_sub1;
-            int i_4_ = class318_sub1.anInt6389;
+            class318_sub1s[i_1_] = SceneEntity;
+            int i_4_ = SceneEntity.anInt6389;
             for (int i_5_ = i; i_5_ < i_1_; i_5_++) {
                 if (class318_sub1s[i_5_].anInt6389 < i_4_ + (i_5_ & 0x1)) {
-                    Class318_Sub1 class318_sub1_6_ = class318_sub1s[i_5_];
+                    SceneEntity class318_sub1_6_ = class318_sub1s[i_5_];
                     class318_sub1s[i_5_] = class318_sub1s[i_3_];
                     class318_sub1s[i_3_++] = class318_sub1_6_;
                 }
             }
             class318_sub1s[i_1_] = class318_sub1s[i_3_];
-            class318_sub1s[i_3_] = class318_sub1;
+            class318_sub1s[i_3_] = SceneEntity;
             method1295(class318_sub1s, i, i_3_ - 1);
             method1295(class318_sub1s, i_3_ + 1, i_1_);
         }

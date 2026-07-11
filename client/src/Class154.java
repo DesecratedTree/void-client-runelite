@@ -18,14 +18,14 @@ final class Class154 {
     private long aLong2102;
     private int anInt2103;
     static int anInt2104;
-    static Class348_Sub49[] aClass348_Sub49Array2105 = new Class348_Sub49[2048];
+    static Packet[] aClass348_Sub49Array2105 = new Packet[2048];
     static int anInt2106;
     static int anInt2107;
 
-    final Class64 method1226(Interface17 interface17, Class17 class17, Class182[] class182s, boolean bool, Class255 class255, int i, Class17 class17_0_, int i_1_, boolean bool_2_, int i_3_, int[] is, int i_4_, Class150 class150, int i_5_, ha var_ha, Class278 class278, Class87 class87, int i_6_, int i_7_, int i_8_, Class261 class261) {
+    final Class64 method1226(Interface17 interface17, Class17 class17, Class182[] class182s, boolean bool, ObjTypeList ObjTypeList, int i, Class17 class17_0_, int i_1_, boolean bool_2_, int i_3_, int[] is, int i_4_, Class150 class150, int i_5_, ha var_ha, NPCTypeList NPCTypeList, Class87 class87, int i_6_, int i_7_, int i_8_, Class261 class261) {
         try {
             anInt2097++;
-            if (this.anInt2093 != -1) return (class278.method2079(this.anInt2093, -1).method800(i, class182s, class87, !bool_2_, class17, i_8_, class261, i_7_, class17_0_, interface17, var_ha, i_3_, is, i_1_, i_6_, i_4_, i_5_));
+            if (this.anInt2093 != -1) return (NPCTypeList.method2079(this.anInt2093, -1).method800(i, class182s, class87, !bool_2_, class17, i_8_, class261, i_7_, class17_0_, interface17, var_ha, i_3_, is, i_1_, i_6_, i_4_, i_5_));
             int i_9_ = i_4_;
             long l = aLong2102;
             int[] is_10_ = anIntArray2092;
@@ -172,7 +172,7 @@ final class Class154 {
                     int i_39_ = is_10_[i_38_];
                     if ((0x40000000 & i_39_) == 0) {
                         if ((~0x7fffffff & i_39_) != 0 && !class150.method1203((byte) 33, i_39_ & 0x3fffffff).method348((byte) 34)) bool_37_ = true;
-                    } else if (!class255.method1940(94, 0x3fffffff & i_39_).method1565(this.aBoolean2100, -1)) bool_37_ = true;
+                    } else if (!ObjTypeList.getItemDefinitions(94, 0x3fffffff & i_39_).hasEquipmentModels(this.aBoolean2100, -1)) bool_37_ = true;
                 }
                 if (bool_37_) {
                     if (aLong2094 != -1) {
@@ -191,7 +191,7 @@ final class Class154 {
                                 if (class124 != null) class124s[i_40_] = class124;
                             }
                         } else {
-                            Class124 class124 = (class255.method1940(104, i_41_ & 0x3fffffff).method1558(this.aBoolean2100, !bool_2_));
+                            Class124 class124 = (ObjTypeList.getItemDefinitions(104, i_41_ & 0x3fffffff).getEquipmentModelData(this.aBoolean2100, !bool_2_));
                             if (class124 != null) class124s[i_40_] = class124;
                         }
                     }
@@ -283,22 +283,22 @@ final class Class154 {
             }
             return class64_51_;
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("oo.C(" + (interface17 != null ? "{...}" : "null") + ',' + (class17 != null ? "{...}" : "null") + ',' + (class182s != null ? "{...}" : "null") + ',' + bool + ',' + (class255 != null ? "{...}" : "null") + ',' + i + ',' + (class17_0_ != null ? "{...}" : "null") + ',' + i_1_ + ',' + bool_2_ + ',' + i_3_ + ',' + (is != null ? "{...}" : "null") + ',' + i_4_ + ',' + (class150 != null ? "{...}" : "null") + ',' + i_5_ + ',' + (var_ha != null ? "{...}" : "null") + ',' + (class278 != null ? "{...}" : "null") + ',' + (class87 != null ? "{...}" : "null") + ',' + i_6_ + ',' + i_7_ + ',' + i_8_ + ',' + (class261 != null ? "{...}" : "null") + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("oo.C(" + (interface17 != null ? "{...}" : "null") + ',' + (class17 != null ? "{...}" : "null") + ',' + (class182s != null ? "{...}" : "null") + ',' + bool + ',' + (ObjTypeList != null ? "{...}" : "null") + ',' + i + ',' + (class17_0_ != null ? "{...}" : "null") + ',' + i_1_ + ',' + bool_2_ + ',' + i_3_ + ',' + (is != null ? "{...}" : "null") + ',' + i_4_ + ',' + (class150 != null ? "{...}" : "null") + ',' + i_5_ + ',' + (var_ha != null ? "{...}" : "null") + ',' + (NPCTypeList != null ? "{...}" : "null") + ',' + (class87 != null ? "{...}" : "null") + ',' + i_6_ + ',' + i_7_ + ',' + i_8_ + ',' + (class261 != null ? "{...}" : "null") + ')'));
         }
     }
 
-    final void method1227(byte i, int i_61_, int i_62_, Class255 class255) {
+    final void method1227(byte i, int i_61_, int i_62_, ObjTypeList ObjTypeList) {
         try {
             if (i == 42) {
                 anInt2099++;
                 if (i_62_ == -1) anIntArray2092[i_61_] = 0;
-                else if (class255.method1940(-125, i_62_) != null) {
+                else if (ObjTypeList.getItemDefinitions(-125, i_62_) != null) {
                     anIntArray2092[i_61_] = Class273.method2057(1073741824, i_62_);
                     method1234(-100);
                 }
             }
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("oo.H(" + i + ',' + i_61_ + ',' + i_62_ + ',' + (class255 != null ? "{...}" : "null") + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("oo.H(" + i + ',' + i_61_ + ',' + i_62_ + ',' + (ObjTypeList != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -324,10 +324,10 @@ final class Class154 {
         method1234(-78);
     }
 
-    final Class64 method1230(Class255 class255, int i, Class87 class87, Class150 class150, Interface17 interface17, Class278 class278, int i_66_, int i_67_, int i_68_, Class17 class17, int i_69_, ha var_ha) {
+    final Class64 method1230(ObjTypeList ObjTypeList, int i, Class87 class87, Class150 class150, Interface17 interface17, NPCTypeList NPCTypeList, int i_66_, int i_67_, int i_68_, Class17 class17, int i_69_, ha var_ha) {
         try {
             anInt2107++;
-            if (this.anInt2093 != -1) return (class278.method2079(this.anInt2093, -1).method803(interface17, var_ha, i_69_, i_67_, class17, class87, i_66_, 121, i_68_));
+            if (this.anInt2093 != -1) return (NPCTypeList.method2079(this.anInt2093, -1).method803(interface17, var_ha, i_69_, i_67_, class17, class87, i_66_, 121, i_68_));
             int i_70_ = i_68_;
             if (class17 != null) {
                 boolean bool = false;
@@ -377,7 +377,7 @@ final class Class154 {
                 for (int i_81_ = 0; i_81_ < 12; i_81_++) {
                     int i_82_ = anIntArray2092[i_81_];
                     if ((i_82_ & 0x40000000) != 0) {
-                        if (!class255.method1940(i ^ 0x17f6eb2c, 0x3fffffff & i_82_).method1555((byte) 97, this.aBoolean2100)) bool = true;
+                        if (!ObjTypeList.getItemDefinitions(i ^ 0x17f6eb2c, 0x3fffffff & i_82_).hasHeadModels((byte) 97, this.aBoolean2100)) bool = true;
                     } else if ((~0x7fffffff & i_82_) != 0 && !class150.method1203((byte) 33, i_82_ & 0x3fffffff).method342((byte) 110)) bool = true;
                 }
                 if (bool) return null;
@@ -391,7 +391,7 @@ final class Class154 {
                             if (class124 != null) class124s[i_83_++] = class124;
                         }
                     } else {
-                        Class124 class124 = (class255.method1940(-107, i_85_ & 0x3fffffff).method1554(this.aBoolean2100, -14));
+                        Class124 class124 = (ObjTypeList.getItemDefinitions(-107, i_85_ & 0x3fffffff).getHeadModelData(this.aBoolean2100, -14));
                         if (class124 != null) class124s[i_83_++] = class124;
                     }
                 }
@@ -413,7 +413,7 @@ final class Class154 {
             class64_88_ = class17.method269(123, class64, i_67_, i_69_, i_68_, i_66_);
             return class64_88_;
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("oo.J(" + (class255 != null ? "{...}" : "null") + ',' + i + ',' + (class87 != null ? "{...}" : "null") + ',' + (class150 != null ? "{...}" : "null") + ',' + (interface17 != null ? "{...}" : "null") + ',' + (class278 != null ? "{...}" : "null") + ',' + i_66_ + ',' + i_67_ + ',' + i_68_ + ',' + (class17 != null ? "{...}" : "null") + ',' + i_69_ + ',' + (var_ha != null ? "{...}" : "null") + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("oo.J(" + (ObjTypeList != null ? "{...}" : "null") + ',' + i + ',' + (class87 != null ? "{...}" : "null") + ',' + (class150 != null ? "{...}" : "null") + ',' + (interface17 != null ? "{...}" : "null") + ',' + (NPCTypeList != null ? "{...}" : "null") + ',' + i_66_ + ',' + i_67_ + ',' + i_68_ + ',' + (class17 != null ? "{...}" : "null") + ',' + i_69_ + ',' + (var_ha != null ? "{...}" : "null") + ')'));
         }
     }
 

@@ -109,7 +109,7 @@ final class Class309 implements Interface7 {
                 if (!Class348_Sub1_Sub1.aBoolean8805) {
                     for (Class348_Sub21 class348_sub21 = (Class348_Sub21) class262.method1995(4); class348_sub21 != null; class348_sub21 = ((Class348_Sub21) class262.method1990((byte) 104))) {
                         Class42 class42 = (Class75.aClass153_1238.method1225(class348_sub21.anInt6847, (byte) 82));
-                        if (Class60.method589(class42, -4)) {
+                        if (ReferenceCache.method589(class42, -4)) {
                             boolean bool = Class190.method1425((byte) -31, class42, class348_sub21, i_14_, var_ha, i_15_);
                             if (bool) Class59.method549((byte) -43, class348_sub21, var_ha, class42);
                         }

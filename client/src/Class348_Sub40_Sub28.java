@@ -9,7 +9,7 @@ final class Class348_Sub40_Sub28 extends Class348_Sub40 {
     private int anInt9362;
     static int anInt9363;
     private int anInt9364 = 4096;
-    static Class45 aClass45_9365;
+    static Js5Archive aClass45_9365;
     static int anInt9366;
     private int anInt9367;
     private int anInt9368 = 16;
@@ -33,7 +33,7 @@ final class Class348_Sub40_Sub28 extends Class348_Sub40 {
         if (i != 0) method3122((byte) -98);
     }
 
-    final void method3049(Class348_Sub49 class348_sub49, int i, int i_0_) {
+    final void method3049(Packet Packet, int i, int i_0_) {
         anInt9370++;
         if (i_0_ != 31015) anInt9364 = -29;
         int i_1_ = i;
@@ -45,7 +45,7 @@ final class Class348_Sub40_Sub28 extends Class348_Sub40 {
                 do {
                     do {
                         if (i_1_ == 0) {
-                            anInt9367 = class348_sub49.readUnsignedByte(255);
+                            anInt9367 = Packet.readUnsignedByte(255);
                             return;
                         } else if (i_1_ != 1) {
                             if (i_1_ != 2) {
@@ -56,16 +56,16 @@ final class Class348_Sub40_Sub28 extends Class348_Sub40 {
                             } else break;
                             break while_202_;
                         }
-                        anInt9362 = class348_sub49.readUnsignedShort(842397944);
+                        anInt9362 = Packet.readUnsignedShort(842397944);
                         return;
                     } while (false);
-                    anInt9368 = class348_sub49.readUnsignedByte(255);
+                    anInt9368 = Packet.readUnsignedByte(255);
                     return;
                 } while (false);
-                anInt9369 = class348_sub49.readUnsignedShort(842397944);
+                anInt9369 = Packet.readUnsignedShort(842397944);
                 return;
             } while (false);
-            anInt9364 = class348_sub49.readUnsignedShort(842397944);
+            anInt9364 = Packet.readUnsignedShort(842397944);
         } while (false);
     }
 

@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-final class Class348_Sub26 extends Class348 {
+final class Class348_Sub26 extends Node {
     static Class348_Sub42_Sub14 aClass348_Sub42_Sub14_6885;
     static int anInt6886;
     volatile int anInt6887 = -1;

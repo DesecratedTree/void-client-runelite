@@ -43,7 +43,7 @@ abstract class Class55 {
     private Class348_Sub23_Sub1 aClass348_Sub23_Sub1_1008;
     private String aString1009;
     static float aFloat1010;
-    private final Class356 aClass356_1011;
+    private final IterableHashTable aClass356_1011;
 
     private final void method504(int i) {
         if (i != 1999) aByteArray995 = null;
@@ -351,7 +351,7 @@ abstract class Class55 {
         anOggSyncState987 = new OggSyncState();
         anOggPage981 = new OggPage();
         anOggPacket993 = new OggPacket();
-        aClass356_1011 = new Class356(8);
+        aClass356_1011 = new IterableHashTable(8);
     }
 
     static {

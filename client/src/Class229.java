@@ -5,7 +5,7 @@
 final class Class229 {
     static int anInt2976;
     static int anInt2977;
-    static Class45 aClass45_2978;
+    static Js5Archive aClass45_2978;
     static Class268 aClass268_2979;
     static int anInt2980;
     static Class194 aClass194_2981;

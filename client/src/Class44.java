@@ -36,9 +36,9 @@ final class Class44 {
                                     int i_13_ = ((i_11_ / 8 << 8) - -(i_12_ / 8));
                                     for (int i_14_ = 0; i_14_ < (Class348_Sub23_Sub3.anIntArray9042).length; i_14_++) {
                                         if ((i_13_ == (Class348_Sub23_Sub3.anIntArray9042[i_14_])) && is[i_14_] != null) {
-                                            Class348_Sub49 class348_sub49 = new Class348_Sub49(is[i_14_]);
-                                            class237_sub1.method1684(i_6_ * 8, i, -1, class348_sub49, i_12_, 8 * i_7_, i_11_, (Class348_Sub45.aClass361Array7108), i_10_, i_9_);
-                                            class237_sub1.method1696(class348_sub49, false, i_12_, i_11_, 8 * i_6_, i, i_10_, 8 * i_7_, Class348_Sub8.aHa6654, is_5_[0] != -1 ? null : is_5_, i_9_);
+                                            Packet Packet = new Packet(is[i_14_]);
+                                            class237_sub1.method1684(i_6_ * 8, i, -1, Packet, i_12_, 8 * i_7_, i_11_, (Class348_Sub45.aClass361Array7108), i_10_, i_9_);
+                                            class237_sub1.method1696(Packet, false, i_12_, i_11_, 8 * i_6_, i, i_10_, 8 * i_7_, Class348_Sub8.aHa6654, is_5_[0] != -1 ? null : is_5_, i_9_);
                                             break;
                                         }
                                     }
@@ -92,8 +92,8 @@ final class Class44 {
                     class318_sub1_sub5.aClass318_Sub1_6379 = Class250.aClass318_Sub1Array3226[i_21_];
                     Class250.aClass318_Sub1Array3226[i_21_] = class318_sub1_sub5;
                 } else {
-                    class318_sub1_sub5.aClass318_Sub1_6379 = Class348.aClass318_Sub1Array4293[i_21_];
-                    Class348.aClass318_Sub1Array4293[i_21_] = class318_sub1_sub5;
+                    class318_sub1_sub5.aClass318_Sub1_6379 = Node.aClass318_Sub1Array4293[i_21_];
+                    Node.aClass318_Sub1Array4293[i_21_] = class318_sub1_sub5;
                     Class348_Sub16_Sub2.aBoolean8870 = true;
                 }
             } else {
@@ -106,8 +106,8 @@ final class Class44 {
                         class318_sub1_sub5_20_.aClass318_Sub1_6379 = Class250.aClass318_Sub1Array3226[i_21_];
                         Class250.aClass318_Sub1Array3226[i_21_] = class318_sub1_sub5_20_;
                     } else {
-                        class318_sub1_sub5_20_.aClass318_Sub1_6379 = Class348.aClass318_Sub1Array4293[i_21_];
-                        Class348.aClass318_Sub1Array4293[i_21_] = class318_sub1_sub5_20_;
+                        class318_sub1_sub5_20_.aClass318_Sub1_6379 = Node.aClass318_Sub1Array4293[i_21_];
+                        Node.aClass318_Sub1Array4293[i_21_] = class318_sub1_sub5_20_;
                         Class348_Sub16_Sub2.aBoolean8870 = true;
                     }
                 } else {

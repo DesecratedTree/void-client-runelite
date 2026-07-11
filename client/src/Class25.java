@@ -3,13 +3,13 @@
  */
 
 final class Class25 {
-    private Class60 aClass60_360 = new Class60(16);
+    private ReferenceCache aClass60_360 = new ReferenceCache(16);
     static int anInt361;
     static int anInt362;
     static int anInt363;
     static Class351 aClass351_364 = new Class351(12, 3);
     static int anInt365;
-    private Class45 aClass45_366;
+    private Js5Archive aClass45_366;
     static Class105[] aClass105Array367;
     static boolean aBoolean368 = false;
     static int[] anIntArray369;
@@ -46,7 +46,7 @@ final class Class25 {
         }
         if (i_2_ < 6) aClass60_360 = null;
         class38 = new Class38();
-        if (is != null) class38.method364(new Class348_Sub49(is), (byte) 54);
+        if (is != null) class38.method364(new Packet(is), (byte) 54);
         synchronized (aClass60_360) {
             aClass60_360.method582(class38, i, (byte) -109);
         }
@@ -91,12 +91,12 @@ final class Class25 {
         aClass105Array367 = null;
     }
 
-    Class25(Class230 class230, int i, Class45 class45) {
+    Class25(Class230 class230, int i, Js5Archive Js5Archive) {
         try {
-            aClass45_366 = class45;
+            aClass45_366 = Js5Archive;
             aClass45_366.method407(0, 30);
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("hq.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (class45 != null ? "{...}" : "null") + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("hq.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (Js5Archive != null ? "{...}" : "null") + ')'));
         }
     }
 }

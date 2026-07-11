@@ -17,10 +17,10 @@ final class Class287 {
     static int anInt3694;
     static int anInt3695 = 0;
 
-    static final void method2178(Class318_Sub1 class318_sub1, int i, Class17 class17, int i_0_) {
+    static final void method2178(SceneEntity SceneEntity, int i, Class17 class17, int i_0_) {
         try {
             anInt3694++;
-            if (Class147.anInt2021 < 50 && (class17 != null && class17.anIntArrayArray264 != null && (class17.anIntArrayArray264.length > i) && class17.anIntArrayArray264[i] != null)) {
+            if (ChatMessage.anInt2021 < 50 && (class17 != null && class17.anIntArrayArray264 != null && (class17.anIntArrayArray264.length > i) && class17.anIntArrayArray264[i] != null)) {
                 int i_1_ = class17.anIntArrayArray264[i][0];
                 int i_2_ = i_1_ >> 8;
                 int i_3_ = (i_1_ & 0xf1) >> 5;
@@ -34,19 +34,19 @@ final class Class287 {
                 if (class17.anIntArray236 != null && class17.anIntArray265 != null) i_6_ = ((int) (Math.random() * (double) (-(class17.anIntArray236[i]) + (class17.anIntArray265[i]))) + class17.anIntArray236[i]);
                 int i_7_ = (class17.anIntArray253 == null ? 255 : class17.anIntArray253[i]);
                 if (i_5_ == 0) {
-                    if (Class132.aPlayer_1907 == class318_sub1) {
+                    if (Class132.aPlayer_1907 == SceneEntity) {
                         if (!class17.aBoolean268) Class348_Sub20.method2947(true, i_7_, i_2_, i_3_, 0, i_6_);
                         else Class279.method2090(i_3_, i_6_, false, (byte) -35, i_7_, 0, i_2_);
                     }
                 } else if (Class316.aClass348_Sub51_3959.aClass239_Sub26_7234.method1838(-32350) != 0) {
-                    int i_8_ = (class318_sub1.x + -256 >> 9);
-                    int i_9_ = (class318_sub1.y - 256 >> 9);
-                    int i_10_ = ((Class132.aPlayer_1907 != class318_sub1) ? ((class318_sub1.plane << 24) + ((i_8_ << 16) + (i_9_ << 8)) + i_5_) : 0);
-                    Class258_Sub2.aClass10Array8531[Class147.anInt2021++] = new Class10((class17.aBoolean268 ? (byte) 2 : (byte) 1), i_2_, i_3_, 0, i_7_, i_10_, i_6_, class318_sub1);
+                    int i_8_ = (SceneEntity.x + -256 >> 9);
+                    int i_9_ = (SceneEntity.y - 256 >> 9);
+                    int i_10_ = ((Class132.aPlayer_1907 != SceneEntity) ? ((SceneEntity.plane << 24) + ((i_8_ << 16) + (i_9_ << 8)) + i_5_) : 0);
+                    Class258_Sub2.aClass10Array8531[ChatMessage.anInt2021++] = new Class10((class17.aBoolean268 ? (byte) 2 : (byte) 1), i_2_, i_3_, 0, i_7_, i_10_, i_6_, SceneEntity);
                 }
             }
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("vp.A(" + (class318_sub1 != null ? "{...}" : "null") + ',' + i + ',' + (class17 != null ? "{...}" : "null") + ',' + i_0_ + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("vp.A(" + (SceneEntity != null ? "{...}" : "null") + ',' + i + ',' + (class17 != null ? "{...}" : "null") + ',' + i_0_ + ')'));
         }
     }
 
@@ -100,36 +100,36 @@ final class Class287 {
         /* empty */
     }
 
-    private final Interface12 method2182(boolean bool, Class223 class223, Class348_Sub49 class348_sub49) {
+    private final Interface12 method2182(boolean bool, Class223 class223, Packet Packet) {
         try {
             anInt3692++;
-            if (Class219.aClass223_2868 == class223) return Class170.method1312((byte) 64, class348_sub49);
-            if (Class348_Sub49.aClass223_7175 == class223) return Class105_Sub1.method987(743571200, class348_sub49);
-            if (Class101_Sub1.aClass223_5689 == class223) return Class303.method2287(class348_sub49, (byte) -112);
-            if (class223 == Class28.aClass223_4997) return Class337.method2660((byte) 26, class348_sub49);
+            if (Class219.aClass223_2868 == class223) return Class170.method1312((byte) 64, Packet);
+            if (Packet.aClass223_7175 == class223) return Class105_Sub1.method987(743571200, Packet);
+            if (Class101_Sub1.aClass223_5689 == class223) return Class303.method2287(Packet, (byte) -112);
+            if (class223 == Class28.aClass223_4997) return Class337.method2660((byte) 26, Packet);
             if (bool != true) method2180((byte) -104);
-            if (class223 == Class348_Sub40_Sub21.aClass223_9274) return Class288_Sub1.method2189(class348_sub49, 86);
-            if (class223 == Class313.aClass223_3934) return Class5.method179(16533, class348_sub49);
-            if (Class185.aClass223_2489 == class223) return Class348_Sub46.method3322(0, class348_sub49);
-            if (class223 == Class174.aClass223_2307) return Class50_Sub4.method472(-27794, class348_sub49);
-            if (Class149.aClass223_2045 == class223) return Class328_Sub2.method2612(class348_sub49, true);
-            if (Class187.aClass223_2507 == class223) return Class285_Sub1.method2128(-1730, class348_sub49);
+            if (class223 == Class348_Sub40_Sub21.aClass223_9274) return Class288_Sub1.method2189(Packet, 86);
+            if (class223 == Class313.aClass223_3934) return Class5.method179(16533, Packet);
+            if (Class185.aClass223_2489 == class223) return Class348_Sub46.method3322(0, Packet);
+            if (class223 == Class174.aClass223_2307) return Class50_Sub4.method472(-27794, Packet);
+            if (Class149.aClass223_2045 == class223) return Class328_Sub2.method2612(Packet, true);
+            if (Class187.aClass223_2507 == class223) return Class285_Sub1.method2128(-1730, Packet);
             return null;
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("vp.F(" + bool + ',' + (class223 != null ? "{...}" : "null") + ',' + (class348_sub49 != null ? "{...}" : "null") + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("vp.F(" + bool + ',' + (class223 != null ? "{...}" : "null") + ',' + (Packet != null ? "{...}" : "null") + ')'));
         }
     }
 
-    final void method2183(Class348_Sub49 class348_sub49, int i) {
-        this.anInt3690 = class348_sub49.readMedium(-1);
+    final void method2183(Packet Packet, int i) {
+        this.anInt3690 = Packet.readMedium(-1);
         anInt3693++;
-        this.anInt3687 = class348_sub49.readUnsignedShort(842397944);
-        this.anInterface12Array3688 = new Interface12[class348_sub49.readUnsignedByte(i ^ 0x557d)];
+        this.anInt3687 = Packet.readUnsignedShort(842397944);
+        this.anInterface12Array3688 = new Interface12[Packet.readUnsignedByte(i ^ 0x557d)];
         Class223[] class223s = Class19.method285(-99);
         int i_27_ = 0;
         if (i != 21890) method2180((byte) 25);
         for (/**/; this.anInterface12Array3688.length > i_27_; i_27_++)
-            this.anInterface12Array3688[i_27_] = method2182(true, class223s[(class348_sub49.readUnsignedByte(Class348_Sub21.method2955(i, 21885)))], class348_sub49);
+            this.anInterface12Array3688[i_27_] = method2182(true, class223s[(Packet.readUnsignedByte(Class348_Sub21.method2955(i, 21885)))], Packet);
     }
 
     static final char method2184(char c, int i) {

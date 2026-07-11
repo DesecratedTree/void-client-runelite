@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-abstract class Class348_Sub16 extends Class348 {
+abstract class Class348_Sub16 extends Node {
     volatile boolean aBoolean6784 = true;
     Class348_Sub16 aClass348_Sub16_6785;
     int anInt6786;

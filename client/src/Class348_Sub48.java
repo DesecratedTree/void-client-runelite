@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-final class Class348_Sub48 extends Class348 {
+final class Class348_Sub48 extends Node {
     int anInt7126;
     Class144[] aClass144Array7127;
     byte[][][] aByteArrayArrayArray7128;

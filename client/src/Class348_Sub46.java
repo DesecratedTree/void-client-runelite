@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-final class Class348_Sub46 extends Class348 {
+final class Class348_Sub46 extends Node {
     static int anInt7109;
     static int anInt7110;
     String aString7111;
@@ -32,7 +32,7 @@ final class Class348_Sub46 extends Class348 {
     static final void method3319(ha var_ha, byte i) {
         if (i > -108) method3321(19, 60, 108);
         anInt7114++;
-        if (((Class132.aPlayer_1907.plane) != Class334.anInt4155) && Class147.aClass357ArrayArrayArray2029 != null) {
+        if (((Class132.aPlayer_1907.plane) != Class334.anInt4155) && ChatMessage.aClass357ArrayArrayArray2029 != null) {
             if (Class348_Sub14.method2808((Class132.aPlayer_1907.plane), var_ha, true)) Class334.anInt4155 = Class132.aPlayer_1907.plane;
         }
     }
@@ -40,7 +40,7 @@ final class Class348_Sub46 extends Class348 {
     static final void method3320(Class318_Sub1_Sub3 class318_sub1_sub3, boolean bool) {
         for (int i = class318_sub1_sub3.aShort8743; i <= class318_sub1_sub3.aShort8751; i++) {
             for (int i_0_ = class318_sub1_sub3.aShort8750; i_0_ <= class318_sub1_sub3.aShort8747; i_0_++) {
-                Class357 class357 = (Class147.aClass357ArrayArrayArray2029[class318_sub1_sub3.plane][i][i_0_]);
+                Class357 class357 = (ChatMessage.aClass357ArrayArrayArray2029[class318_sub1_sub3.plane][i][i_0_]);
                 if (class357 != null) {
                     Class148 class148 = class357.aClass148_4396;
                     Class148 class148_1_ = null;
@@ -60,24 +60,24 @@ final class Class348_Sub46 extends Class348 {
     }
 
     static final Class357 method3321(int i, int i_2_, int i_3_) {
-        if (Class147.aClass357ArrayArrayArray2029[i][i_2_][i_3_] == null) {
-            boolean bool = (Class147.aClass357ArrayArrayArray2029[0][i_2_][i_3_] != null && Class147.aClass357ArrayArrayArray2029[0][i_2_][i_3_].aClass357_4400 != null);
+        if (ChatMessage.aClass357ArrayArrayArray2029[i][i_2_][i_3_] == null) {
+            boolean bool = (ChatMessage.aClass357ArrayArrayArray2029[0][i_2_][i_3_] != null && ChatMessage.aClass357ArrayArrayArray2029[0][i_2_][i_3_].aClass357_4400 != null);
             if (bool && i >= Class189.anInt2524 - 1) return null;
             Class185.method1394(i, i_2_, i_3_);
         }
-        return Class147.aClass357ArrayArrayArray2029[i][i_2_][i_3_];
+        return ChatMessage.aClass357ArrayArrayArray2029[i][i_2_][i_3_];
     }
 
-    static final Class369_Sub3 method3322(int i, Class348_Sub49 class348_sub49) {
+    static final Class369_Sub3 method3322(int i, Packet Packet) {
         anInt7109++;
-        Class369 class369 = Class348_Sub16_Sub2.method2834((byte) -125, class348_sub49);
-        int i_4_ = class348_sub49.readUnsignedShort(i ^ 0x3235f8f8);
-        int i_5_ = class348_sub49.readUnsignedShort(842397944);
+        Class369 class369 = Class348_Sub16_Sub2.method2834((byte) -125, Packet);
+        int i_4_ = Packet.readUnsignedShort(i ^ 0x3235f8f8);
+        int i_5_ = Packet.readUnsignedShort(842397944);
         if (i != 0) aClass114_7113 = null;
-        int i_6_ = class348_sub49.readUnsignedShort(842397944);
-        int i_7_ = class348_sub49.readUnsignedShort(i + 842397944);
-        int i_8_ = class348_sub49.readUnsignedShort(842397944);
-        int i_9_ = class348_sub49.readUnsignedShort(842397944);
+        int i_6_ = Packet.readUnsignedShort(842397944);
+        int i_7_ = Packet.readUnsignedShort(i + 842397944);
+        int i_8_ = Packet.readUnsignedShort(842397944);
+        int i_9_ = Packet.readUnsignedShort(842397944);
         return new Class369_Sub3(class369.aClass221_4968, class369.aClass341_4973, class369.anInt4970, class369.anInt4959, class369.anInt4971, class369.anInt4963, class369.anInt4966, class369.anInt4965, class369.anInt4961, i_4_, i_5_, i_6_, i_7_, i_8_, i_9_);
     }
 

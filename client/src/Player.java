@@ -125,10 +125,10 @@ final class Player extends Class318_Sub1_Sub3_Sub3 {
         return bool;
     }
 
-    final void method2452(byte i, Class348_Sub49 class348_sub49) {
+    final void method2452(byte i, Packet Packet) {
         anInt10547++;
-        class348_sub49.anInt7197 = 0;
-        int i_11_ = class348_sub49.readUnsignedByte(255);
+        Packet.pos = 0;
+        int i_11_ = Packet.readUnsignedByte(255);
         aByte10538 = (byte) (i_11_ & 0x1);
         boolean bool = this.aBoolean10517;
         this.aBoolean10517 = (0x2 & i_11_) != 0;
@@ -138,58 +138,58 @@ final class Player extends Class318_Sub1_Sub3_Sub3 {
         aByte10552 = (byte) (i_11_ >> 6 & 0x3);
         this.x += -i_13_ + method2436((byte) 47) << 8;
         this.y += method2436((byte) 96) + -i_13_ << 8;
-        aByte10556 = class348_sub49.readByte(-114);
-        this.anInt10540 = class348_sub49.readByte(-89);
-        this.anInt10522 = class348_sub49.readByte(i ^ ~0x1);
-        this.aBoolean10551 = class348_sub49.readByte(i + -199) == 1;
+        aByte10556 = Packet.readByte(-114);
+        this.anInt10540 = Packet.readByte(-89);
+        this.anInt10522 = Packet.readByte(i ^ ~0x1);
+        this.aBoolean10551 = Packet.readByte(i + -199) == 1;
         if (Class8.aClass364_165 == Class55_Sub1.aClass364_5271 && Class192.anInt2581 >= 2) this.aBoolean10551 = false;
         this.anInt10542 = 0;
         int i_14_ = -1;
         int[] is = new int[12];
         for (int i_15_ = 0; i_15_ < 12; i_15_++) {
-            int i_16_ = class348_sub49.readUnsignedByte(255);
+            int i_16_ = Packet.readUnsignedByte(255);
             if (i_16_ == 0) is[i_15_] = 0;
             else {
-                int i_17_ = class348_sub49.readUnsignedByte(255);
+                int i_17_ = Packet.readUnsignedByte(255);
                 int i_18_ = i_17_ + (i_16_ << 8);
                 if (i_15_ == 0 && i_18_ == 65535) {
-                    i_14_ = class348_sub49.readUnsignedShort(842397944);
-                    this.anInt10542 = class348_sub49.readUnsignedByte(255);
+                    i_14_ = Packet.readUnsignedShort(842397944);
+                    this.anInt10542 = Packet.readUnsignedByte(255);
                     break;
                 }
                 if (i_18_ >= 32768) {
                     i_18_ = Class25.anIntArray369[-32768 + i_18_];
                     is[i_15_] = Class273.method2057(1073741824, i_18_);
-                    int i_19_ = (Exception_Sub1.aClass255_112.method1940(-111, i_18_).anInt2827);
+                    int i_19_ = (Exception_Sub1.aClass255_112.getItemDefinitions(-111, i_18_).team);
                     if (i_19_ != 0) this.anInt10542 = i_19_;
                 } else is[i_15_] = Class273.method2057(-256 + i_18_, -2147483648);
             }
         }
         int[] is_20_ = new int[5];
         for (int i_21_ = 0; i_21_ < 5; i_21_++) {
-            int i_22_ = class348_sub49.readUnsignedByte(255);
+            int i_22_ = Packet.readUnsignedByte(255);
             if (Class367_Sub2.aShortArrayArrayArray7290.length < 1 || i_22_ < 0 || i_22_ >= Class367_Sub2.aShortArrayArrayArray7290[0][i_21_].length) i_22_ = 0;
             is_20_[i_21_] = i_22_;
         }
-        anInt10520 = class348_sub49.readUnsignedShort(842397944);
-        this.aString10537 = class348_sub49.readString((byte) -47);
+        anInt10520 = Packet.readUnsignedShort(842397944);
+        this.aString10537 = Packet.readString((byte) -47);
         this.aString10544 = this.aString10537;
         if (this == Class132.aPlayer_1907) s_Sub2.aString8265 = this.aString10537;
-        this.anInt10516 = class348_sub49.readUnsignedByte(i ^ 0xab);
+        this.anInt10516 = Packet.readUnsignedByte(i ^ 0xab);
         if (i != 84) anInt10520 = 87;
         if (bool_12_) {
-            this.anInt10564 = class348_sub49.readUnsignedShort(842397944);
+            this.anInt10564 = Packet.readUnsignedShort(842397944);
             this.anInt10557 = this.anInt10516;
             if (this.anInt10564 == 65535) this.anInt10564 = -1;
             this.anInt10561 = -1;
         } else {
             this.anInt10564 = 0;
-            this.anInt10557 = class348_sub49.readUnsignedByte(255);
-            this.anInt10561 = class348_sub49.readUnsignedByte(255);
+            this.anInt10557 = Packet.readUnsignedByte(255);
+            this.anInt10561 = Packet.readUnsignedByte(255);
             if (this.anInt10561 == 255) this.anInt10561 = -1;
         }
         int i_23_ = this.anInt10553;
-        this.anInt10553 = class348_sub49.readUnsignedByte(255);
+        this.anInt10553 = Packet.readUnsignedByte(255);
         if (this.anInt10553 == 0) Class295.method2221(this, -28482);
         else {
             int i_24_ = this.anInt10535;
@@ -197,11 +197,11 @@ final class Player extends Class318_Sub1_Sub3_Sub3 {
             int i_26_ = this.anInt10560;
             int i_27_ = this.anInt10519;
             int i_28_ = this.anInt10558;
-            this.anInt10535 = class348_sub49.readUnsignedShort(842397944);
-            this.anInt10526 = class348_sub49.readUnsignedShort(842397944);
-            this.anInt10560 = class348_sub49.readUnsignedShort(842397944);
-            this.anInt10519 = class348_sub49.readUnsignedShort(842397944);
-            this.anInt10558 = class348_sub49.readUnsignedByte(i ^ 0xab);
+            this.anInt10535 = Packet.readUnsignedShort(842397944);
+            this.anInt10526 = Packet.readUnsignedShort(842397944);
+            this.anInt10560 = Packet.readUnsignedShort(842397944);
+            this.anInt10519 = Packet.readUnsignedShort(842397944);
+            this.anInt10558 = Packet.readUnsignedByte(i ^ 0xab);
             if (!this.aBoolean10517 != !bool || this.anInt10553 != i_23_ || i_24_ != this.anInt10535 || i_25_ != this.anInt10526 || (this.anInt10560 != i_26_) || this.anInt10519 != i_27_ || i_28_ != this.anInt10558) Class92.method858(true, this);
         }
         if (this.aClass154_10536 == null) this.aClass154_10536 = new Class154();
@@ -285,13 +285,13 @@ final class Player extends Class318_Sub1_Sub3_Sub3 {
         throw new IllegalStateException();
     }
 
-    final void method2380(ha var_ha, int i, boolean bool, Class318_Sub1 class318_sub1, int i_47_, byte i_48_, int i_49_) {
+    final void method2380(ha var_ha, int i, boolean bool, SceneEntity SceneEntity, int i_47_, byte i_48_, int i_49_) {
         try {
             if (i_48_ >= -106) anInt10520 = 116;
             anInt10545++;
             throw new IllegalStateException();
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("ke.N(" + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + bool + ',' + (class318_sub1 != null ? "{...}" : "null") + ',' + i_47_ + ',' + i_48_ + ',' + i_49_ + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("ke.N(" + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + bool + ',' + (SceneEntity != null ? "{...}" : "null") + ',' + i_47_ + ',' + i_48_ + ',' + i_49_ + ')'));
         }
     }
 
@@ -325,7 +325,7 @@ final class Player extends Class318_Sub1_Sub3_Sub3 {
         Class101 class101 = var_ha.method3705();
         int i_53_ = this.aClass264_10217.method2019((byte) -126);
         class101.method895(i_53_);
-        Class357 class357 = (Class147.aClass357ArrayArrayArray2029[this.plane][this.x >> Class362.anInt4459][this.y >> Class362.anInt4459]);
+        Class357 class357 = (ChatMessage.aClass357ArrayArrayArray2029[this.plane][this.x >> Class362.anInt4459][this.y >> Class362.anInt4459]);
         if (class357 == null || class357.aClass318_Sub1_Sub1_4402 == null) this.anInt10274 -= (float) this.anInt10274 / 10.0F;
         else {
             int i_54_ = (this.anInt10274 + -(class357.aClass318_Sub1_Sub1_4402.aShort8727));
@@ -334,12 +334,13 @@ final class Player extends Class318_Sub1_Sub3_Sub3 {
         class101.method891(this.x, (-20 + (this.anInt6382 - this.anInt10274)), this.y);
         Class318_Sub4 class318_sub4 = null;
         this.aBoolean10324 = false;
-        if (Class316.aClass348_Sub51_3959.aClass239_Sub21_7270.method1812(-32350) == 1) {
+        int shadowMode = Class316.aClass348_Sub51_3959.aClass239_Sub21_7270.method1812(-32350);
+        if (shadowMode == 1) {
             Class225 class225 = this.method2422((byte) 72);
-            if (class225.aBoolean2913 && (this.aClass154_10536.anInt2093 == -1 || Class189.aClass278_2529.method2079(this.aClass154_10536.anInt2093, i + -2).aBoolean1369)) {
+            if (class225.aBoolean2913 && (this.aClass154_10536.anInt2093 == -1 || Class189.aClass278_2529.method2079(this.aClass154_10536.anInt2093, i + -2).hasShadow)) {
                 Class17 class17 = ((this.anInt10286 != -1 && this.anInt10218 == 0) ? (Class10.aClass87_191.method835(this.anInt10286, 7)) : null);
                 Class17 class17_55_ = ((this.anInt10268 == -1 || this.aBoolean10521 || (this.aBoolean10213 && class17 != null)) ? null : (Class10.aClass87_191.method835(this.anInt10268, 7)));
-                Class64 class64 = (Class348.method2711(this.anInt10302, i_53_, this.aClass64Array10323[0], this.anInt10208, false, (class17_55_ == null ? this.anInt10267 : this.anInt10245), 0, 1, this.anInt10252, var_ha, 160, 0, 240, class17_55_ == null ? class17 : class17_55_));
+                Class64 class64 = (Node.method2711(this.anInt10302, i_53_, this.aClass64Array10323[0], this.anInt10208, false, (class17_55_ == null ? this.anInt10267 : this.anInt10245), 0, 1, this.anInt10252, var_ha, 160, 0, 240, class17_55_ == null ? class17 : class17_55_));
                 if (class64 != null) {
                     class318_sub4 = (OutputStream_Sub2.method136(1 + (this.aClass64Array10323).length, true, false));
                     this.aBoolean10324 = true;

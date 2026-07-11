@@ -11,23 +11,23 @@ final class Class348_Sub40_Sub2 extends Class348_Sub40 {
     static int anInt9100;
     static int anInt9101 = -1;
 
-    final void method3049(Class348_Sub49 class348_sub49, int i, int i_0_) {
+    final void method3049(Packet Packet, int i, int i_0_) {
         anInt9100++;
         int i_1_ = i;
         while_132_:
         do {
             do {
                 if (i_1_ == 0) {
-                    anInt9099 = class348_sub49.readUnsignedByte(i_0_ ^ 0x79d8);
+                    anInt9099 = Packet.readUnsignedByte(i_0_ ^ 0x79d8);
                     break while_132_;
                 } else if (i_1_ != 1) {
                     if (i_1_ == 2) break;
                     break while_132_;
                 }
-                anInt9095 = class348_sub49.readUnsignedByte(255);
+                anInt9095 = Packet.readUnsignedByte(255);
                 break while_132_;
             } while (false);
-            anInt9098 = class348_sub49.readUnsignedShort(842397944);
+            anInt9098 = Packet.readUnsignedShort(842397944);
         } while (false);
         if (i_0_ != 31015) method3042(-14, -114);
     }

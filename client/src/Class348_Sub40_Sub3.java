@@ -13,14 +13,14 @@ final class Class348_Sub40_Sub3 extends Class348_Sub40 {
     static int anInt9109 = 104;
     static int anInt9110;
 
-    final void method3049(Class348_Sub49 class348_sub49, int i, int i_0_) {
+    final void method3049(Packet Packet, int i, int i_0_) {
         int i_1_ = i;
         do {
             if (i_1_ == 0) {
-                anInt9104 = class348_sub49.readUnsignedShort(842397944);
+                anInt9104 = Packet.readUnsignedShort(842397944);
                 break;
             } else if (i_1_ != 1) break;
-            anInt9107 = class348_sub49.readUnsignedShort(842397944);
+            anInt9107 = Packet.readUnsignedShort(842397944);
         } while (false);
         anInt9102++;
         if (i_0_ != 31015) method3056(-75, 18, 53);
@@ -47,7 +47,7 @@ final class Class348_Sub40_Sub3 extends Class348_Sub40 {
             if (class304 == Class348_Sub40_Sub38.aClass304_9471) return 6406;
             if (Class348_Sub40_Sub22.aClass304_9303 != class304) {
                 if (class304 == Class191.aClass304_2571) return 6410;
-                if (class304 == Class318.aClass304_3977) return 6145;
+                if (class304 == Linkable.aClass304_3977) return 6145;
             } else return 6409;
         } else return 6407;
         throw new IllegalStateException();

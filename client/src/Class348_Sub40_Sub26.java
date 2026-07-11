@@ -67,7 +67,7 @@ final class Class348_Sub40_Sub26 extends Class348_Sub40 {
 
         Class322.method2554((byte) -45);
         Class348_Sub40_Sub22.method3111(111, i_15_);
-        int i_18_ = (-Class299.aClass348_Sub49_Sub2_3813.anInt7197 + Class348_Sub40_Sub25.anInt9341) / 16;
+        int i_18_ = (-Class299.aClass348_Sub49_Sub2_3813.pos + Class348_Sub40_Sub25.anInt9341) / 16;
         Class239_Sub6.anIntArrayArray5894 = new int[i_18_][4];
         for (int i_19_ = 0; i_19_ < i_18_; i_19_++) {
             for (int i_20_ = 0; i_20_ < 4; i_20_++)
@@ -78,7 +78,7 @@ final class Class348_Sub40_Sub26 extends Class348_Sub40 {
         aa_Sub1.anIntArray5192 = new int[i_18_];
         Class14_Sub4.aByteArrayArray8642 = new byte[i_18_][];
         Applet_Sub1.anIntArray38 = new int[i_18_];
-        Class348_Sub50.aByteArrayArray7212 = null;
+        StringNode.aByteArrayArray7212 = null;
         r.anIntArray9724 = new int[i_18_];
         Class322.anIntArray4031 = null;
         Class347.aByteArrayArray4281 = new byte[i_18_][];
@@ -99,7 +99,7 @@ final class Class348_Sub40_Sub26 extends Class348_Sub40 {
         Class348_Sub41.method3157(i_16_, (byte) 123, i_17_, 11, bool);
     }
 
-    final void method3049(Class348_Sub49 class348_sub49, int i, int i_23_) {
+    final void method3049(Packet Packet, int i, int i_23_) {
         do {
             try {
                 int i_24_ = i;
@@ -107,22 +107,22 @@ final class Class348_Sub40_Sub26 extends Class348_Sub40 {
                 do {
                     do {
                         if (i_24_ == 0) {
-                            anInt9344 = class348_sub49.readUnsignedShort(i_23_ + 842366929);
+                            anInt9344 = Packet.readUnsignedShort(i_23_ + 842366929);
                             break while_201_;
                         } else if (i_24_ != 1) {
                             if (i_24_ == 2) break;
                             break while_201_;
                         }
-                        anInt9354 = class348_sub49.readUnsignedShort(842397944);
+                        anInt9354 = Packet.readUnsignedShort(842397944);
                         break while_201_;
                     } while (false);
-                    anInt9347 = class348_sub49.readUnsignedShort(842397944);
+                    anInt9347 = Packet.readUnsignedShort(842397944);
                 } while (false);
                 anInt9350++;
                 if (i_23_ == 31015) break;
                 method3118((byte) 96);
             } catch (RuntimeException runtimeexception) {
-                throw Class348_Sub17.method2929(runtimeexception, ("uf.F(" + (class348_sub49 != null ? "{...}" : "null") + ',' + i + ',' + i_23_ + ')'));
+                throw Class348_Sub17.method2929(runtimeexception, ("uf.F(" + (Packet != null ? "{...}" : "null") + ',' + i + ',' + i_23_ + ')'));
             }
             break;
         } while (false);

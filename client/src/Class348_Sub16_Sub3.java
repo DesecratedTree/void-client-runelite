@@ -7,7 +7,7 @@ import java.net.URL;
 final class Class348_Sub16_Sub3 extends Class348_Sub16 {
     static int anInt8889;
     static int anInt8890;
-    private final Class356 aClass356_8891;
+    private final IterableHashTable aClass356_8891;
     static int anInt8892;
     static int anInt8893;
     private final int[] anIntArray8894;
@@ -42,7 +42,7 @@ final class Class348_Sub16_Sub3 extends Class348_Sub16 {
     static int anInt8923;
     static int anInt8924;
     private final int[] anIntArray8925;
-    static Class45 aClass45_8926;
+    static Js5Archive aClass45_8926;
     static int anInt8927;
     private final Class348_Sub43[][] aClass348_Sub43ArrayArray8928;
     static int anInt8929;
@@ -687,7 +687,7 @@ final class Class348_Sub16_Sub3 extends Class348_Sub16 {
         }
     }
 
-    final synchronized boolean method2866(Class348_Sub2 class348_sub2, int i, Class26 class26, Class45 class45, int i_77_) {
+    final synchronized boolean method2866(Class348_Sub2 class348_sub2, int i, Class26 class26, Js5Archive Js5Archive, int i_77_) {
         try {
             class348_sub2.method2733();
             anInt8954++;
@@ -695,10 +695,10 @@ final class Class348_Sub16_Sub3 extends Class348_Sub16 {
             int[] is = null;
             if (i > 0) is = new int[]{i};
             for (Class348_Sub8 class348_sub8 = (Class348_Sub8) class348_sub2.aClass356_6565.method3484(0); class348_sub8 != null; class348_sub8 = (Class348_Sub8) class348_sub2.aClass356_6565.method3482(0)) {
-                int i_78_ = (int) class348_sub8.aLong4291;
+                int i_78_ = (int) class348_sub8.key;
                 Class348_Sub17 class348_sub17 = ((Class348_Sub17) aClass356_8891.method3480(i_78_, -6008));
                 if (class348_sub17 == null) {
-                    class348_sub17 = Class188.method1417(0, class45, i_78_);
+                    class348_sub17 = Class188.method1417(0, Js5Archive, i_78_);
                     if (class348_sub17 == null) {
                         bool = false;
                         continue;
@@ -711,7 +711,7 @@ final class Class348_Sub16_Sub3 extends Class348_Sub16 {
             if (bool) class348_sub2.method2735();
             return bool;
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("ma.CA(" + (class348_sub2 != null ? "{...}" : "null") + ',' + i + ',' + (class26 != null ? "{...}" : "null") + ',' + (class45 != null ? "{...}" : "null") + ',' + i_77_ + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("ma.CA(" + (class348_sub2 != null ? "{...}" : "null") + ',' + i + ',' + (class26 != null ? "{...}" : "null") + ',' + (Js5Archive != null ? "{...}" : "null") + ',' + i_77_ + ')'));
         }
     }
 
@@ -902,13 +902,13 @@ final class Class348_Sub16_Sub3 extends Class348_Sub16 {
     }
 
     static final Class318_Sub1_Sub1 method2878(int i, int i_103_, int i_104_) {
-        Class357 class357 = Class147.aClass357ArrayArrayArray2029[i][i_103_][i_104_];
+        Class357 class357 = ChatMessage.aClass357ArrayArrayArray2029[i][i_103_][i_104_];
         if (class357 == null || class357.aClass318_Sub1_Sub1_4402 == null) return null;
         return class357.aClass318_Sub1_Sub1_4402;
     }
 
     static final void method2879(int i, int i_105_, int i_106_) {
-        Class357 class357 = Class147.aClass357ArrayArrayArray2029[i][i_105_][i_106_];
+        Class357 class357 = ChatMessage.aClass357ArrayArrayArray2029[i][i_105_][i_106_];
         if (class357 != null) {
             Class183.method1376(class357.aClass318_Sub1_Sub1_4402);
             if (class357.aClass318_Sub1_Sub1_4402 != null) class357.aClass318_Sub1_Sub1_4402 = null;
@@ -938,7 +938,7 @@ final class Class348_Sub16_Sub3 extends Class348_Sub16 {
         anIntArray8947 = new int[16];
         aClass204_8944 = new Class204();
         aClass348_Sub16_Sub1_8958 = new Class348_Sub16_Sub1(this);
-        aClass356_8891 = new Class356(128);
+        aClass356_8891 = new IterableHashTable(128);
         method2843(256, -1, -7836);
         method2851(true, true);
     }

@@ -9,7 +9,7 @@ final class Class348_Sub1_Sub1 extends Class348_Sub1 {
     static int anInt8804;
     static boolean aBoolean8805 = false;
     static int anInt8806;
-    static Class60 aClass60_8807;
+    static ReferenceCache aClass60_8807;
     static int anInt8808 = 0;
     static int anInt8809;
 
@@ -51,14 +51,14 @@ final class Class348_Sub1_Sub1 extends Class348_Sub1 {
             for (int i_14_ = 0; i_13_ > i_14_; i_14_++) {
                 byte[] is_15_ = is[i_14_];
                 if (is_15_ != null) {
-                    Class348_Sub49 class348_sub49 = new Class348_Sub49(is_15_);
+                    Packet Packet = new Packet(is_15_);
                     int i_16_ = (Class348_Sub23_Sub3.anIntArray9042[i_14_] >> 8);
                     int i_17_ = 0xff & Class348_Sub23_Sub3.anIntArray9042[i_14_];
                     int i_18_ = -za_Sub2.regionTileX + i_16_ * 64;
                     int i_19_ = -Class90.regionTileY + i_17_ * 64;
                     Class369_Sub1.method3570(false);
-                    class237_sub1.method1681(class348_sub49, i_18_, Class348_Sub45.aClass361Array7108, Class90.regionTileY, za_Sub2.regionTileX, i_19_, (byte) 110);
-                    class237_sub1.method1691(i_19_, Class348_Sub8.aHa6654, class348_sub49, is_11_, i_18_, (byte) -126);
+                    class237_sub1.method1681(Packet, i_18_, Class348_Sub45.aClass361Array7108, Class90.regionTileY, za_Sub2.regionTileX, i_19_, (byte) 110);
+                    class237_sub1.method1691(i_19_, Class348_Sub8.aHa6654, Packet, is_11_, i_18_, (byte) -126);
                     if (!class237_sub1.aBoolean3109 && i_16_ == ha.anInt4581 / 8 && (i_17_ == Class327.anInt4095 / 8) && is_11_[0] != -1) {
                         Class259.aClass305_3304 = Class30.aClass84_413.method823(is_11_[2], is_11_[3], is_11_[1], -66, (Class123.aClass25_1813), is_11_[0]);
                         Class185.anInt2481 = is_11_[4];
@@ -92,6 +92,6 @@ final class Class348_Sub1_Sub1 extends Class348_Sub1 {
     }
 
     static {
-        aClass60_8807 = new Class60(8);
+        aClass60_8807 = new ReferenceCache(8);
     }
 }

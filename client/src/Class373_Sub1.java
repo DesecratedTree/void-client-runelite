@@ -35,10 +35,12 @@ final class Class373_Sub1 extends Class373 implements MouseListener, MouseMotion
 
     public final synchronized void mouseReleased(MouseEvent mouseevent) {
         int i = method3600(mouseevent, -75);
+        int x = Applet_Sub1.scaleMouseX(mouseevent.getX());
+        int y = Applet_Sub1.scaleMouseY(mouseevent.getY());
         if ((i & anInt7422) == 0) i = anInt7422;
-        if (0 != (0x1 & i)) method3598(mouseevent.getX(), 3, mouseevent.getClickCount(), mouseevent.getY(), false);
-        if ((i & 0x4) != 0) method3598(mouseevent.getX(), 5, mouseevent.getClickCount(), mouseevent.getY(), false);
-        if ((0x2 & i) != 0) method3598(mouseevent.getX(), 4, mouseevent.getClickCount(), mouseevent.getY(), false);
+        if (0 != (0x1 & i)) method3598(x, 3, mouseevent.getClickCount(), y, false);
+        if ((i & 0x4) != 0) method3598(x, 5, mouseevent.getClickCount(), y, false);
+        if ((0x2 & i) != 0) method3598(x, 4, mouseevent.getClickCount(), y, false);
         anInt7422 &= ~i;
         if (mouseevent.isPopupTrigger()) mouseevent.consume();
     }
@@ -50,9 +52,11 @@ final class Class373_Sub1 extends Class373 implements MouseListener, MouseMotion
 
     private final void method3599(int i, int i_4_, int i_5_) {
         if (i_4_ == -1) {
-            anInt7421 = i_5_;
-            anInt7423 = i;
-            if (aBoolean7424) method3598(i, -1, 0, i_5_, false);
+            int x = Applet_Sub1.scaleMouseX(i);
+            int y = Applet_Sub1.scaleMouseY(i_5_);
+            anInt7421 = y;
+            anInt7423 = x;
+            if (aBoolean7424) method3598(x, -1, 0, y, false);
         }
     }
 
@@ -63,9 +67,11 @@ final class Class373_Sub1 extends Class373 implements MouseListener, MouseMotion
 
     public final synchronized void mousePressed(MouseEvent mouseevent) {
         int i = method3600(mouseevent, -90);
-        if (1 == i) method3598(mouseevent.getX(), 0, mouseevent.getClickCount(), mouseevent.getY(), false);
-        else if (i == 4) method3598(mouseevent.getX(), 2, mouseevent.getClickCount(), mouseevent.getY(), false);
-        else if (i == 2) method3598(mouseevent.getX(), 1, mouseevent.getClickCount(), mouseevent.getY(), false);
+        int x = Applet_Sub1.scaleMouseX(mouseevent.getX());
+        int y = Applet_Sub1.scaleMouseY(mouseevent.getY());
+        if (1 == i) method3598(x, 0, mouseevent.getClickCount(), y, false);
+        else if (i == 4) method3598(x, 2, mouseevent.getClickCount(), y, false);
+        else if (i == 2) method3598(x, 1, mouseevent.getClickCount(), y, false);
         anInt7422 |= i;
         if (mouseevent.isPopupTrigger()) mouseevent.consume();
     }
@@ -135,9 +141,11 @@ final class Class373_Sub1 extends Class373 implements MouseListener, MouseMotion
     }
 
     public final synchronized void mouseWheelMoved(MouseWheelEvent mousewheelevent) {
-        int i = mousewheelevent.getX();
-        int i_8_ = mousewheelevent.getY();
+        int i = Applet_Sub1.scaleMouseX(mousewheelevent.getX());
+        int i_8_ = Applet_Sub1.scaleMouseY(mousewheelevent.getY());
         int i_9_ = mousewheelevent.getWheelRotation();
+        anInt7423 = i;
+        anInt7421 = i_8_;
         method3598(i, 6, i_9_, i_8_, false);
         mousewheelevent.consume();
     }

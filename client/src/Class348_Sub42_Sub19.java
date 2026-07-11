@@ -9,7 +9,7 @@ final class Class348_Sub42_Sub19 extends Class348_Sub42 {
     String aString9690;
     Class273 aClass273_9691;
     String[] aStringArray9692;
-    Class356[] aClass356Array9693;
+    IterableHashTable[] aClass356Array9693;
     int[] anIntArray9694;
     int anInt9695;
     int[] anIntArray9696;

@@ -113,7 +113,7 @@ final class Class348_Sub42_Sub3 extends Class348_Sub42 {
         anInt9500++;
         Class75.aClass348_Sub42_Sub14_1243 = null;
         Class168.aClass46_2249 = null;
-        Class348.anInt4290 = 0;
+        Node.anInt4290 = 0;
         Class289.aClass262_3705 = null;
         Class75.method749();
         Class75.aClass262_1254.method1996(127);
@@ -140,15 +140,15 @@ final class Class348_Sub42_Sub3 extends Class348_Sub42 {
         }
     }
 
-    static final void method3178(Class45 class45, int i, int[] is, Class45 class45_15_) {
+    static final void method3178(Js5Archive Js5Archive, int i, int[] is, Js5Archive class45_15_) {
         try {
             anInt9506++;
             if (is != null) Class348_Sub1.anIntArray6547 = is;
-            s.aClass45_4585 = class45;
+            s.aClass45_4585 = Js5Archive;
             if (i >= -6) method3177(-36, true);
             Class39.aClass45_518 = class45_15_;
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("lk.F(" + (class45 != null ? "{...}" : "null") + ',' + i + ',' + (is != null ? "{...}" : "null") + ',' + (class45_15_ != null ? "{...}" : "null") + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("lk.F(" + (Js5Archive != null ? "{...}" : "null") + ',' + i + ',' + (is != null ? "{...}" : "null") + ',' + (class45_15_ != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -161,7 +161,7 @@ final class Class348_Sub42_Sub3 extends Class348_Sub42 {
                 Class121.method1083(Class348_Sub8.aHa6654, 100, (byte) 9, Class348_Sub42_Sub8_Sub2.anInt10432, 100, Class321.anInt4017);
                 break;
             } else if (i_16_ != 3) break;
-            Class18.method282(2, Class348_Sub8.aHa6654, Class321.anInt4017, (byte) 73, Class45.anInt666, Class186_Sub1.anInt5812, Class348_Sub42_Sub8_Sub2.anInt10432, 2);
+            Class18.method282(2, Class348_Sub8.aHa6654, Class321.anInt4017, (byte) 73, Js5Archive.anInt666, Class186_Sub1.anInt5812, Class348_Sub42_Sub8_Sub2.anInt10432, 2);
         } while (false);
         if (Class316.aClass348_Sub51_3959.aClass239_Sub3_7222.method1735(false)) s.method3980(i + 93, Class305.aCanvas3869);
         if (Class348_Sub8.aHa6654 != null) Class290.method2196((byte) -9);

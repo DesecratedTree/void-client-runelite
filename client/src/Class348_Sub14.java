@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-final class Class348_Sub14 extends Class348 {
+final class Class348_Sub14 extends Node {
     static int anInt6760;
     static int anInt6761;
     long aLong6762;
@@ -82,7 +82,7 @@ final class Class348_Sub14 extends Class348 {
                     for (int i_10_ = i; i_10_ <= 3; i_10_++) {
                         if (Class58.method536(i_9_, false, i_8_, i, i_10_)) {
                             int i_11_ = i_10_;
-                            if (Class79.method802(i_9_, i_8_, true)) i_11_--;
+                            if (NPCType.method802(i_9_, i_8_, true)) i_11_--;
                             if (i_11_ >= 0) bool_7_ &= Class14_Sub2.method245(i_11_, i_8_, i_9_, (byte) 75);
                         }
                     }
@@ -132,7 +132,7 @@ final class Class348_Sub14 extends Class348 {
                                     int i_30_ = i_28_ + i_17_;
                                     if (i_5_ <= i_29_ && i_6_ <= i_30_ && Class58.method536(i_30_, false, i_29_, i, i_24_)) {
                                         int i_31_ = i_24_;
-                                        if (Class79.method802(i_30_, i_29_, true)) i_31_--;
+                                        if (NPCType.method802(i_30_, i_29_, true)) i_31_--;
                                         if (i_31_ >= 0) Class348_Sub41.method3159(i_14_, ((-i_28_ + (RuntimeException_Sub1.anInt4600)) * 4 + i_19_ + -4), false, i_31_, i_30_, i_29_, var_ha, 4 * i_27_ + i_18_, i_13_);
                                     }
                                 }
@@ -224,11 +224,11 @@ final class Class348_Sub14 extends Class348 {
                         if ((Class132.aPlayer_1907.plane) == i_52_ >> 28) {
                             int i_53_ = ((i_52_ >> 14 & 0x3fff) - za_Sub2.regionTileX);
                             int i_54_ = (i_52_ & 0x3fff) + -Class90.regionTileY;
-                            if (i_53_ >= 0 && i_53_ < Class367_Sub4.anInt7319 && i_54_ >= 0 && (Class348_Sub40_Sub3.anInt9109 > i_54_)) Class318_Sub1_Sub5_Sub1.aClass262_10125.method1999(new Class348_Sub35(i_51_), -20180);
+                            if (i_53_ >= 0 && i_53_ < Class367_Sub4.anInt7319 && i_54_ >= 0 && (Class348_Sub40_Sub3.anInt9109 > i_54_)) Class318_Sub1_Sub5_Sub1.aClass262_10125.method1999(new IntNode(i_51_), -20180);
                             else {
                                 Class42 class42 = (Class348_Sub23_Sub2.aClass153_9031.method1225((r_Sub2.aClass252_10488.anIntArray3239[i_51_]), (byte) 120));
                                 if (class42.anIntArray591 != null && (i_53_ + class42.anInt595 >= 0) && (Class367_Sub4.anInt7319 > class42.anInt603 + i_53_) && i_54_ + class42.anInt570 >= 0 && (Class348_Sub40_Sub3.anInt9109 > (i_54_ - -class42.anInt607)))
-                                    Class318_Sub1_Sub5_Sub1.aClass262_10125.method1999(new Class348_Sub35(i_51_), -20180);
+                                    Class318_Sub1_Sub5_Sub1.aClass262_10125.method1999(new IntNode(i_51_), -20180);
                             }
                         }
                     }

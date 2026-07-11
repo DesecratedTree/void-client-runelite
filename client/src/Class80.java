@@ -42,49 +42,49 @@ final class Class80 {
         return 0;
     }
 
-    final void method807(Class348_Sub49 class348_sub49) {
+    final void method807(Packet Packet) {
         aClass197_1418 = new Class197();
-        aClass197_1418.method1452(class348_sub49);
+        aClass197_1418.method1452(Packet);
         aClass197_1408 = new Class197();
-        aClass197_1408.method1452(class348_sub49);
-        int i = class348_sub49.readUnsignedByte(255);
+        aClass197_1408.method1452(Packet);
+        int i = Packet.readUnsignedByte(255);
         if (i != 0) {
-            class348_sub49.anInt7197--;
+            Packet.pos--;
             aClass197_1415 = new Class197();
-            aClass197_1415.method1452(class348_sub49);
+            aClass197_1415.method1452(Packet);
             aClass197_1425 = new Class197();
-            aClass197_1425.method1452(class348_sub49);
+            aClass197_1425.method1452(Packet);
         }
-        i = class348_sub49.readUnsignedByte(255);
+        i = Packet.readUnsignedByte(255);
         if (i != 0) {
-            class348_sub49.anInt7197--;
+            Packet.pos--;
             aClass197_1413 = new Class197();
-            aClass197_1413.method1452(class348_sub49);
+            aClass197_1413.method1452(Packet);
             aClass197_1423 = new Class197();
-            aClass197_1423.method1452(class348_sub49);
+            aClass197_1423.method1452(Packet);
         }
-        i = class348_sub49.readUnsignedByte(255);
+        i = Packet.readUnsignedByte(255);
         if (i != 0) {
-            class348_sub49.anInt7197--;
+            Packet.pos--;
             aClass197_1414 = new Class197();
-            aClass197_1414.method1452(class348_sub49);
+            aClass197_1414.method1452(Packet);
             aClass197_1420 = new Class197();
-            aClass197_1420.method1452(class348_sub49);
+            aClass197_1420.method1452(Packet);
         }
         for (int i_2_ = 0; i_2_ < 10; i_2_++) {
-            int i_3_ = class348_sub49.readSmart(-118);
+            int i_3_ = Packet.readSmart(-118);
             if (i_3_ == 0) break;
             anIntArray1410[i_2_] = i_3_;
-            anIntArray1411[i_2_] = class348_sub49.method3362((byte) 77);
-            anIntArray1428[i_2_] = class348_sub49.readSmart(-121);
+            anIntArray1411[i_2_] = Packet.method3362((byte) 77);
+            anIntArray1428[i_2_] = Packet.readSmart(-121);
         }
-        anInt1427 = class348_sub49.readSmart(-120);
-        anInt1422 = class348_sub49.readSmart(-122);
-        this.anInt1421 = class348_sub49.readUnsignedShort(842397944);
-        this.anInt1407 = class348_sub49.readUnsignedShort(842397944);
+        anInt1427 = Packet.readSmart(-120);
+        anInt1422 = Packet.readSmart(-122);
+        this.anInt1421 = Packet.readUnsignedShort(842397944);
+        this.anInt1407 = Packet.readUnsignedShort(842397944);
         aClass349_1419 = new Class349();
         aClass197_1417 = new Class197();
-        aClass349_1419.method3446(class348_sub49, aClass197_1417);
+        aClass349_1419.method3446(Packet, aClass197_1417);
     }
 
     public static void method808() {

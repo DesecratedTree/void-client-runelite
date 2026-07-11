@@ -30,7 +30,7 @@ final class Class127_Sub1 extends Class127 {
     static final void method1118(boolean bool, boolean bool_2_, Class348_Sub41 class348_sub41, int i) {
         anInt8382++;
         int i_3_ = class348_sub41.anInt7050;
-        int i_4_ = (int) class348_sub41.aLong4291;
+        int i_4_ = (int) class348_sub41.key;
         if (i == 2533) {
             class348_sub41.method2715((byte) 35);
             if (bool) Class14.method235(i_3_, (byte) -116);
@@ -46,15 +46,15 @@ final class Class127_Sub1 extends Class127 {
                     if (class348_sub41_5_ == null) break;
                 }
                 if (class348_sub41_5_.anInt7053 == 3) {
-                    int i_6_ = (int) class348_sub41_5_.aLong4291;
+                    int i_6_ = (int) class348_sub41_5_.key;
                     if (i_3_ == i_6_ >>> 16) method1118(true, bool_2_, class348_sub41_5_, 2533);
                 }
             }
         }
     }
 
-    Class127_Sub1(Class45 class45, Class288_Sub1 class288_sub1) {
-        super(class45, class288_sub1);
+    Class127_Sub1(Js5Archive Js5Archive, Class288_Sub1 class288_sub1) {
+        super(Js5Archive, class288_sub1);
     }
 
     static final void method1119(boolean bool) {

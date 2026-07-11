@@ -13,7 +13,7 @@ final class Class135_Sub2 extends Class135 implements Interface8 {
     static int anInt4840;
     static int anInt4841;
     static int anInt4842;
-    static Class45 aClass45_4843;
+    static Js5Archive aClass45_4843;
     static int anInt4844;
     private static char[] aCharArray4845 = new char[64];
     static Class348_Sub42_Sub12 aClass348_Sub42_Sub12_4846;
@@ -82,9 +82,9 @@ final class Class135_Sub2 extends Class135 implements Interface8 {
                 Class14_Sub4.method254(35, (byte) -87);
                 return;
             } else {
-                Class348_Sub49 class348_sub49 = (new Class348_Sub49(Class98.method878((Class110_Sub1.method1039(Class348_Sub23_Sub3.aString9043, true)), -126)));
-                l = class348_sub49.readLong(-456577760);
-                Class348_Sub33.aLong6966 = class348_sub49.readLong(-456577760);
+                Packet Packet = (new Packet(Class98.method878((Class110_Sub1.method1039(Class348_Sub23_Sub3.aString9043, true)), -126)));
+                l = Packet.readLong(-456577760);
+                Class348_Sub33.aLong6966 = Packet.readLong(-456577760);
             }
             Class132.method1138(Class27.method313(l, -95), true, "", (byte) 79);
         }

@@ -13,12 +13,12 @@ final class Class254 {
     static int anInt3263;
     static Class114 aClass114_3264 = new Class114(6, 2);
 
-    final void method1924(Class348_Sub49 class348_sub49, byte i) {
+    final void method1924(Packet Packet, byte i) {
         int i_0_ = -47 % ((i - -74) / 49);
         for (; ; ) {
-            int i_1_ = class348_sub49.readUnsignedByte(255);
+            int i_1_ = Packet.readUnsignedByte(255);
             if (i_1_ == 0) break;
-            method1927(true, class348_sub49, i_1_);
+            method1927(true, Packet, i_1_);
         }
         anInt3263++;
     }
@@ -34,13 +34,13 @@ final class Class254 {
         aClass114_3264 = null;
     }
 
-    private final void method1927(boolean bool, Class348_Sub49 class348_sub49, int i) {
+    private final void method1927(boolean bool, Packet Packet, int i) {
         anInt3257++;
         if (i != 1) {
-            if (i == 2) this.anInt3256 = class348_sub49.readInt((byte) -126);
+            if (i == 2) this.anInt3256 = Packet.readInt((byte) -126);
             else if (i == 4) this.aBoolean3261 = false;
-            else if (i == 5) this.aString3258 = class348_sub49.readString((byte) 91);
-        } else aChar3259 = Class50_Sub1.method462(class348_sub49.readByte(-115), -128);
+            else if (i == 5) this.aString3258 = Packet.readString((byte) 91);
+        } else aChar3259 = Class50_Sub1.method462(Packet.readByte(-115), -128);
         if (bool != true) this.aBoolean3261 = true;
     }
 

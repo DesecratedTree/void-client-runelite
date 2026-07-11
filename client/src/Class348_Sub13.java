@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-final class Class348_Sub13 extends Class348 {
+final class Class348_Sub13 extends Node {
     static int anInt6754;
     static int anInt6755;
     static int anInt6756;
@@ -103,12 +103,12 @@ final class Class348_Sub13 extends Class348 {
                 int i_28_ = i_15_;
                 boolean bool_29_ = false;
                 for (int i_30_ = 0; is.length > i_30_; i_30_++) {
-                    if (is[i_30_] != -1 && !Exception_Sub1.aClass255_112.method1940(-91, is[i_30_]).method1565(bool, -1)) bool_29_ = true;
+                    if (is[i_30_] != -1 && !Exception_Sub1.aClass255_112.getItemDefinitions(-91, is[i_30_]).hasEquipmentModels(bool, -1)) bool_29_ = true;
                 }
                 if (bool_29_) return null;
                 Class124[] class124s = new Class124[is.length];
                 for (int i_31_ = 0; i_31_ < is.length; i_31_++) {
-                    if (is[i_31_] != -1) class124s[i_31_] = Exception_Sub1.aClass255_112.method1940(Class348_Sub21.method2955(i_14_, -112), is[i_31_]).method1558(bool, false);
+                    if (is[i_31_] != -1) class124s[i_31_] = Exception_Sub1.aClass255_112.getItemDefinitions(Class348_Sub21.method2955(i_14_, -112), is[i_31_]).getEquipmentModelData(bool, false);
                 }
                 if (class225 != null && class225.anIntArrayArray2939 != null) {
                     for (int i_32_ = 0; (class225.anIntArrayArray2939.length > i_32_); i_32_++) {

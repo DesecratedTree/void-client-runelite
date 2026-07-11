@@ -12,7 +12,7 @@ final class Class239_Sub21 extends Class239 {
     static int anInt6063;
     static int anInt6064;
     static int anInt6065;
-    static Class318_Sub1[] aClass318_Sub1Array6066;
+    static SceneEntity[] aClass318_Sub1Array6066;
     static int anInt6067;
     static int anInt6068;
     static int anInt6069;
@@ -31,7 +31,7 @@ final class Class239_Sub21 extends Class239 {
 
     static final void method1810(int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_) {
         if (i_5_ != 8 && i_5_ != 16) {
-            Class357 class357 = Class147.aClass357ArrayArrayArray2029[i_4_][i][i_2_];
+            Class357 class357 = ChatMessage.aClass357ArrayArrayArray2029[i_4_][i][i_2_];
             if (class357 == null) class357 = new Class357(i_4_);
             if (i_5_ == 1) {
                 class357.aShort4401 = (short) i_0_;

@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-class Class348_Sub42 extends Class348 {
+class Class348_Sub42 extends Node {
     long aLong7057;
     static Class2 aClass2_7058;
     static int anInt7059 = 0;

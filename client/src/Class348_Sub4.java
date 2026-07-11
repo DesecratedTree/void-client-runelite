@@ -4,7 +4,7 @@
 
 import jaclib.hardware_info.HardwareInfo;
 
-final class Class348_Sub4 extends Class348 {
+final class Class348_Sub4 extends Node {
     private int anInt6591;
     private int anInt6592;
     static int anInt6593;
@@ -52,31 +52,31 @@ final class Class348_Sub4 extends Class348 {
         return i_0_;
     }
 
-    final void method2747(int i, Class348_Sub49 class348_sub49) {
-        class348_sub49.writeByte(false, 5);
+    final void method2747(int i, Packet Packet) {
+        Packet.writeByte(false, 5);
         anInt6611++;
-        class348_sub49.writeByte(false, anInt6613);
-        class348_sub49.writeByte(false, aBoolean6608 ? 1 : 0);
-        class348_sub49.writeByte(false, anInt6595);
-        class348_sub49.writeByte(false, anInt6594);
-        class348_sub49.writeByte(false, anInt6616);
-        class348_sub49.writeByte(false, anInt6605);
-        class348_sub49.writeByte(false, anInt6612);
-        class348_sub49.writeByte(false, !aBoolean6607 ? 0 : 1);
-        class348_sub49.writeShort((byte) 107, anInt6592);
-        class348_sub49.writeByte(false, anInt6599);
-        class348_sub49.method3340(i ^ ~0x26b6, this.anInt6609);
-        class348_sub49.writeShort((byte) 107, anInt6591);
-        class348_sub49.writeByte(false, anInt6598);
-        class348_sub49.writeByte(false, anInt6596);
-        class348_sub49.writeByte(false, anInt6603);
-        class348_sub49.method3386(aString6604, 123);
-        class348_sub49.method3386(aString6614, -45);
-        class348_sub49.method3386(aString6610, 100);
+        Packet.writeByte(false, anInt6613);
+        Packet.writeByte(false, aBoolean6608 ? 1 : 0);
+        Packet.writeByte(false, anInt6595);
+        Packet.writeByte(false, anInt6594);
+        Packet.writeByte(false, anInt6616);
+        Packet.writeByte(false, anInt6605);
+        Packet.writeByte(false, anInt6612);
+        Packet.writeByte(false, !aBoolean6607 ? 0 : 1);
+        Packet.writeShort((byte) 107, anInt6592);
+        Packet.writeByte(false, anInt6599);
+        Packet.method3340(i ^ ~0x26b6, this.anInt6609);
+        Packet.writeShort((byte) 107, anInt6591);
+        Packet.writeByte(false, anInt6598);
+        Packet.writeByte(false, anInt6596);
+        Packet.writeByte(false, anInt6603);
+        Packet.method3386(aString6604, 123);
+        Packet.method3386(aString6614, -45);
+        Packet.method3386(aString6610, 100);
         if (i == 1) {
-            class348_sub49.method3386(aString6597, -14);
-            class348_sub49.writeByte(false, anInt6606);
-            class348_sub49.writeShort((byte) 107, anInt6617);
+            Packet.method3386(aString6597, -14);
+            Packet.writeByte(false, anInt6606);
+            Packet.writeShort((byte) 107, anInt6617);
         }
     }
 

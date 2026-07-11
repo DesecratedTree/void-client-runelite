@@ -40,7 +40,7 @@ final class Class318_Sub9_Sub2_Sub1 extends Class318_Sub9_Sub2 {
             Class181 class181 = (this.aClass318_Sub7_10419.aClass181_6441);
             s[] var_ses = aa_Sub1.aSArray5191;
             int i_2_ = class318_sub10.anInt6483;
-            Class357 class357 = (Class147.aClass357ArrayArrayArray2029[class318_sub10.anInt6483][i][i_0_]);
+            Class357 class357 = (ChatMessage.aClass357ArrayArrayArray2029[class318_sub10.anInt6483][i][i_0_]);
             if (class357 != null) i_2_ = class357.aByte4399;
             int i_3_ = var_ses[i_2_].method3982((byte) -86, i_0_, i);
             int i_4_;
@@ -71,17 +71,17 @@ final class Class318_Sub9_Sub2_Sub1 extends Class318_Sub9_Sub2 {
             if (class181.aBoolean2376 && i_5_ == 0 && i_1_ > var_ses[0].method3982((byte) -86, i_0_, i)) method2520();
             else if (i_5_ == Class189.anInt2524 - 1 && (var_ses[i_5_].method3982((byte) -86, i_0_, i) - i_1_ > 8 << Class362.anInt4459)) method2520();
             else {
-                class357 = Class147.aClass357ArrayArrayArray2029[i_5_][i][i_0_];
+                class357 = ChatMessage.aClass357ArrayArrayArray2029[i_5_][i][i_0_];
                 if (class357 == null) {
-                    if (i_5_ == 0 || (Class147.aClass357ArrayArrayArray2029[0][i][i_0_] == null)) class357 = Class147.aClass357ArrayArrayArray2029[0][i][i_0_] = new Class357(0);
-                    boolean bool = (Class147.aClass357ArrayArrayArray2029[0][i][i_0_].aClass357_4400 != null);
+                    if (i_5_ == 0 || (ChatMessage.aClass357ArrayArrayArray2029[0][i][i_0_] == null)) class357 = ChatMessage.aClass357ArrayArrayArray2029[0][i][i_0_] = new Class357(0);
+                    boolean bool = (ChatMessage.aClass357ArrayArrayArray2029[0][i][i_0_].aClass357_4400 != null);
                     if (i_5_ == 3 && bool) {
                         method2520();
                         return;
                     }
                     for (int i_6_ = 1; i_6_ <= i_5_; i_6_++) {
-                        if ((Class147.aClass357ArrayArrayArray2029[i_6_][i][i_0_]) == null) {
-                            class357 = Class147.aClass357ArrayArrayArray2029[i_6_][i][i_0_] = new Class357(i_6_);
+                        if ((ChatMessage.aClass357ArrayArrayArray2029[i_6_][i][i_0_]) == null) {
+                            class357 = ChatMessage.aClass357ArrayArrayArray2029[i_6_][i][i_0_] = new Class357(i_6_);
                             if (bool) class357.aByte4399++;
                         }
                     }
@@ -198,8 +198,8 @@ final class Class318_Sub9_Sub2_Sub1 extends Class318_Sub9_Sub2 {
                 anInt10421 -= (long) anInt10421 * l_38_ >> 28;
             }
             if (class181.anIntArray2402 != null) {
-                Class348 class348 = (class318_sub10.aClass262_6479.aClass348_3334);
-                for (Class348 class348_39_ = class348.aClass348_4294; class348_39_ != class348; class348_39_ = class348_39_.aClass348_4294) {
+                Node Node = (class318_sub10.aClass262_6479.aClass348_3334);
+                for (Node class348_39_ = Node.next; class348_39_ != Node; class348_39_ = class348_39_.next) {
                     Class348_Sub42_Sub20 class348_sub42_sub20 = (Class348_Sub42_Sub20) class348_39_;
                     Class174 class174 = (class348_sub42_sub20.aClass174_9704);
                     if (class174.anInt2296 != 1) {
@@ -311,7 +311,7 @@ final class Class318_Sub9_Sub2_Sub1 extends Class318_Sub9_Sub2 {
                     class181.anIntArray2385 = new int[class181.anIntArray2395.length];
                     for (int i_63_ = 0; i_63_ < class181.anIntArray2395.length; i_63_++) {
                         Class256.method1943(false, (class181.anIntArray2395[i_63_]));
-                        class181.anIntArray2385[i_63_] = ((Class348_Sub35) Class59_Sub2_Sub2.aClass356_8679.method3480(class181.anIntArray2395[i_63_], -6008)).anInt6976;
+                        class181.anIntArray2385[i_63_] = ((IntNode) Class59_Sub2_Sub2.aClass356_8679.method3480(class181.anIntArray2395[i_63_], -6008)).anInt6976;
                     }
                 }
                 for (int i_64_ = 0; i_64_ < class181.anIntArray2385.length; i_64_++) {

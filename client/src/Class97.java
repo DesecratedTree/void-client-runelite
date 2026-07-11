@@ -43,7 +43,7 @@ final class Class97 {
     }
 
     static final void method873(int i, int i_6_, ha var_ha, int i_7_) {
-        Class60.aHa1098 = var_ha;
+        ReferenceCache.aHa1098 = var_ha;
         Class262.aClass190ArrayArray3335 = new Class190[i][i_7_];
         if (i_6_ == 21719) {
             anInt1549++;

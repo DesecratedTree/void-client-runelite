@@ -52,7 +52,7 @@ final class s_Sub2 extends s {
     Class123 aClass123_8275;
     Class123 aClass123_8276;
     Class123 aClass123_8277;
-    private Class356 aClass356_8278;
+    private IterableHashTable aClass356_8278;
     private Interface2 anInterface2_8279;
     private int anInt8280;
     private float[][] aFloatArrayArray8281;
@@ -141,7 +141,7 @@ final class s_Sub2 extends s {
             Class348_Sub20[] class348_sub20s = new Class348_Sub20[anInt8284];
             int i_34_ = Class348_Sub40_Sub1.method3051(anInt8284 / 4, 4096);
             if (i_34_ < 1) i_34_ = 1;
-            Class356 class356 = new Class356(i_34_);
+            IterableHashTable IterableHashTable = new IterableHashTable(i_34_);
             Class348_Sub20[] class348_sub20s_35_ = new Class348_Sub20[anInt8280];
             for (int i_36_ = 0; this.anInt4587 > i_36_; i_36_++) {
                 for (int i_37_ = 0; (this.anInt4590 > i_37_); i_37_++) {
@@ -250,10 +250,10 @@ final class s_Sub2 extends s {
                                 }
                                 i_75_ = (Class10.anIntArray179[0xff80 & i_69_ | i_90_]);
                             }
-                            Class348 class348 = null;
-                            if ((i_65_ & -1 + anInt8260) == 0 && (anInt8260 + -1 & i_66_) == 0) class348 = class356.method3480(l, -6008);
+                            Node Node = null;
+                            if ((i_65_ & -1 + anInt8260) == 0 && (anInt8260 + -1 & i_66_) == 0) Node = IterableHashTable.method3480(l, -6008);
                             int i_91_;
-                            if (class348 == null) {
+                            if (Node == null) {
                                 int i_92_;
                                 if (i_69_ != i_70_) {
                                     int i_93_ = (i_70_ & 0x7f) * i_74_ >> 7;
@@ -315,11 +315,11 @@ final class s_Sub2 extends s {
                                 i_91_ = anInt8246++;
                                 is_63_[i_64_] = (short) i_91_;
                                 if (i_69_ != -1) class348_sub20s[i_91_] = class348_sub20s_38_[i_64_];
-                                class356.method3483((byte) 114, l, new Class348_Sub29(is_63_[i_64_]));
+                                IterableHashTable.method3483((byte) 114, l, new Class348_Sub29(is_63_[i_64_]));
                             } else {
-                                is_63_[i_64_] = ((Class348_Sub29) class348).aShort6911;
+                                is_63_[i_64_] = ((Class348_Sub29) Node).aShort6911;
                                 i_91_ = 0xffff & is_63_[i_64_];
-                                if (i_69_ != -1 && ((class348_sub20s[i_91_].aLong4291) > class348_sub20s_38_[i_64_].aLong4291)) class348_sub20s[i_91_] = class348_sub20s_38_[i_64_];
+                                if (i_69_ != -1 && ((class348_sub20s[i_91_].key) > class348_sub20s_38_[i_64_].key)) class348_sub20s[i_91_] = class348_sub20s_38_[i_64_];
                             }
                             for (int i_98_ = 0; i_98_ < i_60_; i_98_++)
                                 class348_sub20s_35_[i_98_].method2949((byte) 97, i_91_, i_74_, i_75_, f_89_);
@@ -352,11 +352,11 @@ final class s_Sub2 extends s {
                             }
                             if (class348_sub20_108_ != null) {
                                 class348_sub20_108_.method2945(i_100_, (byte) 18, i_101_, i_103_);
-                                if (class348_sub20_110_ == null || ((class348_sub20_110_.aLong4291) > (class348_sub20_108_.aLong4291))) class348_sub20_110_ = class348_sub20_108_;
+                                if (class348_sub20_110_ == null || ((class348_sub20_110_.key) > (class348_sub20_108_.key))) class348_sub20_110_ = class348_sub20_108_;
                             }
                             if (class348_sub20_109_ != null) {
                                 class348_sub20_109_.method2945(i_100_, (byte) 18, i_101_, i_103_);
-                                if (class348_sub20_110_ == null || ((class348_sub20_109_.aLong4291) < (class348_sub20_110_.aLong4291))) class348_sub20_110_ = class348_sub20_109_;
+                                if (class348_sub20_110_ == null || ((class348_sub20_109_.key) < (class348_sub20_110_.key))) class348_sub20_110_ = class348_sub20_109_;
                             }
                             if (class348_sub20_110_ != null) {
                                 if (class348_sub20 != null) class348_sub20_110_.method2951(3, i_105_);
@@ -385,7 +385,7 @@ final class s_Sub2 extends s {
             long[] ls = new long[aClass348_Sub20Array8282.length];
             for (int i_112_ = 0; i_112_ < aClass348_Sub20Array8282.length; i_112_++) {
                 Class348_Sub20 class348_sub20 = aClass348_Sub20Array8282[i_112_];
-                ls[i_112_] = class348_sub20.aLong4291;
+                ls[i_112_] = class348_sub20.key;
                 class348_sub20.method2952(17795, anInt8246);
             }
             Class339.method2669(aClass348_Sub20Array8282, ls, -21);
@@ -477,7 +477,7 @@ final class s_Sub2 extends s {
                         aFloatArrayArray8283[i_139_][i_138_] = (float) i_141_ * f;
                     }
                 }
-                aClass356_8278 = new Class356(128);
+                aClass356_8278 = new IterableHashTable(128);
                 if ((0x10 & this.anInt8235) == 0) break;
                 aClass104_8266 = new Class104(this.aHa_Sub2_8272, this);
             } catch (RuntimeException runtimeexception) {
@@ -566,8 +566,8 @@ final class s_Sub2 extends s {
                 this.aHa_Sub2_8272.method3796(16384);
             }
             this.aHa_Sub2_8272.method3794(this.aClass123_8276, aClass123_8274, -26411, this.aClass123_8277, this.aClass123_8275);
-            if (this.aHa_Sub2_8272.aClass348_Sub49_Sub1_7798.aByteArray7154.length < anInt8257 * 2) this.aHa_Sub2_8272.aClass348_Sub49_Sub1_7798 = new Class348_Sub49_Sub1(anInt8257 * 2);
-            else this.aHa_Sub2_8272.aClass348_Sub49_Sub1_7798.anInt7197 = 0;
+            if (this.aHa_Sub2_8272.aClass348_Sub49_Sub1_7798.data.length < anInt8257 * 2) this.aHa_Sub2_8272.aClass348_Sub49_Sub1_7798 = new Class348_Sub49_Sub1(anInt8257 * 2);
+            else this.aHa_Sub2_8272.aClass348_Sub49_Sub1_7798.pos = 0;
             int i_158_ = 0;
             Class348_Sub49_Sub1 class348_sub49_sub1 = (this.aHa_Sub2_8272.aClass348_Sub49_Sub1_7798);
             if (this.aHa_Sub2_8272.aBoolean7775) {
@@ -604,17 +604,17 @@ final class s_Sub2 extends s {
                 }
             }
             if (i_158_ > 0) {
-                Class119_Sub2 class119_sub2 = new Class119_Sub2(this.aHa_Sub2_8272, 5123, (class348_sub49_sub1.aByteArray7154), (class348_sub49_sub1.anInt7197));
+                Class119_Sub2 class119_sub2 = new Class119_Sub2(this.aHa_Sub2_8272, 5123, (class348_sub49_sub1.data), (class348_sub49_sub1.pos));
                 this.aHa_Sub2_8272.method3759(i_158_, -128, 4, class119_sub2, 0);
             }
         }
     }
 
-    static final void method4001(Class318_Sub1 class318_sub1) {
-        Class9.aHa171.H(class318_sub1.x, (class318_sub1.anInt6382 + (class318_sub1.method2394(true) >> 1)), class318_sub1.y, Class348_Sub42_Sub3.anIntArray9505);
-        class318_sub1.anInt6386 = Class348_Sub42_Sub3.anIntArray9505[0];
-        class318_sub1.anInt6380 = Class348_Sub42_Sub3.anIntArray9505[1];
-        class318_sub1.anInt6389 = Class348_Sub42_Sub3.anIntArray9505[2];
+    static final void method4001(SceneEntity SceneEntity) {
+        Class9.aHa171.H(SceneEntity.x, (SceneEntity.anInt6382 + (SceneEntity.method2394(true) >> 1)), SceneEntity.y, Class348_Sub42_Sub3.anIntArray9505);
+        SceneEntity.anInt6386 = Class348_Sub42_Sub3.anIntArray9505[0];
+        SceneEntity.anInt6380 = Class348_Sub42_Sub3.anIntArray9505[1];
+        SceneEntity.anInt6389 = Class348_Sub42_Sub3.anIntArray9505[2];
     }
 
     final r fa(int i, int i_167_, r var_r) {
@@ -633,7 +633,7 @@ final class s_Sub2 extends s {
         return var_r_Sub2_169_;
     }
 
-    static final void method4002(Class348_Sub49 class348_sub49, byte i) {
+    static final void method4002(Packet Packet, byte i) {
         anInt8248++;
         byte[] is = new byte[24];
         if (i == 55) {
@@ -651,7 +651,7 @@ final class s_Sub2 extends s {
                         is[i_171_] = (byte) -1;
                 }
             }
-            class348_sub49.writeBytes(24, 0, is, i ^ 0x8);
+            Packet.writeBytes(24, 0, is, i ^ 0x8);
         }
     }
 
@@ -690,15 +690,15 @@ final class s_Sub2 extends s {
                     i_189_ = 128;
                 }
                 long l = ((long) i_184_ << 28 | ((long) i_185_ << 42 | (long) i_186_ << 48) | (long) (i_189_ << 14) | (long) i_188_);
-                Class348 class348;
-                for (class348 = aClass356_8278.method3480(l, -6008); class348 != null; class348 = aClass356_8278.method3476(true)) {
-                    Class348_Sub20 class348_sub20 = (Class348_Sub20) class348;
+                Node Node;
+                for (Node = aClass356_8278.method3480(l, -6008); Node != null; Node = aClass356_8278.method3476(true)) {
+                    Class348_Sub20 class348_sub20 = (Class348_Sub20) Node;
                     if (i_188_ == class348_sub20.anInt6841 && (class348_sub20.aFloat6832 == (float) i_189_) && (class348_sub20.anInt6825 == i_184_) && (i_185_ == class348_sub20.anInt6833) && (class348_sub20.anInt6826 == i_186_)) break;
                 }
-                if (class348 == null) {
+                if (Node == null) {
                     class348_sub20s[i_187_] = new Class348_Sub20(this, i_188_, i_189_, i_184_, i_185_, i_186_);
                     aClass356_8278.method3483((byte) 99, l, class348_sub20s[i_187_]);
-                } else class348_sub20s[i_187_] = (Class348_Sub20) class348;
+                } else class348_sub20s[i_187_] = (Class348_Sub20) Node;
             }
             if (bool) aByteArrayArray8240[i][i_176_] = (byte) Class273.method2057((aByteArrayArray8240[i][i_176_]), 1);
             if (is_180_.length > anInt8280) anInt8280 = is_180_.length;
@@ -720,7 +720,7 @@ final class s_Sub2 extends s {
             int i_197_ = i_192_ + i_192_ - -1;
             i_197_ *= i_197_;
             if (this.aHa_Sub2_8272.anIntArray7882.length < i_197_) this.aHa_Sub2_8272.anIntArray7882 = new int[i_197_];
-            if (anInt8257 * 2 > (this.aHa_Sub2_8272.aClass348_Sub49_Sub1_7798.aByteArray7154).length) this.aHa_Sub2_8272.aClass348_Sub49_Sub1_7798 = new Class348_Sub49_Sub1(2 * anInt8257);
+            if (anInt8257 * 2 > (this.aHa_Sub2_8272.aClass348_Sub49_Sub1_7798.data).length) this.aHa_Sub2_8272.aClass348_Sub49_Sub1_7798 = new Class348_Sub49_Sub1(2 * anInt8257);
             int i_198_ = -i_192_ + i_194_;
             int i_199_ = i_198_;
             if (i_198_ < 0) i_198_ = 0;
@@ -758,8 +758,8 @@ final class s_Sub2 extends s {
                 this.aHa_Sub2_8272.method3729(8448, (byte) 98, 7681);
                 this.aHa_Sub2_8272.method3762(34166, 770, (byte) -87, 0);
                 this.aHa_Sub2_8272.method3775(false, 0, 770, 34167);
-                for (Class348 class348 = aClass262_8256.method1995(4); class348 != null; class348 = aClass262_8256.method1990((byte) 92)) {
-                    Class348_Sub32 class348_sub32 = (Class348_Sub32) class348;
+                for (Node Node = aClass262_8256.method1995(4); Node != null; Node = aClass262_8256.method1990((byte) 92)) {
+                    Class348_Sub32 class348_sub32 = (Class348_Sub32) Node;
                     class348_sub32.method3023(bools, 255, i_194_, i_196_, i_192_);
                 }
                 this.aHa_Sub2_8272.method3762(5890, 768, (byte) -87, 0);

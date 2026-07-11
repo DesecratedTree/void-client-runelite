@@ -26,7 +26,7 @@ final class Class240 implements Interface1 {
     }
 
     static final void method1852(int i, int i_1_, int i_2_, int i_3_) {
-        Class357 class357 = Class147.aClass357ArrayArrayArray2029[i][i_1_][i_2_];
+        Class357 class357 = ChatMessage.aClass357ArrayArrayArray2029[i][i_1_][i_2_];
         if (class357 != null) {
             Class318_Sub1_Sub5 class318_sub1_sub5 = class357.aClass318_Sub1_Sub5_4395;
             Class318_Sub1_Sub5 class318_sub1_sub5_4_ = class357.aClass318_Sub1_Sub5_4407;

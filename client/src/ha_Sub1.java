@@ -7,7 +7,7 @@ import java.awt.*;
 final class ha_Sub1 extends ha {
     private int anInt7465;
     private int anInt7466;
-    private Class356 aClass356_7467;
+    private IterableHashTable aClass356_7467;
     private Canvas aCanvas7468;
     Class348_Sub31 aClass348_Sub31_7469;
     private boolean aBoolean7470 = false;
@@ -38,8 +38,8 @@ final class ha_Sub1 extends ha {
     private int anInt7495;
     int anInt7496;
     int anInt7497;
-    private final Class60 aClass60_7498;
-    private final Class60 aClass60_7499;
+    private final ReferenceCache aClass60_7498;
+    private final ReferenceCache aClass60_7499;
     int anInt7500;
     int anInt7501;
     float[] aFloatArray7502;
@@ -1414,13 +1414,13 @@ final class ha_Sub1 extends ha {
             if (class348_sub31 != null) {
                 aCanvas7468 = canvas;
                 Dimension dimension = canvas.getSize();
-                anInt7465 = dimension.width;
-                anInt7472 = dimension.height;
                 this.aClass348_Sub31_7469 = class348_sub31;
                 if (aClass49_7475 == null) {
                     this.anIntArray7483 = class348_sub31.anIntArray6916;
                     this.anInt7477 = class348_sub31.anInt6917;
                     anInt7486 = class348_sub31.anInt6920;
+                    anInt7465 = Applet_Sub1.shouldScaleCanvasFrame() ? this.anInt7477 : dimension.width;
+                    anInt7472 = Applet_Sub1.shouldScaleCanvasFrame() ? anInt7486 : dimension.height;
                     if (this.anInt7477 != anInt7495 || anInt7486 != anInt7488) {
                         anInt7481 = anInt7495 = this.anInt7477;
                         anInt7493 = anInt7488 = anInt7486;
@@ -1950,12 +1950,12 @@ final class ha_Sub1 extends ha {
             aClass356_7467.method3483((byte) 112, canvas.hashCode(), class348_sub31);
             if (aCanvas7468 == canvas && aClass49_7475 == null) {
                 Dimension dimension = canvas.getSize();
-                anInt7465 = dimension.width;
-                anInt7472 = dimension.height;
                 this.aClass348_Sub31_7469 = class348_sub31;
                 this.anIntArray7483 = class348_sub31.anIntArray6916;
                 this.anInt7477 = class348_sub31.anInt6917;
                 anInt7486 = class348_sub31.anInt6920;
+                anInt7465 = Applet_Sub1.shouldScaleCanvasFrame() ? this.anInt7477 : dimension.width;
+                anInt7472 = Applet_Sub1.shouldScaleCanvasFrame() ? anInt7486 : dimension.height;
                 if (this.anInt7477 != anInt7495 || anInt7486 != anInt7488) {
                     anInt7481 = anInt7495 = this.anInt7477;
                     anInt7493 = anInt7488 = anInt7486;
@@ -1989,7 +1989,7 @@ final class ha_Sub1 extends ha {
 
     private ha_Sub1(d var_d) {
         super(var_d);
-        aClass356_7467 = new Class356(4);
+        aClass356_7467 = new IterableHashTable(4);
         this.anInt7474 = 45823;
         aBoolean7489 = false;
         anInt7487 = 0;
@@ -2005,10 +2005,10 @@ final class ha_Sub1 extends ha {
         this.anInt7494 = 3500;
         this.anInt7507 = 0;
         this.anInt7478 = 78642;
-        aClass60_7499 = new Class60(16);
+        aClass60_7499 = new ReferenceCache(16);
         anInt7512 = -1;
         try {
-            aClass60_7498 = new Class60(256);
+            aClass60_7498 = new ReferenceCache(256);
             this.aClass101_Sub1_7492 = new Class101_Sub1();
             method3631(1);
             method3659(0);
@@ -2206,10 +2206,14 @@ final class ha_Sub1 extends ha {
         if (aCanvas7468 == null || this.aClass348_Sub31_7469 == null) throw new IllegalStateException("off");
         try {
             Graphics graphics = aCanvas7468.getGraphics();
-            for (int i_633_ = 0; i_633_ < i; i_633_++) {
-                Rectangle rectangle = rectangles[i_633_];
-                if (rectangle.x + i_631_ <= this.anInt7477 && rectangle.y + i_632_ <= anInt7486 && rectangle.x + i_631_ + rectangle.width > 0 && rectangle.y + i_632_ + rectangle.height > 0)
-                    this.aClass348_Sub31_7469.method3011(rectangle.y, rectangle.x + i_631_, rectangle.height, graphics, -1, rectangle.x, rectangle.width, rectangle.y + i_632_);
+            if (Applet_Sub1.shouldScaleCanvasFrame()) {
+                this.aClass348_Sub31_7469.method3011(0, 0, anInt7486, graphics, -1, 0, this.anInt7477, 0);
+            } else {
+                for (int i_633_ = 0; i_633_ < i; i_633_++) {
+                    Rectangle rectangle = rectangles[i_633_];
+                    if (rectangle.x + i_631_ <= this.anInt7477 && rectangle.y + i_632_ <= anInt7486 && rectangle.x + i_631_ + rectangle.width > 0 && rectangle.y + i_632_ + rectangle.height > 0)
+                        this.aClass348_Sub31_7469.method3011(rectangle.y, rectangle.x + i_631_, rectangle.height, graphics, -1, rectangle.x, rectangle.width, rectangle.y + i_632_);
+                }
             }
         } catch (Exception exception) {
             aCanvas7468.repaint();

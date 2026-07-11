@@ -75,7 +75,7 @@ final class Class76 {
 
     final void method774(Class318_Sub4 class318_sub4, int i) {
         anInt1280++;
-        Class318_Sub1 class318_sub1 = class318_sub4.aClass318_Sub1_6410;
+        SceneEntity SceneEntity = class318_sub4.aClass318_Sub1_6410;
         boolean bool = true;
         Class318_Sub3[] class318_sub3s = class318_sub4.aClass318_Sub3Array6414;
         for (int i_6_ = 0; class318_sub3s.length > i_6_; i_6_++) {
@@ -87,14 +87,14 @@ final class Class76 {
         if (!bool) {
             if (this.aBoolean1283) {
                 for (Class318_Sub4 class318_sub4_7_ = ((Class318_Sub4) this.aClass243_1282.method1872(8)); class318_sub4_7_ != null; class318_sub4_7_ = (Class318_Sub4) this.aClass243_1282.method1878((byte) -103)) {
-                    if (class318_sub1 == (class318_sub4_7_.aClass318_Sub1_6410)) {
+                    if (SceneEntity == (class318_sub4_7_.aClass318_Sub1_6410)) {
                         class318_sub4_7_.method2373(false);
                         Class59_Sub1_Sub1.method560(class318_sub4_7_, -41);
                     }
                 }
             }
             for (Class318_Sub4 class318_sub4_8_ = ((Class318_Sub4) this.aClass243_1282.method1872(8)); class318_sub4_8_ != null; class318_sub4_8_ = (Class318_Sub4) this.aClass243_1282.method1878((byte) -44)) {
-                if (class318_sub1.anInt6389 >= class318_sub4_8_.aClass318_Sub1_6410.anInt6389) {
+                if (SceneEntity.anInt6389 >= class318_sub4_8_.aClass318_Sub1_6410.anInt6389) {
                     Class245.method1883(class318_sub4_8_, class318_sub4, true);
                     return;
                 }

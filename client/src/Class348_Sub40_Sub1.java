@@ -25,7 +25,7 @@ final class Class348_Sub40_Sub1 extends Class348_Sub40 {
         if (bool != true) method3050(true);
     }
 
-    final void method3049(Class348_Sub49 class348_sub49, int i, int i_0_) {
+    final void method3049(Packet Packet, int i, int i_0_) {
         anInt9087++;
         if (i_0_ != 31015) anInt9094 = 115;
         int i_1_ = i;
@@ -37,7 +37,7 @@ final class Class348_Sub40_Sub1 extends Class348_Sub40 {
                 do {
                     do {
                         if (i_1_ == 0) {
-                            anInt9094 = class348_sub49.readUnsignedShort(i_0_ + 842366929);
+                            anInt9094 = Packet.readUnsignedShort(i_0_ + 842366929);
                             return;
                         } else if (i_1_ != 1) {
                             if (i_1_ != 2) {
@@ -48,16 +48,16 @@ final class Class348_Sub40_Sub1 extends Class348_Sub40 {
                             } else break;
                             break while_129_;
                         }
-                        anInt9084 = class348_sub49.readUnsignedShort(842397944);
+                        anInt9084 = Packet.readUnsignedShort(842397944);
                         return;
                     } while (false);
-                    anInt9091 = class348_sub49.readUnsignedShort(842397944);
+                    anInt9091 = Packet.readUnsignedShort(842397944);
                     return;
                 } while (false);
-                anInt9092 = class348_sub49.readUnsignedShort(i_0_ + 842366929);
+                anInt9092 = Packet.readUnsignedShort(i_0_ + 842366929);
                 return;
             } while (false);
-            int i_2_ = class348_sub49.readMedium(-1);
+            int i_2_ = Packet.readMedium(-1);
             anIntArray9086[2] = Class139.method1166(0, i_2_ >> 12);
             anIntArray9086[1] = Class139.method1166(i_2_, 65280) >> 4;
             anIntArray9086[0] = Class139.method1166(i_2_ << 4, 267386880);

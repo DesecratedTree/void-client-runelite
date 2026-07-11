@@ -227,8 +227,8 @@ class Class279 {
     }
 
     static final void method2090(int i, int i_20_, boolean bool, byte i_21_, int i_22_, int i_23_, int i_24_) {
-        if ((bool ? Class316.aClass348_Sub51_3959.aClass239_Sub26_7215.method1838(-32350) : Class316.aClass348_Sub51_3959.aClass239_Sub26_7272.method1838(-32350)) != 0 && i != 0 && Class147.anInt2021 < 50 && i_24_ != -1)
-            Class258_Sub2.aClass10Array8531[Class147.anInt2021++] = new Class10(!bool ? (byte) 2 : (byte) 3, i_24_, i, i_23_, i_22_, 0, i_20_, null);
+        if ((bool ? Class316.aClass348_Sub51_3959.aClass239_Sub26_7215.method1838(-32350) : Class316.aClass348_Sub51_3959.aClass239_Sub26_7272.method1838(-32350)) != 0 && i != 0 && ChatMessage.anInt2021 < 50 && i_24_ != -1)
+            Class258_Sub2.aClass10Array8531[ChatMessage.anInt2021++] = new Class10(!bool ? (byte) 2 : (byte) 3, i_24_, i, i_23_, i_22_, 0, i_20_, null);
         if (i_21_ == -35) anInt3608++;
     }
 

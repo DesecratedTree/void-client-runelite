@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-final class Class348_Sub11 extends Class348 implements Interface6 {
+final class Class348_Sub11 extends Node implements Interface6 {
     static int anInt4760;
     char aChar4761;
     static int anInt4762;
@@ -13,7 +13,7 @@ final class Class348_Sub11 extends Class348 implements Interface6 {
     int anInt4767;
     static int anInt4768;
     static int anInt4769;
-    static Class45 aClass45_4770;
+    static Js5Archive aClass45_4770;
     int anInt4771;
 
     public final int method27(int i) {

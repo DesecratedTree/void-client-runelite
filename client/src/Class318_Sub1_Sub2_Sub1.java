@@ -28,14 +28,14 @@ final class Class318_Sub1_Sub2_Sub1 extends Class318_Sub1_Sub2 {
     final int method2393(int i) {
         anInt10197++;
         if (i > -109) aStringArray10195 = null;
-        Class213 class213 = (Exception_Sub1.aClass255_112.method1940(-115, this.anInt10181));
-        int i_0_ = class213.anInt2784;
+        ObjType ObjType = (Exception_Sub1.aClass255_112.getItemDefinitions(-115, this.anInt10181));
+        int i_0_ = ObjType.anInt2784;
         if (this.anInt10189 != -1) {
-            Class213 class213_1_ = (Exception_Sub1.aClass255_112.method1940(74, this.anInt10189));
+            ObjType class213_1_ = (Exception_Sub1.aClass255_112.getItemDefinitions(74, this.anInt10189));
             if (class213_1_.anInt2784 > i_0_) i_0_ = class213_1_.anInt2784;
         }
         if (this.anInt10180 != -1) {
-            Class213 class213_2_ = (Exception_Sub1.aClass255_112.method1940(-88, this.anInt10180));
+            ObjType class213_2_ = (Exception_Sub1.aClass255_112.getItemDefinitions(-88, this.anInt10180));
             if (i_0_ < class213_2_.anInt2784) i_0_ = class213_2_.anInt2784;
         }
         return i_0_;
@@ -68,17 +68,17 @@ final class Class318_Sub1_Sub2_Sub1 extends Class318_Sub1_Sub2 {
         anInt10188++;
         Class101 class101 = var_ha.method3705();
         class101.method894(this.x, -10 + this.anInt6382, this.y);
-        Class213 class213 = (Exception_Sub1.aClass255_112.method1940(i_8_ ^ 0x6b, this.anInt10181));
-        Class64 class64 = class213.method1559(null, null, var_ha, 131072, 0, this.anInt10185, 0, (byte) 88, -1);
-        if (class64 != null && (Class305.aBoolean3870 ? class64.method623(i_7_, i, class101, true, class213.anInt2784, Class132.anInt1906) : class64.method628(i_7_, i, class101, true, class213.anInt2784))) return true;
+        ObjType ObjType = (Exception_Sub1.aClass255_112.getItemDefinitions(i_8_ ^ 0x6b, this.anInt10181));
+        Class64 class64 = ObjType.getModel(null, null, var_ha, 131072, 0, this.anInt10185, 0, (byte) 88, -1);
+        if (class64 != null && (Class305.aBoolean3870 ? class64.method623(i_7_, i, class101, true, ObjType.anInt2784, Class132.anInt1906) : class64.method628(i_7_, i, class101, true, ObjType.anInt2784))) return true;
         if ((~this.anInt10189) != i_8_) {
-            Class213 class213_9_ = (Exception_Sub1.aClass255_112.method1940(-88, this.anInt10189));
-            class64 = class213_9_.method1559(null, null, var_ha, 131072, 0, (this.anInt10190), 0, (byte) 88, -1);
+            ObjType class213_9_ = (Exception_Sub1.aClass255_112.getItemDefinitions(-88, this.anInt10189));
+            class64 = class213_9_.getModel(null, null, var_ha, 131072, 0, (this.anInt10190), 0, (byte) 88, -1);
             if (class64 != null && (Class305.aBoolean3870 ? class64.method623(i_7_, i, class101, true, class213_9_.anInt2784, Class132.anInt1906) : class64.method628(i_7_, i, class101, true, class213_9_.anInt2784))) return true;
         }
         if (this.anInt10180 != -1) {
-            Class213 class213_10_ = (Exception_Sub1.aClass255_112.method1940(-99, this.anInt10180));
-            class64 = class213_10_.method1559(null, null, var_ha, 131072, 0, (this.anInt10186), 0, (byte) 88, -1);
+            ObjType class213_10_ = (Exception_Sub1.aClass255_112.getItemDefinitions(-99, this.anInt10180));
+            class64 = class213_10_.getModel(null, null, var_ha, 131072, 0, (this.anInt10186), 0, (byte) 88, -1);
             return class64 != null && (!Class305.aBoolean3870 ? class64.method628(i_7_, i, class101, true, class213_10_.anInt2784) : class64.method623(i_7_, i, class101, true, class213_10_.anInt2784, Class132.anInt1906));
         }
         return false;
@@ -145,7 +145,7 @@ final class Class318_Sub1_Sub2_Sub1 extends Class318_Sub1_Sub2 {
         aBoolean10191 = false;
         anInt10184 = 0;
         if (this.anInt10180 != -1) {
-            Class64 class64 = (Exception_Sub1.aClass255_112.method1940(i ^ 0x6c, this.anInt10180).method1559(null, null, var_ha, 2048, 0, this.anInt10186, 0, (byte) 88, -1));
+            Class64 class64 = (Exception_Sub1.aClass255_112.getItemDefinitions(i ^ 0x6c, this.anInt10180).getModel(null, null, var_ha, 2048, 0, this.anInt10186, 0, (byte) 88, -1));
             if (class64 != null) {
                 if (Class305.aBoolean3870) class64.method608(class101, (class318_sub4.aClass318_Sub3Array6414[2]), Class132.anInt1906, 0);
                 else class64.method615(class101, (class318_sub4.aClass318_Sub3Array6414[2]), 0);
@@ -154,7 +154,7 @@ final class Class318_Sub1_Sub2_Sub1 extends Class318_Sub1_Sub2 {
             }
         }
         if (this.anInt10189 != -1) {
-            Class64 class64 = (Exception_Sub1.aClass255_112.method1940(i ^ ~0x3b, this.anInt10189).method1559(null, null, var_ha, 2048, 0, this.anInt10190, 0, (byte) 88, -1));
+            Class64 class64 = (Exception_Sub1.aClass255_112.getItemDefinitions(i ^ ~0x3b, this.anInt10189).getModel(null, null, var_ha, 2048, 0, this.anInt10190, 0, (byte) 88, -1));
             if (class64 != null) {
                 if (!Class305.aBoolean3870) class64.method615(class101, (class318_sub4.aClass318_Sub3Array6414[1]), 0);
                 else class64.method608(class101, (class318_sub4.aClass318_Sub3Array6414[1]), Class132.anInt1906, 0);
@@ -162,7 +162,7 @@ final class Class318_Sub1_Sub2_Sub1 extends Class318_Sub1_Sub2 {
                 if (anInt10184 < class64.ma()) anInt10184 = class64.ma();
             }
         }
-        Class64 class64 = (Exception_Sub1.aClass255_112.method1940(-48, this.anInt10181).method1559(null, null, var_ha, 2048, 0, this.anInt10185, 0, (byte) 88, -1));
+        Class64 class64 = (Exception_Sub1.aClass255_112.getItemDefinitions(-48, this.anInt10181).getModel(null, null, var_ha, 2048, 0, this.anInt10185, 0, (byte) 88, -1));
         if (class64 != null) {
             if (!Class305.aBoolean3870) class64.method615(class101, (class318_sub4.aClass318_Sub3Array6414[0]), 0);
             else class64.method608(class101, (class318_sub4.aClass318_Sub3Array6414[0]), Class132.anInt1906, 0);

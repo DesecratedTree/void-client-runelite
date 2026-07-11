@@ -21,7 +21,7 @@ final class Class342 {
     static int anInt4251;
     Class101 aClass101_4252;
     static int[][] anIntArrayArray4253;
-    static Class60 aClass60_4254;
+    static ReferenceCache aClass60_4254;
 
     public static void method2682(int i) {
         aClass364_4246 = null;
@@ -72,7 +72,7 @@ final class Class342 {
         for (int i = Canvas_Sub1.anInt67; i < Class189.anInt2524; i++) {
             for (int i_8_ = 0; i_8_ < Class318_Sub7.anInt6451; i_8_++) {
                 for (int i_9_ = 0; i_9_ < Class348_Sub41.anInt7054; i_9_++) {
-                    Class357 class357 = Class147.aClass357ArrayArrayArray2029[i][i_8_][i_9_];
+                    Class357 class357 = ChatMessage.aClass357ArrayArrayArray2029[i][i_8_][i_9_];
                     if (class357 != null) {
                         Class318_Sub1_Sub4 class318_sub1_sub4 = class357.aClass318_Sub1_Sub4_4406;
                         Class318_Sub1_Sub4 class318_sub1_sub4_10_ = class357.aClass318_Sub1_Sub4_4403;
@@ -116,6 +116,6 @@ final class Class342 {
 
     static {
         aClass70_4247 = new Class70();
-        aClass60_4254 = new Class60(32);
+        aClass60_4254 = new ReferenceCache(32);
     }
 }

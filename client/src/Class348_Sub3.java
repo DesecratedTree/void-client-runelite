@@ -8,7 +8,7 @@ import jaclib.memory.heap.NativeHeapBuffer;
 
 import java.awt.*;
 
-final class Class348_Sub3 extends Class348 {
+final class Class348_Sub3 extends Node {
     private final s_Sub3 aS_Sub3_6566;
     int anInt6567;
     static int anInt6568;

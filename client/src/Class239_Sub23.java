@@ -52,9 +52,9 @@ final class Class239_Sub23 extends Class239 {
         return 1;
     }
 
-    static final Class143 method1819(int i, int i_1_, int i_2_, Class45 class45) {
+    static final Class143 method1819(int i, int i_1_, int i_2_, Js5Archive Js5Archive) {
         anInt6081++;
-        byte[] is = class45.method410(-1860, i, i_1_);
+        byte[] is = Js5Archive.method410(-1860, i, i_1_);
         if (i_2_ >= -31) method1819(65, -4, -97, null);
         if (is == null) return null;
         return new Class143(is);

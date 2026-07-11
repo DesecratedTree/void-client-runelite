@@ -16,16 +16,16 @@ final class Class348_Sub40_Sub12 extends Class348_Sub40 {
     private final int[] anIntArray9199 = new int[257];
     static int anInt9200;
 
-    final void method3049(Class348_Sub49 class348_sub49, int i, int i_0_) {
+    final void method3049(Packet Packet, int i, int i_0_) {
         if (i == 0) {
-            int i_1_ = class348_sub49.readUnsignedByte(255);
+            int i_1_ = Packet.readUnsignedByte(255);
             if (i_1_ == 0) {
-                anIntArrayArray9194 = new int[class348_sub49.readUnsignedByte(255)][4];
+                anIntArrayArray9194 = new int[Packet.readUnsignedByte(255)][4];
                 for (int i_2_ = 0; anIntArrayArray9194.length > i_2_; i_2_++) {
-                    anIntArrayArray9194[i_2_][0] = class348_sub49.readUnsignedShort(842397944);
-                    anIntArrayArray9194[i_2_][1] = class348_sub49.readUnsignedByte(255) << 4;
-                    anIntArrayArray9194[i_2_][2] = class348_sub49.readUnsignedByte(255) << 4;
-                    anIntArrayArray9194[i_2_][3] = ((class348_sub49.readUnsignedByte(Class348_Sub21.method2955(i_0_, 31192))) << 4);
+                    anIntArrayArray9194[i_2_][0] = Packet.readUnsignedShort(842397944);
+                    anIntArrayArray9194[i_2_][1] = Packet.readUnsignedByte(255) << 4;
+                    anIntArrayArray9194[i_2_][2] = Packet.readUnsignedByte(255) << 4;
+                    anIntArrayArray9194[i_2_][3] = ((Packet.readUnsignedByte(Class348_Sub21.method2955(i_0_, 31192))) << 4);
                 }
             } else method3078(i_1_, i_0_ + -31111);
         }
@@ -56,6 +56,7 @@ final class Class348_Sub40_Sub12 extends Class348_Sub40 {
         Class316.aClass348_Sub51_3959.method3429((byte) 74, (Class316.aClass348_Sub51_3959.aClass239_Sub12_7243), 0);
         Class237.method1686(i ^ 0x6e);
         Class316.aClass348_Sub51_3959.method3429((byte) 74, (Class316.aClass348_Sub51_3959.aClass239_Sub23_7231), 2);
+        Class316.aClass348_Sub51_3959.method3429((byte) 74, (Class316.aClass348_Sub51_3959.aClass239_Sub3_7222), 0);
         Class316.aClass348_Sub51_3959.method3429((byte) 74, (Class316.aClass348_Sub51_3959.aClass239_Sub29_7229), 1);
         Class348_Sub40.method3038(-1);
         Class76.method773(true);

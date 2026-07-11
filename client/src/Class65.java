@@ -6,11 +6,11 @@ final class Class65 {
     static int anInt1138;
     static int anInt1139;
     static int anInt1140;
-    private final Class45 aClass45_1141;
+    private final Js5Archive aClass45_1141;
     static int anInt1142;
     static int anInt1143;
     static Class351 aClass351_1144;
-    private final Class60 aClass60_1145 = new Class60(256);
+    private final ReferenceCache aClass60_1145 = new ReferenceCache(256);
     static Class110_Sub1[] aClass110_Sub1Array1146 = new Class110_Sub1[0];
     static int anInt1147;
     static Class357[][][] aClass357ArrayArrayArray1148;
@@ -59,7 +59,7 @@ final class Class65 {
         aClass110_Sub1Array1146 = null;
     }
 
-    static final void method699(Class45 class45, byte i, Class45 class45_4_, Class45 class45_5_, Class45 class45_6_) {
+    static final void method699(Js5Archive Js5Archive, byte i, Js5Archive class45_4_, Js5Archive class45_5_, Js5Archive class45_6_) {
         try {
             Class348_Sub40_Sub28.aClass45_9365 = class45_6_;
             anInt1147++;
@@ -69,7 +69,7 @@ final class Class65 {
             Class163.aBooleanArray2162 = new boolean[Class229.aClass45_2978.method414(-1)];
             int i_7_ = -72 % ((35 - i) / 41);
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("kb.F(" + (class45 != null ? "{...}" : "null") + ',' + i + ',' + (class45_4_ != null ? "{...}" : "null") + ',' + (class45_5_ != null ? "{...}" : "null") + ',' + (class45_6_ != null ? "{...}" : "null") + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("kb.F(" + (Js5Archive != null ? "{...}" : "null") + ',' + i + ',' + (class45_4_ != null ? "{...}" : "null") + ',' + (class45_5_ != null ? "{...}" : "null") + ',' + (class45_6_ != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -86,19 +86,19 @@ final class Class65 {
             is = aClass45_1141.method410(-1860, 26, i);
         }
         class348_sub42_sub1 = new Class348_Sub42_Sub1();
-        if (is != null) class348_sub42_sub1.method3168(new Class348_Sub49(is), (byte) -101);
+        if (is != null) class348_sub42_sub1.method3168(new Packet(is), (byte) -101);
         synchronized (aClass60_1145) {
             aClass60_1145.method582(class348_sub42_sub1, i, (byte) -114);
         }
         return class348_sub42_sub1;
     }
 
-    Class65(Class230 class230, int i, Class45 class45) {
+    Class65(Class230 class230, int i, Js5Archive Js5Archive) {
         try {
-            aClass45_1141 = class45;
+            aClass45_1141 = Js5Archive;
             aClass45_1141.method407(0, 26);
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("kb.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (class45 != null ? "{...}" : "null") + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("kb.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (Js5Archive != null ? "{...}" : "null") + ')'));
         }
     }
 

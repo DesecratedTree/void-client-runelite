@@ -3,7 +3,7 @@
  */
 
 final class Class84 {
-    private final Class60 aClass60_1449 = new Class60(16);
+    private final ReferenceCache aClass60_1449 = new ReferenceCache(16);
     static int[] anIntArray1450 = {1, 2, 4, 8};
     static int anInt1451;
     static int anInt1452;
@@ -14,7 +14,7 @@ final class Class84 {
     static int anInt1457;
     static int anInt1458;
     static int anInt1459;
-    private final Class45 aClass45_1460;
+    private final Js5Archive aClass45_1460;
 
     final void method816(boolean bool) {
         anInt1455++;
@@ -26,7 +26,7 @@ final class Class84 {
 
     static final Class318_Sub1_Sub3_Sub3 method817(int i, int i_0_, int i_1_, int i_2_) {
         anInt1456++;
-        Class357 class357 = Class147.aClass357ArrayArrayArray2029[i_1_][i_0_][i_2_];
+        Class357 class357 = ChatMessage.aClass357ArrayArrayArray2029[i_1_][i_0_][i_2_];
         if (class357 == null) return null;
         if (i != 252) return null;
         Class318_Sub1_Sub3_Sub3 class318_sub1_sub3_sub3 = null;
@@ -83,7 +83,7 @@ final class Class84 {
             is = aClass45_1460.method410(-1860, i_15_, i);
         }
         class300 = new Class300();
-        if (is != null) class300.method2275(new Class348_Sub49(is), (byte) -123);
+        if (is != null) class300.method2275(new Packet(is), (byte) -123);
         synchronized (aClass60_1449) {
             aClass60_1449.method582(class300, i, (byte) -106);
         }
@@ -123,7 +123,7 @@ final class Class84 {
         Canvas_Sub1.anInt67 = i;
         for (int i_22_ = 0; i_22_ < Class318_Sub7.anInt6451; i_22_++) {
             for (int i_23_ = 0; i_23_ < Class348_Sub41.anInt7054; i_23_++) {
-                if (Class147.aClass357ArrayArrayArray2029[i][i_22_][i_23_] == null) Class147.aClass357ArrayArrayArray2029[i][i_22_][i_23_] = new Class357(i);
+                if (ChatMessage.aClass357ArrayArrayArray2029[i][i_22_][i_23_] == null) ChatMessage.aClass357ArrayArrayArray2029[i][i_22_][i_23_] = new Class357(i);
             }
         }
     }
@@ -134,13 +134,13 @@ final class Class84 {
     }
 
     static final void method826(int i, int i_24_, int i_25_, int i_26_, int i_27_, int i_28_, ha var_ha) {
-        if ((Class174.aClass105_2309 == null || Class348_Sub42_Sub15.aClass105_9658 == null || Class348_Sub42_Sub15.aClass105_9659 == null) && Class21.aClass45_322.method421(false, Class318_Sub1_Sub3_Sub3.anInt10257) && Class21.aClass45_322.method421(false, Class313.anInt3937) && Class21.aClass45_322.method421(false, Class79.anInt1387)) {
+        if ((Class174.aClass105_2309 == null || Class348_Sub42_Sub15.aClass105_9658 == null || Class348_Sub42_Sub15.aClass105_9659 == null) && Class21.aClass45_322.method421(false, Class318_Sub1_Sub3_Sub3.anInt10257) && Class21.aClass45_322.method421(false, Class313.anInt3937) && Class21.aClass45_322.method421(false, NPCType.anInt1387)) {
             Class207 class207 = Class207.method1521(Class21.aClass45_322, Class313.anInt3937, 0);
             Class348_Sub42_Sub15.aClass105_9658 = var_ha.method3691(class207, true);
             class207.method1518();
             Class309.aClass105_4808 = var_ha.method3691(class207, true);
             Class174.aClass105_2309 = (var_ha.method3691(Class207.method1521(Class21.aClass45_322, Class318_Sub1_Sub3_Sub3.anInt10257, 0), true));
-            Class207 class207_29_ = Class207.method1521(Class21.aClass45_322, Class79.anInt1387, 0);
+            Class207 class207_29_ = Class207.method1521(Class21.aClass45_322, NPCType.anInt1387, 0);
             Class348_Sub42_Sub15.aClass105_9659 = var_ha.method3691(class207_29_, true);
             class207_29_.method1518();
             Class110.aClass105_1706 = var_ha.method3691(class207_29_, true);
@@ -161,12 +161,12 @@ final class Class84 {
         int i_34_ = -24 % ((i_27_ - 85) / 35);
     }
 
-    Class84(Class230 class230, int i, Class45 class45) {
+    Class84(Class230 class230, int i, Js5Archive Js5Archive) {
         try {
-            aClass45_1460 = class45;
+            aClass45_1460 = Js5Archive;
             aClass45_1460.method407(0, 29);
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("lca.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (class45 != null ? "{...}" : "null") + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("lca.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (Js5Archive != null ? "{...}" : "null") + ')'));
         }
     }
 }

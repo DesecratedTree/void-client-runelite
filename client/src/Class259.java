@@ -3,11 +3,11 @@
  */
 
 final class Class259 {
-    private final Class45 aClass45_3299;
+    private final Js5Archive aClass45_3299;
     static byte[] aByteArray3300 = new byte[2048];
-    static Class60 aClass60_3301 = new Class60(30);
+    static ReferenceCache aClass60_3301 = new ReferenceCache(30);
     static int anInt3302;
-    private final Class60 aClass60_3303 = new Class60(64);
+    private final ReferenceCache aClass60_3303 = new ReferenceCache(64);
     static Class305 aClass305_3304;
     int anInt3305;
     static int anInt3306 = 0;
@@ -32,19 +32,19 @@ final class Class259 {
             is = aClass45_3299.method410(-1860, 19, i);
         }
         class160 = new Class160();
-        if (is != null) class160.method1255(new Class348_Sub49(is), -1);
+        if (is != null) class160.method1255(new Packet(is), -1);
         synchronized (aClass60_3303) {
             aClass60_3303.method582(class160, i, (byte) -120);
         }
         return class160;
     }
 
-    Class259(Class230 class230, int i, Class45 class45) {
+    Class259(Class230 class230, int i, Js5Archive Js5Archive) {
         try {
-            aClass45_3299 = class45;
+            aClass45_3299 = Js5Archive;
             this.anInt3305 = aClass45_3299.method407(0, 19);
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("uea.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (class45 != null ? "{...}" : "null") + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("uea.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (Js5Archive != null ? "{...}" : "null") + ')'));
         }
     }
 }

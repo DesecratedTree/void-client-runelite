@@ -107,10 +107,12 @@ final class Class373_Sub2 extends Class373 implements MouseListener, MouseMotion
 
     private final void method3605(int i, byte i_3_, int i_4_) {
         anInt7445++;
-        anInt7454 = i_4_;
+        int x = Applet_Sub1.scaleMouseX(i_4_);
+        int y = Applet_Sub1.scaleMouseY(i);
+        anInt7454 = x;
         if (i_3_ != -76) anInt7429 = 51;
-        anInt7453 = i;
-        if (aBoolean7458) method3606(-1, i, i_4_, 0, -125);
+        anInt7453 = y;
+        if (aBoolean7458) method3606(-1, y, x, 0, -125);
     }
 
     final int method3594(byte i) {
@@ -160,14 +162,14 @@ final class Class373_Sub2 extends Class373 implements MouseListener, MouseMotion
         return (anInt7432 & 0x1) != 0;
     }
 
-    static final String method3607(int i, Class348_Sub49 class348_sub49, int i_10_) {
+    static final String method3607(int i, Packet Packet, int i_10_) {
         int i_11_ = 17 % ((9 - i_10_) / 59);
         anInt7451++;
         try {
-            int i_12_ = class348_sub49.readSmart(-122);
+            int i_12_ = Packet.readSmart(-122);
             if (i < i_12_) i_12_ = i;
             byte[] is = new byte[i_12_];
-            class348_sub49.anInt7197 += (Class64.aClass296_1131.method2226(is, class348_sub49.anInt7197, class348_sub49.aByteArray7154, i_12_, -1, 0));
+            Packet.pos += (Class64.aClass296_1131.method2226(is, Packet.pos, Packet.data, i_12_, -1, 0));
             String string = Class367_Sub8.method3546(is, 0, i_12_, 0);
             return string;
         } catch (Exception exception) {
@@ -178,10 +180,12 @@ final class Class373_Sub2 extends Class373 implements MouseListener, MouseMotion
     public final synchronized void mouseReleased(MouseEvent mouseevent) {
         anInt7428++;
         int i = method3604(-6345, mouseevent);
+        int x = Applet_Sub1.scaleMouseX(mouseevent.getX());
+        int y = Applet_Sub1.scaleMouseY(mouseevent.getY());
         if ((i & anInt7456) == 0) i = anInt7456;
-        if ((i & 0x1) != 0) method3606(3, mouseevent.getY(), mouseevent.getX(), mouseevent.getClickCount(), -116);
-        if ((0x4 & i) != 0) method3606(5, mouseevent.getY(), mouseevent.getX(), mouseevent.getClickCount(), -119);
-        if ((0x2 & i) != 0) method3606(4, mouseevent.getY(), mouseevent.getX(), mouseevent.getClickCount(), -117);
+        if ((i & 0x1) != 0) method3606(3, y, x, mouseevent.getClickCount(), -116);
+        if ((0x4 & i) != 0) method3606(5, y, x, mouseevent.getClickCount(), -119);
+        if ((0x2 & i) != 0) method3606(4, y, x, mouseevent.getClickCount(), -117);
         anInt7456 &= ~i;
         if (mouseevent.isPopupTrigger()) mouseevent.consume();
     }
@@ -209,10 +213,12 @@ final class Class373_Sub2 extends Class373 implements MouseListener, MouseMotion
     public final synchronized void mousePressed(MouseEvent mouseevent) {
         anInt7449++;
         int i = method3604(-6345, mouseevent);
+        int x = Applet_Sub1.scaleMouseX(mouseevent.getX());
+        int y = Applet_Sub1.scaleMouseY(mouseevent.getY());
         if (i != 1) {
-            if (i == 4) method3606(2, mouseevent.getY(), mouseevent.getX(), mouseevent.getClickCount(), -112);
-            else if (i == 2) method3606(1, mouseevent.getY(), mouseevent.getX(), mouseevent.getClickCount(), -121);
-        } else method3606(0, mouseevent.getY(), mouseevent.getX(), mouseevent.getClickCount(), -126);
+            if (i == 4) method3606(2, y, x, mouseevent.getClickCount(), -112);
+            else if (i == 2) method3606(1, y, x, mouseevent.getClickCount(), -121);
+        } else method3606(0, y, x, mouseevent.getClickCount(), -126);
         anInt7456 |= i;
         if (mouseevent.isPopupTrigger()) mouseevent.consume();
     }

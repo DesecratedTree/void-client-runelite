@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-final class Class348_Sub41 extends Class348 {
+final class Class348_Sub41 extends Node {
     static int anInt7046;
     static int anInt7047;
     static String aString7048;
@@ -19,26 +19,26 @@ final class Class348_Sub41 extends Class348 {
         anInt7047++;
         if (i_3_ != 39) aClass114_7052 = null;
         boolean bool = true;
-        Class348_Sub49 class348_sub49 = new Class348_Sub49(is);
+        Packet Packet = new Packet(is);
         int i_4_ = -1;
         for (; ; ) {
-            int i_5_ = class348_sub49.method3334(107);
+            int i_5_ = Packet.method3334(107);
             if (i_5_ == 0) break;
             i_4_ += i_5_;
             int i_6_ = 0;
             boolean bool_7_ = false;
             for (; ; ) {
                 if (bool_7_) {
-                    int i_8_ = class348_sub49.readSmart(-118);
+                    int i_8_ = Packet.readSmart(-118);
                     if (i_8_ == 0) break;
-                    class348_sub49.readUnsignedByte(255);
+                    Packet.readUnsignedByte(255);
                 } else {
-                    int i_9_ = class348_sub49.readSmart(i_3_ ^ ~0x58);
+                    int i_9_ = Packet.readSmart(i_3_ ^ ~0x58);
                     if (i_9_ == 0) break;
                     i_6_ += -1 + i_9_;
                     int i_10_ = i_6_ & 0x3f;
                     int i_11_ = i_6_ >> 6 & 0x3f;
-                    int i_12_ = class348_sub49.readUnsignedByte(255) >> 2;
+                    int i_12_ = Packet.readUnsignedByte(255) >> 2;
                     int i_13_ = i_11_ - -i_0_;
                     int i_14_ = i_2_ + i_10_;
                     if (i_13_ > 0 && i_14_ > 0 && i_13_ < -1 + i && -1 + i_1_ > i_14_) {
@@ -76,7 +76,7 @@ final class Class348_Sub41 extends Class348 {
             Class327.anInt4095 = i;
             Class167.anInt2204 = Class355.anInt4372;
             if (Class316.aClass348_Sub51_3959.aClass239_Sub27_7261.method1840(-32350) == 1) Class167.anInt2204 = 0;
-            Class348_Sub49.method3379(2, i_17_);
+            Packet.method3379(2, i_17_);
             Class362.method3511(true, Applet_Sub1.aClass324_20, Class246.aClass143_3179, Class274.aClass274_3495.method2063(Class348_Sub33.anInt6967, 544), 2, Class348_Sub8.aHa6654);
             int i_18_ = za_Sub2.regionTileX;
             int i_19_ = Class90.regionTileY;
@@ -111,6 +111,7 @@ final class Class348_Sub41 extends Class348 {
                         npc.y -= 512 * i_21_;
                         npc.x -= 512 * i_20_;
                         if ((npc.x) < 0 || i_25_ < (npc.x) || (npc.y) < 0 || i_26_ < (npc.y)) {
+                            NpcEventHooks.despawned(npc);
                             npc.method2448(null, -2);
                             class348_sub22.method2715((byte) 80);
                             bool_24_ = true;
@@ -123,6 +124,7 @@ final class Class348_Sub41 extends Class348 {
                                     bool_28_ = false;
                             }
                             if (!bool_28_) {
+                                NpcEventHooks.despawned(npc);
                                 npc.method2448(null, -2);
                                 bool_24_ = true;
                                 class348_sub22.method2715((byte) 113);
@@ -162,9 +164,9 @@ final class Class348_Sub41 extends Class348 {
                 }
                 if (Class312.anInt3931 != 4) {
                     for (Class348_Sub37 class348_sub37 = ((Class348_Sub37) Class130.aClass356_1895.method3484(0)); class348_sub37 != null; class348_sub37 = ((Class348_Sub37) Class130.aClass356_1895.method3482(0))) {
-                        int i_33_ = (int) (0x3fffL & class348_sub37.aLong4291);
+                        int i_33_ = (int) (0x3fffL & class348_sub37.key);
                         int i_34_ = -za_Sub2.regionTileX + i_33_;
-                        int i_35_ = (int) (0x3fffL & (class348_sub37.aLong4291 >> 14));
+                        int i_35_ = (int) (0x3fffL & (class348_sub37.key >> 14));
                         int i_36_ = i_35_ + -Class90.regionTileY;
                         if (i_34_ < 0 || i_36_ < 0 || (i_34_ >= Class367_Sub4.anInt7319) || i_36_ >= Class348_Sub40_Sub3.anInt9109) class348_sub37.method2715((byte) 37);
                     }
@@ -179,7 +181,7 @@ final class Class348_Sub41 extends Class348 {
                     Class286_Sub4.anInt6246 -= 512 * i_20_;
                     Class352.anInt4336 -= i_20_;
                     Class281.anInt3647 -= i_21_;
-                    Class348_Sub35.anInt6981 -= i_20_;
+                    IntNode.anInt6981 -= i_20_;
                     Class59_Sub2_Sub2.anInt8685 -= 512 * i_21_;
                     if ((Class367_Sub4.anInt7319 < Math.abs(i_20_)) || Math.abs(i_21_) > Class348_Sub40_Sub3.anInt9109) Class76.method773(true);
                 } else if (Class348_Sub40_Sub21.anInt9282 == 4) {
@@ -203,15 +205,15 @@ final class Class348_Sub41 extends Class348 {
 
     static final byte[] method3158(byte[] is, int i) {
         anInt7046++;
-        Class348_Sub49 class348_sub49 = new Class348_Sub49(is);
-        int i_37_ = class348_sub49.readUnsignedByte(255);
+        Packet Packet = new Packet(is);
+        int i_37_ = Packet.readUnsignedByte(255);
         if (i > -74) method3156(true, null);
-        int i_38_ = class348_sub49.readInt((byte) -126);
+        int i_38_ = Packet.readInt((byte) -126);
         if (i_38_ < 0 || (Class29.anInt401 != 0 && i_38_ > Class29.anInt401)) {
             throw new RuntimeException();
         }
         if (i_37_ != 0) {
-            int i_39_ = class348_sub49.readInt((byte) -126);
+            int i_39_ = Packet.readInt((byte) -126);
             if (i_39_ < 0 || (Class29.anInt401 != 0 && i_39_ > Class29.anInt401) || i_39_ > 10000000) {
                 return new byte[4];
             }
@@ -219,13 +221,13 @@ final class Class348_Sub41 extends Class348 {
             if (i_37_ == 1) Class212.method1547(is_40_, i_39_, is, i_38_, 9);
             else {
                 synchronized (Class348_Sub33.aClass152_6955) {
-                    Class348_Sub33.aClass152_6955.method1218(is_40_, 29123, class348_sub49);
+                    Class348_Sub33.aClass152_6955.method1218(is_40_, 29123, Packet);
                 }
             }
             return is_40_;
         }
         byte[] is_41_ = new byte[i_38_];
-        class348_sub49.method3389(2147483647, 0, i_38_, is_41_);
+        Packet.method3389(2147483647, 0, i_38_, is_41_);
         return is_41_;
     }
 

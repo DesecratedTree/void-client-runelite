@@ -7,7 +7,7 @@ final class Class268 {
     private static short[] aShortArray3430 = {-1, -1, -1, -1, -1};
     static int anInt3431;
     static int[] anIntArray3432 = new int[500];
-    private final Class60 aClass60_3433 = new Class60(64);
+    private final ReferenceCache aClass60_3433 = new ReferenceCache(64);
     static int anInt3434;
     static int anInt3435;
     static int anInt3436;
@@ -16,7 +16,7 @@ final class Class268 {
     static int anInt3439 = 16777215;
     static int anInt3440;
     static int anInt3441 = 0;
-    private final Class45 aClass45_3442;
+    private final Js5Archive aClass45_3442;
     static short[][] aShortArrayArray3443;
     static int anInt3444;
     static int anInt3445;
@@ -76,7 +76,7 @@ final class Class268 {
         class277 = new Class277();
         class277.anInt3573 = i;
         class277.aClass268_3562 = this;
-        if (is != null) class277.method2070(true, new Class348_Sub49(is));
+        if (is != null) class277.method2070(true, new Packet(is));
         class277.method2067(-4860);
         synchronized (aClass60_3433) {
             aClass60_3433.method582(class277, i, (byte) -111);
@@ -92,8 +92,8 @@ final class Class268 {
             Class9.anInt167 = Class318_Sub1_Sub5_Sub2.anInt10163 = -1;
         } else {
             int i_6_ = (int) Class76.aFloat1287;
-            if (i_6_ < Class348_Sub35.anInt6979 >> 8) i_6_ = Class348_Sub35.anInt6979 >> 8;
-            if (Class181.aBooleanArray2374[4] && Class255.anIntArray3273[4] - -128 > i_6_) i_6_ = Class255.anIntArray3273[4] + 128;
+            if (i_6_ < IntNode.anInt6979 >> 8) i_6_ = IntNode.anInt6979 >> 8;
+            if (Class181.aBooleanArray2374[4] && ObjTypeList.anIntArray3273[4] - -128 > i_6_) i_6_ = ObjTypeList.anIntArray3273[4] + 128;
             int i_7_ = 0x3fff & (int) Class314.aFloat3938 + Class195.anInt5016;
             if (i_4_ != 0) method2031(-117, null);
             Class17.method268(i_6_, -200 + (Class275.method2064((Class132.aPlayer_1907.x), Class355.anInt4372, 11219, (Class132.aPlayer_1907.y))), i_7_, Class192.anInt2578, i, -19360, Class130_Sub1.anInt5799, 3 * (i_6_ >> 3) + 600 << 2);
@@ -130,7 +130,7 @@ final class Class268 {
 
     static final void method2038(int i) {
         if (i <= -47) {
-            for (int i_9_ = 0; i_9_ < Class147.anInt2021; i_9_++) {
+            for (int i_9_ = 0; i_9_ < ChatMessage.anInt2021; i_9_++) {
                 Class10 class10 = Class258_Sub2.aClass10Array8531[i_9_];
                 if (class10.aByte180 == 3) {
                     if (class10.aClass348_Sub16_Sub5_176 == null) class10.anInt188 = -2147483648;
@@ -141,12 +141,12 @@ final class Class268 {
         }
     }
 
-    Class268(Class230 class230, int i, Class45 class45) {
+    Class268(Class230 class230, int i, Js5Archive Js5Archive) {
         try {
-            aClass45_3442 = class45;
+            aClass45_3442 = Js5Archive;
             this.anInt3429 = aClass45_3442.method407(0, 4);
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("cb.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (class45 != null ? "{...}" : "null") + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("cb.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (Js5Archive != null ? "{...}" : "null") + ')'));
         }
     }
 

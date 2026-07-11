@@ -11,7 +11,7 @@ final class Class250 implements Runnable {
     volatile boolean aBoolean3223 = false;
     static int anInt3224;
     static int anInt3225;
-    static Class318_Sub1[] aClass318_Sub1Array3226;
+    static SceneEntity[] aClass318_Sub1Array3226;
     static int anInt3227 = 0;
     Class297 aClass297_3228;
 

@@ -4,14 +4,14 @@
 
 final class Class26 {
     static int anInt373;
-    private final Class356 aClass356_374 = new Class356(256);
+    private final IterableHashTable aClass356_374 = new IterableHashTable(256);
     static int anInt375;
     static int anInt376;
-    private final Class45 aClass45_377;
+    private final Js5Archive aClass45_377;
     static int anInt378;
-    private final Class45 aClass45_379;
+    private final Js5Archive aClass45_379;
     static int anInt380;
-    private final Class356 aClass356_381 = new Class356(256);
+    private final IterableHashTable aClass356_381 = new IterableHashTable(256);
     static Class364 aClass364_382 = new Class364("WTQA", 2);
     static int anInt383;
     static boolean aBoolean384 = false;
@@ -83,12 +83,12 @@ final class Class26 {
         return c == 160 || c == 32 || c == 95 || c == 45;
     }
 
-    Class26(Class45 class45, Class45 class45_9_) {
+    Class26(Js5Archive Js5Archive, Js5Archive class45_9_) {
         try {
             aClass45_377 = class45_9_;
-            aClass45_379 = class45;
+            aClass45_379 = Js5Archive;
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("hs.<init>(" + (class45 != null ? "{...}" : "null") + ',' + (class45_9_ != null ? "{...}" : "null") + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("hs.<init>(" + (Js5Archive != null ? "{...}" : "null") + ',' + (class45_9_ != null ? "{...}" : "null") + ')'));
         }
     }
 

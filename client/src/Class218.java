@@ -21,8 +21,8 @@ final class Class218 {
         anInt2855++;
         if (i >= 1 && i_5_ >= 1 && -2 + Class367_Sub4.anInt7319 >= i && i_5_ <= -2 + Class348_Sub40_Sub3.anInt9109) {
             int i_8_ = i_7_;
-            if (i_8_ < 3 && Class79.method802(i_5_, i, true)) i_8_++;
-            if ((Class316.aClass348_Sub51_3959.aClass239_Sub27_7261.method1840(-32350) == 0 && !Class58.method536(i_5_, false, i, Class167.anInt2204, i_8_)) || Class147.aClass357ArrayArrayArray2029 == null) return;
+            if (i_8_ < 3 && NPCType.method802(i_5_, i, true)) i_8_++;
+            if ((Class316.aClass348_Sub51_3959.aClass239_Sub27_7261.method1840(-32350) == 0 && !Class58.method536(i_5_, false, i, Class167.anInt2204, i_8_)) || ChatMessage.aClass357ArrayArrayArray2029 == null) return;
             Class338.aClass237_Sub1_4197.method1694((Class348_Sub45.aClass361Array7108[i_7_]), i_1_, i_7_, Class348_Sub8.aHa6654, i, i_5_, (byte) 106);
             if (i_3_ >= 0) {
                 int i_9_ = Class316.aClass348_Sub51_3959.aClass239_Sub4_7220.method1737(-32350);
@@ -66,14 +66,14 @@ final class Class218 {
         aClass114_2860 = null;
     }
 
-    private final void method1595(byte i, int i_17_, Class348_Sub49 class348_sub49) {
+    private final void method1595(byte i, int i_17_, Packet Packet) {
         anInt2852++;
         if (i >= 5) {
-            if (i_17_ == 1) this.anInt2853 = class348_sub49.readUnsignedShort(842397944);
+            if (i_17_ == 1) this.anInt2853 = Packet.readUnsignedShort(842397944);
             else if (i_17_ != 2) {
                 if (i_17_ == 3) this.aBoolean2854 = true;
                 else if (i_17_ == 4) this.anInt2853 = -1;
-            } else this.anInt2856 = class348_sub49.readMedium(-1);
+            } else this.anInt2856 = Packet.readMedium(-1);
         }
     }
 
@@ -96,12 +96,12 @@ final class Class218 {
         return class105;
     }
 
-    final void method1597(byte i, Class348_Sub49 class348_sub49) {
+    final void method1597(byte i, Packet Packet) {
         anInt2850++;
         for (; ; ) {
-            int i_20_ = class348_sub49.readUnsignedByte(255);
+            int i_20_ = Packet.readUnsignedByte(255);
             if (i_20_ == 0) break;
-            method1595((byte) 61, i_20_, class348_sub49);
+            method1595((byte) 61, i_20_, Packet);
         }
         if (i != -114) aClass262_2859 = null;
     }

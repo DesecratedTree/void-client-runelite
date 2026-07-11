@@ -4,7 +4,7 @@
 
 import java.awt.*;
 
-final class p extends Class348 implements Interface19 {
+final class p extends Node implements Interface19 {
     long nativeid;
     private static boolean aBoolean5144 = false;
     int anInt5145;

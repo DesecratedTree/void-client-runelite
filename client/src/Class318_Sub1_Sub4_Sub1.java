@@ -134,19 +134,19 @@ final class Class318_Sub1_Sub4_Sub1 extends Class318_Sub1_Sub4 implements Interf
         return aBoolean10064;
     }
 
-    final void method2380(ha var_ha, int i, boolean bool, Class318_Sub1 class318_sub1, int i_11_, byte i_12_, int i_13_) {
+    final void method2380(ha var_ha, int i, boolean bool, SceneEntity SceneEntity, int i_11_, byte i_12_, int i_13_) {
         try {
             if (i_12_ > -106) method2388(-102);
-            if (class318_sub1 instanceof Class318_Sub1_Sub4_Sub1) {
-                Class318_Sub1_Sub4_Sub1 class318_sub1_sub4_sub1_14_ = (Class318_Sub1_Sub4_Sub1) class318_sub1;
+            if (SceneEntity instanceof Class318_Sub1_Sub4_Sub1) {
+                Class318_Sub1_Sub4_Sub1 class318_sub1_sub4_sub1_14_ = (Class318_Sub1_Sub4_Sub1) SceneEntity;
                 if (this.aClass64_10071 != null && (class318_sub1_sub4_sub1_14_.aClass64_10071) != null) this.aClass64_10071.method613(class318_sub1_sub4_sub1_14_.aClass64_10071, i_13_, i, i_11_, bool);
-            } else if (class318_sub1 instanceof Class318_Sub1_Sub3_Sub1) {
-                Class318_Sub1_Sub3_Sub1 class318_sub1_sub3_sub1 = (Class318_Sub1_Sub3_Sub1) class318_sub1;
+            } else if (SceneEntity instanceof Class318_Sub1_Sub3_Sub1) {
+                Class318_Sub1_Sub3_Sub1 class318_sub1_sub3_sub1 = (Class318_Sub1_Sub3_Sub1) SceneEntity;
                 if (this.aClass64_10071 != null && (class318_sub1_sub3_sub1.aClass64_10028) != null) this.aClass64_10071.method613((class318_sub1_sub3_sub1.aClass64_10028), i_13_, i, i_11_, bool);
             }
             anInt10083++;
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("ge.N(" + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + bool + ',' + (class318_sub1 != null ? "{...}" : "null") + ',' + i_11_ + ',' + i_12_ + ',' + i_13_ + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("ge.N(" + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + bool + ',' + (SceneEntity != null ? "{...}" : "null") + ',' + i_11_ + ',' + i_12_ + ',' + i_13_ + ')'));
         }
     }
 

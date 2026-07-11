@@ -7,11 +7,11 @@ final class Class87 {
     static int anInt1484;
     static int anInt1485;
     static int anInt1486;
-    private Class60 aClass60_1487 = new Class60(64);
-    private final Class45 aClass45_1488;
+    private ReferenceCache aClass60_1487 = new ReferenceCache(64);
+    private final Js5Archive aClass45_1488;
     static int anInt1489;
     static int anInt1490;
-    private Class60 aClass60_1491 = new Class60(100);
+    private ReferenceCache aClass60_1491 = new ReferenceCache(100);
 
     final void method834(byte i) {
         synchronized (aClass60_1487) {
@@ -39,7 +39,7 @@ final class Class87 {
         class17 = new Class17();
         class17.anInt269 = i;
         class17.aClass87_251 = this;
-        if (is != null) class17.method267(new Class348_Sub49(is), false);
+        if (is != null) class17.method267(new Packet(is), false);
         class17.method270((byte) 124);
         synchronized (aClass60_1487) {
             aClass60_1487.method582(class17, i, (byte) -126);
@@ -94,16 +94,16 @@ final class Class87 {
         return class348_sub42_sub17;
     }
 
-    Class87(Class230 class230, int i, Class45 class45, Class45 class45_6_, Class45 class45_7_) {
+    Class87(Class230 class230, int i, Js5Archive Js5Archive, Js5Archive class45_6_, Js5Archive class45_7_) {
         try {
-            aClass45_1488 = class45;
+            aClass45_1488 = Js5Archive;
             if (aClass45_1488 != null) {
                 int i_8_ = aClass45_1488.method414(-1) + -1;
                 aClass45_1488.method407(0, i_8_);
             }
             Class239.method1711(7, class45_6_, 2, class45_7_);
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("lfa.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (class45 != null ? "{...}" : "null") + ',' + (class45_6_ != null ? "{...}" : "null") + ',' + (class45_7_ != null ? "{...}" : "null") + ')'));
+            throw Class348_Sub17.method2929(runtimeexception, ("lfa.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (Js5Archive != null ? "{...}" : "null") + ',' + (class45_6_ != null ? "{...}" : "null") + ',' + (class45_7_ != null ? "{...}" : "null") + ')'));
         }
     }
 }

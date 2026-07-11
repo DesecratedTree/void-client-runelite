@@ -82,50 +82,50 @@ final class Class31 {
         aClass113_430 = null;
     }
 
-    private final void method329(Class348_Sub49 class348_sub49, int i, int i_1_) {
+    private final void method329(Packet Packet, int i, int i_1_) {
         if (i_1_ != 1) {
             if (i_1_ != 2) {
-                if (i_1_ == 3) anInt421 = class348_sub49.readUnsignedShort(842397944);
+                if (i_1_ == 3) anInt421 = Packet.readUnsignedShort(842397944);
                 else if (i_1_ != 4) {
-                    if (i_1_ == 5) anInt433 = class348_sub49.readUnsignedShort(842397944);
-                    else if (i_1_ == 6) anInt439 = class348_sub49.readUnsignedShort(842397944);
+                    if (i_1_ == 5) anInt433 = Packet.readUnsignedShort(842397944);
+                    else if (i_1_ == 6) anInt439 = Packet.readUnsignedShort(842397944);
                     else if (i_1_ != 7) {
                         if (i_1_ != 8) {
                             if (i_1_ != 9) {
                                 if (i_1_ != 10) {
                                     if (i_1_ == 11) this.anInt426 = 0;
-                                    else if (i_1_ == 12) this.anInt431 = class348_sub49.readUnsignedByte(255);
-                                    else if (i_1_ == 13) this.anInt420 = class348_sub49.readShort(i ^ ~0x3547);
-                                    else if (i_1_ == 14) this.anInt426 = class348_sub49.readUnsignedShort(842397944);
-                                } else this.anInt422 = class348_sub49.readShort(13638);
-                            } else this.anInt434 = class348_sub49.readUnsignedShort(842397944);
-                        } else aString423 = class348_sub49.method3371(i ^ 0x34af);
-                    } else this.anInt424 = class348_sub49.readShort(13638);
-                } else anInt429 = class348_sub49.readUnsignedShort(842397944);
-            } else this.anInt444 = class348_sub49.readMedium(-1);
-        } else this.anInt435 = class348_sub49.readUnsignedShort(842397944);
+                                    else if (i_1_ == 12) this.anInt431 = Packet.readUnsignedByte(255);
+                                    else if (i_1_ == 13) this.anInt420 = Packet.readShort(i ^ ~0x3547);
+                                    else if (i_1_ == 14) this.anInt426 = Packet.readUnsignedShort(842397944);
+                                } else this.anInt422 = Packet.readShort(13638);
+                            } else this.anInt434 = Packet.readUnsignedShort(842397944);
+                        } else aString423 = Packet.method3371(i ^ 0x34af);
+                    } else this.anInt424 = Packet.readShort(13638);
+                } else anInt429 = Packet.readUnsignedShort(842397944);
+            } else this.anInt444 = Packet.readMedium(-1);
+        } else this.anInt435 = Packet.readUnsignedShort(842397944);
         if (i != -2) method333(-112, 38);
         anInt437++;
     }
 
     private final void method330(ha var_ha, int i) {
         anInt446++;
-        Class45 class45 = this.aClass219_438.aClass45_2873;
-        if (anInt421 >= 0 && this.aClass219_438.aClass60_2862.method583(anInt421, 121) == null && class45.method421(false, anInt421)) {
-            Class207 class207 = Class207.method1512(class45, anInt421);
+        Js5Archive Js5Archive = this.aClass219_438.aClass45_2873;
+        if (anInt421 >= 0 && this.aClass219_438.aClass60_2862.method583(anInt421, 121) == null && Js5Archive.method421(false, anInt421)) {
+            Class207 class207 = Class207.method1512(Js5Archive, anInt421);
             this.aClass219_438.aClass60_2862.method582(var_ha.method3691(class207, true), anInt421, (byte) -112);
         }
-        if (anInt433 >= 0 && this.aClass219_438.aClass60_2862.method583(anInt433, -99) == null && class45.method421(false, anInt433)) {
-            Class207 class207 = Class207.method1512(class45, anInt433);
+        if (anInt433 >= 0 && this.aClass219_438.aClass60_2862.method583(anInt433, -99) == null && Js5Archive.method421(false, anInt433)) {
+            Class207 class207 = Class207.method1512(Js5Archive, anInt433);
             this.aClass219_438.aClass60_2862.method582(var_ha.method3691(class207, true), anInt433, (byte) -128);
         }
-        if (anInt429 >= 0 && this.aClass219_438.aClass60_2862.method583(anInt429, 86) == null && class45.method421(false, anInt429)) {
-            Class207 class207 = Class207.method1512(class45, anInt429);
+        if (anInt429 >= 0 && this.aClass219_438.aClass60_2862.method583(anInt429, 86) == null && Js5Archive.method421(false, anInt429)) {
+            Class207 class207 = Class207.method1512(Js5Archive, anInt429);
             this.aClass219_438.aClass60_2862.method582(var_ha.method3691(class207, true), anInt429, (byte) -108);
         }
         if (i > -7) this.anInt434 = -14;
-        if (anInt439 >= 0 && this.aClass219_438.aClass60_2862.method583(anInt439, -83) == null && class45.method421(false, anInt439)) {
-            Class207 class207 = Class207.method1512(class45, anInt439);
+        if (anInt439 >= 0 && this.aClass219_438.aClass60_2862.method583(anInt439, -83) == null && Js5Archive.method421(false, anInt439)) {
+            Class207 class207 = Class207.method1512(Js5Archive, anInt439);
             this.aClass219_438.aClass60_2862.method582(var_ha.method3691(class207, true), anInt439, (byte) -101);
         }
     }
@@ -142,12 +142,12 @@ final class Class31 {
         return class105;
     }
 
-    final void method332(int i, Class348_Sub49 class348_sub49) {
+    final void method332(int i, Packet Packet) {
         if (i > -119) method333(119, -71);
         for (; ; ) {
-            int i_3_ = class348_sub49.readUnsignedByte(255);
+            int i_3_ = Packet.readUnsignedByte(255);
             if (i_3_ == 0) break;
-            method329(class348_sub49, -2, i_3_);
+            method329(Packet, -2, i_3_);
         }
         anInt427++;
     }
