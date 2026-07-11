@@ -13,15 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        run: |
-          git clone --depth 1 --branch "${{ github.ref_name }}" "${{ github.server_url }}/${{ github.repository }}.git" .
+        run: git clone --depth 1 --branch "${{ github.ref_name }}" "${{ github.server_url }}/${{ github.repository }}.git" .
 
       - name: Set up JDK 8
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y openjdk-8-jdk
-          echo "JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64" >> "$GITHUB_ENV"
-          echo "/usr/lib/jvm/java-8-openjdk-amd64/bin" >> "$GITHUB_PATH"
+        run: sudo apt-get update && sudo apt-get install -y openjdk-8-jdk && echo "JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64" >> "$GITHUB_ENV" && echo "/usr/lib/jvm/java-8-openjdk-amd64/bin" >> "$GITHUB_PATH"
 
       - name: Make Gradle wrapper executable
         run: chmod +x gradlew
@@ -31,36 +26,16 @@ jobs:
         run: echo "version=${GITHUB_REF_NAME#v}" >> "$GITHUB_OUTPUT"
 
       - name: Verify gradle version matches tag
-        run: |
-          gradle_version=$(grep -oP 'version\s*=\s*"\K[^"]+' client/build.gradle.kts)
-          if [ "$gradle_version" != "${{ steps.version.outputs.version }}" ]; then
-            echo "Version mismatch: tag=${{ steps.version.outputs.version }}, gradle=$gradle_version" >&2
-            exit 1
-          fi
+        run: gradle_version=$(grep -oP 'version\s*=\s*"\K[^"]+' client/build.gradle.kts) && if [ "$gradle_version" != "${{ steps.version.outputs.version }}" ]; then echo "Version mismatch: tag=${{ steps.version.outputs.version }}, gradle=$gradle_version" >&2 && exit 1; fi
 
       - name: Build + obfuscate jar
         run: ./gradlew :client:proguardJar --no-daemon --stacktrace
 
       - name: Stage release artifact + checksum
         id: artifact
-        run: |
-          version="${{ steps.version.outputs.version }}"
-          src="client/build/libs/void-client-${version}-release.jar"
-          dst_dir="release"
-          dst="${dst_dir}/void-client-${version}.jar"
-          mkdir -p "$dst_dir"
-          cp "$src" "$dst"
-          (cd "$dst_dir" && sha256sum "void-client-${version}.jar" > "void-client-${version}.jar.sha256")
-          echo "jar=$dst" >> "$GITHUB_OUTPUT"
-          echo "sha=${dst}.sha256" >> "$GITHUB_OUTPUT"
+        run: version="${{ steps.version.outputs.version }}" && src="client/build/libs/void-client-${version}-release.jar" && dst_dir="release" && dst="${dst_dir}/void-client-${version}.jar" && mkdir -p "$dst_dir" && cp "$src" "$dst" && (cd "$dst_dir" && sha256sum "void-client-${version}.jar" > "void-client-${version}.jar.sha256") && echo "jar=$dst" >> "$GITHUB_OUTPUT" && echo "sha=${dst}.sha256" >> "$GITHUB_OUTPUT"
 
       - name: Publish release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          gh release create "${{ github.ref_name }}" \
-            --repo "${{ github.repository }}" \
-            --title "${{ github.ref_name }}" \
-            --generate-notes \
-            "${{ steps.artifact.outputs.jar }}" \
-            "${{ steps.artifact.outputs.sha }}"
+        run: gh release create "${{ github.ref_name }}" --repo "${{ github.repository }}" --title "${{ github.ref_name }}" --generate-notes "${{ steps.artifact.outputs.jar }}" "${{ steps.artifact.outputs.sha }}"
