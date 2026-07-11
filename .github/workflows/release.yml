@@ -1,0 +1,64 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: read
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 8
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 8
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Extract version from tag
+        id: version
+        run: echo "version=${GITHUB_REF_NAME#v}" >> "$GITHUB_OUTPUT"
+
+      - name: Verify gradle version matches tag
+        run: |
+          gradle_version=$(grep -oP 'version\s*=\s*"\K[^"]+' client/build.gradle.kts)
+          if [ "$gradle_version" != "${{ steps.version.outputs.version }}" ]; then
+            echo "Version mismatch: tag=${{ steps.version.outputs.version }}, gradle=$gradle_version" >&2
+            exit 1
+          fi
+
+      - name: Build + obfuscate jar
+        run: ./gradlew :client:proguardJar --no-daemon --stacktrace
+
+      - name: Stage release artifact + checksum
+        id: artifact
+        run: |
+          version="${{ steps.version.outputs.version }}"
+          src="client/build/libs/void-client-${version}-release.jar"
+          dst_dir="release"
+          dst="${dst_dir}/void-client-${version}.jar"
+          mkdir -p "$dst_dir"
+          cp "$src" "$dst"
+          (cd "$dst_dir" && sha256sum "void-client-${version}.jar" > "void-client-${version}.jar.sha256")
+          echo "jar=$dst" >> "$GITHUB_OUTPUT"
+          echo "sha=${dst}.sha256" >> "$GITHUB_OUTPUT"
+
+      - name: Publish release to public repo
+        env:
+          GH_TOKEN: ${{ secrets.RELEASES_TOKEN }}
+        run: |
+          gh release create "${{ github.ref_name }}" \
+            --repo 2011Scape/void-client-releases \
+            --title "${{ github.ref_name }}" \
+            --notes-file "release-notes/${{ github.ref_name }}.md" \
+            "${{ steps.artifact.outputs.jar }}" \
+            "${{ steps.artifact.outputs.sha }}"
